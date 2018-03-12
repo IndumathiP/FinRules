@@ -192,11 +192,22 @@
 		.cardView {
 			display: inline-block;
 			padding: 15px;
+			margin-bottom: 55px;
 			h2 {
 				.h2style();
 			}
 			.cards {
 				.individualCard {	
+					position: relative;
+					transition:transform 0.5s;
+					&:hover {
+						transform:scale(1.07,1.07);
+						height:107%;
+						border:2px solid @secondary-background;	
+						.configuration {
+							display: block;
+						}
+					}
          .cardStyle();
           border-bottom: 3px solid @secondary-background;
 					.cardHeader {
@@ -255,6 +266,21 @@
 							} 
 						}
 					}
+					.configuration {
+						padding: 10px;
+						background-color: @secondary-background;
+						border: 2px solid @secondary-background;
+						width:calc(100% + 4px);
+						position: absolute;
+						left:-2px;
+						display:none;
+						a {
+							span {
+								font-size: 24px;
+								color:#ffffff;
+							}
+						}
+					}
 				}
 				.individualCard:nth-child(2) {
 					.leftIcon {
@@ -293,9 +319,10 @@
 					}
 				}
 			}
+
 		}
 		.startExecution {
-			margin: 40px;
+			margin-bottom: 20px;
 			text-align: center;
 			button {
 				color: @primary-color;
