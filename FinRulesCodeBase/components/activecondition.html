@@ -17,55 +17,51 @@
 
 <body>
   <div class="activeConditionContainer">
-    <div class="headerLogo row">
-      <ul class="col-md-6 col-xs-6 padding0">
-        <li class="col icon">
+    <div class="activeheaderLogo row">
+      <ul class="col-md-6">
+        <li class="col-md-1 icon">
           <span class="logoIcon"></span>
         </li>
-        <li class="col">
+        <li class="col-md-3">
           <span class="logoName"></span>
         </li>
       </ul>
-      <ul class="col-md-3 col-xs-3 padding0 pull-right">
-        <div class="pull-right">
-          <li class="col text-right padding0">
-            <h3>John Smith</h3>
-            <label>underWriter</label>
-          </li>
-          <li class="col">
-            <span class="userIcon"></span>
-            <i class="fa fa-caret-down"></i>
-          </li>
-        </div>
+      <ul class="col-md-2 pull-right">
+        <li class="col-md-7 text-right">
+          <h3>John Smith</h3>
+          <span>underWriter</span>
+        </li>
+        <li class="col-md-5">
+          <span class="userIcon"></span>
+          <i class="fa fa-caret-down"></i>
+        </li>
       </ul>
     </div>
     <div class="loanDetails row">
-      <h3 class="col-md-2 col-xs-2">LOAN #19048394990</h3>
-      <ul class="loanInformation col-md-7 col-xs-7">
-        <li class="col-md-3 col-xs-3">
+      <h3 class="col-md-2">LOAN #19048394990</h3>
+      <ul class="loanInformation col-md-6">
+        <li class="col-md-3">
           <label>Borrower</label>
           <span>Garland Yoder</span>
         </li>
-        <li class="col-md-3 col-xs-3">
+        <li class="col-md-3">
           <label>Loan Status</label>
           <span>LE Pending</span>
         </li>
-        <li class="col-md-3 col-xs-3">
+        <li class="col-md-3">
           <label>Purchase Price</label>
           <span>$ 165,000.00</span>
         </li>
-        <li class="col-md-3 col-xs-3">
+        <li class="col-md-3">
           <label>Total Loan Amount</label>
           <span>$ 156,350.00</span>
         </li>
       </ul>
-      <h3 class="col-md-2 col-xs-2 pull-right loanAvg text-center">Weighted Avg. 70%</h3>
+      <h3 class="col-md-2 pull-right loanAvg text-center">Weighted Avg. 70%</h3>
     </div>
     <div class="row loanMenu">
       <div class="hamMenu">
-        <div class="col icon">
-          <i class="fa fa-bars"></i>
-        </div>
+        <i class="fa fa-bars"></i>
         <span class="leftArrow"></span>
         <label>Condition Type: Income</label>
       </div>
@@ -108,17 +104,21 @@
     </div>
     <div class="mainSection row">
       <div class="leftMenu col-md-2 col-xs-2">
-        <div class="form-group">
-          <select class="form-control" id="sel1">
-								<option>View All Category</option>
-								<option>All</option>
-								<option>Prior to Approval</option>
-								<option>Prior to Document</option>
-								<option>Prior to Closing</option>
-								<option>Prior to Funding</option>
-								<option>Prior to Underwriting</option>
-							</select>
-        </div>
+
+        
+            
+            <select class="form-control">
+               
+                <option>View All Category</option>
+                <option>All</option>
+                <option>Prior to Approval</option>
+                <option>Prior to Document</option>
+                <option>Prior to Closing</option>
+                <option>Prior to Funding</option>
+                <option>Prior to Underwriting</option>
+              </select>
+       
+
         <ul class="">
           <li>
             ADDED BY DU
@@ -139,13 +139,176 @@
               <span class="closed">Closed 10</span>
             </div>
           </li>
+          <li>
+            ADDED BY UNDERWRITER
+          </li>
+          <li>
+            <h4>Additonal Income</h4>
+            <span class="threeDotIcon"></span>
+            <div class="incomeStatus">
+              <span>Open 10</span>
+              <span class="closed">Closed 10</span>
+            </div>
+          </li>
         </ul>
 
       </div>
-      <div class="rightMenu">
+      <div class="rightMenu col-md-10 col-xs-10">
+        <ul class="borrowerList">
+          <li>Garland Yoder</li>
+          <li>Co-Borrower 1</li>
+          <li>Co-Borrower 2</li>
+        </ul>
+        <ul class="taskList">
+          <li>Task List</li>
+          <li>1003 Form</li>
+        </ul>
+        <h3>Task Validation Category 1</h3>
+        <div class="editCondition">
+          <h3>(And) all required Validation</h3>
+          <ul class="row">
+            <li class="col-md-1 col-xs-1">
+              <span class="dropdownIcon"></span>
+            </li>
+            <li class="col-md-3 col-xs-3">Upload divorse degree Satisfied</li>
+            <li class="col-md-1 col-xs-1">Satisfied</li>
+            <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
+            <li class="col-md-1 col-xs-1">
+              <span></span>
+            </li>
+            <li class="col-md-1 col-xs-1">
+              <span class="dropDown"></span>
+              <span class="addIconTop"></span>
+              <span class="addIconBottom"></span>
+            </li>
 
+          </ul>
+          <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+          <ul class="row pendingrows">
+            <li class="col-md-1 col-xs-1">
+              <span class="dropdownIcon"></span>
+            </li>
+            <li class="col-md-3 col-xs-3">Upload seperation Agreement</li>
+            <li class="col-md-1 col-xs-1">Pending</li>
+            <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+            <li class="col-md-2 col-xs-2">Loan Officer</li>
+            <li class="col-md-1 col-xs-1">
+              <span></span>
+            </li>
+            <li class="col-md-1 col-xs-1">
+              <label class="orOption">OR</label>
+              <span class="dropDown"></span>
+              <span class="addIconTop"></span>
+              <span class="addIconBottom"></span>
+            </li>
+
+          </ul>
+          <ul class="row pendingrows">
+            <li class="col-md-1 col-xs-1">
+              <span class="dropdownIcon"></span>
+            </li>
+            <li class="col-md-3 col-xs-3">Upload seperation Agreement</li>
+            <li class="col-md-1 col-xs-1">Pending</li>
+            <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+            <li class="col-md-2 col-xs-2">Loan Officer</li>
+            <li class="col-md-1 col-xs-1">
+              <span></span>
+            </li>
+            <li class="col-md-1 col-xs-1">
+              <label class="orOption">OR</label>
+              <span class="dropDown"></span>
+              <span class="addIconTop"></span>
+              <span class="addIconBottom"></span>
+            </li>
+
+          </ul>
+          <ul class="row pendingrows">
+            <li class="col-md-1 col-xs-1">
+              <span class="dropdownIcon"></span>
+            </li>
+            <li class="col-md-3 col-xs-3">Upload seperation Agreement</li>
+            <li class="col-md-1 col-xs-1">Pending</li>
+            <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+            <li class="col-md-2 col-xs-2">Loan Officer</li>
+            <li class="col-md-1 col-xs-1">
+              <span></span>
+            </li>
+            <li class="col-md-1 col-xs-1">
+              <label class="orOption">OR</label>
+              <span class="dropDown"></span>
+              <span class="addIconTop"></span>
+            </li>
+
+          </ul>
+          <div class="sourceInformation">
+            <span class="closeIcon"></span>
+            <label class="soruce">
+              <span>Source: </span>System Default</label>
+            <label>
+              <span>Reason:</span>Info Closed after discusssion with loan Officer</label>
+            <p>
+              <span>Task: </span>Lorm ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+              massa. Cum sociss natoque penatibus et magnis</p>
+            <span class="addIconTop"></span>
+          </div>
+        </div>
+        <div class="toggleBtn">
+          <div class="andState">And</div>
+          <span>Or</span>
+        </div>
+        <h3>Task Validation Category 2</h3>
+        <div class="editCondition">
+          <h3>(And) all required Validation</h3>
+          <ul class="row">
+            <li class="col-md-1 col-xs-1">
+              <span class="dropdownIcon"></span>
+            </li>
+            <li class="col-md-3 col-xs-3">Upload divorse degree Satisfied</li>
+            <li class="col-md-1 col-xs-1">Satisfied</li>
+            <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
+            <li class="col-md-1 col-xs-1">
+              <span></span>
+            </li>
+            <li class="col-md-1 col-xs-1">
+              <span class="dropDown"></span>
+              <span class="addIconTop"></span>
+              <span class="addIconBottom"></span>
+            </li>
+
+          </ul>
+          <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+          <ul class="addTask row">
+            <li class="col-md-2">
+              <span></span>
+              <label>Add Task</label>
+            </li>
+          </ul>
+        </div>
+        
       </div>
+     
     </div>
+    <div class="row">
+        <div class="col-md-2 col-xs-2 suspended">
+          <label>Suspended</label>
+          <label class="suspensionCount">6/2</label>
+          <span></span>
+        </div>
+        <div class="col-md-10">
+            <div class="button-wrapper">
+                <button type="submit" class="btn btn-primary add">
+                    <label>Add Task</label>
+                    <span></span>
+                  </button>
+                <button type="submit" class="btn btn-primary start">
+                  <label>Start Execution</label>
+                  <span></span>
+                </button>
+                
+              
+            </div>
+        </div>
+      </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
