@@ -3,64 +3,72 @@
 @import "common.less";
 body,html {
 	height:100%;
+
 }
-// body {
-// 	background:#2B9381;
-// }
+body {
+	min-width: 1024px;
+	max-width:1366px;
+	margin:auto;
+}
 main {
 	padding: 20px;
 	height:100%;
+	background:url("../images/BG.png") no-repeat;
+	background-size: cover;
+	position: relative;
+	.footer {
+		position: absolute;
+		left:20px;
+		bottom:20px;
+		span {
+			color:@text-color;
+			font-size: 12px;
+			font-family: Roboto-Regular;
+		}
+	}
 }
-.mainContainer {
-		//position: relative;		
-		height: 100%;
-		min-width: 1024px;
-		max-width:1366px;
-		margin:auto;
-		
-		//background:url("../images/LoginBackground.png") no-repeat;
-		
-		.loginWrapper {
-			width: 350px;
-			margin: 10% auto;
-			//position: absolute;
-			//top: 25%;
-			//left: 40%;
-			//padding:15px;
-				.logo {
-					background: url('../images/Sprite_FinRules.png') no-repeat -327px -22px;
-					margin:auto;
-					background-origin: content-box;
-					width: 129px;
-					height: 21px;
+
+.loginWrapper {
+		width: 350px;
+		position: absolute;
+		top:25%;
+		left:35%;
+			.logo {
+				background: url('../images/Sprite_FinRules.png') no-repeat -327px -22px;
+				margin:auto;
+				background-origin: content-box;
+				width: 129px;
+				height: 21px;
 				}
-				.border-bottom {
-					border-bottom: 1px solid #84C5B8;
-					margin: 45px 0;
+			.border-bottom {
+				border-bottom: 1px solid #84C5B8;
+				margin: 45px 0;
+			}
+			form {
+				padding: 15px;
+			}
+			h2 {
+				font-size: 18px;
+				padding-bottom: 30px;
+				font-family: Roboto-Medium;
+				color:@text-color;
+			}
+			label {
+				margin-bottom: 10px;
+				font-family:Roboto-Regular;
+				font-size:13px;
+				color:@text-color;
+			}
+			input {
+				height: 40px;
+				color:@text-color;
+				border:1px solid #ffffff;
+				border-radius: 2px;
+				background-color:transparent;
+				font-family:Roboto-Light;				
 				}
-				form {
-					padding: 15px;
-				}
-				h2 {
-					font-size: 18px;
-					padding-bottom: 30px;
-					font-family: Roboto-Medium;
-					color:@text-color;
-				}
-				label {
-					margin-bottom: 10px;
-					font-family:Roboto-Regular;
-					font-size:13px;
-					color:@text-color;
-				}
-				input {
-					height: 40px;
-					color:@text-color;
-					border:1px solid #ffffff;
-					border-radius: 2px;
-					background-color:transparent;
-					font-family:Roboto-Light;
-					
+				::placeholder {
+					color:#ffffff;
 				}
 
         .buttonWrapper {
@@ -87,14 +95,4 @@ main {
 		} 
 		
 	}
-	.footer {
-		position: absolute;
-		left:20px;
-		bottom:20px;
-		span {
-			color:@text-color;
-			font-size: 12px;
-			font-family: Roboto-Regular;
-		}
-	}
-}
+	
