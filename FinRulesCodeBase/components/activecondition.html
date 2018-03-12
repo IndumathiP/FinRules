@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet/less" type="text/css" href="../assets/css/styles.less" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
+
+</head>
+
+<body>
+  <div class="activeConditionContainer">
+    <div class="headerLogo row">
+      <ul class="col-md-6 col-xs-6 padding0">
+        <li class="col icon">
+          <span class="logoIcon"></span>
+        </li>
+        <li class="col">
+          <span class="logoName"></span>
+        </li>
+      </ul>
+      <ul class="col-md-3 col-xs-3 padding0 pull-right">
+        <div class="pull-right">
+          <li class="col text-right padding0">
+            <h3>John Smith</h3>
+            <label>underWriter</label>
+          </li>
+          <li class="col">
+            <span class="userIcon"></span>
+            <i class="fa fa-caret-down"></i>
+          </li>
+        </div>
+      </ul>
+    </div>
+    <div class="loanDetails row">
+      <h3 class="col-md-2 col-xs-2">LOAN #19048394990</h3>
+      <ul class="loanInformation col-md-7 col-xs-7">
+        <li class="col-md-3 col-xs-3">
+          <label>Borrower</label>
+          <span>Garland Yoder</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Loan Status</label>
+          <span>LE Pending</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Purchase Price</label>
+          <span>$ 165,000.00</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Total Loan Amount</label>
+          <span>$ 156,350.00</span>
+        </li>
+      </ul>
+      <h3 class="col-md-2 col-xs-2 pull-right loanAvg text-center">Weighted Avg. 70%</h3>
+    </div>
+    <div class="row loanMenu">
+      <div class="hamMenu">
+        <div class="col icon">
+          <i class="fa fa-bars"></i>
+        </div>
+        <span class="leftArrow"></span>
+        <label>Condition Type: Income</label>
+      </div>
+    </div>
+    <div class="activeConidition row">
+      <div class="col-md-2 col-xs-2 addConditionSection">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+        <label>Add Conditions</label>
+        <div class="search">
+          <i class="fa fa-search"></i>
+        </div>
+      </div>
+      <div class="col-md-10 col-xs-10">
+        <ul class="optionMenu">
+          <ul class="leftTabs">
+            <li>
+              <h3>Additional Income</h3>
+            </li>
+            <li>
+              <span>Pending</span>
+            </li>
+            <li>Weighted Avg. 20%</li>
+          </ul>
+          <ul class="rightTabs">
+            <li>
+              <i class="fa fa-search"></i>
+              <span>DU Findings</span>
+            </li>
+            <li>
+              <i class="fa fa-search"></i>
+              <span>Condition for Loan</span>
+            </li>
+            <li>
+              <i class="fa fa-search"></i>
+              <span>Notes</span>
+            </li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+    <div class="mainSection row">
+      <div class="leftMenu col-md-2 col-xs-2">
+        <div class="form-group">
+          <select class="form-control" id="sel1">
+								<option>View All Category</option>
+								<option>All</option>
+								<option>Prior to Approval</option>
+								<option>Prior to Document</option>
+								<option>Prior to Closing</option>
+								<option>Prior to Funding</option>
+								<option>Prior to Underwriting</option>
+							</select>
+        </div>
+        <ul class="">
+          <li>
+            ADDED BY DU
+          </li>
+          <li>
+            <h4>Base Income</h4>
+            <span class="threeDotIcon"></span>
+            <div class="incomeStatus">
+              <span>Open 10</span>
+              <span class="closed">Closed 10</span>
+            </div>
+          </li>
+          <li>
+            <h4>Income from Assets</h4>
+            <span class="threeDotIcon"></span>
+            <div class="incomeStatus">
+              <span>Open 10</span>
+              <span class="closed">Closed 10</span>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+      <div class="rightMenu">
+
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

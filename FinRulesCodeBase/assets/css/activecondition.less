@@ -1,0 +1,216 @@
+@primary-border: #E7E7E7;
+@primary-background: #F8F8F8;
+@open-status-border: #FECD62;
+@closed-status-border: #F48185;
+@primary-button-color: #FFAB31;
+@secondary-background: #47AE9D;
+@primary-color: #fff;
+@secondary-color: #000;
+@navbar-background: #41A292;
+@secondary-text :#767F85;
+@selectbox-background: #D3D7DA;
+@list-background: #F1F5F6;
+@base-background: #8F989D;
+.pstyle {
+	font-family: Roboto-Light;
+	font-size: 12px;
+}
+.h3Style {
+	color: @secondary-background;
+	font-size: 16px;
+	font-weight: 600;
+}
+.activeConditionContainer {
+  padding: 0 15px;
+	max-width: 1366px;
+	min-width: 1024px;
+	margin: 0 auto;
+	font-family: Roboto-Regular;
+	.col{
+    padding: 0 15px;
+    float: left;
+  }
+  .icon{
+    border-right: 1px solid #A3A3A3;
+  }
+  .padding0{
+    padding: 0;
+  }
+  .headerLogo{
+    padding : 15px 0 8px;
+    .logoIcon{
+        background: url('../images/Sprite_FinRules.png') no-repeat -26px -20px;
+        width: 24px;
+        height: 24px;
+     }
+    .logoName{
+      background: url('../images/Sprite_FinRules.png') no-repeat -71px -22px;
+      width: 129px;
+      height: 21px;
+    }
+    .userIcon{
+      background: url('../images/Sprite_FinRules.png') no-repeat -222px -14px;
+      width: 36px;
+      height: 36px;
+      vertical-align: middle;
+    }
+    label{
+      margin-top: 5px;
+      font-size: 13px;
+    }
+    span{
+      display: inline-block;
+      font-size: 13px;
+    }
+    i{
+      padding-left: 15px;
+    }
+    h3{
+      color: @secondary-background;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+  .loanDetails {
+      padding-left: 15px;
+      padding-right: 15px;
+      border-top: 1px solid @primary-border;
+      background: @primary-background;
+      h3{
+        font-size: 18px;
+        padding: 19px 0;
+        font-weight: 600;
+            white-space: nowrap;
+      }
+      .loanInformation {     
+        padding: 12px 0;   
+          label {
+              display: block;
+              font-size: 13px;
+              color: @secondary-color;
+          }
+          span{
+            font-family: Roboto-Medium;
+            font-size: 15px;
+            padding-top: 5px;
+            display: inline-block;
+          }
+      }
+      .loanAvg{
+        color: #80898F;
+        background-color: #DBDFE0;
+        font-size: 16px;
+        padding-top: 22px;
+      }
+  }
+		.loanMenu {
+			background: @secondary-background;
+			color: @primary-color;
+			.hamMenu {
+				padding: 20px 10px;
+				i {
+					font-size:20px;
+				}
+				label {
+					padding-left: 20px;
+				}
+				.leftArrow {
+					background: url('../images/Sprite_FinRules.png') no-repeat -446px -79px;
+					width: 23px;
+					height: 16px;
+					display: inline-block;
+				}
+			}
+		}
+		.activeConidition {
+			padding: 20px 0;
+			.addConditionSection {
+				background: @secondary-background;
+				padding: 0;
+				color: @primary-color;
+				.search {
+					float: right;
+					padding: 11px;
+					background: @primary-button-color;
+					color: @primary-color;
+					border-left: 2px solid @primary-color;
+				}
+			}
+			.optionMenu {
+				.leftTabs {
+					float: left;
+					li {
+						display: inline-block;
+						padding: 10px 20px;
+						h3 {
+							.h3Style();
+						}
+					}
+					li:nth-child(2) {
+						color:@closed-status-border;
+						background: @primary-background;
+						border-radius: 3px;
+					}
+					li:nth-child(3) {
+						color:@secondary-text;
+					}
+ 				}
+				.rightTabs {
+					float: right;
+					li {
+						display: inline-block;
+						color: @secondary-background;
+						padding:10px;
+						i {
+							color:@primary-button-color;
+							font-size: 23px;
+							padding-right:5px;
+						}
+					}
+				}
+			}
+		}
+		.mainSection {
+			.leftMenu {
+				border: 1px solid @primary-border;
+				-webkit-box-shadow: 0 3px 8px rgba(0,0,0,.2);
+				box-shadow: 0 3px 8px rgba(0,0,0,.2);
+				padding: 0;
+				select {
+					background: @selectbox-background;
+					border-radius: 0;
+					option {
+						background: @primary-color;
+						// padding:5px;
+						// border-bottom:1px solid @primary-border;
+					}
+				}
+				ul {
+					li {
+						padding:10px;
+					}
+					li:first-child {
+						background:@list-background;
+					}
+					li:nth-child(2) {
+						background: @base-background;
+						color: @primary-color;
+						.incomeStatus {
+							.pstyle();
+							margin-top: 10px;
+							.closed {
+								float: right;
+								padding:0 50px;
+							}
+						}
+						.threeDotIcon {
+							background: url('../images/Sprite_FinRules.png') no-repeat -769px -79px;
+							width: 3px;
+							height: 13px;
+							float: right;
+						}
+					}
+				}
+			}
+		}
+}
