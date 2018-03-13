@@ -78,7 +78,7 @@
     <!-- main content -->
     <div class="content row">
       <!-- Add conditions -->
-      <div class="activeConidition clearfix">
+      <div class="activeCondition clearfix">
         <div class="col-md-2 col-xs-2 addConditionSection">
           <i class="fa fa-plus" aria-hidden="true"></i>
           <label>Add Conditions</label>
@@ -87,7 +87,7 @@
           </div>
         </div>
         <div class="col-md-10 col-xs-10 paddingRight">
-          <ul class="optionMenu">
+          <ul class="optionMenu clearfix">
             <ul class="leftTabs">
               <li>
                 <h3>Additional Income</h3>
@@ -97,27 +97,194 @@
               </li>
               <li>Weighted Avg. 20%</li>
             </ul>
-            <ul class="rightTabs">
-              <li>
-                <i class="fa fa-search"></i>
+            <ul class="rightTabs" id="options">
+              <li id="viewDu">
+                <span class="searchIcon"></span>
                 <span>DU Findings</span>
               </li>
               <li>
-                <i class="fa fa-search"></i>
+                <span class="conditionIcon"></span>
                 <span>Condition for Loan</span>
               </li>
-              <li>
-                <i class="fa fa-search"></i>
+              <li id="viewNotes">
+                <span class="notesIcon"></span>
                 <span>Notes</span>
               </li>
             </ul>
           </ul>
         </div>
       </div>
-
+      <!-- Description of list of options -->
+      <!-- DU Findings in detail -->
+      <div class="duFindings" id="duFindings">
+        <ul>
+          <li id="hideDu"><span></span></li>
+          <li>
+            <span class="searchIcon"></span>
+            <span>DU Findings</span>
+          </li>
+        </ul>
+        <p>
+          Signed 1005 and/or leave and earning statement complete verbal verification of employment. 1005 and/or leave and earning
+          statement complete verbal verification of employment. 1005 and/or leave and earning statement complete verbal verification
+          of employment. 1005 and/or leave and earning statement complete verbal verification of employment. 1005 and/or
+          leave and earning statement complete verbal verification of employment. 1005 and/or leave and earning statement
+          complete verbal verification of employment. 1005 and/or leave and earning statement complete verbal verification
+          of employment. 1005 and/or leave and earning statement complete verbal verification of employment. 1005 and/or
+          leave and earning statement complete verbal verification of employment. 1005 and/or leave and earning statement
+          complete verbal verification of employment. 1005 and/or leave and earning statement complete verbal verification
+          of employment. 1005 and/or leave and earning statement complete verbal verification of employment.
+        </p>
+        <div class="closeSection">
+          <span>close</span>
+        </div>
+      </div>
+      <!-- notes in detail -->
+      <div class="notes" id="notes">
+        <div class="notesHeader">
+          <ul>
+            <li id="hideNotes"><span></span></li>
+            <li>
+                <span class="notesIcon"></span>
+                <span>Notes</span>
+            </li>
+          </ul>
+        </div>
+        <ul class="notesDes">
+          <li class="clearfix">
+            <div class="bullet"></div>
+            <div class="notesDate clearfix">
+              <h3>12.01.2018</h3>
+            </div>
+            <div class="task">
+              <h3>Task name-one</h3>
+              <div class="author">
+                <span>12:45 am</span>
+                <label>William John</label>
+              </div>
+              <p>
+                Signed 1005 and/or leave and earning statement complete verbal verification of employment. 1005 and/or <span>Read More...</span>
+              </p>
+            </div>
+            <div class="task">
+              <h3>Task name-two</h3>
+              <div class="author">
+                <span>12:45 am</span>
+                <label>William John</label>
+              </div>
+              <p>
+                Signed 1005 and/or leave and earning statement complete verbal verification of employment. 1005 and/or <span>Read More...</span>
+              </p>
+            </div>
+          </li>
+          <li class="clearfix">
+            <div class="bullet"></div>
+            <div class="notesDate clearfix">
+              <h3>10.01.2018</h3>
+            </div>
+            <div class="task">
+              <h3>Task name-one</h3>
+              <div class="author">
+                <span>12:45 am</span>
+                <label>William John</label>
+              </div>
+              <p>
+                Signed 1005 and/or leave and earning statement complete verbal verification of employment. 1005 and/or <span>Read More...</span>
+              </p>
+            </div>
+            <div class="task">
+              <h3>Task name-two</h3>
+              <div class="author">
+                <span>12:45 am</span>
+                <label>William John</label>
+              </div>
+              <p>
+                Signed 1005 and/or leave and earning statement complete verbal verification of employment. 1005 and/or <span>Read More...</span>
+              </p>
+            </div>
+            <div class="task">
+              <h3>Task name-three</h3>
+              <div class="author">
+                <span>12:45 am</span>
+                <label>William John</label>
+              </div>
+              <p>
+                Signed 1005 and/or leave and earning statement complete verbal verification of employment. 1005 and/or <span>Read More...</span>
+              </p>
+            </div>
+          </li>
+          <li class="clearfix">
+            <div class="bullet"></div>
+            <div class="notesDate clearfix">
+              <h3>06.01.2018</h3>
+            </div>
+            <div class="task">
+              <h3>Task name-one</h3>
+              <div class="author">
+                <span>12:45 am</span>
+                <label>William John</label>
+              </div>
+              <p>
+                Signed 1005 and/or leave and earning statement complete verbal verification of employment. 1005 and/or <span>Read More...</span>
+              </p>
+            </div>
+            <div class="task">
+              <h3>Task name-two</h3>
+              <div class="author">
+                <span>12:45 am</span>
+                <label>William John</label>
+              </div>
+              <p>
+                Signed 1005 and/or leave and earning statement complete verbal verification of employment. 1005 and/or <span>Read More...</span>
+              </p>
+            </div>
+            <div class="task">
+              <h3>Task name-three</h3>
+              <div class="author">
+                <span>12:45 am</span>
+                <label>William John</label>
+              </div>
+              <p>
+                Signed 1005 and/or leave and earning statement complete verbal verification of employment. 1005 and/or <span>Read More...</span>
+              </p>
+            </div>
+          </li>
+          <li class="clearfix">
+            <div class="bullet"></div>
+            <div class="notesDate clearfix">
+              <h3>12.01.2018</h3>
+            </div>
+            <div class="task">
+              <h3>Task name-one</h3>
+              <div class="author">
+                <span>12:45 am</span>
+                <label>William John</label>
+              </div>
+              <p>
+                Signed 1005 and/or leave and earning statement complete verbal verification of employment. 1005 and/or <span>Read More...</span>
+              </p>
+            </div>
+            <div class="task">
+              <h3>Task name-two</h3>
+              <div class="author">
+                <span>12:45 am</span>
+                <label>William John</label>
+              </div>
+              <p>
+                Signed 1005 and/or leave and earning statement complete verbal verification of employment. 1005 and/or <span>Read More...</span>
+              </p>
+            </div>
+          </li>
+        </ul>
+        <div class="closeSection">
+          <span>Cancel</span>
+          <span class="view">View All</span>
+        </div>
+      </div>
       <!-- Categories and task condition -->
       <div class="mainSection clearfix">
-        <div class="leftMenu col-md-2 col-xs-2">
+       <!-- side menu -->
+        <div class="leftMenu col-md-2 col-xs-2"> 
           <select class="form-control">
             <option>View All Category</option>
             <option>All</option>
@@ -127,7 +294,7 @@
             <option>Prior to Funding</option>
             <option>Prior to Underwriting</option>
           </select>
-          <ul class="">
+          <ul>
             <li>
               ADDED BY DU
             </li>
@@ -160,6 +327,7 @@
             </li>
           </ul>
         </div>
+        <!-- content -->
         <!-- borrower list -->
         <div class="rightMenu col-md-10 col-xs-10 paddingRight">
           <ul class="borrowerList">
@@ -168,7 +336,7 @@
             <li>Co-Borrower 2</li>
           </ul>
           <!-- Task lists -->
-          <ul class="taskList">
+          <ul class="taskList clearfix">
             <li>Task List</li>
             <li>1003 Form</li>
           </ul>
@@ -177,155 +345,162 @@
           <div class="editCondition">
             <h3>(And) all required Validation</h3>
             <ul class="row">
-                <!-- <li class="col-md-1 col-xs-1">
+              <!-- <li class="col-md-1 col-xs-1">
                   <span class="dropdownIcon"></span>
                 </li> -->
-                <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload divorse degree Satisfied</li>
-                <li class="col-md-1 col-xs-1">Satisfied</li>
-                <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
-                <!-- <li class="col-md-1 col-xs-1">
+              <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload divorse degree Satisfied</li>
+              <li class="col-md-1 col-xs-1">Satisfied</li>
+              <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
+              <!-- <li class="col-md-1 col-xs-1">
                   <span class="settingIcon"></span>
                 </li> -->
-                <li class="col-md-2 col-xs-2">
-                    <span class="settingIcon"></span>
-                  <span class="dropDown"></span>
-                  <span class="addIconTop"></span>
-                  <span class="addIconBottom"></span>
-                </li>
-    
-              </ul>
-              <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
-              <ul class="row pendingrows">
-                <!-- <li class="col-md-1 col-xs-1">
-                  <span class="dropdownIcon"></span>
-                </li> -->
-                <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload seperation Agreement</li>
-                <li class="col-md-1 col-xs-1">Pending</li>
-                <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
-                <li class="col-md-2 col-xs-2">Loan Officer</li>
-                <!-- <li class="col-md-1 col-xs-1">
-                  <span></span>
-                </li> -->
-                <li class="col-md-2 col-xs-2">
-                    <span class="settingIcon"></span>
-                  <label class="orOption">OR</label>
-                  <span class="dropDown"></span>
-                  <span class="addIconTop"></span>
-                  <span class="addIconBottom"></span>
-                </li>
-    
-              </ul>
-              <ul class="row pendingrows">
-                <!-- <li class="col-md-1 col-xs-1">
-                  <span class="dropdownIcon"></span>
-                </li> -->
-                <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload Court Degree</li>
-                <li class="col-md-1 col-xs-1">Pending</li>
-                <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
-                <li class="col-md-2 col-xs-2">Loan Officer</li>
-                <!-- <li class="col-md-1 col-xs-1">
-                  <span></span>
-                </li> -->
-                <li class="col-md-2 col-xs-2">
-                    <span class="settingIcon"></span>
-                  <label class="orOption">OR</label>
-                  <span class="dropDown"></span>
-                  <span class="addIconTop"></span>
-                  <span class="addIconBottom"></span>
-                </li>
-    
-              </ul>
-              <ul class="row pendingrows">
-                <!-- <li class="col-md-1 col-xs-1">
-                  <span class="dropdownIcon"></span>
-                </li> -->
-                <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload any Legal Documents</li>
-                <li class="col-md-1 col-xs-1">Pending</li>
-                <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
-                <li class="col-md-2 col-xs-2">Loan Officer</li>
-                <!-- <li class="col-md-1 col-xs-1">
-                  <span></span>
-                </li> -->
-                <li class="col-md-2 col-xs-2">
-                    <span class="settingIcon"></span>
-                  <label class="orOption">OR</label>
-                  <span class="dropDown"></span>
-                  <span class="addIconTop"></span>
-                </li>
-    
-              </ul>
-              <div class="sourceInformation">
-                <span class="closeIcon"></span>
-                <label class="soruce">
-                  <span>Source: </span>System Default</label>
-                <label>
-                  <span>Reason:</span>Info Closed after discusssion with loan Officer</label>
-                <p>
-                  <span>Task: </span>Lorm ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
-                  massa. Cum sociss natoque penatibus et magnis</p>
+              <li class="col-md-2 col-xs-2 paddingLeft">
+                <span class="settingIcon"></span>
+                <span class="dropDown"></span>
                 <span class="addIconTop"></span>
-              </div>
-            </div>
-            <div class="toggleBtn">
-              <div class="andState">And</div>
-              <span>Or</span>
-            </div>
-            <h3>Task Validation Category 2</h3>
-            <div class="editCondition">
-              <h3>(And) all required Validation</h3>
-              <ul class="row">
-                <!-- <li class="col-md-1 col-xs-1">
+                <span class="addIconBottom"></span>
+              </li>
+
+            </ul>
+            <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+            <ul class="row pendingrows">
+              <!-- <li class="col-md-1 col-xs-1">
                   <span class="dropdownIcon"></span>
                 </li> -->
-                <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload divorse degree Satisfied</li>
-                <li class="col-md-1 col-xs-1">Satisfied</li>
-                <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
-                <!-- <li class="col-md-1 col-xs-1">
+              <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload seperation Agreement</li>
+              <li class="col-md-1 col-xs-1">Pending</li>
+              <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+              <li class="col-md-2 col-xs-2">Loan Officer</li>
+              <!-- <li class="col-md-1 col-xs-1">
                   <span></span>
                 </li> -->
-                <li class="col-md-2 col-xs-2">
-                    <span class="settingIcon"></span>
-                  <span class="dropDown"></span>
-                  <span class="addIconTop"></span>
-                  <span class="addIconBottom"></span>
-                </li>
-    
-              </ul>
-              <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
-              <ul class="addTask row">
-                <li class="col-md-2">
+              <li class="col-md-2 col-xs-2">
+                <span class="settingIcon"></span>
+                <label class="orOption">OR</label>
+                <span class="dropDown"></span>
+                <span class="addIconTop"></span>
+                <span class="addIconBottom"></span>
+              </li>
+
+            </ul>
+            <ul class="row pendingrows">
+              <!-- <li class="col-md-1 col-xs-1">
+                  <span class="dropdownIcon"></span>
+                </li> -->
+              <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload Court Degree</li>
+              <li class="col-md-1 col-xs-1">Pending</li>
+              <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+              <li class="col-md-2 col-xs-2">Loan Officer</li>
+              <!-- <li class="col-md-1 col-xs-1">
                   <span></span>
-                  <label>Add Task</label>
-                </li>
-              </ul>
+                </li> -->
+              <li class="col-md-2 col-xs-2">
+                <span class="settingIcon"></span>
+                <label class="orOption">OR</label>
+                <span class="dropDown"></span>
+                <span class="addIconTop"></span>
+                <span class="addIconBottom"></span>
+              </li>
+
+            </ul>
+            <ul class="row pendingrows">
+              <!-- <li class="col-md-1 col-xs-1">
+                  <span class="dropdownIcon"></span>
+                </li> -->
+              <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload any Legal Documents</li>
+              <li class="col-md-1 col-xs-1">Pending</li>
+              <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+              <li class="col-md-2 col-xs-2">Loan Officer</li>
+              <!-- <li class="col-md-1 col-xs-1">
+                  <span></span>
+                </li> -->
+              <li class="col-md-2 col-xs-2">
+                <span class="settingIcon"></span>
+                <label class="orOption">OR</label>
+                <span class="dropDown"></span>
+                <span class="addIconTop"></span>
+              </li>
+
+            </ul>
+            <div class="sourceInformation">
+              <span class="closeIcon"></span>
+              <label class="soruce">
+                  <span>Source: </span>System Default</label>
+              <label>
+                  <span>Reason:</span>Info Closed after discusssion with loan Officer</label>
+              <p>
+                <span>Task: </span>Lorm ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                Aenean massa. Cum sociss natoque penatibus et magnis</p>
+              <span class="addIconTop"></span>
             </div>
-            
+          </div>
+          <div class="toggleBtn">
+            <div class="andState">And</div>
+            <span>Or</span>
+          </div>
+          <h3>Task Validation Category 2</h3>
+          <div class="editCondition">
+            <h3>(And) all required Validation</h3>
+            <ul class="row">
+              <!-- <li class="col-md-1 col-xs-1">
+                  <span class="dropdownIcon"></span>
+                </li> -->
+              <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload divorse degree Satisfied</li>
+              <li class="col-md-1 col-xs-1">Satisfied</li>
+              <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
+              <!-- <li class="col-md-1 col-xs-1">
+                  <span></span>
+                </li> -->
+              <li class="col-md-2 col-xs-2">
+                <span class="settingIcon"></span>
+                <span class="dropDown"></span>
+                <span class="addIconTop"></span>
+                <span class="addIconBottom"></span>
+              </li>
+
+            </ul>
+            <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+            <ul class="addTask row">
+              <li class="col-md-2">
+                <span></span>
+                <label>Add Task</label>
+              </li>
+            </ul>
           </div>
 
+        </div>
+
       </div>
-      <div class="clearfix">
+      <div class="button-wrapper clearfix">
         <div class="col-md-2 col-xs-2 suspended">
           <label>Suspended</label>
           <label class="suspensionCount">6/2</label>
           <span></span>
         </div>
-        <div class="col-md-10 paddingRight">
-          <div class="button-wrapper clearfix">
-            <button type="submit" class="btn btn-primary add">
+        <div class="col-md-10 col-xs-10 clearfix paddingRight">
+
+          <button type="submit" class="btn btn-primary add">
                     <label>Add Task</label>
                     <span></span>
                   </button>
-            <button type="submit" class="btn btn-primary start">
+          <button type="submit" class="btn btn-primary start">
                   <label>Start Execution</label>
                   <span></span>
                 </button>
-          </div>
+
+
+
         </div>
       </div>
     </div>
+    <div class="footer row">
+      <span>Copyright &#169;2018-Finrules,All rights reserved. </span>
+    </div>
   </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../assets/js/script.js"></script>
 </body>
 
 </html>
