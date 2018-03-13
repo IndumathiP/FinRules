@@ -263,20 +263,22 @@
 
 }
 
-h2{
-  color: @secondary-background;
-  font-family: Roboto-Regular;
-    padding-left: 15px;
+.paddingTop8 {
+     padding-top: 8px;
 }
-/**Styling for Tabs**/
+ h2{
+     color: @secondary-background;
+     font-family: Roboto-Regular;
+     padding-left: 15px;
+}
  ul.tabs{
-     border-bottom: 1px solid #E7F2F0;
-     background: #f9f9f9;
-     display: inline-block;
+     font-size: 13px;
      width: 100%;
+     display: flex;
+     max-height: 62px;
      li.tab-link{
          background: #f9f9f9;
-         padding: 10px 20px;
+         padding: 17px 20px;
          cursor: pointer;
          width: 25%;
          position: relative;
@@ -291,8 +293,11 @@ h2{
             }
         }
          i.fa.fa-angle-right {
-             font-size: 45px;
+             font-size: 40px;
              color: #A8A8A8;
+             position: absolute;
+             left: 3px;
+             top: -6px;
         }
          .step{
              font-family: Roboto-light;
@@ -304,11 +309,11 @@ h2{
              background: #fff;
              color: #000;
              &:after{
-                 border-left: 34px solid white;
+                 border-left: 30px solid white;
             }
         }
          &:first-child {
-             padding: 26px 0;
+             padding: 25px 0;
         }
          &:after {
              content: '';
@@ -317,10 +322,10 @@ h2{
              top: 1px;
              width: 0;
              height: 0;
-             border-top: 34px solid transparent;
-             border-bottom: 34px solid transparent;
+             border-top: 30px solid transparent;
+             border-bottom: 30px solid transparent;
              z-index: 9;
-             border-left: 34px solid #f9f9f9;
+             border-left: 30px solid #f9f9f9;
         }
     }
 }
@@ -328,12 +333,61 @@ h2{
      display: none;
      background: #fff;
      padding: 15px;
+     font-size: 14px;
 }
  .tab-content.current{
      display: inherit;
 }
-.chevronStatus{
-    border-left: 1px solid grey;
-    padding-left: 10px;
-    margin-left: 10px;
+ .chevronStatus{
+     border-left: 1px solid grey;
 }
+ .summary{
+     overflow: hidden;
+     position: relative;
+     .legend{
+         &:after {
+             content: '';
+             position: absolute;
+             background: #47AE9D;
+             width: 100%;
+             height: 1px;
+             margin: 6px;
+        }
+    }
+     p{
+         line-height: 16px;
+    }
+     .taskContent{
+         padding-left: 7%;
+         &:before{
+             content: ":";
+             position: relative;
+             right: 20px;
+        }
+    }
+     .condition{
+         padding: 15px;
+         li{
+             padding-bottom: 30px;
+        }
+         label{
+             font-family: Roboto-Bold;
+             white-space: nowrap;
+        }
+         span:not(.task):before{
+             content: ":";
+             padding-right: 20px;
+        }
+    }
+     .fa-check-circle{
+         color: #6DC25E;
+         font-size: 20px;
+         margin-right: 10px;
+    }
+     i.fa.fa-info-circle {
+         color: @secondary-background;
+         font-size: 18px;
+         margin-left: 15px;
+    }
+}
+ 
