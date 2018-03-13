@@ -2,128 +2,145 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-		crossorigin="anonymous" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet/less" type="text/css" href="../assets/css/styles.less" />
-	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet/less" type="text/css" href="../assets/css/styles.less" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
 
 </head>
 
 <body>
-	<div class="conditionWrapper">
-		<ul class="tabs">
-			<li class="tab-link current pull-left text-center" data-tab="tab-1">
-                <label class="step">Step 1 : </label> <label class="stepTitle"> Conditions</label>
-            </li>
-			<li class="tab-link pull-left text-center" data-tab="tab-2">
-                <i class="fa fa-angle-right pull-left"></i>
-                <label class="step">Step 2 : </label><label class="stepTitle">Task</label>
-            </li>
-			<li class="tab-link pull-left text-center" data-tab="tab-3">
-                <i class="fa fa-angle-right pull-left"></i>
-                <label class="step">Step 3 : </label><label class="stepTitle"> Business Rule</label>
-            </li>
-			<li class="tab-link pull-left text-center" data-tab="tab-4">
-                <i class="fa fa-angle-right pull-left"></i>
-                <label class="step">Step 4 : </label><label class="stepTitle"> Summary</label>
-            </li>
-		</ul>
-		<div id="tab-1" class="tab-content current">
-        <h3>CREATE CONDITION FRON UNASSIGNED</h3>
-        <div class="duFindings clearfix">
-          <h2>UNASSIGNED
-            <span>(03)</span>
-          </h2>
-          <div class="duCards">
-            <div class="singleduCard">
-              <label class="cardCheck">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-              <h2>DU Findings</h2>
-              <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no
-                greater
-              </p>
-            </div>
-            <div class="singleduCard">
-              <label class="cardCheck">
-                <input type="checkbox" checked="checked">
-                <span class="checkmark"></span>
-              </label>
-              <h2>DU Findings</h2>
-              <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no
-                greater
-              </p>
-            </div>
-            <div class="singleduCard">
-              <label class="cardCheck">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-              <h2>DU Findings</h2>
-              <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no
-                greater
-              </p>
-            </div>
-            <div class="subDivider"><span>OR</span></div>
+  <div class="conditionWrapper">
+    <ul class="tabs">
+      <li class="tab-link current pull-left text-center" data-tab="tab-1">
+        <label class="step">Step 1 : </label>
+        <label class="stepTitle"> Conditions</label>
+      </li>
+      <li class="tab-link pull-left text-center" data-tab="tab-2">
+        <i class="fa fa-angle-right pull-left"></i>
+        <label class="step">Step 2 : </label>
+        <label class="stepTitle">Task</label>
+      </li>
+      <li class="tab-link pull-left text-center" data-tab="tab-3">
+        <i class="fa fa-angle-right pull-left"></i>
+        <label class="step">Step 3 : </label>
+        <label class="stepTitle"> Business Rule</label>
+      </li>
+      <li class="tab-link pull-left text-center" data-tab="tab-4">
+        <i class="fa fa-angle-right pull-left"></i>
+        <label class="step">Step 4 : </label>
+        <label class="stepTitle"> Summary</label>
+      </li>
+    </ul>
+    <div id="tab-1" class="tab-content current">
+      <h3>CREATE CONDITION FRON UNASSIGNED</h3>
+      <div class="duFindings clearfix">
+        <h2>UNASSIGNED
+          <span>(03)</span>
+        </h2>
+        <div class="duCards">
+          <div class="singleduCard">
+            <label class="cardCheck">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <h2>DU Findings</h2>
+            <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct
+              no greater
+            </p>
           </div>
-          
-          <div class="createNewCondition">
-              <h2>CREATE NEW CONDITION</h2>
-            <div class="form-row">
-              <div class="form-group col-md-4 col-xs-4">
-                  <label for="name">Condition Name</label>
-                  <input type="text" class="form-control" placeholder="Tip Income">
-              </div>
-              <div class="form-group col-md-4 col-xs-4">
-                  <label for="category">Condition Category</label>
-                  <input type="text" class="form-control" placeholder="Prior To Finding">
-              </div>
-              <div class="form-group col-md-4 col-xs-4">
-                  <label for="type">Condition Type</label>
-                  <input type="text" class="form-control" placeholder="Income">
-              </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-4 col-xs-4">
-                    <label for="name">Condition for Loan</label>
-                    <textarea name="Text1" cols="49" rows="5">Tip income was entered on the loan application. This income must have received for the last two years and must be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005)."
-                      </textarea>
-                </div>
-                <div class="form-group col-md-4 col-xs-4">
-                    <label for="category">Findings from DU</label>
-                    <textarea name="Text1" cols="49" rows="5">Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no greater</textarea>
-                </div>
-              </div>
+          <div class="singleduCard">
+            <label class="cardCheck">
+              <input type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+            </label>
+            <h2>DU Findings</h2>
+            <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct
+              no greater
+            </p>
+          </div>
+          <div class="singleduCard">
+            <label class="cardCheck">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <h2>DU Findings</h2>
+            <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct
+              no greater
+            </p>
+          </div>
+          <div class="subDivider">
+            <span>OR</span>
           </div>
         </div>
-		</div>
-		<div id="tab-2" class="tab-content">
-			Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-			cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</div>
-		<div id="tab-3" class="tab-content">
-			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-			dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-		</div>
-		<div id="tab-4" class="tab-content">
-			Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-			laboris nisi ut aliquip ex ea commodo consequat.
-		</div>
-	</div>
-	<div class="conditionWrapper">
-		<h3>CREATE CONDITION FRON UNASSIGNED</h3>
 
-	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="../assets/jquery/jquery.js"></script>
+        <div class="createNewCondition">
+          <h2>CREATE NEW CONDITION</h2>
+          <div class="form-row">
+            <div class="form-group col-md-4 col-xs-4">
+              <label for="name">Condition Name</label>
+              <input type="text" class="form-control" placeholder="Tip Income">
+            </div>
+            <div class="form-group col-md-4 col-xs-4">
+              <label for="category">Condition Category</label>
+              <input type="text" class="form-control" placeholder="Prior To Finding">
+            </div>
+            <div class="form-group col-md-4 col-xs-4">
+              <label for="type">Condition Type</label>
+              <input type="text" class="form-control" placeholder="Income">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4 col-xs-4">
+              <label for="name">Condition for Loan</label>
+              <textarea name="Text1" cols="49" rows="5">Tip income was entered on the loan application. This income must have received for the last two years and must be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005)."
+                      </textarea>
+            </div>
+            <div class="form-group col-md-4 col-xs-4">
+              <label for="category">Findings from DU</label>
+              <textarea name="Text1" cols="49" rows="5">Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no greater</textarea>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper clearfix">
+          <button type="submit" class="btn btn-primary next">
+            <label>Next</label>
+            <span></span>
+          </button>
+          <button type="submit" class="btn btn-primary cancel">
+            <span>
+              <i class="fa fa-close"></i>
+            </span>
+            <label>Cancel</label>
+
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <div id="tab-2" class="tab-content">
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div id="tab-3" class="tab-content">
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </div>
+    <div id="tab-4" class="tab-content">
+      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../assets/jquery/jquery.js"></script>
 </body>
 
 </html>
