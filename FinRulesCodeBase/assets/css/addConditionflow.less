@@ -158,12 +158,16 @@
 	 }
 }
 
-
+h2{
+  color: @secondary-background;
+  font-family: Roboto-Regular;
+    padding-left: 15px;
+}
  ul.tabs{
-     margin: 0px;
-     padding: 0px;
-     list-style: none;
+     border-bottom: 1px solid #E7F2F0;
      background: #f9f9f9;
+     display: inline-block;
+     width: 100%;
      li.tab-link{
          background: #f9f9f9;
          padding: 10px 20px;
@@ -182,10 +186,6 @@
         }
          i.fa.fa-angle-right {
              font-size: 45px;
-             position: absolute;
-             left: 15px;
-             top: 3px;
-             z-index: 99;
              color: #A8A8A8;
         }
          .step{
@@ -198,23 +198,23 @@
              background: #fff;
              color: #000;
              &:after{
-                 border-left: 28px solid white;
+                 border-left: 34px solid white;
             }
         }
          &:first-child {
-             padding: 18px;
+             padding: 26px 0;
         }
          &:after {
              content: '';
              position: absolute;
-             right: -27px;
-             top: 0px;
+             right: -30px;
+             top: 1px;
              width: 0;
              height: 0;
-             border-top: 28px solid transparent;
-             border-bottom: 28px solid transparent;
+             border-top: 34px solid transparent;
+             border-bottom: 34px solid transparent;
              z-index: 9;
-             border-left: 28px solid #f9f9f9;
+             border-left: 34px solid #f9f9f9;
         }
     }
 }
@@ -225,4 +225,9 @@
 }
  .tab-content.current{
      display: inherit;
+}
+.chevronStatus{
+    border-left: 1px solid grey;
+    padding-left: 10px;
+    margin-left: 10px;
 }
