@@ -285,15 +285,18 @@
       <div class="mainSection clearfix">
        <!-- side menu -->
         <div class="leftMenu col-md-2 col-xs-2"> 
-          <select class="form-control">
-            <option>View All Category</option>
-            <option>All</option>
-            <option>Prior to Approval</option>
-            <option>Prior to Document</option>
-            <option>Prior to Closing</option>
-            <option>Prior to Funding</option>
-            <option>Prior to Underwriting</option>
-          </select>
+          <div class="category">  View All Category <a href="javascript:void(0)" class="catageory-select pull-right" data-toggle="collapse" data-target="#category-list" ></a>
+            
+            <div class="category-list collapse" id="category-list">
+              <div><a href="javascript:void(0)">All</a></div>
+              <div><a href="javascript:void(0)">Prior to Approval</a></div>
+              <div><a href="javascript:void(0)">Prior to Document</a></div>
+              <div><a href="javascript:void(0)">Prior to Closing</a></div>
+              <div><a href="javascript:void(0)">Prior to Funding</a></div>
+              <div><a href="javascript:void(0)">Prior to Underwriting</a></div>
+            </div>
+          
+          </div>
           <ul>
             <li>
               ADDED BY DU
@@ -345,21 +348,26 @@
           <div class="editCondition">
             <h3>(And) all required Validation</h3>
             <ul class="row">
-              <!-- <li class="col-md-1 col-xs-1">
-                  <span class="dropdownIcon"></span>
-                </li> -->
+              
               <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload divorse degree Satisfied</li>
               <li class="col-md-1 col-xs-1">Satisfied</li>
               <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
-              <!-- <li class="col-md-1 col-xs-1">
-                  <span class="settingIcon"></span>
-                </li> -->
-              <li class="col-md-2 col-xs-2 paddingLeft">
-                <span class="settingIcon"></span>
-                <span class="dropDown"></span>
-                <span class="addIconTop"></span>
-                <span class="addIconBottom"></span>
-              </li>
+               <!-- validation- operation -->
+                <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
+                  <span class="settingIcon" data-toggle="collapse" data-target="#pop-up">
+                    <ul class="collapse validation_action" id="pop-up" >
+                      <div class="option"><span class="delete"></span>Delete</div>
+                      <div class="option"><span class="manage"></span>Manage</div>
+                      <div class="option"><span class="reopen"></span>Reopen</div>
+                      <div class="tip"></div>
+                      <div class="tip in"></div>
+                    </ul>
+                  </span>
+                  <span class="dropDown"></span>
+                  <span class="addIconTop"></span>
+                  <span class="addIconBottom"></span>
+                  
+                </li>
 
             </ul>
             <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>

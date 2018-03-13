@@ -236,8 +236,8 @@
         .paddingRight {
             padding-right: 0;
         }
-        .paddingLeft{
-          padding-left: 0;
+        .paddingLeft {
+            padding-left: 0;
         }
         .activeCondition {
             padding: 20px 0;
@@ -373,15 +373,38 @@
             -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
             box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
             padding: 0;
-            select {
+            .category {
                 background: @selectbox-background;
                 border-radius: 0;
-                height: 40px;
+                padding: 10px;
                 -webkit-appearance: none;
                 -moz-appearance: none;
                 text-indent: 1px;
-                option {
-                    background: @primary-color;
+                position: relative;
+                .catageory-select {
+                    background: url('../images/Sprite_FinRules-psd.png') no-repeat -677px -83px;
+                    width: 12px;
+                    height: 7px;
+                    display: inline-block;
+                }
+                .category-list {
+                    position: absolute;
+                    background-color: #ffffff;
+                    border: 1px solid #EBEFEE;
+                    width: 90%;
+                    right: 0;
+                    top: 35px;
+                    z-index: 10;
+                    div {
+                        padding: 7px;
+                        border-bottom: 1px solid #EBEFEE;
+                        a {
+                            color: #9AA1A4;
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                    }
                 }
             }
             ul {
@@ -511,7 +534,67 @@
                             width: 3px;
                             height: 13px;
                             float: left;
-                        }
+                            cursor: pointer;   
+                          //  display: inline-block;  
+                            position: relative;
+            
+                              .validation_action {
+                                position: absolute;
+                                z-index: 1;
+                                top:-50px;
+                                left:-120px;
+                                padding:0;
+                                border:1px solid #B1B9C9;
+                                border-radius: 2px;
+                                width: 80px;
+                                // display: none;
+                                .option {
+                                    border-bottom: 1px solid #F8F8F8;
+                                    padding:10px;
+                                    color:#949494;
+                                    font-size: 11px;
+                                    .delete {
+                                      background: url('../images/Sprite_FinRules-psd.png') no-repeat -243px -146px;
+                                      width: 13px;
+                                      height: 16px;
+                                      display: inline-block;
+                                      vertical-align: sub;
+                                      margin-right:5px;
+                                    }
+                                    .manage {
+                                      background: url('../images/Sprite_FinRules-psd.png') no-repeat -293px -146px;
+                                      width: 16px;
+                                      height: 16px;
+                                      display: inline-block;
+                                      vertical-align:sub;
+                                      margin-right:2px;
+                                    }
+                                    .reopen {
+                                      background: url('../images/Sprite_FinRules-psd.png') no-repeat -346px -146px;
+                                      width: 11px;
+                                      height: 17px;
+                                      display: inline-block;
+                                      vertical-align:sub;
+                                      margin-right:2px;
+                                    }
+                                  }
+                                  .tip {
+                                    border:10px solid;
+                                    border-color:transparent transparent transparent #B1B9C9;
+                                    position: absolute;
+                                    top: 22%;
+                                    left: 100%;
+                                  }
+                                  .in {
+                                    top:23%;
+                                    left: 99%;
+                                    border:8px solid;
+                                    border-color:transparent transparent transparent #ffffff;
+                                  }
+                                  
+                              }
+                                        
+                          }
                         .dropDown {
                             background: url('../images/Sprite_FinRules.png') no-repeat -86px -131px;
                             width: 18px;
