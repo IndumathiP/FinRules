@@ -1,3 +1,141 @@
+@primary-border: #E7E7E7;
+@primary-background: #F8F8F8;
+@open-status-border: #FECD62;
+@closed-status-border: #F48185;
+@primary-button-color: #FFAB31;
+@secondary-background: #47AE9D;
+@primary-color: #fff;
+@secondary-color: #000;
+@navbar-background: #41A292;
+@secondary-text :#767F85;
+@selectbox-background: #D3D7DA;
+@list-background: #F1F5F6;
+@base-background: #8F989D;
+.conditionWrapper {
+		padding: 0 15px;
+		.duFindings {
+				h2 {
+						.h2style();
+						span {
+								color: @secondary-color;
+					 }
+			 }
+				.duCards {
+						margin-bottom: 20px;
+						margin-right: 20px;
+						display: flex;
+						padding: 40px 20px;
+						border-bottom: 2px solid @primary-border;
+						background: #FAFAFA;
+						position: relative;
+						.singleduCard {
+								position: relative;
+								margin-right:14px;
+								.cardStyle();
+								width: 250px;
+								border-bottom: 3px solid @open-status-border;
+								h2 {
+										background: @primary-background;
+										padding: 25px 20px;
+										color: @secondary-color;
+							 }
+								p {
+										padding: 20px 20px 30px;
+										background-color: @primary-color;
+										.pstyle();
+							 }
+							 .cardCheck {
+								position: absolute;
+								cursor: pointer;
+								font-size: 22px;
+								right: 35px;
+								top: 10px;
+							 /* Hide the browser's default checkbox */
+								input {
+										position: absolute;
+										opacity: 0;
+										cursor: pointer;
+									 /* When the checkbox is checked, add a blue background */
+										&:checked ~ .checkmark {
+												background-color: @secondary-background;
+												border:2px solid @secondary-background 
+									 }
+									 /* Show the checkmark when checked */
+										&:checked ~ .checkmark:after {
+												display: block;
+									 }
+							 }
+							 /* Create a custom checkbox */
+								.checkmark {
+										position: absolute;
+										top: 0;
+										left: 0;
+										height: 25px;
+										width: 25px;
+										background-color: @primary-color;
+										border-radius: 6px;
+										border: 2px solid @primary-border;
+									 /* Create the checkmark/indicator (hidden when not checked) */
+										&::after {
+												content: "";
+												position: absolute;
+												display: none;
+									 }
+									 /* Style the checkmark/indicator */
+										&:after {
+												left: 9px;
+												top: 5px;
+												width: 5px;
+												height: 10px;
+												border: solid white;
+												border-width: 0 3px 3px 0;
+												-webkit-transform: rotate(45deg);
+												-ms-transform: rotate(45deg);
+												transform: rotate(45deg);
+									 }
+							 }
+						}
+					 }
+						.subDivider {
+								position: absolute;
+								bottom: -20px;
+								left: 50%;
+								width: 40px;
+								height: 40px;
+								border: 1px solid @primary-border;
+								border-radius: 50%;
+								background: @primary-color;
+								span {
+										position: relative;
+										top: 11px;
+										left: 7px;
+							 }
+					 }
+			 }
+			 .createNewCondition {
+				 .form-row {
+					 margin-bottom: 20px;
+				 }
+				 label {
+					 font-family: Roboto-Regular;
+					 margin-bottom: 5px;
+					 
+				 }
+				 input, textarea {
+					 font-family: Roboto-Regular;
+				 }
+				 textarea {
+					 font-size: 15px;
+					 padding: 10px;
+					 border: 1px solid #ccc;
+					 box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+					 color: @secondary-text;
+				 }
+			 }
+	 }
+}
+
+
  ul.tabs{
      margin: 0px;
      padding: 0px;
