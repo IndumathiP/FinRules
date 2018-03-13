@@ -1,1 +1,68 @@
-XX
+ ul.tabs{
+     margin: 0px;
+     padding: 0px;
+     list-style: none;
+     background: #f9f9f9;
+     li.tab-link{
+         background: #f9f9f9;
+         padding: 10px 20px;
+         cursor: pointer;
+         width: 25%;
+         position: relative;
+         color: #C0C0C0;
+         i+label{
+             padding: 8px;
+             &:nth-child(even){
+                 font-family: Roboto-light;
+            }
+             &:nth-child(odd){
+                 font-family: Roboto-Bold;
+            }
+        }
+         i.fa.fa-angle-right {
+             font-size: 45px;
+             position: absolute;
+             left: 15px;
+             top: 3px;
+             z-index: 99;
+             color: #A8A8A8;
+        }
+         .step{
+             font-family: Roboto-light;
+        }
+         .stepTitle{
+             font-family: Roboto-Bold;
+        }
+         &.current{
+             background: #fff;
+             color: #000;
+             &:after{
+                 border-left: 28px solid white;
+            }
+        }
+         &:first-child {
+             padding: 18px;
+        }
+         &:after {
+             content: '';
+             position: absolute;
+             right: -27px;
+             top: 0px;
+             width: 0;
+             height: 0;
+             border-top: 28px solid transparent;
+             border-bottom: 28px solid transparent;
+             z-index: 9;
+             border-left: 28px solid #f9f9f9;
+        }
+    }
+}
+ .tab-content{
+     display: none;
+     background: #fff;
+     padding: 15px;
+}
+ .tab-content.current{
+     display: inherit;
+}
+ 
