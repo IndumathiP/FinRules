@@ -21,6 +21,8 @@
 .conditionWrapper {
         padding: 0 15px;
         font-family: Roboto-Light;
+        font-size: 14px;
+        // Conditions Tab Styling Starts
 		.duFindings {
 				h2 {
 						.h2style();
@@ -155,7 +157,110 @@
                      float:right;
                  }
              }
-	 }
+     }
+     //Condition tab styling ends
+
+     /* Task Wrapper Styling Begins*/
+     .taskWrapper {
+         padding:20px 10px;
+         h2 {
+             padding:20px 0;
+         }
+        .taskList {
+            padding: 10px;
+            border: 1px solid #E7E7E7;
+            background: #E9E9E9;
+            .search {
+                background: @secondary-background;
+                border:1px solid @secondary-background;
+                color: @primary-color;
+            }
+            .reset {
+                background: @secondary-text;
+                border:1px solid @secondary-text;
+                color: @primary-color;
+            }
+        }
+        .accordion {
+            padding:20px;
+            background: #F4F4F4;
+            ul {
+                li {
+                    padding:15px;
+                    background: @primary-color;
+                    position: relative;
+                    margin-bottom: 10px;
+                    label {
+                        padding:0 20px;
+                    }
+                    a {
+                        padding: 5px;
+                        color: @primary-button-color;
+                        border: 1px solid @primary-button-color;
+                        border-radius: 3px;
+                        text-align: right;
+                        position: absolute;
+                        right: 12px;
+                        bottom: 8px;
+                    }
+                    .expand {
+                        background: url('../images/Sprite_FinRules-psd.png') no-repeat -842px -77px;
+                        width: 16px;
+                        height: 17px;
+                        float: left;
+                    }
+                }
+                li:nth-child(4) {
+                    padding: 0;
+                    .listContent {
+                        padding:20px;
+                    }
+                    .verbalVerification {
+                        padding: 10px;
+                        background: #FAFAFA;
+                        label {
+                            padding:5px 20px;
+                            span {
+                                font-weight: bold;
+                                display: inline-block;
+                                width: 130px;
+                                &:after {
+                                    content: ':';
+                                    float: right;
+                                    padding-right: 20px;
+                                }
+                            }
+                        }
+                      .verbalList {
+                          display: inline-block;
+                          padding:20px;
+                        ul {
+                            width: 40%;
+                            float: left;
+                            padding:0 20px;
+                            li {
+                                padding: 0;
+                                background: #FAFAFA;
+                                line-height: 18px;
+                                &:before {
+                                    content: '\25CF';
+                                    font-size: 15px;
+                                    color: @navbar-background;
+                                    padding-right: 20px;
+                                }
+                            }
+                        }
+                        ul:first-child {
+                            border-right: 1px solid @primary-border;
+                        }
+                      }
+                    }
+                }
+                
+            }
+        }
+     }
+
 }
 
 h2{
@@ -163,6 +268,7 @@ h2{
   font-family: Roboto-Regular;
     padding-left: 15px;
 }
+/**Styling for Tabs**/
  ul.tabs{
      border-bottom: 1px solid #E7F2F0;
      background: #f9f9f9;

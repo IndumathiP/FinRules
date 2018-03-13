@@ -18,26 +18,30 @@
 <body>
   <div class="conditionWrapper">
     <h2>ADD CONDITION</h2>
-   <ul class="tabs">
-        <li class="tab-link current pull-left text-center" data-tab="tab-1">
-            <label class="step">Step 1 : </label> <label class="stepTitle"> Conditions</label>
-            <span class="chevronStatus">Tip Income</span>
-        </li>
-        <li class="tab-link pull-left text-center" data-tab="tab-2">
-            <i class="fa fa-angle-right pull-left"></i>
-            <label class="step">Step 2 : </label><label class="stepTitle">Task</label>
-            <span class="chevronStatus">Complete Verbal Verification</span>
-        </li>
-        <li class="tab-link pull-left text-center" data-tab="tab-3">
-            <i class="fa fa-angle-right pull-left"></i>
-            <label class="step">Step 3 : </label><label class="stepTitle"> Business Rule</label>
-            <span class="chevronStatus">Validate Document</span>
-        </li>
-        <li class="tab-link pull-left text-center" data-tab="tab-4">
-            <i class="fa fa-angle-right pull-left"></i>
-            <label class="step">Step 4 : </label><label class="stepTitle"> Summary</label>
-            <span class="chevronStatus">Review</span>
-        </li>
+    <ul class="tabs">
+      <li class="tab-link current pull-left text-center" data-tab="tab-1">
+        <label class="step">Step 1 : </label>
+        <label class="stepTitle"> Conditions</label>
+        <span class="chevronStatus">Tip Income</span>
+      </li>
+      <li class="tab-link pull-left text-center" data-tab="tab-2">
+        <i class="fa fa-angle-right pull-left"></i>
+        <label class="step">Step 2 : </label>
+        <label class="stepTitle">Task</label>
+        <span class="chevronStatus">Complete Verbal Verification</span>
+      </li>
+      <li class="tab-link pull-left text-center" data-tab="tab-3">
+        <i class="fa fa-angle-right pull-left"></i>
+        <label class="step">Step 3 : </label>
+        <label class="stepTitle"> Business Rule</label>
+        <span class="chevronStatus">Validate Document</span>
+      </li>
+      <li class="tab-link pull-left text-center" data-tab="tab-4">
+        <i class="fa fa-angle-right pull-left"></i>
+        <label class="step">Step 4 : </label>
+        <label class="stepTitle"> Summary</label>
+        <span class="chevronStatus">Review</span>
+      </li>
     </ul>
     <div id="tab-1" class="tab-content current">
       <h3>CREATE CONDITION FRON UNASSIGNED</h3>
@@ -126,12 +130,71 @@
       </div>
     </div>
     <div id="tab-2" class="tab-content">
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <div class="taskWrapper">
+        <h2>SELECT A TASK FROM EXISTING LIST</h2>
+        <div class="taskList">
+          <div class="form-row">
+            <div class="col-md-3 col-sm-3">
+              <input type="text" class="form-control" placeholder="Task Name">
+            </div>
+            <div class="col-md-3 col-sm-3">
+              <input type="text" class="form-control" placeholder="All Condition Type">
+            </div>
+            <button type="submit" class="search btn btn-primary">Search</button>
+            <button type="reset" class="reset btn btn-primary">Reset</button>
+          </div>
+        </div>
+        <div class="accordion">
+          <ul>
+            <li>
+              <span class="expand"></span>
+              <label>Provide signed 1005 form</label>
+              <a href="javascript:void(0)">Select</a>
+            </li>
+            <li>
+              <span class="expand"></span>
+              <label>Verify income through equifax</label>
+              <a href="javascript:void(0)">Select</a>
+            </li>
+            <li>
+              <span class="expand"></span>
+              <label>Provide leave and earning statement</label>
+              <a href="javascript:void(0)">Select</a>
+            </li>
+            <li>
+                <div class="listContent">
+                    <span class="expand"></span>
+                    <label>Complete Verbal Verification</label>
+                </div>
+              <div class="verbalVerification">
+                <label><span>Descriptions</span>The verbal verification must be dtaed no earlier than 30 days prior to the initial loan application date and it must include all year-to-date earnings.</label>
+                <label><span>Business Rules</span>Fields to be checked in document against 1003 form</label>
+                <div class="verbalList">
+                    <ul>
+                        <li>Income Payslip Availability</li>
+                        <li>Employee name matching</li>
+                        <li>Tip income was entered on the loan application. This income must have received for the last two years and must be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005).</li>
+                      </ul>
+                      <ul>
+                          <li>Income Payslip Availability</li>
+                          <li>Employee name matching</li>
+                          
+                        </ul>
+                </div>
+              </div>
+                <a href="javascript:void(0)">Select</a>
+              </li>
+            <li>
+                <span class="expand"></span>
+                <label>Provide form 16</label>
+                <a href="javascript:void(0)">Select</a>
+              </li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div id="tab-3" class="tab-content">
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      <h2>BUSINESS RULES</h2>
     </div>
     <div id="tab-4" class="tab-content">
       Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
