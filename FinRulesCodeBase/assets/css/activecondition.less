@@ -210,7 +210,7 @@
 							margin-top: 10px;
 							.closed {
 								float: right;
-								padding:0 50px;
+								padding:0 20px;
 							}
 						}
 						.threeDotIcon {
@@ -226,7 +226,7 @@
 							margin-top: 10px;
 							.closed {
 								float: right;
-								padding:0 50px;
+								padding:0 20px;
 							}
 						}
 						.threeDotIcon {
@@ -239,7 +239,7 @@
 					li:nth-child(4) {
 						background: @list-background;
 						color: @secondary-text;
-						font-size: 14px;
+						font-size: 12px;
 					}
 					li:nth-child(5) {
 						border-bottom: 1px solid @primary-border;
@@ -304,20 +304,35 @@
 								width: 16px;
 								height: 17px;
 								display: inline-block;
+								margin-right: 5px;
 							}
 						}
-						li:nth-child(3) {
+						li:nth-child(2) {
 							color: #5EA26B;
 						}
-						li:nth-child(5), li:nth-child(6) {
-							span {
+						li:nth-child(4), li:nth-child(5) {
+							.settingIcon {
 								background: url('../images/Sprite_FinRules.png') no-repeat -809px -79px;
 								width: 3px;
 								height: 13px;
-								display: inline-block;
+								float: left;
+							}
+							.dropDown {
+								background: url('../images/Sprite_FinRules.png') no-repeat -86px -131px;
+								width: 18px;
+								height: 18px;
+								float: right;
+							}
+							.addIconTop {
+								.addIcon();
+								bottom: 22px;
+							}
+							.addIconBottom {
+								.addIcon();
+								top: 22px;
 							}
 						}
-						li:nth-child(6), li:nth-child(7) {
+						li:nth-child(5), li:nth-child(6) {
 							.dropDown {
 								background: url('../images/Sprite_FinRules.png') no-repeat -86px -131px;
 								width: 18px;
@@ -336,16 +351,17 @@
 					}
 					.pendingrows {
 						margin-bottom: 0;
-						li:nth-child(3) {
+						li:nth-child(2) {
 							color: @closed-status-border;
 						}
-						li:nth-child(7) {
+						li:nth-child(5) {
 							padding: 0 15px 0 0;
 							.orOption {
 								padding: 4px 7px;
 								background: @primary-background;
 								color: #6E7D9A;
-								float: left;
+								position: relative;
+								left: 23%;
 								font-size: 14px;
 							}
 						}
