@@ -14,21 +14,26 @@
 .cancelbtn {
     background: @primary-color;
     border: 1px solid @primary-color;
-    color: @secondary-color;
-    width:150px;
-    height:45px;
-}
-.startbtn {
-    color: @primary-color;
-    background-color: @primary-button-color;
-    border: 1px solid @primary-button-color;
-    border-radius: 2px;
-    width: 185px;
-    height: 45px;
+    color: @secondary-color; // width: 150px;
+    // height: 45px;
     padding: 6px 22px;
     float: right;
     label {
-        padding: 3px 5px;
+        padding: 4px 8px;
+    }
+}
+
+.startbtn {
+    margin-right: 5px;
+    color: @primary-color;
+    background-color: @primary-button-color;
+    border: 1px solid @primary-button-color;
+    border-radius: 2px; // width: 185px;
+    // height: 45px;
+    padding: 6px 22px;
+    float: right;
+    label {
+        padding: 4px 8px;
     }
     span {
         background: url('../images/Sprite_FinRules.png') no-repeat -391px -74px;
@@ -37,376 +42,415 @@
         float: left;
     }
 }
+
 .conditionWrapper {
+    padding: 0 15px; // Conditions Tab Styling Starts
+    .col {
         padding: 0 15px;
-        font-family: Roboto-Light;
-        font-size: 14px;
-        // Conditions Tab Styling Starts
-		.duFindings {
-				h2 {
-						.h2style();
-						span {
-								color: @secondary-color;
-					 }
-			 }
-				.duCards {
-						margin-bottom: 20px;
-						margin-right: 20px;
-						display: flex;
-						padding: 40px 20px;
-						border-bottom: 2px solid @primary-border;
-						background: #FAFAFA;
-						position: relative;
-						.singleduCard {
-								position: relative;
-								margin-right:14px;
-								.cardStyle();
-								width: 250px;
-								border-bottom: 3px solid @open-status-border;
-								h2 {
-										background: @primary-background;
-										padding: 25px 20px;
-										color: @secondary-color;
-							 }
-								p {
-										padding: 20px 20px 30px;
-										background-color: @primary-color;
-										.pstyle();
-							 }
-							 .cardCheck {
-								position: absolute;
-								cursor: pointer;
-								font-size: 22px;
-								right: 35px;
-								top: 10px;
-							 /* Hide the browser's default checkbox */
-								input {
-										position: absolute;
-										opacity: 0;
-										cursor: pointer;
-									 /* When the checkbox is checked, add a blue background */
-										&:checked ~ .checkmark {
-												background-color: @secondary-background;
-												border:2px solid @secondary-background 
-									 }
-									 /* Show the checkmark when checked */
-										&:checked ~ .checkmark:after {
-												display: block;
-									 }
-							 }
-							 /* Create a custom checkbox */
-								.checkmark {
-										position: absolute;
-										top: 0;
-										left: 0;
-										height: 25px;
-										width: 25px;
-										background-color: @primary-color;
-										border-radius: 6px;
-										border: 2px solid @primary-border;
-									 /* Create the checkmark/indicator (hidden when not checked) */
-										&::after {
-												content: "";
-												position: absolute;
-												display: none;
-									 }
-									 /* Style the checkmark/indicator */
-										&:after {
-												left: 9px;
-												top: 5px;
-												width: 5px;
-												height: 10px;
-												border: solid white;
-												border-width: 0 3px 3px 0;
-												-webkit-transform: rotate(45deg);
-												-ms-transform: rotate(45deg);
-												transform: rotate(45deg);
-									 }
-							 }
-						}
-					 }
-						.subDivider {
-								position: absolute;
-								bottom: -20px;
-								left: 50%;
-								width: 40px;
-								height: 40px;
-								border: 1px solid @primary-border;
-								border-radius: 50%;
-								background: @primary-color;
-								span {
-										position: relative;
-										top: 11px;
-										left: 7px;
-							 }
-					 }
-			 }
-			 .createNewCondition {
-                 display: inline-block;
-                 width: 100%;
-                 border-bottom: 2px solid @primary-border;
-				 .form-row {
-                     margin-bottom: 20px;
-                     display: inline-block;
-                     width: 100%;
-				 }
-				 label {
-					 font-family: Roboto-Regular;
-					 margin-bottom: 5px;
-					 
-				 }
-				 input, textarea {
-					 font-family: Roboto-Regular;
-				 }
-				 textarea {
-					 font-size: 15px;
-					 padding: 10px;
-					 border: 1px solid #ccc;
-					 box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-					 color: @secondary-text;
-				 }
-             }
-             .buttonWrapper {
-                 .next {
-                     .startbtn();
-                     width: 150px;
-                 }
-                 .cancel {
-                     .cancelbtn();
-                     float:right;
-                 }
-             }
-     }
-     //Condition tab styling ends
-
-     /* Task Wrapper Styling Begins*/
-     .taskWrapper {
-         padding:20px 10px;
-         h2 {
-             padding:20px 0;
-         }
-        .taskList {
-            padding: 10px;
-            border: 1px solid #E7E7E7;
-            background: #E9E9E9;
-            .search {
-                background: @secondary-background;
-                border:1px solid @secondary-background;
-                color: @primary-color;
+        float: left;
+    }
+    .padding0 {
+        padding: 0;
+    }
+    span {
+        display: inline-block;
+    }
+    /**** main content ***/
+    .mainSection {
+        .duFindings {
+            h2 {
+                .h2style();
+                span {
+                    color: @secondary-color;
+                }
             }
-            .reset {
-                background: @secondary-text;
-                border:1px solid @secondary-text;
-                color: @primary-color;
-            }
-        }
-        .accordion {
-            padding:20px;
-            background: #F4F4F4;
-            ul {
-                li {
-                    padding:15px;
-                    background: @primary-color;
+            .duCards {
+                margin-bottom: 20px;
+                margin-right: 20px;
+                display: flex;
+                padding: 40px 20px;
+                border-bottom: 2px solid @primary-border;
+                background: #FAFAFA;
+                position: relative;
+                .singleduCard {
                     position: relative;
-                    margin-bottom: 10px;
-                    label {
-                        padding:0 20px;
+                    margin-right: 14px;
+                    .cardStyle();
+                    width: 250px;
+                    border-bottom: 3px solid @open-status-border;
+                    h2 {
+                        background: @primary-background;
+                        padding: 25px 20px;
+                        color: @secondary-color;
                     }
-                    a {
-                        padding: 5px;
-                        color: @primary-button-color;
-                        border: 1px solid @primary-button-color;
-                        border-radius: 3px;
-                        text-align: right;
+                    p {
+                        padding: 20px 20px 30px;
+                        background-color: @primary-color;
+                        .pstyle();
+                    }
+                    .cardCheck {
                         position: absolute;
-                        right: 12px;
-                        bottom: 8px;
-                    }
-                    .expand {
-                        background: url('../images/Sprite_FinRules-psd.png') no-repeat -842px -77px;
-                        width: 16px;
-                        height: 17px;
-                        float: left;
+                        cursor: pointer;
+                        font-size: 22px;
+                        right: 35px;
+                        top: 10px;
+                        /* Hide the browser's default checkbox */
+                        input {
+                            position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                            /* When the checkbox is checked, add a blue background */
+                            &:checked~.checkmark {
+                                background-color: @secondary-background;
+                                border: 2px solid @secondary-background
+                            }
+                            /* Show the checkmark when checked */
+                            &:checked~.checkmark:after {
+                                display: block;
+                            }
+                        }
+                        /* Create a custom checkbox */
+                        .checkmark {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 25px;
+                            width: 25px;
+                            background-color: @primary-color;
+                            border-radius: 6px;
+                            border: 2px solid @primary-border;
+                            /* Create the checkmark/indicator (hidden when not checked) */
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                display: none;
+                            }
+                            /* Style the checkmark/indicator */
+                            &:after {
+                                left: 9px;
+                                top: 5px;
+                                width: 5px;
+                                height: 10px;
+                                border: solid white;
+                                border-width: 0 3px 3px 0;
+                                -webkit-transform: rotate(45deg);
+                                -ms-transform: rotate(45deg);
+                                transform: rotate(45deg);
+                            }
+                        }
                     }
                 }
-                li:nth-child(4) {
-                    padding: 0;
-                    .listContent {
-                        padding:20px;
+                .subDivider {
+                    position: absolute;
+                    bottom: -20px;
+                    left: 50%;
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid @primary-border;
+                    border-radius: 50%;
+                    background: @primary-color;
+                    span {
+                        position: relative;
+                        top: 11px;
+                        left: 7px;
                     }
-                    .verbalVerification {
-                        padding: 10px;
-                        background: #FAFAFA;
+                }
+            }
+            .createNewCondition {
+                display: inline-block;
+                width: 100%; // border-bottom: 2px solid @primary-border;
+                .form-row {
+                    margin-bottom: 20px;
+                    display: inline-block;
+                    width: 100%;
+                }
+                label {
+                    font-family: Roboto-Regular;
+                    margin-bottom: 5px;
+                }
+                input,
+                textarea {
+                    font-family: Roboto-Regular;
+                }
+                textarea {
+                    font-size: 15px;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+                    color: @secondary-text;
+                }
+            }
+        } //Condition tab styling ends
+        /* Task Wrapper Styling Begins*/
+        .taskWrapper {
+            padding: 20px 10px;
+            h2 {
+                padding: 20px 0;
+            }
+            .taskList {
+                padding: 10px;
+                border: 1px solid #E7E7E7;
+                background: #E9E9E9;
+                .search {
+                    background: @secondary-background;
+                    border: 1px solid @secondary-background;
+                    color: @primary-color;
+                }
+                .reset {
+                    background: @secondary-text;
+                    border: 1px solid @secondary-text;
+                    color: @primary-color;
+                }
+            }
+            .accordion {
+                padding: 20px;
+                background: #F4F4F4;
+                ul {
+                    li {
+                        padding: 15px;
+                        background: @primary-color;
+                        position: relative;
+                        margin-bottom: 10px;
                         label {
-                            padding:5px 20px;
-                            span {
-                                font-weight: bold;
-                                display: inline-block;
-                                width: 130px;
-                                &:after {
-                                    content: ':';
-                                    float: right;
-                                    padding-right: 20px;
-                                }
-                            }
+                            padding: 0 20px;
                         }
-                      .verbalList {
-                          display: inline-block;
-                          padding:20px;
-                        ul {
-                            width: 40%;
+                        a {
+                            padding: 5px;
+                            color: @primary-button-color;
+                            border: 1px solid @primary-button-color;
+                            border-radius: 3px;
+                            text-align: right;
+                            position: absolute;
+                            right: 12px;
+                            bottom: 8px;
+                        }
+                        .expand {
+                            background: url('../images/Sprite_FinRules-psd.png') no-repeat -842px -77px;
+                            width: 16px;
+                            height: 17px;
                             float: left;
-                            padding:0 20px;
-                            li {
-                                padding: 0;
-                                background: #FAFAFA;
-                                line-height: 18px;
-                                &:before {
-                                    content: '\25CF';
-                                    font-size: 15px;
-                                    color: @navbar-background;
-                                    padding-right: 20px;
+                        }
+                    }
+                    li:nth-child(4) {
+                        padding: 0;
+                        .listContent {
+                            padding: 20px;
+                        }
+                        .verbalVerification {
+                            padding: 10px;
+                            background: #FAFAFA;
+                            label {
+                                padding: 5px 20px;
+                                span {
+                                    font-weight: bold;
+                                    display: inline-block;
+                                    width: 130px;
+                                    &:after {
+                                        content: ':';
+                                        float: right;
+                                        padding-right: 20px;
+                                    }
+                                }
+                            }
+                            .verbalList {
+                                display: inline-block;
+                                padding: 20px;
+                                ul {
+                                    width: 40%;
+                                    float: left;
+                                    padding: 0 20px;
+                                    li {
+                                        padding: 0;
+                                        background: #FAFAFA;
+                                        line-height: 18px;
+                                        &:before {
+                                            content: '\25CF';
+                                            font-size: 15px;
+                                            color: @navbar-background;
+                                            padding-right: 20px;
+                                        }
+                                    }
+                                }
+                                ul:first-child {
+                                    border-right: 1px solid @primary-border;
                                 }
                             }
                         }
-                        ul:first-child {
-                            border-right: 1px solid @primary-border;
-                        }
-                      }
                     }
                 }
-                
             }
         }
-     }
-
-}
-
-.paddingTop8 {
-     padding-top: 8px;
-}
- h2{
-     color: @secondary-background;
-     font-family: Roboto-Regular;
-     padding-left: 15px;
-}
- ul.tabs{
-     font-size: 13px;
-     width: 100%;
-     display: flex;
-     max-height: 62px;
-     li.tab-link{
-         background: #f9f9f9;
-         padding: 17px 20px;
-         cursor: pointer;
-         width: 25%;
-         position: relative;
-         color: #C0C0C0;
-         i+label{
-             padding: 8px;
-             &:nth-child(even){
-                 font-family: Roboto-light;
-            }
-             &:nth-child(odd){
-                 font-family: Roboto-Bold;
+    }
+    .buttonWrapper {
+        padding-top: 2px;
+        border-top: 2px solid @primary-border;
+        .back {
+            .cancelbtn();
+            float: left;
+        }
+        .save {
+            .cancelbtn();
+        }
+        .next {
+            .startbtn(); // width: 150px;
+        }
+        .cancel {
+            .cancelbtn(); // float: right;
+        }
+        .saveUser {
+            .startbtn();
+            span {
+                background: none;
             }
         }
-         i.fa.fa-angle-right {
-             font-size: 40px;
-             color: #A8A8A8;
-             position: absolute;
-             left: 3px;
-             top: -6px;
-        }
-         .step{
-             font-family: Roboto-light;
-        }
-         .stepTitle{
-             font-family: Roboto-Bold;
-        }
-         &.current{
-             background: #fff;
-             color: #000;
-             &:after{
-                 border-left: 30px solid white;
+    }
+    .verticallyCenter {
+        padding: 8px;
+    }
+    h2 {
+        color: @secondary-background;
+        font-family: Roboto-Regular;
+        padding: 15px;
+    }
+    ul.tabs {
+        // font-size: 13px;
+        width: 100%;
+        display: flex; // max-height: 62px;
+        border-bottom: 1px solid @primary-border;
+        li.tab-link {
+            background: #f9f9f9;
+            padding: 15px 0 15px 20px;
+            cursor: pointer;
+            width: 25%;
+            position: relative;
+            color: #C0C0C0;
+            i+label {
+                // padding: 8px;
+                &:nth-child(even) {
+                    font-family: Roboto-light;
+                }
+                &:nth-child(odd) {
+                    font-family: Roboto-Bold;
+                }
+            }
+            i.fa.fa-angle-right {
+                font-size: 40px;
+                color: #A8A8A8;
+                position: absolute;
+                left: 3px;
+                top: 0;
+            }
+            .step {
+                font-family: Roboto-light;
+                padding: 8px 0;
+            }
+            .stepTitle {
+                font-family: Roboto-Bold;
+                font-size: 15px;
+            }
+            .change {
+                border: 1px solid @secondary-background;
+                color: @secondary-background;
+                background-color: @primary-color;
+                padding: 5px;
+                border-radius: 4px;
+                font-size: 12px;
+            }
+            &.current {
+                background: #fff;
+                color: #000;
+                &:after {
+                    border-left: 30px solid white;
+                }
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                right: -30px;
+                top: 1px;
+                width: 0;
+                height: 0;
+                border-top: 35px solid transparent;
+                border-bottom: 30px solid transparent;
+                z-index: 9;
+                border-left: 30px solid #f9f9f9;
+            }
+            &:last-child:after {
+                border: 0;
             }
         }
-         &:first-child {
-             padding: 25px 0;
+    }
+    .tab-content {
+        display: none;
+        background: #fff;
+        padding: 15px;
+        font-size: 14px;
+    }
+    .tab-content.current {
+        display: inherit;
+    }
+    .chevronStatus {
+        border-left: 1px solid grey;
+        font-size: 12px;
+        text-align: left;
+    }
+    .summary {
+        overflow: hidden;
+        position: relative;
+        .legend {
+            &:after {
+                content: '';
+                position: absolute;
+                background: #47AE9D;
+                width: 100%;
+                height: 1px;
+                margin: 6px;
+            }
         }
-         &:after {
-             content: '';
-             position: absolute;
-             right: -30px;
-             top: 1px;
-             width: 0;
-             height: 0;
-             border-top: 30px solid transparent;
-             border-bottom: 30px solid transparent;
-             z-index: 9;
-             border-left: 30px solid #f9f9f9;
+        p {
+            line-height: 16px;
+        }
+        .taskContent {
+            padding-left: 7%;
+            &:before {
+                content: ":";
+                position: relative;
+                right: 20px;
+            }
+        }
+        .condition {
+            padding: 15px;
+            li {
+                padding-bottom: 30px;
+            }
+            label {
+                font-family: Roboto-Bold;
+                white-space: nowrap;
+            }
+            span:not(.task):before {
+                content: ":";
+                padding-right: 20px;
+            }
+        }
+        .fa-check-circle {
+            color: #6DC25E;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        i.fa.fa-info-circle {
+            color: @secondary-background;
+            font-size: 18px;
+            margin-left: 15px;
+        }
+    }
+    .footer {
+        background-color: @primary-background;
+        border-top: 1px solid @primary-border;
+        span {
+            display: inline-block;
+            padding: 15px;
+            font-size: 12px;
+            font-family: Roboto-Regular;
         }
     }
 }
- .tab-content{
-     display: none;
-     background: #fff;
-     padding: 15px;
-     font-size: 14px;
-}
- .tab-content.current{
-     display: inherit;
-}
- .chevronStatus{
-     border-left: 1px solid grey;
-}
- .summary{
-     overflow: hidden;
-     position: relative;
-     .legend{
-         &:after {
-             content: '';
-             position: absolute;
-             background: #47AE9D;
-             width: 100%;
-             height: 1px;
-             margin: 6px;
-        }
-    }
-     p{
-         line-height: 16px;
-    }
-     .taskContent{
-         padding-left: 7%;
-         &:before{
-             content: ":";
-             position: relative;
-             right: 20px;
-        }
-    }
-     .condition{
-         padding: 15px;
-         li{
-             padding-bottom: 30px;
-        }
-         label{
-             font-family: Roboto-Bold;
-             white-space: nowrap;
-        }
-         span:not(.task):before{
-             content: ":";
-             padding-right: 20px;
-        }
-    }
-     .fa-check-circle{
-         color: #6DC25E;
-         font-size: 20px;
-         margin-right: 10px;
-    }
-     i.fa.fa-info-circle {
-         color: @secondary-background;
-         font-size: 18px;
-         margin-left: 15px;
-    }
-}
- 
