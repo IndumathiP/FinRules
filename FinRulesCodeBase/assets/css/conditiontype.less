@@ -21,19 +21,24 @@
 		left: 15px;
 	}
 }
+a,a:hover {
+    text-decoration: none;
+    color: @secondary-color;
+}
 .h2style {
 	font-family: Roboto-Regular;
 	color: @secondary-background;
 	padding: 30px 0;
 }
 .cardStyle {
-	border: 1px solid @primary-border;
-	-webkit-box-shadow: 0 3px 8px rgba(0,0,0,.2);
-	box-shadow: 0 3px 8px rgba(0,0,0,.2);
-	margin-right: 2%;
-	float: left;
-	padding: 0;
-  width: 18.4%;
+	  border: 1px solid @primary-border;
+	  -webkit-box-shadow: 0 3px 8px rgba(0,0,0,.2);
+	  box-shadow: 0 3px 8px rgba(0,0,0,.2);
+    margin-right: 40px;
+    float: left;
+    padding: 0;
+    width: 230px;
+    border-bottom: 3px solid #47AE9D;
   &:last-child{
     margin-right: 0;
   }
@@ -48,7 +53,6 @@
     width: 100%;
     height: 100%;
 		min-width: 1024px;
-		max-width:1366px;
 		margin:0 auto;
     font-family: Roboto-Light;
     .col{
@@ -198,9 +202,10 @@
     .mainContent{
       background-color: #F4F4F4;
 		.cardView {
-			display: inline-block;
 			padding: 15px;
-			margin-bottom: 55px;
+      margin-bottom: 55px;
+      width: 1363px;
+      margin: 0 auto;
 			h2 {
 				.h2style();
 			}
@@ -256,7 +261,7 @@
 						.statusCount {
 							padding: 60px 0 30px;
 							text-align: center;
-							@media screen and (max-width:1150px) and (min-width:1024px) {
+							@media screen and (max-width:1150px) {
 								padding: 20px 0;
 								transform: scale(0.8,0.8);
 							}
@@ -275,7 +280,7 @@
 								span {
 									display: block;
 								}
-								@media screen and (max-width:1150px) and (min-width:1024px) {
+								@media screen and (max-width:1150px) {
 									margin-right: 17px;
 								}
 							} 
@@ -421,3 +426,8 @@
 // 	}
 
 // }
+@media screen and  (max-width:1180px) {
+	.conditionContainer .mainContent .cardView .cards .individualCard .cardHeader .loanStatus{
+		padding: 0;
+	}
+}
