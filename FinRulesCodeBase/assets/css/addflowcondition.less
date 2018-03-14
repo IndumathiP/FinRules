@@ -57,6 +57,13 @@
     }
     /**** main content ***/
     .mainSection {
+        .conditionTab {
+            h3 {
+                color: @navbar-background;
+                font-family: Roboto-Medium;
+                margin: 25px 0;
+            }
+        }
         .duFindings {
             h2 {
                 .h2style();
@@ -151,33 +158,37 @@
                     background: @primary-color;
                     span {
                         position: relative;
-                        top: 11px;
-                        left: 7px;
+                        top: 12px;
+                        left: 10px;
+                        font-family: Roboto-Bold;
                     }
                 }
             }
             .createNewCondition {
                 display: inline-block;
-                width: 100%; // border-bottom: 2px solid @primary-border;
+                width: 100%;
                 .form-row {
                     margin-bottom: 20px;
                     display: inline-block;
                     width: 100%;
                 }
                 label {
-                    font-family: Roboto-Regular;
-                    margin-bottom: 5px;
+                    font-family: Roboto-Bold;
+                    margin-bottom: 10px;
                 }
                 input,
                 textarea {
                     font-family: Roboto-Regular;
                 }
                 textarea {
-                    font-size: 15px;
+                    font-size: 14px;
                     padding: 10px;
                     border: 1px solid #ccc;
                     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
                     color: @secondary-text;
+                    width: 100%;
+                    height: 100px;
+                    resize: none;
                 }
             }
         } //Condition tab styling ends
@@ -443,6 +454,110 @@
             margin-left: 15px;
         }
     }
+    .taskTab {
+      .taskDetails {
+          h2 {
+              font-family:Roboto-Bold;
+              color:@navbar-background;
+              margin: 20px 0;
+              font-size: 14px;
+          }
+          .noteIcon {
+  
+          }
+          .note {
+              font-family: Roboto-Bold;
+              color:@base-background;
+          }
+          .noteText {
+              font-family: Roboto-Medium;
+              color:#BEBEBE;
+          }
+          .tasklabel {
+              font-family: Roboto-Bold;
+          }
+          .taskName {
+              width:100%;
+              margin:15px 0;
+              padding:7px;
+              font-family:Roboto-Medium;
+              color:@base-background;
+              border:2px solid @primary-border;
+              border-radius: 2px;
+          }
+          .genericTask {
+              position: relative;
+              .cardCheck {
+                  position: absolute;
+                  cursor: pointer;
+                  font-size: 22px;
+                  left: 0px;
+                  top: 33px;
+                  /* Hide the browser's default checkbox */
+                  input {
+                      position: absolute;
+                      opacity: 0;
+                      cursor: pointer;
+                      /* When the checkbox is checked, add a blue background */
+                      &:checked~.checkmark {
+                          background-color: @secondary-background;
+                          border: 2px solid @secondary-background
+                      }
+                      /* Show the checkmark when checked */
+                      &:checked~.checkmark:after {
+                          display: block;
+                      }
+                  }
+                  /* Create a custom checkbox */
+                  .checkmark {
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      height: 25px;
+                      width: 25px;
+                      background-color: @primary-color;
+                      border-radius: 6px;
+                      border: 2px solid @secondary-background;
+                      /* Create the checkmark/indicator (hidden when not checked) */
+                      &::after {
+                          content: "";
+                          position: absolute;
+                          display: none;
+                      }
+                      /* Style the checkmark/indicator */
+                      &:after {
+                          left: 9px;
+                          top: 5px;
+                          width: 5px;
+                          height: 10px;
+                          border: solid white;
+                          border-width: 0 3px 3px 0;
+                          -webkit-transform: rotate(45deg);
+                          -ms-transform: rotate(45deg);
+                          transform: rotate(45deg);
+                      }
+                  }
+              }
+              .genericTaskMessage {
+                  margin:40px 0 0 35px;
+              }
+              
+          }
+          .description {
+              font-family: Roboto-Bold;
+          }
+          textarea {
+              width:100%;
+              padding:15px;
+              margin-top: 15px;
+              font-family: Roboto-Medium;
+              color:@secondary-text;
+              resize: none;
+              border:2px solid @primary-border;
+              border-radius:2px;
+          }
+      }
+  }
     .footer {
         background-color: @primary-background;
         border-top: 1px solid @primary-border;
