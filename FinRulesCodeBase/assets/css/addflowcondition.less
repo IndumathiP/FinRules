@@ -293,8 +293,9 @@
         }
     }
     .buttonWrapper {
-        padding-top: 2px;
+        padding: 3px 25px;
         border-top: 2px solid @primary-border;
+        color:#565454;
         .back {
             .cancelbtn();
             float: left;
@@ -558,6 +559,113 @@
           }
       }
   }
+  .summary{
+    margin:60px 20px 0 20px;
+    padding:0;
+    h2{
+     color: #47AE9D;
+     font-family: Roboto-Regular;
+     font-weight:bold;
+     font-size: 14px;
+     padding:10px;
+     position:relative
+   }
+   .nobreak{
+     white-space: nowrap;
+   }
+   .task{
+     font-family:Roboto-bold;
+   }
+     .edit{
+     background: #fff url('../images/Sprite_FinRules-psd.png') no-repeat -330px -76px;
+     width: 43px;
+     height: 23px;
+     display: inline-block;
+     position: absolute;
+     right: 0;
+     top: 5px;
+     z-index:1;
+     margin-left:5px;
+     cursor:pointer;
+   }
+   .help{
+     background: url('../images/Sprite_FinRules-psd.png') no-repeat -450px -146px;
+     width: 16px;
+     height: 16px;    
+     display: inline-block;
+     margin-left: 10px;
+     vertical-align:middle;
+   }
+   .taskname{
+     padding-top:4px;
+   }
+   .legend-description{
+     padding:10px 0;
+     color:#565454;
+   }
+   .businessrules-description{
+ margin:40px 30px 0;
+ height:350px;
+ background:#f9f9f9;
+   }
+      overflow: hidden;
+      position: relative;
+      .legend{
+          &:after {
+              content: '';
+              position: absolute;
+              background: #daeeec;
+              height: 1px;
+              width:100%;
+              margin: 5px 10px;
+         }
+     }   
+      p{
+          line-height: 16px;
+     }
+      .taskContent{
+          padding-left: 7%;
+          &:before{
+              content: ":";
+              position: relative;
+              right: 20px;             
+              font-family:Roboto-bold;
+         }
+     }
+      .condition{
+          padding: 15px;
+          li{
+              padding-bottom: 40px;
+         }
+          label{
+              font-family: Roboto-Bold;
+              white-space: nowrap;
+         }
+          span:not(.help):not(.task):before{
+              content: ":";
+              padding-right: 20px;
+              font-family:Roboto-bold;
+         }
+     }
+     .condition-col{
+       padding:0;
+     }
+      .fa-check-circle{
+          color: #6DC25E;
+          font-size: 20px;
+          margin-right: 10px;
+     }
+      i.fa.fa-info-circle {
+          color: @secondary-background;
+          font-size: 18px;
+          margin-left: 15px;
+     }
+ }
+ @media only screen and (max-width: 1140px){
+   .summary .taskContent {
+     padding-left: 8%;
+ }
+ } 
     .footer {
         background-color: @primary-background;
         border-top: 1px solid @primary-border;
