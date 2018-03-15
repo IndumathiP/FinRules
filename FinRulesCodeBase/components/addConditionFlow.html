@@ -80,7 +80,7 @@
       <h2>ADD CONDITION</h2>
       <!-- stepwise tabs -->
       <ul class="tabs">
-        <li class="tab-link current pull-left text-center " id="navtab-1" data-tab="tab-1">
+        <li class="tablink current pull-left text-center " id="navtab-1">
           <div class="col-xs-8 text-left paddingLeft">
             <label class="step">Step 1 : </label> <label class="stepTitle"> Conditions</label>
           </div>
@@ -88,7 +88,7 @@
 				  Tip Income
 				</span>
         </li>
-        <li class="tab-link pull-left text-center clearfix" id="navtab-2" data-tab="tab-2">
+        <li class="tablink pull-left text-center clearfix" id="navtab-2">
 
           <div class="col-xs-6">
             <i class="fa fa-angle-right"></i>
@@ -101,14 +101,14 @@
 
           </div>
         </li>
-        <li class="tab-link pull-left text-center clearfix" id="navtab-3" data-tab="tab-3">
+        <li class="tablink pull-left text-center clearfix" id="navtab-3">
           <div class="col-xs-9">
             <i class="fa fa-angle-right"></i>
             <label class="step">Step 3 : </label><label class="stepTitle"> Business Rule</label>
           </div>
           <span class="col-xs-3 chevronStatus paddingRight">Validate Document</span>
         </li>
-        <li class="tab-link pull-left text-center clearfix" id="navtab-4" data-tab="tab-4">
+        <li class="tablink pull-left text-center clearfix" id="navtab-4">
           <div class="col-xs-8">
             <i class="fa fa-angle-right"></i>
             <label class="step">Step 4 : </label><label class="stepTitle"> Summary</label>
@@ -117,21 +117,19 @@
         </li>
       </ul>
       <!-- Start of step-1 -->
-      <div id="tab-1" class="tab-content current conditionTab">
-        <h3>CREATE CONDITION FRON UNASSIGNED</h3>
+      <div id="tab-1" class="tab-content conditionTab" data-tab="tab-1">
+        
         <div class="duFindings clearfix">
-          <!-- <h2>UNASSIGNED
-            <span>(03)</span>
-          </h2> -->
-          <div class="duCards">
+          <div class="unassignedCondition">
+            <h3>CREATE CONDITION FRON UNASSIGNED</h3>
+            <div class="duCards">
             <div class="singleduCard">
               <label class="cardCheck">
                       <input type="checkbox" onclick="enabledCheckbox()">
                         <span class="checkmark"></span>
                     </label>
               <h2>DU Findings</h2>
-              <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct
-                no greater
+              <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no greater
               </p>
             </div>
             <div class="singleduCard">
@@ -140,8 +138,7 @@
               <span class="checkmark"></span>
               </label>
               <h2>DU Findings</h2>
-              <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct
-                no greater
+              <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no greater
               </p>
             </div>
             <div class="singleduCard">
@@ -150,29 +147,28 @@
                         <span class="checkmark"></span>
                     </label>
               <h2>DU Findings</h2>
-              <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct
-                no greater
+              <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no greater
               </p>
             </div>
             <div class="subDivider">
               <span>OR</span>
             </div>
           </div>
-
+          </div>
           <div class="createNewCondition">
             <h2>CREATE NEW CONDITION</h2>
             <div class="form-row">
               <div class="form-group col-md-4 col-xs-4">
                 <label for="name">Condition Name</label>
-                <input type="text" class="form-control" placeholder="Tip Income">
+                <input type="text" class="form-control" value="Tip Income">
               </div>
               <div class="form-group col-md-4 col-xs-4">
                 <label for="category">Condition Category</label>
-                <input type="text" class="form-control" placeholder="Prior To Finding">
+                <input type="text" class="form-control" value="Prior To Finding">
               </div>
               <div class="form-group col-md-4 col-xs-4">
                 <label for="type">Condition Type</label>
-                <input type="text" class="form-control" placeholder="Income">
+                <input type="text" class="form-control" value="Income">
               </div>
             </div>
             <div class="form-row">
@@ -185,12 +181,12 @@
                 <textarea name="Text1">Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no greater</textarea>
               </div>
             </div>
-          </div>
+          </div>  
         </div>
       </div>
       <!-- end of tab1 -->
       <!-- start of tab2 -->
-      <div id="tab-2" class="tab-content taskTab">
+      <div id="tab-2" class="tab-content taskTab" data-tab="tab-2">
         <!-- task details -->
         <div class="taskDetails">
           <h2>Task Details</h2>
@@ -293,12 +289,12 @@
           </div>
         </div>
       </div>
-      <div id="tab-3" class="tab-content">
+      <div id="tab-3" class="tab-content businessRule" data-tab="tab-3">
         <h2>BUSINESS RULES</h2>
       </div>
       <!-- start of tab4 -->
-      <div id="tab-4" class="tab-content summary">
-        <h2 class="legend">CONDITION<span class="condition-link edit condition-head"></span></h2>
+      <div id="tab-4" class="tab-content summary" data-tab="tab-4">
+        <h2 class="legend">CONDITION<span class="condition-link edit condition-head" id="condition_" onclick="summaryNavigation()"></span></h2>
         <div class="legend-description">
           <div class="row condition">
             <div class="col-xs-3 condition-col">
@@ -332,7 +328,7 @@
             </div>
           </div>
         </div>
-        <h2 class="legend">TASK<span class="task-link edit legend-head"></span></h2>
+        <h2 class="legend">TASK<span class="task-link edit legend-head" id="task_" onclick="summaryNavigation()"></span></h2>
         <div class="legend-description">
           <div class="row condition">
             <div class="col-xs-3 taskname">
@@ -358,7 +354,7 @@
               must be dated no earlier than 30 days prior to the initial loan application date and it must include all.</p>
           </div>
         </div>
-        <h2 class="legend">BUSINESS RULES<span class="businessrule-link edit businessrules-head"></span></h2>
+        <h2 class="legend">BUSINESS RULES<span class="businessrule-link edit businessrules-head" id="businessrule_" onclick="summaryNavigation()"></span></h2>
         <div class="businessrule-wrap">
           <div class="businessrules-description">
 
@@ -368,19 +364,19 @@
       <!-- end of tab4 -->
       <!-- cancel,next,back buttons -->
       <div class="buttonWrapper clearfix">
-        <button type="submit" class="btn btn-primary back" id="back-link">
+        <button type="submit" class="btn btn-primary back" id="back-link" onclick="back()">
             <span>
                 <i class="fa fa-arrow-circle-left"></i>
             </span>
               <label>back</label>
              
             </button>
-        <button type="submit" class="btn btn-primary next" id="next-link">
+        <button type="submit" class="btn btn-primary next" id="next-link" onclick="next()">
           <label>Next</label>
           <span>         
           </span>
         </button>
-        <button type="submit" class="btn btn-primary saveUser" id="savej-link">
+        <button type="submit" class="btn btn-primary saveUser" id="savej-link" >
             <span>
                 <i class="fa fa-plus-circle"></i>
             </span>
@@ -395,7 +391,7 @@
             
           </button>
 
-        <button type="submit" class="btn btn-primary cancel" id="cancel-link">
+        <button type="submit" class="btn btn-primary cancel" id="cancel-link" onclick="cancel()">
           <span>
             <i class="fa fa-close"></i>
           </span>
@@ -410,7 +406,8 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="../assets/jquery/jquery.js"></script>
+  <!-- <script src="../assets/jquery/jquery.js"></script> -->
+  <script src="../assets/js/conditionFlowScript.js"></script>
 </body>
 
 </html>

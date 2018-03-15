@@ -63,6 +63,9 @@
                 font-family: Roboto-Medium;
                 margin: 25px 0;
             }
+            .unassignedCondition {
+              display: none;
+            }
         }
         .duFindings {
             h2 {
@@ -329,7 +332,7 @@
         width: 100%;
         display: flex; // max-height: 62px;
         border-bottom: 1px solid @primary-border;
-        li.tab-link {
+        li.tablink {
             background: #f9f9f9;
             padding: 15px 0 15px 20px;
             cursor: pointer;
@@ -463,9 +466,7 @@
               margin: 20px 0;
               font-size: 14px;
           }
-          .noteIcon {
-  
-          }
+
           .note {
               font-family: Roboto-Bold;
               color:@base-background;
@@ -676,4 +677,7 @@
             font-family: Roboto-Regular;
         }
     }
+    .conditionTab,.taskTab,.businessRule,.summary,.back,.next,.saveUser,.save {
+      display:none;
+  }
 }
