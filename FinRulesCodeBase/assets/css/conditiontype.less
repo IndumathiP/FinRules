@@ -1,7 +1,7 @@
 @primary-border: #E7E7E7;
 @primary-background: #F8F8F8;
 @open-status-border: #FECD62;
-@closed-status-border: #F48185;
+@closed-status-border: #ef615e;
 @primary-button-color: #FFAB31;
 @secondary-background: #47AE9D;
 @primary-color: #fff;
@@ -23,6 +23,8 @@
 
 .h2style {
     font-family: Roboto-Regular;
+    font-weight:bold;
+    font-size:18px;
     color: @secondary-background;
     padding: 30px 0;
 }
@@ -44,7 +46,6 @@
     font-family: Roboto-Light;
     font-size: 12px;
 }
-
 .col {
   padding: 0 15px;
   float: left;
@@ -61,7 +62,6 @@
 .paddingLeft {
   padding-left: 0;
 }
-
 header {
     .headerLogo {
         padding: 15px 0 8px;
@@ -109,7 +109,7 @@ header {
         h3 {
             font-size: 18px;
             padding: 19px 0;
-            font-weight: 600;
+            letter-spacing:-1px;
             white-space: nowrap;
         }
         .loanInformation {
@@ -139,22 +139,22 @@ header {
         .hamMenu {
             padding: 20px 15px;
             i {
-                font-size: 20px;
-            }
-            .hamIcon {
-                border-right: 1px solid @primary-color;
-            }
-            .leftArrow {
-                background: url('../images/Sprite_FinRules.png') no-repeat -446px -79px;
-                width: 23px;
-                height: 16px;
-                display: inline-block;
-                margin-left: 15px;
-                vertical-align: middle;
-            }
-            label {
-                padding-left: 10px;
-            }
+              font-size: 20px;
+          }
+          .hamIcon {
+              border-right: 1px solid @primary-color;
+          }
+          .leftArrow {
+              background: url('../images/Sprite_FinRules.png') no-repeat -446px -79px;
+              width: 23px;
+              height: 16px;
+              display: inline-block;
+              margin-left: 15px;
+              vertical-align: middle;
+          }
+          label {
+              padding-left: 10px;
+          }
         }
         .loanReport {
             padding: 15px;
@@ -171,14 +171,10 @@ header {
                 button {
                     background: @primary-color;
                     color: @secondary-color;
-                    font-size: 14px;
-                    padding: 9px 19px;
-                    border: 1px solid #fff;
-                    font-weight: bold;
-                    @media screen and (max-width: 1260px) and (min-width:1024px) {
-                        font-size: 12px;
-                        padding: 10px 9px;
-                    }
+                    font-size: 0.9em;
+                    padding: 4%;
+                    border: 1px solid #fff;    
+                    border-radius: 3px;
                 }
             }
         }
@@ -206,7 +202,7 @@ header {
                 color: @primary-color;
                 background: @secondary-background;
                 border: 1px solid @primary-color;
-                padding: 7px 15px;
+                padding: 5%;
                 border-radius: 3px;
             }
         }
@@ -214,13 +210,15 @@ header {
 }
 
 .conditionContainer {
-    padding: 0 15px;
+  box-sizing: border-box;
+    padding: 0 15px;   
     .mainContent {
         background-color: #F4F4F4;
         .cardView {
             display: inline-block;
             padding: 15px;
             margin-bottom: 55px;
+            width:100%;
             h2 {
                 .h2style();
             }
@@ -236,8 +234,9 @@ header {
                             display: block;
                         }
                     }
+
                     .cardStyle();
-                    border-bottom: 3px solid @secondary-background;
+                    border-bottom: 2px solid @secondary-background;
                     .cardHeader {
                         background: @primary-background;
                         padding: 25px 20px;
@@ -251,7 +250,9 @@ header {
                             display: inline-block;
                             padding-left: 15px;
                             h3 {
-                                font-family: Roboto-Bold;
+                              font-family: Roboto-regular;
+                              font-size: 18px;
+                              font-weight: bold;
                             }
                             label {
                                 color: @closed-status-border;
@@ -260,20 +261,56 @@ header {
                             }
                         }
                         .rightIcon {
-                            background: url('../images/Sprite_FinRules.png') no-repeat -288px -73px;
-                            width: 27px;
-                            height: 23px;
-                            float: right;
+                          background: url('../images/Sprite_FinRules-psd.png') no-repeat -288px -73px;
+                          width: 27px;
+                          height: 23px;
+                          float: right;
+                          position: absolute;
+                          top: 30px;
+                          right: 22px;
                         }
+                        
+                @media only screen and (max-width: 1203px){
+                  .rightIcon{
+                    background: url('../images/Sprite_FinRules-psd.png') no-repeat -552px -205px;
+                    width: 20px;
+                    height: 18px;
+                    position: absolute;
+                    top: 41px;
+                    right: 17px;
+                  }
+                  }
                     }
                     .cardData {
-                        padding: 20px;
-                        background-color: @primary-color;
-                        p {
-                            .pstyle();
+                        padding: 12%;
+                        background-color: @primary-color;                        
+                        box-sizing:border-box;
+                        .conditionstatus-wrap{
+                          background:#f8f8f8;                          
+                          padding:6%;  
+                          box-sizing:border-box;
+                          .conditionstatus-content{                      
+                        .left-content{
+                          font-size:1em;
+                          color:#818181;
+                          display:inline-block;
+                          width:60%;
+                          padding-right:5%;
                         }
+                        .right-content{
+                          font-size:37px;
+                          font-weight:bold;                          
+                          color:#4b4e60;                                                    
+                          border-left:1px solid #818181;
+                          display:inline-block;
+                          padding-left:5%;
+                          width:35%;
+                          box-sizing:border-box;
+                        }
+                        }
+                      }
                         .statusCount {
-                            padding: 60px 0 30px;
+                            padding: 20px 0 15px;
                             text-align: center;
                             @media screen and (max-width: 1150px) and (min-width:1024px) {
                                 padding: 20px 0;
@@ -287,16 +324,25 @@ header {
                                 border: 1px solid @closed-status-border;
                                 .status();
                             }
+                            @media only screen and (max-width: 1203px){
+                              .closeStatus,.openStatus{
+                                width:45px;
+                                height:45px;
+                              }
+
+                            }
+                              .openstatuswrap{
+                                margin-right: 30px;
+                              }
                             .statusContainer {
                                 display: inline-block;
-                                position: relative;
-                                margin-right: 20px;
+                                position: relative;                                
                                 span {
                                     display: block;
                                 }
-                                @media screen and (max-width:1150px) and (min-width:1024px) {
-                                    margin-right: 17px;
-                                }
+                                // @media screen and (max-width:1150px) and (min-width:1024px) {
+                                //     margin-right: 17px;
+                                // }
                             }
                         }
                     }
@@ -313,6 +359,7 @@ header {
                                 font-size: 24px;
                                 color: #ffffff;
                             }
+
                         }
                     }
                 }
@@ -336,7 +383,12 @@ header {
                         background: url('../images/Sprite_FinRules.png') no-repeat -188px -68px!important;
                     }
                     .rightIcon {
-                        background: url('../images/Sprite_FinRules.png') no-repeat -341px -76px;
+                      background: url('../images/Sprite_FinRules-psd.png') no-repeat -341px -76px;
+                    }
+                    @media only screen and (max-width: 1203px){
+                      .rightIcon{
+                        background: url('../images/Sprite_FinRules-psd.png') no-repeat -600px -207px;
+                      }
                     }
                 }
                 .individualCard:nth-child(5) {
@@ -349,11 +401,17 @@ header {
                         background: url('../images/Sprite_FinRules.png') no-repeat -234px -70px!important;
                     }
                     .rightIcon {
-                        background: url('../images/Sprite_FinRules.png') no-repeat -341px -76px;
+                      background: url('../images/Sprite_FinRules-psd.png') no-repeat -341px -76px;
                     }
+                    @media only screen and (max-width: 1203px){
+                      .rightIcon{
+                        background: url('../images/Sprite_FinRules-psd.png') no-repeat -600px -207px;
+                      }
+                    }
+                    
                 }
-            }
-        }
+            }/*cards*/
+        }/*cardview*/
         .startExecution {
             margin-bottom: 20px;
             text-align: center;
@@ -420,7 +478,14 @@ header {
             }
         }
     }
+    @media only screen and (min-width: 1367px){
+      .cards {
+        padding:0 10%;
+      }
+    }
+    
 }
+
 
 
 /*--------Media query------*/
