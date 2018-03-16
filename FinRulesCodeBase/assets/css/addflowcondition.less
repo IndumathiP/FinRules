@@ -57,7 +57,7 @@
                 margin: 25px 0;
             }
             .unassignedCondition {
-              display: none;
+                display: none;
             }
         }
         .duFindings {
@@ -291,7 +291,7 @@
     .buttonWrapper {
         padding: 3px 25px;
         border-top: 2px solid @primary-border;
-        color:#565454;
+        color: #565454;
         .back {
             .cancelbtn();
             float: left;
@@ -328,7 +328,6 @@
         li.tablink {
             background: #f9f9f9;
             padding: 15px 0 15px 20px;
-            cursor: pointer;
             width: 25%;
             position: relative;
             color: #C0C0C0;
@@ -342,11 +341,11 @@
                 }
             }
             i.fa.fa-angle-right {
-                font-size: 40px;
+                font-size: 50px;
                 color: #A8A8A8;
                 position: absolute;
                 left: 3px;
-                top: 0;
+                top: -12px;
             }
             .step {
                 font-family: Roboto-light;
@@ -375,7 +374,7 @@
                 content: '';
                 position: absolute;
                 right: -30px;
-                top: 1px;
+                top: -5px;
                 width: 0;
                 height: 0;
                 border-top: 35px solid transparent;
@@ -401,6 +400,18 @@
         border-left: 1px solid grey;
         font-size: 12px;
         text-align: left;
+        display: inline-block;
+        position: relative;
+        display: none;
+        .backToThePage {
+            background: url('../images/Sprite_FinRules-psd.png') no-repeat -768px -201px;
+            width: 27px;
+            height: 27px;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
     }
     .summary {
         overflow: hidden;
@@ -452,215 +463,213 @@
         }
     }
     .taskTab {
-      .taskDetails {
-          display: none;
-          h2 {
-              font-family:Roboto-Bold;
-              color:@navbar-background;
-              margin: 20px 0;
-              font-size: 14px;
-          }
-
-          .note {
-              font-family: Roboto-Bold;
-              color:@base-background;
-          }
-          .noteText {
-              font-family: Roboto-Medium;
-              color:#BEBEBE;
-          }
-          .tasklabel {
-              font-family: Roboto-Bold;
-          }
-          .taskName {
-              width:100%;
-              margin:15px 0;
-              padding:7px;
-              font-family:Roboto-Medium;
-              color:@base-background;
-              border:2px solid @primary-border;
-              border-radius: 2px;
-          }
-          .genericTask {
-              position: relative;
-              .cardCheck {
-                  position: absolute;
-                  cursor: pointer;
-                  font-size: 22px;
-                  left: 0px;
-                  top: 33px;
-                  /* Hide the browser's default checkbox */
-                  input {
-                      position: absolute;
-                      opacity: 0;
-                      cursor: pointer;
-                      /* When the checkbox is checked, add a blue background */
-                      &:checked~.checkmark {
-                          background-color: @secondary-background;
-                          border: 2px solid @secondary-background
-                      }
-                      /* Show the checkmark when checked */
-                      &:checked~.checkmark:after {
-                          display: block;
-                      }
-                  }
-                  /* Create a custom checkbox */
-                  .checkmark {
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 25px;
-                      width: 25px;
-                      background-color: @primary-color;
-                      border-radius: 6px;
-                      border: 2px solid @secondary-background;
-                      /* Create the checkmark/indicator (hidden when not checked) */
-                      &::after {
-                          content: "";
-                          position: absolute;
-                          display: none;
-                      }
-                      /* Style the checkmark/indicator */
-                      &:after {
-                          left: 9px;
-                          top: 5px;
-                          width: 5px;
-                          height: 10px;
-                          border: solid white;
-                          border-width: 0 3px 3px 0;
-                          -webkit-transform: rotate(45deg);
-                          -ms-transform: rotate(45deg);
-                          transform: rotate(45deg);
-                      }
-                  }
-              }
-              .genericTaskMessage {
-                  margin:40px 0 0 35px;
-              }
-              
-          }
-          .description {
-              font-family: Roboto-Bold;
-          }
-          textarea {
-              width:100%;
-              padding:15px;
-              margin-top: 15px;
-              font-family: Roboto-Medium;
-              color:@secondary-text;
-              resize: none;
-              border:2px solid @primary-border;
-              border-radius:2px;
-          }
-      }
-  }
-  .summary{
-    margin:60px 20px 0 20px;
-    padding:0;
-    h2{
-     color: #47AE9D;
-     font-family: Roboto-Regular;
-     font-weight:bold;
-     font-size: 14px;
-     padding:10px;
-     position:relative
-   }
-   .nobreak{
-     white-space: nowrap;
-   }
-   .task{
-     font-family:Roboto-bold;
-   }
-     .edit{
-     background: #fff url('../images/Sprite_FinRules-psd.png') no-repeat -330px -76px;
-     width: 43px;
-     height: 23px;
-     display: inline-block;
-     position: absolute;
-     right: 0;
-     top: 5px;
-     z-index:1;
-     margin-left:5px;
-     cursor:pointer;
-   }
-   .help{
-     background: url('../images/Sprite_FinRules-psd.png') no-repeat -450px -146px;
-     width: 16px;
-     height: 16px;    
-     display: inline-block;
-     margin-left: 10px;
-     vertical-align:middle;
-   }
-   .taskname{
-     padding-top:4px;
-   }
-   .legend-description{
-     padding:10px 0;
-     color:#565454;
-   }
-   .businessrules-description{
- margin:40px 30px 0;
- height:350px;
- background:#f9f9f9;
-   }
-      overflow: hidden;
-      position: relative;
-      .legend{
-          &:after {
-              content: '';
-              position: absolute;
-              background: #daeeec;
-              height: 1px;
-              width:100%;
-              margin: 5px 10px;
-         }
-     }   
-      p{
-          line-height: 16px;
-     }
-      .taskContent{
-          padding-left: 7%;
-          &:before{
-              content: ":";
-              position: relative;
-              right: 20px;             
-              font-family:Roboto-bold;
-         }
-     }
-      .condition{
-          padding: 15px;
-          li{
-              padding-bottom: 40px;
-         }
-          label{
-              font-family: Roboto-Bold;
-              white-space: nowrap;
-         }
-          span:not(.help):not(.task):before{
-              content: ":";
-              padding-right: 20px;
-              font-family:Roboto-bold;
-         }
-     }
-     .condition-col{
-       padding:0;
-     }
-      .fa-check-circle{
-          color: #6DC25E;
-          font-size: 20px;
-          margin-right: 10px;
-     }
-      i.fa.fa-info-circle {
-          color: @secondary-background;
-          font-size: 18px;
-          margin-left: 15px;
-     }
- }
- @media only screen and (max-width: 1140px){
-   .summary .taskContent {
-     padding-left: 8%;
- }
- } 
+        .taskDetails {
+            display: none;
+            h2 {
+                font-family: Roboto-Bold;
+                color: @navbar-background;
+                margin: 20px 0;
+                font-size: 14px;
+            }
+            .note {
+                font-family: Roboto-Bold;
+                color: @base-background;
+            }
+            .noteText {
+                font-family: Roboto-Medium;
+                color: #BEBEBE;
+            }
+            .tasklabel {
+                font-family: Roboto-Bold;
+            }
+            .taskName {
+                width: 100%;
+                margin: 15px 0;
+                padding: 7px;
+                font-family: Roboto-Medium;
+                color: @base-background;
+                border: 2px solid @primary-border;
+                border-radius: 2px;
+            }
+            .genericTask {
+                position: relative;
+                .cardCheck {
+                    position: absolute;
+                    cursor: pointer;
+                    font-size: 22px;
+                    left: 0px;
+                    top: 33px;
+                    /* Hide the browser's default checkbox */
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        /* When the checkbox is checked, add a blue background */
+                        &:checked~.checkmark {
+                            background-color: @secondary-background;
+                            border: 2px solid @secondary-background
+                        }
+                        /* Show the checkmark when checked */
+                        &:checked~.checkmark:after {
+                            display: block;
+                        }
+                    }
+                    /* Create a custom checkbox */
+                    .checkmark {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 25px;
+                        width: 25px;
+                        background-color: @primary-color;
+                        border-radius: 6px;
+                        border: 2px solid @secondary-background;
+                        /* Create the checkmark/indicator (hidden when not checked) */
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            display: none;
+                        }
+                        /* Style the checkmark/indicator */
+                        &:after {
+                            left: 9px;
+                            top: 5px;
+                            width: 5px;
+                            height: 10px;
+                            border: solid white;
+                            border-width: 0 3px 3px 0;
+                            -webkit-transform: rotate(45deg);
+                            -ms-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+                .genericTaskMessage {
+                    margin: 40px 0 0 35px;
+                }
+            }
+            .description {
+                font-family: Roboto-Bold;
+            }
+            textarea {
+                width: 100%;
+                padding: 15px;
+                margin-top: 15px;
+                font-family: Roboto-Medium;
+                color: @secondary-text;
+                resize: none;
+                border: 2px solid @primary-border;
+                border-radius: 2px;
+            }
+        }
+    }
+    .summary {
+        margin: 60px 20px 0 20px;
+        padding: 0;
+        h2 {
+            color: #47AE9D;
+            font-family: Roboto-Regular;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 10px;
+            position: relative
+        }
+        .nobreak {
+            white-space: nowrap;
+        }
+        .task {
+            font-family: Roboto-bold;
+        }
+        .edit {
+            background:#ffffff url('../images/Sprite_FinRules-psd.png') no-repeat -768px -201px;
+            width: 27px;
+            height: 27px;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 1px;
+            z-index: 1;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        .help {
+            background: url('../images/Sprite_FinRules-psd.png') no-repeat -450px -146px;
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .taskname {
+            padding-top: 4px;
+        }
+        .legend-description {
+            padding: 10px 0;
+            color: #565454;
+        }
+        .businessrules-description {
+            margin: 40px 30px 0;
+            height: 350px;
+            background: #f9f9f9;
+        }
+        overflow: hidden;
+        position: relative;
+        .legend {
+            &:after {
+                content: '';
+                position: absolute;
+                background: #daeeec;
+                height: 1px;
+                width: 100%;
+                margin: 5px 10px;
+            }
+        }
+        p {
+            line-height: 16px;
+        }
+        .taskContent {
+            padding-left: 7%;
+            &:before {
+                content: ":";
+                position: relative;
+                right: 20px;
+                font-family: Roboto-bold;
+            }
+        }
+        .condition {
+            padding: 15px;
+            li {
+                padding-bottom: 40px;
+            }
+            label {
+                font-family: Roboto-Bold;
+                white-space: nowrap;
+            }
+            span:not(.help):not(.task):before {
+                content: ":";
+                padding-right: 20px;
+                font-family: Roboto-bold;
+            }
+        }
+        .condition-col {
+            padding: 0;
+        }
+        .fa-check-circle {
+            color: #6DC25E;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        i.fa.fa-info-circle {
+            color: @secondary-background;
+            font-size: 18px;
+            margin-left: 15px;
+        }
+    }
+    @media only screen and (max-width: 1140px) {
+        .summary .taskContent {
+            padding-left: 8%;
+        }
+    }
     .footer {
         background-color: @primary-background;
         border-top: 1px solid @primary-border;
@@ -671,10 +680,49 @@
             font-family: Roboto-Regular;
         }
     }
-    .taskWrapper,.taskDetails.conditionTab,.taskTab,.businessRule,.summary,.back,.next,.saveUser,.save {
-      display:none;
-  }
-  .rotate {
-      transform: rotate(180deg);
-  }
+    .taskWrapper,
+    .taskDetails.conditionTab,
+    .taskTab,
+    .businessRule,
+    .summary,
+    .back,
+    .next,
+    .saveUser,
+    .save {
+        display: none;
+    }
+    .rotate {
+        transform: rotate(180deg);
+    }
 }
+
+.visited {
+    .step,
+    .stepTitle {
+        color: @secondary-background;
+    }
+    .chevronStatus {
+        display: inline-block;
+    }
+    .backToThePage {
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+.taskSelected {
+    button,
+    span {
+        display: inline-block;
+    }
+    .backToThePage {
+        display: none;
+    }
+    background: black;
+}
+
+// .buttonAndFooter {
+//     position: fixed;
+//     bottom:0vh;
+//     width:100%;
+// }

@@ -85,8 +85,9 @@
             <label class="step">Step 1 : </label> <label class="stepTitle"> Conditions</label>
           </div>
           <span class="col-xs-4 chevronStatus verticallyCenter">
-				  Tip Income
-				</span>
+            Tip Income
+            <span class="backToThePage" id="firstStep" onclick="summaryNavigation()"></span>
+				  </span>
         </li>
         <li class="tablink pull-left text-center clearfix" id="navtab-2">
 
@@ -94,11 +95,11 @@
             <i class="fa fa-angle-right"></i>
             <label class="step">Step 2 : </label><label class="stepTitle">Task</label>
           </div>
-          <div class="col-xs-6 padding0">
-            <span class="col-xs-7 chevronStatus">Complete Verbal Verification</span>
+          <div class="col-xs-6 padding0 chevronStatus">
+            <span class="col-xs-6 ">Complete Verbal Verification</span>
 
-            <button class="col-xs-5 change">Change</button>
-
+            <button class="col-xs-4 change" onclick="changeTask()">Change</button>
+            <span class="backToThePage" id="secondStep" onclick="summaryNavigation()"></span>
           </div>
         </li>
         <li class="tablink pull-left text-center clearfix" id="navtab-3">
@@ -106,54 +107,61 @@
             <i class="fa fa-angle-right"></i>
             <label class="step">Step 3 : </label><label class="stepTitle"> Business Rule</label>
           </div>
-          <span class="col-xs-3 chevronStatus paddingRight">Validate Document</span>
+          <span class="col-xs-3 chevronStatus paddingRight">Validate Document
+            <span class="backToThePage" id="thirdStep" onclick="summaryNavigation()"></span>
+          </span>
         </li>
         <li class="tablink pull-left text-center clearfix" id="navtab-4">
           <div class="col-xs-8">
             <i class="fa fa-angle-right"></i>
             <label class="step">Step 4 : </label><label class="stepTitle"> Summary</label>
           </div>
-          <span class="col-xs-4 chevronStatus verticallyCenter">Review</span>
+          <span class="col-xs-4 chevronStatus verticallyCenter">Review
+
+          </span>
         </li>
       </ul>
       <!-- Start of step-1 -->
       <div id="tab-1" class="tab-content conditionTab" data-tab="tab-1">
-        
+
         <div class="duFindings clearfix">
           <div class="unassignedCondition">
             <h3>CREATE CONDITION FRON UNASSIGNED</h3>
             <div class="duCards">
-            <div class="singleduCard">
-              <label class="cardCheck">
+              <div class="singleduCard">
+                <label class="cardCheck">
                       <input type="checkbox" onclick="enabledCheckbox()">
                         <span class="checkmark"></span>
                     </label>
-              <h2>DU Findings</h2>
-              <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no greater
-              </p>
-            </div>
-            <div class="singleduCard">
-              <label class="cardCheck">
+                <h2>DU Findings</h2>
+                <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct
+                  no greater
+                </p>
+              </div>
+              <div class="singleduCard">
+                <label class="cardCheck">
               <input type="checkbox" onclick="enabledCheckbox()">
               <span class="checkmark"></span>
               </label>
-              <h2>DU Findings</h2>
-              <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no greater
-              </p>
-            </div>
-            <div class="singleduCard">
-              <label class="cardCheck">
+                <h2>DU Findings</h2>
+                <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct
+                  no greater
+                </p>
+              </div>
+              <div class="singleduCard">
+                <label class="cardCheck">
                         <input type="checkbox" onclick="enabledCheckbox()">
                         <span class="checkmark"></span>
                     </label>
-              <h2>DU Findings</h2>
-              <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no greater
-              </p>
+                <h2>DU Findings</h2>
+                <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct
+                  no greater
+                </p>
+              </div>
+              <div class="subDivider">
+                <span>OR</span>
+              </div>
             </div>
-            <div class="subDivider">
-              <span>OR</span>
-            </div>
-          </div>
           </div>
           <div class="createNewCondition">
             <h2>CREATE NEW CONDITION</h2>
@@ -181,7 +189,7 @@
                 <textarea name="Text1">Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no greater</textarea>
               </div>
             </div>
-          </div>  
+          </div>
         </div>
       </div>
       <!-- end of tab1 -->
@@ -319,7 +327,8 @@
               <p class="col-xs-8 text-justify">Tip income was entered on the loan application. This income must have been received for the last two years
                 and must be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005). The
                 paystub must be dated no earlier than 30 days prior to the initial loan application date and it must include
-                all.</p>
+                all.
+              </p>
             </div>
             <div class="col-xs-4 condition-col">
               <label class="col-xs-5">Findings From DU : </label>
@@ -363,27 +372,27 @@
       </div>
       <!-- end of tab4 -->
       <!-- cancel,next,back buttons -->
-      <div class="buttonWrapper clearfix">
-        <button type="submit" class="btn btn-primary back" id="back-link" onclick="back()">
+      <div class="buttonAndFooter">
+        <div class="buttonWrapper clearfix">
+          <button type="submit" class="btn btn-primary back" id="back-link" onclick="back()">
             <span>
                 <i class="fa fa-arrow-circle-left"></i>
             </span>
-              <label>back</label>
-             
+              <label>back</label>           
             </button>
-        <button type="submit" class="btn btn-primary next" id="next-link" onclick="next()">
+          <button type="submit" class="btn btn-primary next" id="next-link" onclick="next()">
           <label>Next</label>
           <span>         
           </span>
         </button>
-        <button type="submit" class="btn btn-primary saveUser" id="savej-link" >
+          <button type="submit" class="btn btn-primary saveUser" id="savej-link">
             <span>
                 <i class="fa fa-plus-circle"></i>
             </span>
             <label>Save &amp; Add to All Borrowers - John</label>
           
           </button>
-        <button type="submit" class="btn btn-primary save" id="save-link">
+          <button type="submit" class="btn btn-primary save" id="save-link">
             <span>
                 <i class="fa fa-plus-circle"></i>
             </span>
@@ -391,16 +400,17 @@
             
           </button>
 
-        <button type="submit" class="btn btn-primary cancel" id="cancel-link" onclick="cancel()">
+          <button type="submit" class="btn btn-primary cancel" id="cancel-link" onclick="cancel()">
           <span>
             <i class="fa fa-close"></i>
           </span>
           <label>Cancel</label>
 
         </button>
-      </div>
-      <div class="footer">
-        <span>Copyright &#169;2018-Finrules,All rights reserved. </span>
+        </div>
+        <div class="footer">
+          <span>Copyright &#169;2018-Finrules,All rights reserved. </span>
+        </div>
       </div>
     </div>
   </div>

@@ -14,7 +14,7 @@ function enabledCheckbox(event) {
 
 var getClass=document.getElementsByClassName("tab-content") ;
 var leng=getClass.length;
-var i,j,counter,backfromTask,count=0;
+var i,j,counter=0,backfromTask,count=0,k;
 document.getElementsByClassName("next")[0].style.display="inline-block";
 (function () {
 getClass[0].style.display="block";
@@ -62,14 +62,21 @@ function cancel() {
 function navTabs(pageNo) {
     var navEffect=document.getElementsByClassName("tablink");
     var navLength=navEffect.length;
-    var k;
+    var k,l;
     for (k=0;k<navLength;k++)
     {
-        navEffect[k].classList.remove("current");
+        navEffect[k].classList.remove("current"); 
+        //navEffect[k].classList.remove("visited");       
     }
+
+    if(pageNo-1>=0){navEffect[pageNo-1].classList.add("visited");}
     navEffect[pageNo].classList.add("current");
 }
-   
+function changeTask(event)
+{
+    backfromTask=1;
+    back();
+}   
 function back() {
     
     if(backfromTask==1)
@@ -83,7 +90,9 @@ function back() {
     getClass[j].style.display="";
     clear();
     j=j-1;
-
+    for(k=leng-1;k>=j;k--)    {
+        document.getElementsByClassName("tablink")[k].classList.remove("visited");
+    }
     getClass[j].style.display="block";
     
     if(j==1 && backfromTask!=1) {
@@ -98,6 +107,8 @@ function back() {
 }    
 
 function next() {
+    document.getElementsByClassName("backToThePage")[1].style.display="";
+    document.getElementsByClassName("change")[0].style.display="none";
     for(j=0;j<leng;j++) 
     {
         if(getClass[j].style.display=="block") {
@@ -124,23 +135,37 @@ function summaryNavigation(event) {
    var targetId= window.event.currentTarget.id;
    var summaryTab=document.getElementsByClassName("summary")[0];
    var page;
-   if(targetId=="condition_")
+   if(targetId=="condition_" || targetId=="firstStep")
    {
-    summaryTab.style.display="none";
+    //summaryTab.style.display="none";
+    clear();
     document.getElementsByClassName("conditionTab")[0].style.display="block";    
+    document.getElementsByClassName("tablink")[0].classList.remove("visited");
+    document.getElementsByClassName("tablink")[1].classList.remove("visited");
+    document.getElementsByClassName("tablink")[2].classList.remove("visited");
+    document.getElementsByClassName("chevronStatus")[1].style.display="";
     button(0);
    }
-   else if(targetId=="task_")
+   else if(targetId=="task_" || targetId=="secondStep")
    {
-    summaryTab.style.display="none";
+    //summaryTab.style.display="none";
+    clear();
     document.getElementsByClassName("taskTab")[0].style.display="block";  
     document.getElementsByClassName("taskWrapper")[0].style.display="block";  
+
     verbalVerification();
-   }
-   else if(targetId=="businessrule_")
+
+    document.getElementsByClassName("tablink")[1].classList.remove("visited");
+    document.getElementsByClassName("tablink")[2].classList.remove("visited");
+
+    }
+   else if(targetId=="businessrule_" || targetId=="thirdStep")
    {
+       clear();
     summaryTab.style.display="none";
     document.getElementsByClassName("businessRule")[0].style.display="block";    
+    document.getElementsByClassName("tablink")[2].classList.remove("visited");
+    document.getElementsByClassName("chevronStatus")[1].style.display="";
     button(2);
    }
 
@@ -149,10 +174,15 @@ function summaryNavigation(event) {
 function verbalVerification(event) {
      document.getElementsByClassName("taskWrapper")[0].style.display="block";
      document.getElementsByClassName("taskDetails")[0].style.display="";
+     document.getElementsByClassName("chevronStatus")[1].style.display="";
+     document.getElementsByClassName("change")[0].style.display="none";
      counter=0;
      if(window.event.currentTarget.className=="select") {
+         document.getElementsByClassName("chevronStatus")[1].style.display="inline-block";
+         document.getElementsByClassName("backToThePage")[1].style.display="none";
          document.getElementsByClassName("taskDetails")[0].style.display="block";
          document.getElementsByClassName("taskWrapper")[0].style.display="";
+         document.getElementsByClassName("change")[0].style.display="inline-block";
          counter=1;
          backfromTask=1;
     }
