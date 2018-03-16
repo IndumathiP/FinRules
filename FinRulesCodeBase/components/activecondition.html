@@ -43,34 +43,33 @@
       </div>
       <!-- loan details header -->
       <div class="loanDetails row">
-        <h3 class="col-md-2 col-xs-2">LOAN #19048394990</h3>
+        <h3 class="col-md-2 col-xs-2">LOAN #W2018030139</h3>
         <ul class="loanInformation col-md-7 col-xs-7">
           <li class="col-md-3 col-xs-3">
             <label>Borrower</label>
-            <span>Garland Yoder</span>
+            <span>Firstimer, Alice</span>
           </li>
           <li class="col-md-3 col-xs-3">
             <label>Loan Status</label>
-            <span>LE Pending</span>
+            <span>In Underwriting</span>
           </li>
           <li class="col-md-3 col-xs-3">
             <label>Purchase Price</label>
-            <span>$ 165,000.00</span>
+            <span>$ 250,000.00</span>
           </li>
           <li class="col-md-3 col-xs-3">
             <label>Total Loan Amount</label>
-            <span>$ 156,350.00</span>
+            <span>$ 217,150.00</span>
           </li>
         </ul>
-        <h3 class="col-md-2 col-xs-2 pull-right loanAvg text-center">Weighted Avg. 70%</h3>
       </div>
       <!-- select condition type -->
       <div class="row loanMenu">
         <div class="hamMenu">
-          <div class="col hamIcon">
+          <div class="col hamIcon paddingLeft">
             <i class="fa fa-bars"></i>
           </div>
-          <span class="leftArrow"></span>
+          <a href="conditiontype.html" class="leftArrow"></a>
           <label>Condition Type: Income</label>
         </div>
       </div>
@@ -79,10 +78,12 @@
     <div class="content row">
       <!-- Add conditions -->
       <div class="activeCondition clearfix">
-        <div class="col-md-2 col-xs-2 addConditionSection">
+        <div class="col-md-2 col-xs-2 padding0">
+          <a href="addConditionflow.html" class="col-xs-10 addConditionSection ">
           <i class="fa fa-plus" aria-hidden="true"></i>
           <label>Add Conditions</label>
-          <div class="search">
+        </a>
+          <div class="col-xs-2 search">
             <i class="fa fa-search"></i>
           </div>
         </div>
@@ -95,12 +96,11 @@
               <li>
                 <span>Pending</span>
               </li>
-              <li>Weighted Avg. 20%</li>
             </ul>
             <ul class="rightTabs" id="options">
               <li id="viewDu">
                 <span class="searchIcon"></span>
-                <span>DU Findings</span>
+                <span>LP Findings</span>
               </li>
               <li>
                 <span class="conditionIcon"></span>
@@ -108,7 +108,7 @@
               </li>
               <li id="viewNotes">
                 <span class="notesIcon"></span>
-                <span>Notes</span>
+                <span>Notifications</span>
               </li>
             </ul>
           </ul>
@@ -116,12 +116,14 @@
       </div>
       <!-- Description of list of options -->
       <!-- DU Findings in detail -->
+      <div id="duFindingsWrapper" class="row">
+      </div>
       <div class="duFindings" id="duFindings">
         <ul>
-          <li id="hideDu"><span></span></li>
+          <li class="hideDu"><span></span></li>
           <li>
             <span class="searchIcon"></span>
-            <span>DU Findings</span>
+            <span>LP Findings</span>
           </li>
         </ul>
         <p>
@@ -136,17 +138,17 @@
           of employment. 1005 and/or leave and earning statement complete verbal verification of employment.
         </p>
         <div class="closeSection">
-          <span>close</span>
+          <span class="hideDu">close</span>
         </div>
       </div>
       <!-- notes in detail -->
       <div class="notes" id="notes">
         <div class="notesHeader">
           <ul>
-            <li id="hideNotes"><span></span></li>
+            <li class="hideNotes"><span></span></li>
             <li>
               <span class="notesIcon"></span>
-              <span>Notes</span>
+              <span>Notifications</span>
             </li>
           </ul>
         </div>
@@ -277,7 +279,7 @@
           </li>
         </ul>
         <div class="closeSection">
-          <span>Cancel</span>
+          <span class="hideNotes">Cancel</span>
           <span class="view">View All</span>
         </div>
       </div>
@@ -285,8 +287,8 @@
       <div class="mainSection clearfix">
         <!-- side menu -->
         <div class="leftMenu col-md-2 col-xs-2">
-          <div class="category"> View All Category <a href="javascript:void(0)" class="catageory-select pull-right" data-toggle="collapse" data-target="#category-list"></a>
-
+          <div class="category" data-toggle="collapse" data-target="#category-list"> View All Category <a href="javascript:void(0)" class="catageory-select pull-right"></a>
+            <!-- onclick="showOverlay()" onfocusout="hideOverlay()" -->
             <div class="category-list collapse" id="category-list">
               <div><a href="javascript:void(0)">All</a></div>
               <div><a href="javascript:void(0)">Prior to Approval</a></div>
@@ -334,28 +336,106 @@
         <!-- borrower list -->
         <div class="rightMenu col-md-10 col-xs-10 paddingRight">
           <ul class="borrowerList">
-            <li>Garland Yoder</li>
-            <li>Co-Borrower 1</li>
-            <li>Co-Borrower 2</li>
+            <li><a href="javascript:void(0)">Firstimer, Alice</a></li>
+            <li><a href="javascript:void(0)">Home Owner, John</a></li>
           </ul>
           <!-- Task lists -->
           <ul class="taskList clearfix">
-            <li>Task List</li>
-            <li>1003 Form</li>
+            <li class="active"><a data-toggle="tab" href="#task">Task List</a></li>
+            <li><a data-toggle="tab" href="#menu2">1003 Form</a></li>
           </ul>
           <!-- task -->
-          <h3>Task Validation Category 1</h3>
-          <div class="editCondition">
-            <h3>(And) all required Validation</h3>
-            <ul class="row">
-              <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload divorse degree Satisfied</li>
-              <li class="col-md-1 col-xs-1">Satisfied</li>
+          <div id="task">
+            <!-- Required tasks -->
+            <h3>Task Validation Category 1</h3>
+            <div class="editCondition">
+              <h3>(And) all required Validation</h3>
+              <div class="descriptionList">
+                <div class="detail">
+                  <ul class="clearfix" data-toggle="collapse" href="#collapse1" onclick="addIcon()">
+                    <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload the most recent Paystub</li>
+                    <li class="col-md-1 col-xs-1">Pending</li>
+                    <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+                    <li class="col-md-2 col-xs-2">Loan Officer</li>
+                    <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
+                      <span class="settingIcon" data-toggle="collapse" data-target="#pop-up">
+                        <ul class="collapse validation_action" id="pop-up" >
+                          <div class="option"><span class="delete"></span>Delete</div>
+                <div class="option"><span class="manage"></span>Manage</div>
+                <div class="option"><span class="reopen"></span>Reopen</div>
+                <div class="tip"></div>
+                <div class="tip in"></div>
+                </ul>
+                </span>
+                <span class="dropDown"></span>
+                <span class="addIconTop"></span>
+                <span id="bottomIcon" class="addIconMiddle"></span>
+                </li>
+                </ul>
+                <div id="collapse1" class="panel-collapse collapse">
+                  <div class="sourceInformation">
+                    <span class="closeIcon"></span>
+                    <label class="soruce">
+                      <span>Source : </span> System Default</label>
+                    <label>
+                      <span>Reason :</span> Info Closed after discusssion with loan Officer</label>
+                    <p>
+                      <span>Task : </span> Lorm ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                      eget dolor. Aenean massa. Cum sociss natoque penatibus et magnis</p>
+                  </div>
+                </div>
+              </div>
+              <ul class="clearfix">
+                <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload W2 of Previous Year</li>
+                <li class="col-md-1 col-xs-1">Pending</li>
+                <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+                <li class="col-md-2 col-xs-2">Loan Officer</li>
+                <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
+                  <span class="settingIcon" data-toggle="collapse" data-target="#pop-up2">
+                        <ul class="collapse validation_action" id="pop-up2" >
+                          <div class="option"><span class="delete"></span>Delete</div>
+            <div class="option"><span class="manage"></span>Manage</div>
+            <div class="option"><span class="reopen"></span>Reopen</div>
+            <div class="tip"></div>
+            <div class="tip in"></div>
+            </ul>
+            </span>
+            <span class="dropDown"></span>
+            <span class="addIconMiddle"></span>
+            </li>
+
+            </ul>
+          </div>
+          <!-- Optional task -->
+          <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+          <div class="descriptionList">
+            <ul class="addTask clearfix">
+              <li class="col-md-2">
+                <span></span>
+                <label>Add Task</label>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="toggleBtn">
+          <div class="btn-toggle clearfix">
+            <button class="btn btn-active" id="active" onclick="toggleactive()">AND</button>
+            <button class="btn btn-inactive" id="inactive" onclick="toggleinactive()">OR</button>
+          </div>
+        </div>
+        <h3>Task Validation Category 2</h3>
+        <div class="editCondition">
+          <h3>(And) all required Validation</h3>
+          <div class="descriptionList">
+            <ul class="clearfix">
+              <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload VOE document</li>
+              <li class="col-md-1 col-xs-1">Pending</li>
               <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
-              <!-- validation- operation -->
               <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
-                <span class="settingIcon" data-toggle="collapse" data-target="#pop-up">
-                    <ul class="collapse validation_action" id="pop-up" >
-                      <div class="option"><span class="delete"></span>Delete</div>
+                <span class="settingIcon" data-toggle="collapse" data-target="#pop-up3">
+                        <ul class="collapse validation_action" id="pop-up3" >
+                          <div class="option"><span class="delete"></span>Delete</div>
           <div class="option"><span class="manage"></span>Manage</div>
           <div class="option"><span class="reopen"></span>Reopen</div>
           <div class="tip"></div>
@@ -364,111 +444,45 @@
           </span>
           <span class="dropDown"></span>
           <span class="addIconTop"></span>
-          <span class="addIconBottom"></span>
+          <span class="addIconMiddle"></span>
           </li>
-          </ul>
-          <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
-          <ul class="row pendingrows">
-            <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload seperation Agreement</li>
-            <li class="col-md-1 col-xs-1">Pending</li>
-            <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
-            <li class="col-md-2 col-xs-2">Loan Officer</li>
-            <li class="col-md-2 col-xs-2">
-              <span class="settingIcon"></span>
-              <label class="orOption">OR</label>
-              <span class="dropDown"></span>
-              <span class="addIconTop"></span>
-              <span class="addIconBottom"></span>
-            </li>
-          </ul>
-          <ul class="row pendingrows">
-            <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload Court Degree</li>
-            <li class="col-md-1 col-xs-1">Pending</li>
-            <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
-            <li class="col-md-2 col-xs-2">Loan Officer</li>
-            <li class="col-md-2 col-xs-2">
-              <span class="settingIcon"></span>
-              <label class="orOption">OR</label>
-              <span class="dropDown"></span>
-              <span class="addIconTop"></span>
-              <span class="addIconBottom"></span>
-            </li>
 
-          </ul>
-          <ul class="row pendingrows">
-            <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload any Legal Documents</li>
-            <li class="col-md-1 col-xs-1">Pending</li>
-            <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
-            <li class="col-md-2 col-xs-2">Loan Officer</li>
-            <li class="col-md-2 col-xs-2">
-              <span class="settingIcon"></span>
-              <label class="orOption">OR</label>
-              <span class="dropDown"></span>
-              <span class="addIconTop"></span>
-            </li>
-
-          </ul>
-          <div class="sourceInformation">
-            <span class="closeIcon"></span>
-            <label class="soruce">
-                  <span>Source: </span>System Default</label>
-            <label>
-                  <span>Reason:</span>Info Closed after discusssion with loan Officer</label>
-            <p>
-              <span>Task: </span>Lorm ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-              Aenean massa. Cum sociss natoque penatibus et magnis</p>
-            <span class="addIconTop"></span>
-          </div>
-        </div>
-        <div class="toggleBtn">
-          <div class="andState">And</div>
-          <span>Or</span>
-        </div>
-        <h3>Task Validation Category 2</h3>
-        <div class="editCondition">
-          <h3>(And) all required Validation</h3>
-          <ul class="row">
-            <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload divorse degree Satisfied</li>
-            <li class="col-md-1 col-xs-1">Satisfied</li>
-            <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
-            <li class="col-md-2 col-xs-2">
-              <span class="settingIcon"></span>
-              <span class="dropDown"></span>
-              <span class="addIconTop"></span>
-              <span class="addIconBottom"></span>
-            </li>
-
-          </ul>
-          <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
-          <ul class="addTask row">
-            <li class="col-md-2">
-              <span></span>
-              <label>Add Task</label>
-            </li>
           </ul>
         </div>
+        <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+        <div class="descriptionList">
+          <ul class="addTask clearfix">
 
-      </div>
+            <span></span>
+            <label>Add Task</label>
 
-    </div>
-    <div class="button-wrapper clearfix">
-      <div class="col-md-2 col-xs-2 suspended">
-        <label>Suspended</label>
-        <label class="suspensionCount">6/2</label>
-        <span></span>
-      </div>
-      <div class="col-md-10 col-xs-10 clearfix paddingRight">
-        <button type="submit" class="btn btn-primary add">
-              <label>Add Task</label>
-              <span></span>
-          </button>
-        <button type="submit" class="btn btn-primary start">
-              <label>Start Execution</label>
-              <span></span>
-          </button>
+          </ul>
+
+        </div>
       </div>
     </div>
   </div>
+  </div>
+  <div class="button-wrapper clearfix">
+    <div class="col-md-2 col-xs-2 suspended">
+      <label>Suspended</label>
+      <label class="suspensionCount">6/2</label>
+      <span></span>
+    </div>
+    <div class="col-md-10 col-xs-10 clearfix paddingRight">
+      <button type="submit" class="btn btn-primary add">
+              <label>Add Task</label>
+              <span></span>
+          </button>
+      <button type="submit" class="btn btn-primary start">
+              <label>Start Execution</label>
+              <span></span>
+          </button>
+    </div>
+  </div>
+  </div>
+ 
+
   <div class="footer row">
     <span>Copyright &#169;2018-Finrules,All rights reserved. </span>
   </div>
@@ -476,6 +490,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="../assets/js/script.js"></script>
+  <!-- <script src="../assets/js/activetoggle.js"></script> -->
 </body>
 
 </html>

@@ -45,14 +45,24 @@
     font-size: 12px;
 }
 
+.col {
+  padding: 0 15px;
+  float: left;
+}
+
+.padding0 {
+  padding: 0;
+}
+
+.paddingRight {
+  padding-right: 0;
+}
+
+.paddingLeft {
+  padding-left: 0;
+}
+
 header {
-    .col {
-        padding: 0 15px;
-        float: left;
-    }
-    .padding0 {
-        padding: 0;
-    }
     .headerLogo {
         padding: 15px 0 8px;
         .icon {
@@ -129,22 +139,22 @@ header {
         .hamMenu {
             padding: 20px 15px;
             i {
-              font-size: 20px;
-          }
-          .hamIcon {
-              border-right: 1px solid @primary-color;
-          }
-          .leftArrow {
-              background: url('../images/Sprite_FinRules.png') no-repeat -446px -79px;
-              width: 23px;
-              height: 16px;
-              display: inline-block;
-              margin-left: 15px;
-              vertical-align: middle;
-          }
-          label {
-              padding-left: 10px;
-          }
+                font-size: 20px;
+            }
+            .hamIcon {
+                border-right: 1px solid @primary-color;
+            }
+            .leftArrow {
+                background: url('../images/Sprite_FinRules.png') no-repeat -446px -79px;
+                width: 23px;
+                height: 16px;
+                display: inline-block;
+                margin-left: 15px;
+                vertical-align: middle;
+            }
+            label {
+                padding-left: 10px;
+            }
         }
         .loanReport {
             padding: 15px;
@@ -204,7 +214,7 @@ header {
 }
 
 .conditionContainer {
-    padding: 0 15px;   
+    padding: 0 15px;
     .mainContent {
         background-color: #F4F4F4;
         .cardView {

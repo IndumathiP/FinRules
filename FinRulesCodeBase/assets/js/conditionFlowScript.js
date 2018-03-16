@@ -14,7 +14,7 @@ function enabledCheckbox(event) {
 
 var getClass=document.getElementsByClassName("tab-content") ;
 var leng=getClass.length;
-var i,j;
+var i,j,counter,backfromTask,count=0;
 document.getElementsByClassName("next")[0].style.display="inline-block";
 (function () {
 getClass[0].style.display="block";
@@ -25,12 +25,16 @@ function clear() {
     for(i=0;i<leng;i++)
     {
         getClass[i].style.display="";
+        if(i==1) {
+            document.getElementsByClassName("taskWrapper")[0].style.display="";
+            document.getElementsByClassName("taskDetails")[0].style.display="";
+        }
     }
 }
 
 function button(pageNo) {
     j=pageNo;
-    if (pageNo<(leng-1)){
+    if (pageNo<(leng-1)&& counter!=0){
         document.getElementsByClassName("next")[0].style.display="inline-block";
     }
     else {
@@ -67,10 +71,29 @@ function navTabs(pageNo) {
 }
    
 function back() {
+    
+    if(backfromTask==1)
+    {   j=1;
+        verbalVerification();
+        backfromTask=0;
+    }
+    else {
+
+    
     getClass[j].style.display="";
+    clear();
     j=j-1;
+
     getClass[j].style.display="block";
-    button(j);
+    
+    if(j==1 && backfromTask!=1) {
+        verbalVerification();
+        
+    }
+    else {counter=1;
+        button(j);
+    }
+    }
     
 }    
 
@@ -83,8 +106,18 @@ function next() {
     }
     clear();
     j=j+1;
+
     getClass[j].style.display="block";
-    button(j);
+    if(j==1) {
+        verbalVerification();
+//        return;
+    }
+    else {
+        counter=1;
+        button(j);
+    }
+    backfromTask=0;
+    
 }
 
 function summaryNavigation(event) {
@@ -100,8 +133,9 @@ function summaryNavigation(event) {
    else if(targetId=="task_")
    {
     summaryTab.style.display="none";
-    document.getElementsByClassName("taskTab")[0].style.display="block";    
-    button(1);
+    document.getElementsByClassName("taskTab")[0].style.display="block";  
+    document.getElementsByClassName("taskWrapper")[0].style.display="block";  
+    verbalVerification();
    }
    else if(targetId=="businessrule_")
    {
@@ -109,4 +143,30 @@ function summaryNavigation(event) {
     document.getElementsByClassName("businessRule")[0].style.display="block";    
     button(2);
    }
+
 } 
+
+function verbalVerification(event) {
+     document.getElementsByClassName("taskWrapper")[0].style.display="block";
+     document.getElementsByClassName("taskDetails")[0].style.display="";
+     counter=0;
+     if(window.event.currentTarget.className=="select") {
+         document.getElementsByClassName("taskDetails")[0].style.display="block";
+         document.getElementsByClassName("taskWrapper")[0].style.display="";
+         counter=1;
+         backfromTask=1;
+    }
+    button(1);
+}
+function rotate(event) {
+    //window.event.currentTarget.children[0].classList.add("rotate");
+    if(count&1)
+    {
+        window.event.currentTarget.children[0].style.transform="rotate(0deg)";
+        
+    }
+    else {
+        window.event.currentTarget.children[0].style.transform="rotate(180deg)";
+    }
+    count=count+1;
+}

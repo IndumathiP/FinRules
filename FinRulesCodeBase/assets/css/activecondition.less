@@ -13,6 +13,7 @@
 @base-background: #8F989D;
 
 /*** mixins ***/
+
 .pstyle {
     font-family: Roboto-Light;
     font-size: 12px;
@@ -30,6 +31,7 @@
     height: 21px;
     display: inline-block;
     position: absolute;
+    z-index: 1;
     right: 0;
 }
 
@@ -52,7 +54,7 @@
     li {
         display: inline-block;
         color: @secondary-background;
-        padding: 10px;
+        padding: 7px;
         cursor: pointer;
         font-weight: 600;
         span {
@@ -94,10 +96,10 @@
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 1;
+    z-index: 3;
     p {
         font-size: 10px;
-        line-height: 1.5;
+        line-height: 1.8;
         word-break: keep-all;
     }
 }
@@ -111,23 +113,18 @@
     bottom: 0;
 }
 
-.paddingRight {
-  padding-right: 0;
+.displayBlock{
+  display: block;
 }
-.paddingLeft {
-  padding-left: 0;
+
+.displayNone{
+  display: none;
 }
 
 /*** container ***/
+
 .activeConditionContainer {
     padding: 0 15px;
-    .col {
-        padding: 0 15px;
-        float: left;
-    }
-    .padding0 {
-        padding: 0;
-    }
     span {
         display: inline-block;
     }
@@ -136,35 +133,36 @@
         position: relative;
         padding: 0 15px;
         .activeCondition {
-            padding: 20px 0;
+            padding: 20px 0 3px;
             .addConditionSection {
                 background: @secondary-background;
-                padding: 0;
                 color: @primary-color;
-                .search {
-                    float: right;
-                    padding: 11px;
-                    background: @primary-button-color;
-                    color: @primary-color;
-                    border-left: 2px solid @primary-color;
-                }
-                .fa-plus {
-                    position: relative;
-                    top: 11px;
-                    left: 11px;
-                }
+                padding-top: 8px;
+                padding-bottom: 10px;
+            }
+            a {
+                text-decoration: none;
+                color: @primary-color;
+                display: inline-block;
                 label {
-                    position: relative;
-                    top: 11px;
-                    left: 21px;
+                    padding-left: 10px;
+                    cursor: pointer;
                 }
+            }
+            .search {
+                padding: 9px;
+                background: @primary-button-color;
+                color: @primary-color;
+                border-left: 2px solid @primary-color;
+                cursor: pointer;
+                text-align: center;
             }
             .optionMenu {
                 .leftTabs {
                     float: left;
                     li {
                         display: inline-block;
-                        padding: 10px 20px;
+                        padding: 8px 20px;
                         h3 {
                             .h3Style();
                         }
@@ -185,6 +183,14 @@
             }
         }
         /*** List Of Options ***/
+        .duFindingsWrapper{
+          position: fixed;
+          top:0;
+          height:100%;
+          width:100%;
+          z-index:2;
+          background-color:rgba(0,0,0,0.4);
+        }
         .duFindings {
             .OptionsInDetail();
             .activeOption();
@@ -277,20 +283,25 @@
                 -moz-appearance: none;
                 text-indent: 1px;
                 position: relative;
+                cursor: pointer;
                 .catageory-select {
                     background: url('../images/Sprite_FinRules-psd.png') no-repeat -677px -83px;
                     width: 12px;
                     height: 7px;
                     display: inline-block;
+                    position: relative;
+                    top: 3px;
                 }
                 .category-list {
+                    border: 1px solid @primary-border;
+                    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+                    box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
                     position: absolute;
                     background-color: #ffffff;
-                    border: 1px solid #EBEFEE;
                     width: 90%;
                     right: 0;
                     top: 35px;
-                    z-index: 10;
+                    z-index: 1;
                     div {
                         padding: 7px;
                         border-bottom: 1px solid #EBEFEE;
@@ -359,11 +370,15 @@
             }
         }
         .rightMenu {
+            padding-top: 10px;
             .borrowerList {
                 border-bottom: 1px solid @primary-border;
                 li {
                     display: inline-block;
                     padding: 10px 20px;
+                    a {
+                        color: @secondary-color;
+                    }
                 }
                 li:first-child {
                     font-weight: 700;
@@ -372,24 +387,27 @@
             }
             .taskList {
                 text-align: center;
-                padding: 35px 0;
+                padding: 15px 0;
                 width: 21%;
                 margin: 0 auto;
                 li {
                     float: left;
-                    padding: 10px;
+                    a {
+                        padding: 10px;
+                        display: block;
+                    }
                 }
-                li:first-child {
+                li:first-child a {
                     background: #6E7D9A;
                     color: @primary-color;
                 }
-                li:last-child {
+                li:last-child a {
                     border: 1px solid @primary-border;
                     border-radius: 3px;
                 }
             }
             h3 {
-                padding: 20px 0;
+                padding-bottom: 15px;
                 color: #757E86;
             }
             .editCondition {
@@ -398,149 +416,146 @@
                 box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
                 background: @primary-background;
                 h3 {
-                    padding: 20px;
+                    padding: 12px;
                     background: #6E7D9A;
                     color: @primary-color;
                 }
-                ul {
-                    padding: 12px 10px;
-                    margin: 25px;
-                    border: 1px solid @primary-border;
-                    position: relative;
-                    background: @primary-color;
-                    li {
-                        display: inline-block;
+                .descriptionList {
+                    padding: 20px 15px;
+                    .detail{
+                      margin-bottom: 10px;
                     }
-                    li:first-child {
-                        .dropdownIcon {
-                            background: url('../images/Sprite_FinRules.png') no-repeat -842px -77px;
-                            width: 16px;
-                            height: 17px;
+                    ul {
+                        padding: 12px 10px;
+                        border: 1px solid @primary-border;
+                        position: relative;
+                        background: @primary-color;
+                        cursor: pointer;
+                        // margin-bottom: 10px;
+                        // &:last-child {
+                        //     margin: 0;
+                        // }
+                        li {
                             display: inline-block;
-                            margin-right: 5px;
                         }
-                    }
-                    li:nth-child(2) {
-                        color: #5EA26B;
-                    }
-                    li:nth-child(4),
-                    li:nth-child(5) {
-                        .settingIcon {
-                            background: url('../images/Sprite_FinRules.png') no-repeat -809px -79px;
-                            width: 3px;
-                            height: 13px;
-                            float: left;
-                            cursor: pointer; //  display: inline-block;  
-                            position: relative;
-                            .validation_action {
-                                position: absolute;
-                                z-index: 1;
-                                top: -50px;
-                                left: -120px;
-                                padding: 0;
-                                border: 1px solid #B1B9C9;
-                                border-radius: 2px;
-                                width: 80px; // display: none;
-                                .option {
-                                    border-bottom: 1px solid #F8F8F8;
-                                    padding: 10px;
-                                    color: #949494;
-                                    font-size: 11px;
-                                    .delete {
-                                        background: url('../images/Sprite_FinRules-psd.png') no-repeat -243px -146px;
-                                        width: 13px;
-                                        height: 16px;
-                                        display: inline-block;
-                                        vertical-align: sub;
-                                        margin-right: 5px;
-                                    }
-                                    .manage {
-                                        background: url('../images/Sprite_FinRules-psd.png') no-repeat -293px -146px;
-                                        width: 16px;
-                                        height: 16px;
-                                        display: inline-block;
-                                        vertical-align: sub;
-                                        margin-right: 2px;
-                                    }
-                                    .reopen {
-                                        background: url('../images/Sprite_FinRules-psd.png') no-repeat -346px -146px;
-                                        width: 11px;
-                                        height: 17px;
-                                        display: inline-block;
-                                        vertical-align: sub;
-                                        margin-right: 2px;
-                                    }
-                                }
-                                .tip {
-                                    border: 10px solid;
-                                    border-color: transparent transparent transparent #B1B9C9;
-                                    position: absolute;
-                                    top: 22%;
-                                    left: 100%;
-                                }
-                                .in {
-                                    top: 23%;
-                                    left: 99%;
-                                    border: 8px solid;
-                                    border-color: transparent transparent transparent #ffffff;
-                                }
+                        li:first-child {
+                            .dropdownIcon {
+                                background: url('../images/Sprite_FinRules.png') no-repeat -842px -77px;
+                                width: 16px;
+                                height: 17px;
+                                display: inline-block;
+                                margin-right: 5px;
+                                vertical-align: text-bottom;
                             }
                         }
-                        .dropDown {
-                            background: url('../images/Sprite_FinRules.png') no-repeat -86px -145px;
-                            width: 18px;
-                            height: 18px;
-                            float: right;
+                        li:nth-child(2) {
+                            color: #dc0a0d;
                         }
-                        .addIconTop {
-                            .addIcon();
-                            bottom: 22px;
+                        li:nth-child(4),
+                        li:nth-child(5) {
+                            .settingIcon {
+                                background: url('../images/Sprite_FinRules.png') no-repeat -809px -79px;
+                                width: 3px;
+                                height: 13px;
+                                float: left;
+                                cursor: pointer; //  display: inline-block;  
+                                position: relative;
+                                .validation_action {
+                                    position: absolute;
+                                    z-index: 1;
+                                    top: -30px;
+                                    left: -90px;
+                                    padding: 0;
+                                    border: 1px solid #B1B9C9;
+                                    border-radius: 2px;
+                                    width: 80px; // display: none;
+                                    .option {
+                                        border-bottom: 1px solid #F8F8F8;
+                                        padding: 10px;
+                                        color: #949494;
+                                        font-size: 11px;
+                                        .delete {
+                                            background: url('../images/Sprite_FinRules-psd.png') no-repeat -243px -146px;
+                                            width: 13px;
+                                            height: 16px;
+                                            display: inline-block;
+                                            vertical-align: sub;
+                                            margin-right: 5px;
+                                        }
+                                        .manage {
+                                            background: url('../images/Sprite_FinRules-psd.png') no-repeat -293px -146px;
+                                            width: 16px;
+                                            height: 16px;
+                                            display: inline-block;
+                                            vertical-align: sub;
+                                            margin-right: 2px;
+                                        }
+                                        .reopen {
+                                            background: url('../images/Sprite_FinRules-psd.png') no-repeat -346px -146px;
+                                            width: 11px;
+                                            height: 17px;
+                                            display: inline-block;
+                                            vertical-align: sub;
+                                            margin-right: 2px;
+                                        }
+                                    }
+                                    .tip {
+                                        border: 10px solid;
+                                        border-color: transparent transparent transparent #B1B9C9;
+                                        position: absolute;
+                                        top: 22%;
+                                        left: 100%;
+                                    }
+                                    .in {
+                                        top: 23%;
+                                        left: 99%;
+                                        border: 8px solid;
+                                        border-color: transparent transparent transparent #ffffff;
+                                    }
+                                }
+                            }
+    
+                          }
+                            .dropDown {
+                                background: url('../images/Sprite_FinRules.png') no-repeat -86px -145px;
+                                width: 18px;
+                                height: 18px;
+                                float: right;
+                            }
+                            .addIconTop {
+                                .addIcon();
+                                bottom: 22px;
+                            }
+                            .addIconMiddle {
+                                .addIcon();
+                                top: 22px;
+                            }
+                            .addIconBottom {
+                              .addIcon();
+                              top: 100px;
+                          }
                         }
-                        .addIconBottom {
-                            .addIcon();
-                            top: 22px;
-                        }
-                    }
-                    li:nth-child(5),
-                    li:nth-child(6) {
-                        .dropDown {
-                            background: url('../images/Sprite_FinRules.png') no-repeat -86px -145px;
-                            width: 18px;
-                            height: 18px;
-                            float: right;
-                        }
-                        .addIconTop {
-                            .addIcon();
-                            bottom: 22px;
-                        }
-                        .addIconBottom {
-                            .addIcon();
-                            top: 22px;
-                        }
-                    }
-                }
-                .pendingrows {
-                    margin-bottom: 0;
-                    li:nth-child(2) {
-                        color: @closed-status-border;
-                    }
-                    li:nth-child(5) {
-                        padding: 0 15px 0 0;
-                        .orOption {
-                            padding: 4px 7px;
-                            background: @primary-background;
-                            color: #6E7D9A;
-                            position: relative;
-                            left: 23%;
-                            font-size: 14px;
-                        }
+                        .addTask {
+                          padding: 0;
+                          border: 0;
+                          background: none;
+                          span {
+                              background: url('../images/Sprite_FinRules.png') no-repeat -32px -143px;
+                              width: 20px;
+                              height: 21px;
+                              float: left;
+                          }
+                          label {
+                              vertical-align: -webkit-baseline-middle;
+                              margin-left: 20px;
+                          }
                     }
                 }
                 .sourceInformation {
-                    padding: 12px 25px;
-                    margin: 0px 25px;
+                    padding: 18px 25px;
+                    // margin: 0px 25px;
                     border: 1px solid #E7E7E7;
-                    margin-bottom: 20px;
+                    // margin-bottom: 20px;
                     position: relative;
                     background: @primary-color;
                     .closeIcon {
@@ -559,23 +574,7 @@
                         padding: 0 30px;
                     }
                     p {
-                        padding-top: 10px;
-                    }
-                    .addIconTop {
-                        .addIcon();
-                        right: 10px;
-                    }
-                }
-                .addTask {
-                    span {
-                        background: url('../images/Sprite_FinRules.png') no-repeat -32px -128px;
-                        width: 20px;
-                        height: 21px;
-                        float: left;
-                    }
-                    label {
-                        vertical-align: -webkit-baseline-middle;
-                        margin-left: 20px;
+                        padding-top: 15px;
                     }
                 }
             }
@@ -645,23 +644,41 @@
         }
     }
     .toggleBtn {
-        margin: 20px auto;
-        text-align: center;
-        width: 91px;
-        border: 1px solid @primary-border;
-        /* padding: 5px; */
-        border-radius: 17px;
-        height: 32px;
-        .andState {
-            float: left;
-            color: white;
-            background: #6E7D9A;
-            padding: 8px 10px;
-            border-radius: 17px;
-        }
-        span {
-            position: relative;
-            top: 9px;
+          margin: 20px auto;
+          text-align: center;
+          width: 102px;
+          .btn-toggle{
+            border-radius: 40px;
+            border: 1px solid @primary-border;
+            .btn-active,.btn-inactive{
+              float: left;
+              border-radius: 40px;
+            }
+          .btn-active{
+            background-color: @primary-color;
+            border-top-left-radius: 40px;
+            border-bottom-left-radius:40px;
+            width: 50px;
+            &:focus,
+            &.focus {
+                &,
+                &.active {
+                    outline: none;
+                }
+              }
+          }
+          .btn-inactive{
+            background-color: #6E7D9A;
+            color: @primary-color;
+            width: 50px;
+            &:focus,
+            &.focus {
+                &,
+                &.active {
+                    outline: none;
+                }
+              }
+          }
         }
     }
     .footer {

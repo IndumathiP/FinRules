@@ -45,13 +45,6 @@
 
 .conditionWrapper {
     padding: 0 15px; // Conditions Tab Styling Starts
-    .col {
-        padding: 0 15px;
-        float: left;
-    }
-    .padding0 {
-        padding: 0;
-    }
     span {
         display: inline-block;
     }
@@ -248,7 +241,7 @@
                     li:nth-child(4) {
                         padding: 0;
                         .listContent {
-                            padding: 20px;
+                            padding: 15px;
                         }
                         .verbalVerification {
                             padding: 10px;
@@ -460,6 +453,7 @@
     }
     .taskTab {
       .taskDetails {
+          display: none;
           h2 {
               font-family:Roboto-Bold;
               color:@navbar-background;
@@ -677,7 +671,10 @@
             font-family: Roboto-Regular;
         }
     }
-    .conditionTab,.taskTab,.businessRule,.summary,.back,.next,.saveUser,.save {
+    .taskWrapper,.taskDetails.conditionTab,.taskTab,.businessRule,.summary,.back,.next,.saveUser,.save {
       display:none;
+  }
+  .rotate {
+      transform: rotate(180deg);
   }
 }

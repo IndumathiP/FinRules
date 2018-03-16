@@ -67,7 +67,7 @@
       <!-- select condition type -->
       <div class="row loanMenu">
         <div class="hamMenu">
-          <div class="col hamIcon">
+          <div class="hamIcon col paddingLeft">
             <i class="fa fa-bars"></i>
           </div>
           <span class="leftArrow"></span>
@@ -257,11 +257,11 @@
                 <a href="javascript:void(0)">Select</a>
               </li>
               <li>
-                <div class="listContent">
+                <div class="listContent" data-toggle="collapse" data-target="#verbalVerification" onclick="rotate()">
                   <span class="expand"></span>
                   <label>Complete Verbal Verification</label>
                 </div>
-                <div class="verbalVerification">
+                <div class="verbalVerification collapse" id="verbalVerification">
                   <label><span>Descriptions</span>The verbal verification must be dtaed no earlier than 30 days prior to the initial loan application date and it must include all year-to-date earnings.</label>
                   <label><span>Business Rules</span>Fields to be checked in document against 1003 form</label>
                   <div class="verbalList">
@@ -278,7 +278,7 @@
                     </ul>
                   </div>
                 </div>
-                <a href="javascript:void(0)">Select</a>
+                <a href="javascript:void(0)" onclick="verbalVerification() " class="select">Select</a>
               </li>
               <li>
                 <span class="expand"></span>
