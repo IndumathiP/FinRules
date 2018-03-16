@@ -91,10 +91,12 @@
     border: 1px solid @primary-border;
     -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
     box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
-    width: 250px;
+    width:250px;
+    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s;
     height: 100%;
     position: absolute;
-    right: 0;
+    right: -267px;
     top: 0;
     z-index: 3;
     p {
@@ -104,6 +106,9 @@
     }
 }
 
+// .notes.show{
+//   right: 0;
+// }
 .closeSection {
     cursor: pointer;
     background-color: @primary-background;
@@ -132,12 +137,18 @@
     .content {
         position: relative;
         padding: 0 15px;
+        overflow: hidden;
         .activeCondition {
             padding: 20px 0 3px;
+            .add{
+              background: url('../images/Sprite_FinRules-psd.png') no-repeat -139px -149px;
+              width: 11px;
+              height: 11px;
+            }
             .addConditionSection {
                 background: @secondary-background;
                 color: @primary-color;
-                padding-top: 8px;
+                padding-top: 9px;
                 padding-bottom: 10px;
             }
             a {
@@ -150,12 +161,16 @@
                 }
             }
             .search {
-                padding: 9px;
+                padding: 7px;
                 background: @primary-button-color;
-                color: @primary-color;
                 border-left: 2px solid @primary-color;
                 cursor: pointer;
                 text-align: center;
+                span{
+                  background: url('../images/Sprite_FinRules-psd.png') no-repeat -499px -79px;
+                  width: 16px;
+                  height: 16px;
+                }
             }
             .optionMenu {
                 .leftTabs {
@@ -193,6 +208,9 @@
         }
         .duFindings {
             .OptionsInDetail();
+            &.showMenu{
+              right: 0;
+            }
             .activeOption();
             p {
                 padding: 25px;
@@ -206,6 +224,9 @@
         }
         .notes {
             .OptionsInDetail();
+            &.showMenu{
+              right: 0;
+            }
             .notesHeader {
                 .activeOption();
             }
@@ -430,7 +451,9 @@
                         border: 1px solid @primary-border;
                         position: relative;
                         background: @primary-color;
-                        cursor: pointer;
+                        .collapse.in.displayNone{
+                          display: none;
+                        }
                         // margin-bottom: 10px;
                         // &:last-child {
                         //     margin: 0;
@@ -439,6 +462,7 @@
                             display: inline-block;
                         }
                         li:first-child {
+                          cursor: pointer;
                             .dropdownIcon {
                                 background: url('../images/Sprite_FinRules.png') no-repeat -842px -77px;
                                 width: 16px;
@@ -462,13 +486,14 @@
                                 position: relative;
                                 .validation_action {
                                     position: absolute;
-                                    z-index: 1;
+                                    z-index: 2;
                                     top: -30px;
                                     left: -90px;
                                     padding: 0;
                                     border: 1px solid #B1B9C9;
                                     border-radius: 2px;
                                     width: 80px; // display: none;
+                                    
                                     .option {
                                         border-bottom: 1px solid #F8F8F8;
                                         padding: 10px;

@@ -80,11 +80,11 @@
       <div class="activeCondition clearfix">
         <div class="col-md-2 col-xs-2 padding0">
           <a href="addConditionflow.html" class="col-xs-10 addConditionSection ">
-          <i class="fa fa-plus" aria-hidden="true"></i>
+          <span class="add"></span>
           <label>Add Conditions</label>
         </a>
           <div class="col-xs-2 search">
-            <i class="fa fa-search"></i>
+            <span></span>
           </div>
         </div>
         <div class="col-md-10 col-xs-10 paddingRight">
@@ -137,8 +137,8 @@
           complete verbal verification of employment. 1005 and/or leave and earning statement complete verbal verification
           of employment. 1005 and/or leave and earning statement complete verbal verification of employment.
         </p>
-        <div class="closeSection">
-          <span class="hideDu">close</span>
+        <div class="closeSection hideDu">
+          <span>close</span>
         </div>
       </div>
       <!-- notes in detail -->
@@ -352,14 +352,16 @@
               <h3>(And) all required Validation</h3>
               <div class="descriptionList">
                 <div class="detail">
-                  <ul class="clearfix" data-toggle="collapse" href="#collapse1" onclick="addIcon()">
-                    <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload the most recent Paystub</li>
+                  <ul class="clearfix">
+                    <div data-toggle="collapse" href="#collapse1" onclick="addIcon()">
+                      <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload the most recent Paystub</li>
+                    </div>
                     <li class="col-md-1 col-xs-1">Pending</li>
                     <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
                     <li class="col-md-2 col-xs-2">Loan Officer</li>
                     <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
-                      <span class="settingIcon" data-toggle="collapse" data-target="#pop-up">
-                        <ul class="collapse validation_action" id="pop-up" >
+                      <span class="settingIcon" onclick="showPopup()">
+                        <ul class="validation_action" id="pop-up">
                           <div class="option"><span class="delete"></span>Delete</div>
                 <div class="option"><span class="manage"></span>Manage</div>
                 <div class="option"><span class="reopen"></span>Reopen</div>
@@ -391,8 +393,8 @@
                 <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
                 <li class="col-md-2 col-xs-2">Loan Officer</li>
                 <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
-                  <span class="settingIcon" data-toggle="collapse" data-target="#pop-up2">
-                        <ul class="collapse validation_action" id="pop-up2" >
+                    <span class="settingIcon" onclick="showPopup2()">
+                        <ul class="validation_action" id="pop-up2">
                           <div class="option"><span class="delete"></span>Delete</div>
             <div class="option"><span class="manage"></span>Manage</div>
             <div class="option"><span class="reopen"></span>Reopen</div>
@@ -433,8 +435,8 @@
               <li class="col-md-1 col-xs-1">Pending</li>
               <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
               <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
-                <span class="settingIcon" data-toggle="collapse" data-target="#pop-up3">
-                        <ul class="collapse validation_action" id="pop-up3" >
+                  <span class="settingIcon" onclick="showPopup3()">
+                      <ul class="validation_action" id="pop-up3">
                           <div class="option"><span class="delete"></span>Delete</div>
           <div class="option"><span class="manage"></span>Manage</div>
           <div class="option"><span class="reopen"></span>Reopen</div>
@@ -481,7 +483,7 @@
     </div>
   </div>
   </div>
- 
+
 
   <div class="footer row">
     <span>Copyright &#169;2018-Finrules,All rights reserved. </span>

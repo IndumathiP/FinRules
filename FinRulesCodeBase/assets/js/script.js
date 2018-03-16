@@ -1,25 +1,46 @@
 var listOfOptions = document.getElementById("options"),
   duFindings = document.getElementById("duFindings"),
   notes = document.getElementById("notes"),
-  counter = 0;
+  counter = 0,
+  childCount;
 
 document.getElementById("viewDu").addEventListener("click", showDu);
-//document.getElementById("hideDu").addEventListener("click", hideDu);
 document.getElementById("viewNotes").addEventListener("click", showNotes);
-// document.getElementById("hideNotes").addEventListener("click", hideNotes);
 window.addEventListener("click",hideMenu);
+var ElehideDu = document.getElementsByClassName("hideDu")
+var EleNotesDu = document.getElementsByClassName("hideNotes")
+
+for(var i=0;i<ElehideDu.length;i++)
+  ElehideDu[i].addEventListener("click",hideDu);
+
+
+for(var i=0;i<EleNotesDu.length;i++)
+  EleNotesDu[i].addEventListener("click",hideNotes);
 
 function hideMenu(e) {
   console.log(e.target);
-  // if(e.target != document.getElementById("viewDu")){
-  //   hideDu();
-  // }
-  // else if(e.target != document.getElementById("viewNotes")){
-  //   hideNotes();
-  // }
-  // else if()
+  // if(e.target !=  document.getElementById("viewDu")) || e.target.parentNode == duFindings{
+  if(e.target ==  document.getElementById("duFindingsWrapper")){
+    hideDu();
+    hideNotes();
+    display(document.getElementById("pop-up"),false);
+    display(document.getElementById("pop-up2"),false);
+    display(document.getElementById("pop-up3"),false);
+    // document.getElementById("duFindingsWrapper").addEventListener("hide-overlay");
+  }
 }
-
+function showPopup(){
+  display(document.getElementById("pop-up"),true);
+  showOverlay();
+}
+function showPopup2(){
+  display(document.getElementById("pop-up2"),true);
+  showOverlay();
+}
+function showPopup3(){
+  display(document.getElementById("pop-up3"),true);
+  showOverlay();
+}
 function display(ele, res) {
   if (res) {
     ele.classList.remove("displayNone");
@@ -27,8 +48,10 @@ function display(ele, res) {
     ele.classList.add("displayNone");
   }
 }
-display(duFindings, false);
-display(notes, false);
+// display(duFindings, false);
+display(document.getElementById("pop-up"),false);
+display(document.getElementById("pop-up2"),false);
+display(document.getElementById("pop-up3"),false);
 
 function showOverlay() {
   document.getElementById("duFindingsWrapper").classList.add("duFindingsWrapper");
@@ -39,27 +62,28 @@ function hideOverlay() {
 }
 
 function showDu() {
-  showOverlay();
   display(listOfOptions, false);
-  display(duFindings, true);
+  duFindings.classList.add("showMenu");
+  showOverlay();
 }
 
 function showNotes() {
-  showOverlay();
   display(listOfOptions, false);
-  display(notes, true);
+  notes.classList.add("showMenu");
+  showOverlay();
 }
 
 function hideDu() {
-  hideOverlay();
   display(listOfOptions, true);
-  display(duFindings, false);
+  duFindings.classList.remove("showMenu");
+  hideOverlay();
 }
 
 function hideNotes() {
-  hideOverlay();
   display(listOfOptions, true);
-  display(notes, false);
+  notes.classList.remove("showMenu");
+  hideOverlay();
+  // display(notes, false);
 }
 
 function toggleactive(){
