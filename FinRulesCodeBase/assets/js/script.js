@@ -109,10 +109,12 @@ function positionIcon(counter){
   if(counter%2 == 0){
     document.getElementById("bottomIcon").classList.remove("addIconBottom");
     document.getElementById("bottomIcon").classList.add("addIconMiddle");
+    document.getElementById("rotateArrow").style.transform = "rotate(0deg)";
   }
   else{
     document.getElementById("bottomIcon").classList.remove("addIconMiddle");
     document.getElementById("bottomIcon").classList.add("addIconBottom");
+    document.getElementById("rotateArrow").style.transform = "rotate(180deg)";
   }
 }
 // function enabledCheckbox(event) {
@@ -126,4 +128,16 @@ function positionIcon(counter){
 //     parent.style.borderColor = "transparent transparent #FECD62 transparent";
 //   }
 
+// }
+// function rotate(event) {
+//   //window.event.currentTarget.children[0].classList.add("rotate");
+//   if(count&1)
+//   {
+//       window.event.currentTarget.children[0].style.transform="rotate(0deg)";
+      
+//   }
+//   else {
+//       window.event.currentTarget.children[0].style.transform="rotate(180deg)";
+//   }
+//   count=count+1;
 // }
