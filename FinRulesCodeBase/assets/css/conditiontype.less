@@ -366,13 +366,10 @@ header {
                         position: absolute;
                         left: -2px;
                         display: none;
-                        a {
                             span {
                                 font-size: 24px;
                                 color: #ffffff;
                             }
-
-                        }
                     }
                 }
                 .individualCard:nth-child(2) {
@@ -485,13 +482,28 @@ header {
             }
         }
         .footer {
-            span {
-                display: inline-block;
-                padding: 15px;
-                font-size: 12px;
-                font-family: Roboto-Regular;
-                color:grey;
-            }
+          clear:both;
+          content:"";
+          display:block;
+          span {
+              display: inline-block;
+              padding: 15px;
+              font-size: 12px;
+              font-family: Roboto-Regular;
+              color:grey;
+          }
+          .right-content{          
+            float:right;
+            padding:0;
+            margin-top:10px;
+          }
+          .logo{
+            background:url("../images/logo.png") no-repeat;
+            width:100px;
+            height:22px;    
+            margin: 0 20px;          
+            vertical-align:middle;
+          }
         }
     }
     @media only screen and (min-width: 1367px){
