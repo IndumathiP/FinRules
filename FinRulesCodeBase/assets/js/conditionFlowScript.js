@@ -144,6 +144,7 @@ function summaryNavigation(event) {
     document.getElementsByClassName("tablink")[1].classList.remove("visited");
     document.getElementsByClassName("tablink")[2].classList.remove("visited");
     document.getElementsByClassName("chevronStatus")[1].style.display="";
+    counter=1;
     button(0);
    }
    else if(targetId=="task_" || targetId=="secondStep")

@@ -32,7 +32,7 @@
           <div class="pull-right">
             <li class="col text-right padding0">
               <h3>John Smith</h3>
-              <label>underWriter</label>
+              <label>Underwriter</label>
             </li>
             <li class="col">
               <span class="userIcon"></span>
@@ -43,26 +43,25 @@
       </div>
       <!-- loan details header -->
       <div class="loanDetails row">
-        <h3 class="col-md-2 col-xs-2">LOAN #19048394990</h3>
+        <h3 class="col-md-2 col-xs-2">LOAN # W2018030139</h3>
         <ul class="loanInformation col-md-7 col-xs-7">
           <li class="col-md-3 col-xs-3">
             <label>Borrower</label>
-            <span>Garland Yoder</span>
+            <span>Firstimer, Alice</span>
           </li>
           <li class="col-md-3 col-xs-3">
             <label>Loan Status</label>
-            <span>LE Pending</span>
+            <span>In Underwriting</span>
           </li>
           <li class="col-md-3 col-xs-3">
             <label>Purchase Price</label>
-            <span>$ 165,000.00</span>
+            <span>$ 250,000.00</span>
           </li>
           <li class="col-md-3 col-xs-3">
             <label>Total Loan Amount</label>
-            <span>$ 156,350.00</span>
+            <span>$ 217,150.00</span>
           </li>
         </ul>
-        <h3 class="col-md-2 col-xs-2 pull-right loanAvg text-center">Weighted Avg. 70%</h3>
       </div>
       <!-- select condition type -->
       <div class="row loanMenu">
@@ -189,7 +188,7 @@
                 <textarea name="Text1">Tip income was entered on the loan application. This income must have received for the last two years and must be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005)."</textarea>
               </div>
               <div class="form-group col-md-4 col-xs-4">
-                <label for="category">Findings from DU</label>
+                <label for="category">Findings from LP</label>
                 <textarea name="Text1">Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no greater</textarea>
               </div>
             </div>
@@ -202,13 +201,13 @@
         <!-- task details -->
         <div class="taskDetails">
           <h2>Task Details</h2>
-          <div class="panel panel-default">
+          <!-- <div class="panel panel-default">
             <div class="panel-body">
               <span class="noteIcon"></span>
               <span class="note">Note:</span>
               <span class="noteText">You have the option to delete the existing task details,suggest you to change the task name to avoid confusion</span>
             </div>
-          </div>
+          </div> -->
           <div class="row">
             <div class="col-md-4 col-sm-4">
               <span class="tasklabel">Task Name</span>
@@ -246,7 +245,13 @@
                 <input type="text" class="form-control" placeholder="Task Name">
               </div>
               <div class="col-md-3 col-sm-3">
-                <input type="text" class="form-control" placeholder="All Condition Type">
+                  <select class="form-control">
+                      <option>Condition Type 1</option>
+                      <option>Condition Type 2</option>
+                      <option>Condition Type 3</option>
+                      <option>Condition Type 4</option>                  
+                      <option>Condition Type 5</option>
+                    </select>
               </div>
               <button type="submit" class="search btn btn-primary">Search</button>
               <button type="reset" class="reset btn btn-primary">Reset</button>
@@ -341,7 +346,7 @@
               </p>
             </div>
             <div class="col-xs-4 condition-col">
-              <label class="col-xs-5">Findings From DU : </label>
+              <label class="col-xs-5">Findings From LP : </label>
               <p class="col-xs-7 text-justify">Hazard ins for 100 percent of insured value or equal to 10 liens if 80 percent of insured value max deduct
                 no greater</p>
             </div>
@@ -425,7 +430,7 @@
           </button>
         </div>
         <div class="footer">
-          <span>Copyright &#169;2018-Finrules,All rights reserved. </span>
+          <span>Copyright &#169; 2018 - FinRules. All rights reserved. </span>
         </div>
       </div>
     </div>
