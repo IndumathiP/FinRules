@@ -1,4 +1,4 @@
-var id,toggle,counter=0;
+var id,toggle;
 function remove(counter) {
     if(document.getElementsByClassName("currentLink")[0]&& counter==1){
         document.getElementsByClassName("currentLink")[0].classList.remove("currentLink");
@@ -58,14 +58,20 @@ function toggleName(event) {
     }
 }
 function iconToggle(event) {
-    if(counter&1)
+    
+    var counter;
+    counter=window.event.currentTarget.getAttribute("count");
+    //counter=parseInt(counter);
+    
+    if(counter=="0")
     {
-        window.event.currentTarget.children[0].style.transform="rotate(0deg)";
-        counter=counter+1;
+        window.event.currentTarget.children[0].style.transform="rotate(180deg)";
+        window.event.currentTarget.setAttribute("count","1");
     }
     else {
-        window.event.currentTarget.children[0].style.transform="rotate(180deg)";
-        counter=counter+1;
+        window.event.currentTarget.children[0].style.transform="rotate(0deg)";
+        window.event.currentTarget.setAttribute("count","0");
     }
+
     
 }
