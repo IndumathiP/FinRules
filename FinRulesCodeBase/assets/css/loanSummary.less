@@ -1,0 +1,238 @@
+@primary-border: #E7E7E7;
+@primary-background: #F8F8F8;
+@open-status-border: #FECD62;
+@closed-status-border: #F48185;
+@primary-button-color: #FFAB31;
+@secondary-background: #47AE9D;
+@primary-color: #fff;
+@secondary-color: #000;
+@navbar-background: #41A292;
+@secondary-text :#767F85;
+@selectbox-background: #D3D7DA;
+@list-background: #F1F5F6;
+@base-background: #8F989D;
+@link-background: #6E7D9A;
+@title-color: #989898;
+@table-color: #F0F4F7;
+.hamMenu {
+    .summaryLabel {
+        margin-top: 5px;
+    }
+}
+
+.summaryInfo {
+    margin: 15px;
+    padding: 15px;
+    border: 2px solid @primary-border;
+    background: @list-background;
+    font-family: Roboto-Light;
+    color: @secondary-text;
+    font-size: 16px;
+    .infoIcon {
+        background: url('../images/Sprite_FinRules-psd.png') no-repeat -818px -205px;
+        width: 19px;
+        height: 19px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    .rightArrow {
+        background: url('../images/Sprite_FinRules-psd.png') no-repeat -194px -209px;
+        width: 12px;
+        height: 20px;
+        vertical-align: middle;
+        margin: 0 10px;
+    }
+    .goTo {
+        background-color: @primary-button-color;
+        border: @primary-button-color;
+        margin: 0 15px;
+        font-size: 12px;
+    }
+}
+
+.mainWrapper {
+    padding: 15px;
+    width: 80%;
+    float: left;
+    .nameToggler {
+        width: 200px;
+        margin: 25px auto;
+        a {
+            padding: 10px;
+            text-align: center;
+            width: 100px;
+            border: 1px solid @primary-border;
+            float: left;
+            color: @secondary-color;
+            &:active,
+            &:focus {
+                background: @link-background;
+                color: @primary-color;
+                border-color: @link-background;
+            }
+        }
+        .active {
+            background: @link-background;
+            color: @primary-color;
+            border-color: @link-background;
+        }
+    }
+    .summaryContent {
+        .nav {
+            .currentLink {
+                border-bottom: 2px solid @navbar-background;
+            }
+            a {
+                color: @secondary-text;
+                &:hover,
+                &:active,
+                &:focus {
+                    border: none;
+                    background: none;
+                    border-bottom: 2px solid @navbar-background;
+                    color: @secondary-color;
+                }
+            }
+            .summaryLinks {
+                margin-right: 5px;
+            }
+        }
+
+    }
+    #application {
+        display: block;
+    }
+    #loanInformation {
+        display: none;
+        margin-top:50px;
+    }
+    .datas {
+        .borrowerInformation,
+        .income,
+        .monthlyIncome,
+        .loanInformation,
+        .propertyInformation {
+            padding: 15px;
+            border-top: 1px solid @primary-border;
+            margin-bottom: 10px;
+            position: relative;
+            .borderRight {
+                border-right: 1px solid @primary-border;
+            }
+            .fieldTitle {
+                position: absolute;
+                top: -8px;
+                left: -6px;
+                background: @primary-color;
+                padding: 0 10px;
+                cursor: pointer;
+                .downIcon {
+                    background: url('../images/Sprite_FinRules-psd.png') no-repeat -643px -208px;
+                    width: 16px;
+                    height: 16px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 5px;
+                    
+                }
+                .titleLabel {
+                    color: @secondary-background;
+                    font-family: Roboto-Bold;
+                }
+            }
+        }
+        .row {
+            margin: 15px 0;
+            line-height: 20px;
+            .labels {
+                font-family: Roboto-Bold;
+            }
+            .labelValue {
+                font-family: Roboto-Bold;
+                color: @secondary-text;
+            }
+            .none {
+                display:none;
+            }
+            .block {
+                display: inline-block;
+            }
+        }
+        .title {
+            color: @title-color;
+            font-family: Roboto-bold;
+            padding-left: 15px;
+            margin-top: 20px;
+        }
+        .table {
+            display: table;
+            font-family: Roboto-Bold;
+            .row {
+                margin-top:0;
+                margin-bottom: 0;
+            }
+            .td,
+            .th {
+                padding:10px 10px 10px 15px;
+                display:table-cell;
+            }
+            .td,
+            .th {
+                border: none;
+            }
+            .even {
+                background: @table-color;
+            }
+            .labelValue {
+                font-family: Roboto-Bold;
+                color: @secondary-text;
+            }
+            .tableFooter {
+                .row {
+                    background: #8D8D8D;
+                    color: @primary-color;
+                }
+            }
+        }
+    }
+}
+.footer {
+    clear: both;
+}
+
+.asideWrapper {
+    width:20%;
+    display: inline-block;
+    padding:15px;
+    color: @link-background;
+    font-family: Roboto-Medium;
+    .documents {
+        .listHead {
+            color:@secondary-background;
+            //border-bottom: 1px solid @primary-border;
+            span {
+                margin-top:15px;
+            }
+            hr {
+                margin-bottom: 0px;
+            }
+        }
+        li {
+            padding:15px;
+            span {
+                display: inline-block;
+                padding:0 15px; 
+            }
+            .documentIcon {
+                background: url('../images/Sprite_FinRules-psd.png') no-repeat -593px -76px;
+                width: 16px;
+                height: 19px;
+                vertical-align: middle;
+                padding:0;
+                margin-left:15px;
+                cursor: pointer;
+            }
+        }
+        border:1px solid @primary-border;
+    }
+}
