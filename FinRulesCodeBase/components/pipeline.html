@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet/less" type="text/css" href="../assets/css/styles.less" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
+
+</head>
+
+<body>
+  <div class="pipelineContainer">
+    <!-- Header section -->
+    <header>
+      <div class="headerLogo row">
+        <ul class="col-md-6 col-xs-6 padding0">
+          <li class="col icon">
+            <span class="logoIcon"></span>
+          </li>
+          <li class="col">
+            <span class="logoName"></span>
+          </li>
+        </ul>
+        <ul class="col-md-3 col-xs-3 padding0 pull-right">
+          <div class="pull-right">
+            <li class="col text-right padding0">
+              <h3>John Smith</h3>
+              <label>underWriter</label>
+            </li>
+            <li class="col">
+              <span class="userIcon"></span>
+              <i class="fa fa-caret-down"></i>
+            </li>
+          </div>
+        </ul>
+      </div>
+      <!-- select pipeline -->
+      <div class="row loanMenu">
+        <div class="hamMenu">
+          <div class="col hamIcon paddingLeft">
+            <i class="fa fa-bars"></i>
+          </div>
+          <label>Pipeline</label>
+        </div>
+      </div>
+    </header>
+    <!-- pipeline information -->
+    <div class="pipelineContent row">
+      <!-- sidebar -->
+      <div class="col-xs-2 paddingRight">
+        <div class="sideBar">
+          <!-- Top section -->
+          <div class="filterSection">
+            <h3>FILTERS</h3>
+            <div class="filterDetails clearfix">
+              <h4>Loan Amount</h4>
+              <div class="value">
+                <label>16000</label>
+                <span></span>
+              </div>
+              <div class="middleIcon">-</div>
+              <div class="value">
+                <label>200000</label>
+                <span></span>
+              </div>
+            </div>
+            <section>
+              <h4>Loan Type</h4>
+              <label class="cardCheck">FHA
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              <label class="cardCheck">VA
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              <label class="cardCheck">USDA
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              <label class="cardCheck">Conventional
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+            </section>
+          </div>
+          <!-- bottom section -->
+          <div class="statusSection">
+            <h3>FINRULES</h3>
+            <div class="statusDes">
+              <h4>AUS Status</h4>
+              <label class="cardCheck">DU, LP Eligible
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              <label class="cardCheck">DU Eligible
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              <label class="cardCheck">LP Eligible
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              <label class="cardCheck">DU Loan
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              <label class="cardCheck">LP Loan
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+              <label class="cardCheck">Private Investor
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-10">
+        <div class="searchRecord clearfix">
+          <input type="search" class="col-xs-3" placeholder="Search by Keyword">
+          <span></span>
+          <!-- <input type="" placeholder=""> -->
+        </div>
+        <!-- list of Records -->
+        <section>
+          <!-- record heading -->
+          <ul class="clearfix recordHeading">
+            <li class="col">
+              <label>Loan Number</label>
+              <span></span>
+            </li>
+            <li class="col">
+              <label>Borrower</label>
+              <span></span>
+            </li>
+            <li class="col">
+              <label>Purchase Price</label>
+              <span></span>
+            </li>
+            <li class="col">
+              <label>Loan Amount</label>
+              <span></span>
+            </li>
+            <li class="col">
+              <label>Loan Type</label>
+              <span></span>
+            </li>
+            <li class="col">
+              <label>Last Updated</label>
+              <span class="currentTime"></span>
+            </li>
+            <li class="col">
+              <label>AUS Status</label>
+              <span></span>
+            </li>
+          </ul>
+          <!-- List of records -->
+          <!-- first record -->
+          <div class="recordInformation">
+            <ul class="clearfix evenList">
+              <li class="col" id="one" data-toggle="collapse" href="#collapse1" onclick="addIcon()">
+                <span></span>
+                <label>W2018030139</label>
+              </li>
+              <li class="col">
+                <label>Firstimer, Alice</label>
+              </li>
+              <li class="col">
+                <label>&dollar;250,000.00</label>
+              </li>
+              <li class="col">
+                <label>&dollar;217,150.00</label>
+              </li>
+              <li class="col">
+                <label>Conventional</label>
+              </li>
+              <li class="col">
+                <label>1/17/18 2:05 PM</label>
+              </li>
+              <li class="col">
+                <span class="eligible"></span>
+                <label>DU, LP Eligible</label>
+              </li>
+            </ul>
+            <!-- information for DU and LP -->
+            <div id="collapse1" class="info collapse clearfix">
+              <div class="description pull-left">
+                <ul class="clearfix">
+                  <li class="col">
+                    <label>Loan Amount</label>
+                    <p>&dollar; 217,150.00</p>
+                  </li>
+                  <li class="col">
+                    <label>LTV/CLTV</label>
+                    <p>86 % / 86 %</p>
+                  </li>
+                  <li class="col-xs-1 padding0">
+                    <label>DTI </label>
+                    <p>23 % </p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>Second Ratio</label>
+                    <p>26 %</p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>First Ratio</label>
+                    <p>13 %</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="pull-left">
+                <span class="underwriterSection">
+                  <label>Ready For Underwritter</label>
+                </span>
+                <span class="comparisonSection">
+                  <button>DU-LP Comparison</button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- second record -->
+          <div class="recordInformation">
+            <ul class="clearfix">
+              <li class="col" id="two" data-toggle="collapse" href="#collapse2">
+                <span></span>
+                <label>W2017110023</label>
+              </li>
+              <li class="col">
+                <label>Bancroft, Cameron</label>
+              </li>
+              <li class="col">
+                <label>&dollar;250,000.00</label>
+              </li>
+              <li class="col">
+                <label>&dollar;217,150.00</label>
+              </li>
+              <li class="col">
+                <label>VA</label>
+              </li>
+              <li class="col">
+                <label>1/17/18 2:05 PM</label>
+              </li>
+              <li class="col">
+                <span class="loan"></span>
+                <label>DU Loan</label>
+              </li>
+            </ul>
+            <div id="collapse2" class="info collapse clearfix">
+              <div class="description pull-left">
+                <ul class="clearfix">
+                  <li class="col">
+                    <label>Loan Amount</label>
+                    <p>156000</p>
+                  </li>
+                  <li class="col">
+                    <label>LTV/CLTV</label>
+                    <p>78 % / 112 %</p>
+                  </li>
+                  <li class="col-xs-1 padding0">
+                    <label>DTI </label>
+                    <p>23 % </p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>Second Ratio</label>
+                    <p>26 %</p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>First Ratio</label>
+                    <p>13 %</p>
+                  </li>
+                </ul>
+                <div class="notifications">
+                  <p>
+                    Notifications on 12/27/2017 12:30 PM <span class="pull-right">Total Notification : <span class="number">05</span></span>
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prom eget hendrerit dolor. <br> Aliquam fermentum
+                    luctus metus, ut commodo enim sodales.
+                  </p>
+                </div>
+              </div>
+              <div class="conditionStatus pull-left clearfix">
+                <h3>Condition Status</h3>
+                <div class="progressBar">
+                  <div class="item progress-75">
+                    <div class="radial-inner-bg"></div>
+                  </div>
+                  <p>Income</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- third record -->
+          <div class="recordInformation">
+            <ul class="clearfix evenList">
+              <li class="col" data-toggle="collapse" href="#collapse3">
+                <span></span>
+                <label>W2018030163</label>
+              </li>
+              <li class="col">
+                <label>Clarke, Michael</label>
+              </li>
+              <li class="col">
+                <label>&dollar;250,000.00</label>
+              </li>
+              <li class="col">
+                <label>&dollar;217,150.00</label>
+              </li>
+              <li class="col">
+                <label>FHA</label>
+              </li>
+              <li class="col">
+                <label>1/17/18 2:05 PM</label>
+              </li>
+              <li class="col">
+                <span class="discrepences"></span>
+                <label>Discrepences</label>
+              </li>
+            </ul>
+            <div id="collapse3" class="info collapse clearfix">
+              <div class="description pull-left">
+                <ul class="clearfix">
+                  <li class="col">
+                    <label>Loan Amount</label>
+                    <p>156000</p>
+                  </li>
+                  <li class="col">
+                    <label>LTV/CLTV</label>
+                    <p>78 % / 112 %</p>
+                  </li>
+                  <li class="col-xs-1 padding0">
+                    <label>DTI </label>
+                    <p>23 % </p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>Second Ratio</label>
+                    <p>26 %</p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>First Ratio</label>
+                    <p>13 %</p>
+                  </li>
+                </ul>
+                <div class="notifications">
+                  <p>
+                    Notifications on 12/27/2017 12:30 PM <span class="pull-right">Total Notification : <span class="number">02</span></span>
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prom eget hendrerit dolor. <br> Aliquam fermentum
+                    luctus metus, ut commodo enim sodales.
+                  </p>
+                </div>
+              </div>
+              <div class="discrepencies pull-left">
+                <h3>discrepencies</h3>
+                <label>Income</label>
+                <p>LTV exceed 97% for fixed rate purchase <br> - Under Credit Categor</p>
+                <a href="javascript:void(0)">READ MORE</a>
+              </div>
+            </div>
+          </div>
+          <!-- fourth record -->
+          <div class="recordInformation">
+            <ul class="clearfix">
+              <li class="col">
+                <span></span>
+                <label>W2017110132</label>
+              </li>
+              <li class="col">
+                <label>Mateo, Pedro</label>
+              </li>
+              <li class="col">
+                <label>&dollar;250,000.00</label>
+              </li>
+              <li class="col">
+                <label>&dollar;217,150.00</label>
+              </li>
+              <li class="col">
+                <label>Conventional</label>
+              </li>
+              <li class="col">
+                <label>1/17/18 2:05 PM</label>
+              </li>
+              <li class="col">
+                <span class="loan"></span>
+                <label>LP Loan</label>
+              </li>
+            </ul>
+          </div>
+          <!-- fifth record -->
+          <div class="recordInformation">
+            <ul class="clearfix evenList">
+              <li class="col">
+                <span></span>
+                <label>W2017110127</label>
+              </li>
+              <li class="col">
+                <label>Ella, Alice</label>
+              </li>
+              <li class="col">
+                <label>&dollar;250,000.00</label>
+              </li>
+              <li class="col">
+                <label>&dollar;217,150.00</label>
+              </li>
+              <li class="col">
+                <label>Jumbo </label>
+              </li>
+              <li class="col">
+                <label>1/17/18 2:05 PM</label>
+              </li>
+              <li class="col">
+                <span class="eligible"></span>
+                <label>Private Investor</label>
+              </li>
+            </ul>
+          </div>
+          <!-- sixth record -->
+          <div class="recordInformation">
+            <ul class="clearfix">
+              <li class="col">
+                <span></span>
+                <label>W2017120035</label>
+              </li>
+              <li class="col">
+                <label>Lara, Maria</label>
+              </li>
+              <li class="col">
+                <label>&dollar;250,000.00</label>
+              </li>
+              <li class="col">
+                <label>&dollar;217,150.00</label>
+              </li>
+              <li class="col">
+                <label>USDA</label>
+              </li>
+              <li class="col">
+                <label>1/17/18 2:05 PM</label>
+              </li>
+              <li class="col">
+                <span class="eligible"></span>
+                <label>DU Eligible</label>
+              </li>
+            </ul>
+          </div>
+          <!-- seventh record -->
+          <div class="recordInformation">
+            <ul class="clearfix evenList">
+              <li class="col">
+                <span></span>
+                <label>W2017120034</label>
+              </li>
+              <li class="col">
+                <label>Leo, Johnson</label>
+              </li>
+              <li class="col">
+                <label>&dollar;250,000.00</label>
+              </li>
+              <li class="col">
+                <label>&dollar;217,150.00</label>
+              </li>
+              <li class="col">
+                <label>Conventional</label>
+              </li>
+              <li class="col">
+                <label>1/17/18 2:05 PM</label>
+              </li>
+              <li class="col">
+                <span class="eligible"></span>
+                <label>LP Eligible</label>
+              </li>
+            </ul>
+          </div>
+          <!-- eighth record -->
+          <div class="recordInformation">
+            <ul class="clearfix">
+              <li class="col">
+                <span></span>
+                <label>W2018030029</label>
+              </li>
+              <li class="col">
+                <label>Martin, Josh</label>
+              </li>
+              <li class="col">
+                <label>&dollar;250,000.00</label>
+              </li>
+              <li class="col">
+                <label>&dollar;217,150.00</label>
+              </li>
+              <li class="col">
+                <label>FHA</label>
+              </li>
+              <li class="col">
+                <label>1/17/18 2:05 PM</label>
+              </li>
+              <li class="col">
+                <span class="eligible"></span>
+                <label>DU, LP Eligible</label>
+              </li>
+            </ul>
+          </div>
+          <!-- nineth record -->
+          <div class="recordInformation">
+            <ul class="clearfix evenList">
+              <li class="col">
+                <span></span>
+                <label>W2018030027</label>
+              </li>
+              <li class="col">
+                <label>Harley, Michael</label>
+              </li>
+              <li class="col">
+                <label>&dollar;250,000.00</label>
+              </li>
+              <li class="col">
+                <label>&dollar;217,150.00</label>
+              </li>
+              <li class="col">
+                <label>Conventional</label>
+              </li>
+              <li class="col">
+                <label>1/17/18 2:05 PM</label>
+              </li>
+              <li class="col">
+                <span class="eligible"></span>
+                <label>LP Eligible</label>
+              </li>
+            </ul>
+          </div>
+          <!-- tenth record -->
+          <div class="recordInformation">
+            <ul class="clearfix">
+              <li class="col">
+                <span></span>
+                <label>W2018030160</label>
+              </li>
+              <li class="col">
+                <label>Tomas, Peter</label>
+              </li>
+              <li class="col">
+                <label>&dollar;250,000.00</label>
+              </li>
+              <li class="col">
+                <label>&dollar;217,150.00</label>
+              </li>
+              <li class="col">
+                <label>Conventional</label>
+              </li>
+              <li class="col">
+                <label>1/17/18 2:05 PM</label>
+              </li>
+              <li class="col">
+                <span class="loan"></span>
+                <label>LP Loan</label>
+              </li>
+            </ul>
+          </div>
+          <!-- eleventh record -->
+          <div class="recordInformation">
+            <ul class="clearfix evenList">
+              <li class="col">
+                <span></span>
+                <label>W2018030151</label>
+              </li>
+              <li class="col">
+                <label>Ryan, David</label>
+              </li>
+              <li class="col">
+                <label>&dollar;250,000.00</label>
+              </li>
+              <li class="col">
+                <label>&dollar;217,150.00</label>
+              </li>
+              <li class="col">
+                <label>USDA</label>
+              </li>
+              <li class="col">
+                <label>1/17/18 2:05 PM</label>
+              </li>
+              <li class="col">
+                <span class="discrepences"></span>
+                <label>Discrepences</label>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div class="showEntries clearfix">
+          <div class="col-xs-3 paddingLeft">
+            <label>
+              Show <span class="numberOfEntries"><label>30</label><span></span> </span>of 460 Records
+            </label>
+          </div>
+          <div class="col-xs-3 pull-right">
+            <span class="prev"></span><label>PREV</label>
+            <span class="numberOfEntries"><label>2</label></span> of 8
+            <label class="nxtLabel">NEXT</label><span class="next"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer row">
+      <span>Copyright &#169;2018-Finrules, All rights reserved. </span>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../assets/js/pipelinescript.js"></script>
+</body>
+
+</html>
