@@ -1,3 +1,4 @@
+@secondary-border-color : #D6EAE8;
 header {
     .hamMenu {
         .hamIcon {
@@ -12,113 +13,236 @@ header {
 .pipelineContainer {
     padding: 0 15px;
     font-family: Roboto-Regular;
-    span {
+    span,
+    a {
         display: inline-block;
     }
+    .duFindingsWrapper {
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
     .pipelineContent {
-        margin-top: 18px;
-        margin-bottom: 18px;
+        padding-top: 18px;
+        padding-bottom: 18px;
         display: flex;
-        .sideBar {
-            border: 1px solid @primary-border;
-            height: 100%;
-            h4 {
-                font-size: 16px;
-                font-weight: 600;
-                padding: 15px 0;
+        position: relative;
+        overflow: hidden;
+        .sideMenu {
+            @media screen and (max-width: 1200px) {
+                background-color: @primary-color;
+                border: 1px solid @primary-border;
+                -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+                box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+                -webkit-transition: all 0.5s;
+                /* For Safari 3.1 to 6.0 */
+                transition: all 0.5s;
+                position: absolute;
+                right: -200px;
+                top: 0;
+                z-index: 3;
+                height: 100%;
+                padding: 0;
             }
-            .filterSection {
-                padding: 0 15px;
-                h3 {
-                    .h3Style();
-                    padding: 18px 0;
-                    border-bottom: 1px solid @primary-border;
+            .sideBar {
+                border: 1px solid @primary-border;
+                height: 100%;
+                h4 {
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 15px 0;
                 }
-                .filterDetails {
-                    .value {
-                        padding: 10px 5px;
-                        border: 1px solid @primary-border;
-                        float: left;
-                        label {
-                            padding-right: 10px;
-                        }
-                        span {
-                            background: url('../images/Sprite_FinRules-psd.png') no-repeat -95px -216px;
-                            width: 10px;
-                            height: 6px;
-                            vertical-align: middle;
-                        }
-                        @media screen and (max-width: 1320px) {
-                            padding: 5px 3px;
+                .filterSection {
+                    padding: 0 15px;
+                    h3 {
+                        .h3Style();
+                        padding: 18px 0;
+                        border-bottom: 1px solid @secondary-border-color;
+                    }
+                    .filterDetails {
+                        .value {
+                            padding: 10px 5px;
+                            border: 1px solid @primary-border;
+                            float: left;
                             label {
-                                font-size: 10px;
-                                padding-right: 0;
+                                padding-right: 10px;   
+                                font-family: Roboto-Regular;                            
+                            }
+                            span {
+                                background: url('../images/Sprite_FinRules-psd.png') no-repeat -95px -216px;
+                                width: 10px;
+                                height: 6px;
+                                vertical-align: middle;
+                            }
+                            @media screen and (max-width: 1350px) {
+                                padding: 8px 5px;
+                                label {
+                                    font-size: 12px;
+                                    padding-right: 0;
+                                }
                             }
                         }
+                        .range {
+                            position: relative;
+                            width: 160px;
+                            margin-top: 15px;
+                            margin-bottom: 15px;
+                            .min,
+                            .max {
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 50%;
+                                border: 1px solid #47AE9D;
+                                position: absolute;
+                                z-index: 0;
+                            }
+                            .min {
+                                top: 0;
+                                left: 0;
+                                .minValue {
+                                    height: 4px;
+                                    width: 143px;
+                                    border-top: 1px solid #47AE9D;
+                                    border-bottom: 1px solid #47AE9D;
+                                    position: absolute;
+                                    top: 2px;
+                                    left: 8px;
+                                    background-color: @primary-color;
+                                    z-index: 2;
+                                }
+                            }
+                            .max {
+                                top: 0;
+                                right: 0;
+                                z-index: -1;
+                            }
+                            .selected {
+                                position: absolute;
+                                width: 70px;
+                                left: 50px;
+                                .min,
+                                .max {
+                                    background-color: #47AE9D;
+                                }
+                                .max {
+                                    z-index: 2
+                                }
+                                .minValue {
+                                  width: 51px;
+                                    background-color: #47AE9D;
+                                    border-color: #47AE9D;
+                                }
+                            }
+                        }
+                        .middleIcon {
+                            padding: 10px 5px;
+                            float: left;
+                        }
                     }
-                    .middleIcon {
-                        padding: 10px 5px;
-                        float: left;
+                }
+                .cardCheck {
+                    font-family: Roboto-Regular;
+                    position: relative;
+                    cursor: pointer;
+                    display: block;
+                    padding-left: 25px;
+                    padding-bottom: 10px;
+                    font-size: inherit;
+                    right: 0;
+                    top: 0;
+                    .checkmark {
+                        height: 15px;
+                        width: 15px;
+                        border-radius: 0;
+                        border: 1px solid @secondary-color;
+                    }
+                    .checkmark:after {
+                        left: 3px;
+                        top: 0px;
                     }
                 }
-            }
-            .cardCheck {
-                font-family: Roboto-Regular;
-                position: relative;
-                cursor: pointer;
-                display: block;
-                padding-left: 25px;
-                padding-bottom: 10px;
-                font-size: inherit;
-                right: 0;
-                top: 0;
-                .checkmark {
-                    height: 15px;
-                    width: 15px;
-                    border-radius: 0;
-                    border: 1px solid @secondary-color;
-                }
-                .checkmark:after {
-                    left: 3px;
-                    top: 0px;
-                }
-            }
-            .statusSection {
-                margin-top: 25px;
-                h3 {
-                    color: #999A9A;
-                    background-color: @primary-background;
-                    padding: 15px;
-                }
-                .statusDes {
-                    padding: 10px 15px;
+                .statusSection {
+                    margin-top: 25px;
+                    h3 {
+                        color: #999A9A;
+                        background-color: @primary-background;
+                        padding: 15px;
+                    }
+                    .statusDes {
+                        padding: 10px 15px;
+                    }
                 }
             }
         }
+        .showFilters {
+            right: 0;
+        }
         .searchRecord {
             padding: 0 10px 15px;
-            border-bottom: 1px solid @primary-border;
+            border-bottom: 1px solid @secondary-border-color;
             position: relative;
-            span {
-                background: url('../images/Sprite_FinRules-psd.png') no-repeat -547px -79px;
-                width: 16px;
-                height: 16px;
+            .searchIcon {
+              background: url('../images/Sprite_FinRules.png') no-repeat -843px -204px;
+              width: 15px;
+              height: 15px;
                 position: absolute;
                 top: 10px;
                 left: 15px;
             }
-            input[type="search"] {
+            input[type="search"],
+            input[type="text"] {
                 border: 1px solid @secondary-background;
                 border-radius: 3px;
                 padding: 10px 10px 10px 25px;
                 display: inline-block;
             }
+            .text {
+                position: relative;
+                float: left;
+                input[type="text"] {
+                    padding-left: 6em;
+                    width: 100%;
+                }
+                .leftView {
+                    position: absolute;
+                    left: 17px;
+                    top: 2px;
+                    padding: 10px;
+                    background-color: @primary-background;
+                }
+                .rightView {
+                    position: absolute;
+                    right: 25px;
+                    top: 10px;
+                    background: url('../images/Sprite_FinRules-psd.png') no-repeat -37px -212px;
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+            .fa-bars {
+                float: right;
+                color: @secondary-background;
+                font-size: 20px;
+                padding: 10px;
+                cursor: pointer;
+                display: none;
+                @media screen and (max-width: 1200px) {
+                    display: inline-block;
+                }
+            }
         }
         section {
             font-family: Roboto-Bold;
             .col {
-                width: 14%;
-                margin-right: 0.2%;
+                width: 12%;
+                margin-right: 0.5%;
+            }
+            .largeCol {
+                width: 16%;
+                white-space: nowrap;
             }
             .recordHeading {
                 li {
@@ -129,18 +253,18 @@ header {
                     }
                     label {
                         padding-right: 10px;
+                        width: 75%;
                     }
-                    span {
+                    a {
                         background: url('../images/Sprite_FinRules-psd.png') no-repeat -144px -216px;
                         width: 10px;
                         height: 6px;
-                        vertical-align: middle;
+                        padding-top: 10px;
                     }
                     .currentTime {
                         background: url('../images/Sprite_FinRules-psd.png') no-repeat -95px -216px;
                         width: 10px;
                         height: 6px;
-                        vertical-align: middle;
                     }
                 }
             }
@@ -171,6 +295,11 @@ header {
                                 padding-left: 10px;
                             }
                         }
+                        .name{
+                          @media screen and (max-width: 1540px){
+                            display: block;
+                          }
+                        }
                         .eligible {
                             background: url('../images/Sprite_FinRules-psd.png') no-repeat -802px -144px;
                             width: 19px;
@@ -199,7 +328,7 @@ header {
                 .description {
                     margin-top: 8px;
                     margin-bottom: 8px;
-                    border-right: 1px solid @primary-border;
+                    border-right: 1px solid @secondary-border-color;
                     width: 60%;
                     .col {
                         width: 25%;
@@ -208,7 +337,7 @@ header {
                         padding-top: 15px;
                         margin-left: 15px;
                         margin-right: 15px;
-                        border-top: 1px solid @primary-border;
+                        border-top: 1px solid @secondary-border-color;
                         p {
                             margin-bottom: 15px;
                             .number {
@@ -217,39 +346,69 @@ header {
                         }
                     }
                 }
+                .detail {
+                    width: 40%;
+                }
                 .conditionStatus {
                     h3 {
                         color: @secondary-background;
                         padding: 20px;
-                        text-align: center;
                     }
-                    .progressBar {
-                      padding: 15px;
-                      float: left;
-                        .item {
-                            margin-bottom: 20px;
-                            position: relative;
-                            width: 66px;
-                            height: 66px;
-                            border-radius: 50%;
-                            // border: 1px solid #DCDCDC;
-                            // background-color: #DCDCDC;
-                            margin-right: 20px;
-                        }
-                        .radial-inner-bg {
-                            border-radius: 50%;
-                            width: 50px;
-                            height: 50px;
-                            top: 8px;
-                            left: 8px;
-                            background: #FAFAFA;
-                            position: absolute;
-                        }
-                        .progress-75 {
-                            background-image: linear-gradient(0deg, @secondary-background 50%, transparent 50%, transparent), linear-gradient(270deg, @secondary-background 50%, #DCDCDC 50%, #DCDCDC);
-                        }
-                        p{
-                          margin-top: 25px;
+                    .progressWrapper {
+                        .progressBar {
+                            padding-right: 15px;
+                            display: inline-block;
+                            .item {
+                                position: relative;
+                                width: 66px;
+                                height: 66px;
+                                border-radius: 50%;
+                                @media screen and (max-width: 1330px) {
+                                    width: 56px;
+                                    height: 56px;
+                                }
+                            }
+                            .radial-inner-bg {
+                                border-radius: 50%;
+                                width: 50px;
+                                height: 50px;
+                                top: 8px;
+                                left: 8px;
+                                @media screen and (max-width: 1330px) {
+                                    width: 40px;
+                                    height: 40px;
+                                }
+                                background: #FAFAFA;
+                                position: absolute;
+                                .progressValue {
+                                    position: absolute;
+                                    color: @secondary-background;
+                                    top: 18px;
+                                    left: 15px;
+                                    @media screen and (max-width: 1330px) {
+                                        top: 15px;
+                                        left: 12px;
+                                    }
+                                }
+                            }
+                            .progress-1 {
+                                background-image: linear-gradient(90deg, #DCDCDC 50%, transparent 50%, transparent), linear-gradient(356deg, #DCDCDC 50%, #47AE9D 50%, #47AE9D);
+                            }
+                            .progress-2 {
+                                background-image: linear-gradient(90deg, #DCDCDC 50%, transparent 50%, transparent), linear-gradient(400deg, #DCDCDC 50%, #47AE9D 50%, #47AE9D);
+                            }
+                            .progress-3 {
+                                background-image: linear-gradient(-45deg, #47AE9D 50%, transparent 50%, transparent), linear-gradient(270deg, #47AE9D 50%, #DCDCDC 50%, #DCDCDC);
+                            }
+                            .progress-4 {
+                                background-image: linear-gradient(90deg, #DCDCDC 50%, transparent 50%, transparent), linear-gradient(320deg, #DCDCDC 50%, #47AE9D 50%, #47AE9D);
+                            }
+                            .progress-5 {
+                                background-image: linear-gradient(90deg, #DCDCDC 50%, transparent 50%, transparent), linear-gradient(400deg, #DCDCDC 50%, #47AE9D 50%, #47AE9D);
+                            }
+                            p {
+                                margin-top: 25px;
+                            }
                         }
                     }
                 }
@@ -290,14 +449,13 @@ header {
                             }
                         }
                         p {
-                            font-size: 20px;
+                            font-size: 25px;
                             color: @secondary-background;
                             margin-top: 10px;
                         }
                     }
                 }
                 .underwriterSection {
-                    margin-left: 35px;
                     padding: 26px 20px;
                     color: #5AAF73;
                     white-space: nowrap;
@@ -336,7 +494,7 @@ header {
             }
         }
         .nxtLabel {
-            padding: 0 10px;
+            padding: 0 8px;
         }
         .prev {
             background: url('../images/Sprite_FinRules-psd.png') no-repeat -243px -209px;
@@ -344,7 +502,7 @@ header {
             height: 20px;
             vertical-align: middle;
             &+label {
-                padding-left: 10px;
+                padding-left: 8px;
             }
         }
         .next {
