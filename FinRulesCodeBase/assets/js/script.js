@@ -1,7 +1,7 @@
 var listOfOptions = document.getElementById("options"),
   duFindings = document.getElementById("duFindings"),
   notes = document.getElementById("notes"),
-  counter = 0,
+  counter = 0,cnt=0,
   childCount;
 
 document.getElementById("viewDu").addEventListener("click", showDu);
@@ -98,6 +98,21 @@ function toggleinactive(){
   document.getElementById("inactive").classList.add("btn-inactive");
   document.getElementById("active").classList.remove("btn-inactive");
   document.getElementById("active").classList.add("btn-active");
+}
+
+function expand1003()
+{
+  cnt +=1;
+  rotateIcon(cnt);
+}
+
+function rotateIcon(cnt){
+  if(cnt%2 == 0){
+    document.getElementById("icon").style.transform = "rotate(180deg)";
+  }
+  else{
+    document.getElementById("icon").style.transform = "rotate(0deg)";
+  }  
 }
 
 function addIcon(){
