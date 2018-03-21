@@ -100,9 +100,11 @@
     top: 0;
     z-index: 3;
     p {
-        font-size: 10px;
+        font-size: 13px;
         line-height: 1.8;
         word-break: keep-all;
+        color:grey;
+        text-align: justify;
     }
 }
 
@@ -131,7 +133,8 @@
 .activeConditionContainer {
     padding: 0 15px;
     span {
-        display: inline-block;
+        display: inline-block;  
+        font-family: Roboto-Regular;
     }
     /***  main content ***/
     .content {
@@ -208,18 +211,19 @@
         }
         .duFindings {
             .OptionsInDetail();
+            height:90%;
             &.showMenu{
               right: 0;
             }
             .activeOption();
             p {
                 padding: 15px;
-                text-align:justify;
             }
             .closeSection {
                 span {
                     padding: 15px;
                     font-size: 13px;
+                    color:grey;
                 }
             }
         }
@@ -234,7 +238,7 @@
             .notesDes {
                 padding: 15px;
                 overflow: auto;
-                height: 92%;
+                height: 87%;
                 li {
                     position: relative;
                     border-left: 1px solid @primary-border;
@@ -249,7 +253,7 @@
                     }
                 }
                 h3 {
-                    font-weight: 600;
+                    color:black;
                 }
                 .notesDate {
                     padding: 8px 30px;
@@ -260,10 +264,9 @@
                     .author {
                         padding: 10px 0;
                         span {
-                            font-family: Roboto-Light;
                             padding-right: 5px;
                             font-size: 12px;
-                            border-right: 1px solid @primary-border;
+                            color:grey;
                         }
                         label {
                             padding-left: 5px;
@@ -297,6 +300,9 @@
             -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
             box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
             padding: 0;
+            span{
+              color:grey;
+            }
             .category {
                 background: @selectbox-background;
                 border-radius: 0;
@@ -306,6 +312,7 @@
                 text-indent: 1px;
                 position: relative;
                 cursor: pointer;
+                font-size:15px;
                 .catageory-select {
                     background: url('../images/Sprite_FinRules-psd.png') no-repeat -677px -83px;
                     width: 12px;
@@ -343,13 +350,17 @@
                 li:first-child {
                     background: @list-background;
                     color: @secondary-text;
-                    font-size: 14px;
+                    font-size: 12px;
                     margin: 0;
+                    font-weight:bold;
                 }
                 li:nth-child(2) {
                     background: @base-background;
                     color: @primary-color;
                     .incomeStatus {
+                      span{
+                        color:white;
+                      }
                         .pstyle();
                         margin-top: 10px;
                         .closed {
@@ -385,6 +396,7 @@
                     background: @list-background;
                     color: @secondary-text;
                     font-size: 12px;
+                    font-weight:bold;
                 }
                 li:nth-child(5) {
                     border-bottom: 1px solid @primary-border;
@@ -406,28 +418,42 @@
                     font-weight: 700;
                     border-bottom: 2px solid @navbar-background;
                 }
+            } 
+            .nav-pills{
+              width: 196.5px;
+              border: 1px solid #c9c9c9;
+              border-radius: 6px;
+              margin: 25px auto;
+                   a{
+                     color:#575757;
+                     font-size:15px;
+                   }
             }
-            .taskList {
-                text-align: center;
-                padding: 15px 0;
-                width: 21%;
-                margin: 0 auto;
-                li {
-                    float: left;
-                    a {
-                        padding: 10px;
-                        display: block;
-                    }
-                }
-                li:first-child a {
+                   .nav-pills li.active a, .nav-pills li.active a:focus, .nav-pills li.active a:hover {
+                    color: #fff;
                     background: #6E7D9A;
-                    color: @primary-color;
-                }
-                li:last-child a {
-                    border: 1px solid @primary-border;
-                    border-radius: 3px;
-                }
-            }
+                   }
+            // .taskList {
+            //     text-align: center;
+            //     padding: 15px 0;
+            //     width: 21%;
+            //     margin: 0 auto;
+            //     li {
+            //         float: left;
+            //         a {
+            //             padding: 10px;
+            //             display: block;
+            //         }
+            //     }
+            //     li:first-child a {
+            //         background: #6E7D9A;
+            //         color: @primary-color;
+            //     }
+            //     li:last-child a {
+            //         border: 1px solid @primary-border;
+            //         border-radius: 3px;
+            //     }
+            // }
             h3 {
                 padding-bottom: 15px;
                 color: #757E86;
@@ -604,6 +630,170 @@
                     }
                 }
             }
+            .assets{              
+                margin-bottom: 80px;
+              .row{
+                margin:0;
+              }
+              @media only screen and (max-width: 1200px) {
+                [class^="col-xs"]  {
+                    padding:0.3%;
+                }
+              }
+              h2{
+                font-size: 18px;
+                font-weight: lighter;
+                color: grey;
+                font-family: Roboto-bold;
+                // padding: 5px 20px 15px;
+                padding: 0.3% 1.6% 0.9%;
+                border-bottom:1px solid #ebebeb;
+              }
+              label{
+                font-family:Roboto-bold;
+              }
+              span{
+                color:grey;
+                white-space:nowrap;
+              }
+              label.col-xs-2 {
+                text-align: right;
+            }
+              .subtotal
+              {
+                // padding:30px 5px;
+                padding: 2% 0.3%;
+                border-bottom:1px solid #ebebeb;
+              }
+              .heading{
+                padding:1.7%;                
+                border-bottom:1px solid #ebebeb;
+              }
+              .description{                
+                border:1px solid #ebebeb;
+              }
+              .panel-heading{
+                padding:1.4% 1.7%;
+                background:#f0f4f7;
+                position:relative;                
+                .icon{
+                  background: url(../images/Sprite_FinRules.png) no-repeat -842px -77px;
+                  width: 16px;
+                  height: 17px;
+                  transform: rotate(180deg);
+                  position: absolute;
+                  top: 32%;
+                  left: 1%;
+                }
+                @media only screen and (max-width: 1600px) {
+                  .icon{
+                    background: url(../images/Sprite_FinRules.png) no-repeat -842px -77px;
+                    width: 16px;
+                    height: 17px;
+                    transform: rotate(0deg);
+                    position: absolute;
+                    top: 28%;
+                    left: 0.5%;
+                  }
+              }
+            }
+              .unexpand{
+                background:white;
+                position:relative;                
+                border-bottom:1px solid #ebebeb;
+                .icon{
+                  background: url(../images/Sprite_FinRules.png) no-repeat -842px -77px;
+                  width: 16px;
+                  height: 17px;
+                  transform: rotate(0deg);
+                  position: absolute;
+                  top: 32%;
+                  left: 1%;
+                }
+                @media only screen and (max-width: 1600px) {
+                  .icon{
+                    background: url(../images/Sprite_FinRules.png) no-repeat -842px -77px;
+                    width: 16px;
+                    height: 17px;
+                    transform: rotate(0deg);
+                    position: absolute;
+                    top: 28%;
+                    left: 0.5%;
+                  }
+              }
+            }
+                @media only screen and (max-width: 1200px) {
+                  .panel-heading {
+                    padding: 1.4% 3%;
+              }
+            }
+              .panel-description{
+                background:#fafafa;
+                padding:1%;
+                .panel-content{
+                  padding:1%;
+                  border-bottom:1px solid #c1d4d2;
+                  .row{                    
+                    padding-bottom:25px;
+                  }
+                  .row:nth-child(1){
+                    padding-bottom:40px;
+                  }
+                  label{
+                    display:block;
+                    margin-bottom:10px;
+                  }
+                }
+                .panelfooter{
+                  padding:2% 1% 1%;
+                  label{
+                    display:block;
+                    margin-bottom:10px;
+                  }
+                }
+              }
+            }
+            .additionalincome{
+              padding: 25px 10px;
+              th,h3{
+                font-family:Roboto-bold;
+              }
+              h3{
+                padding-left:21px;
+              }
+              th,.left{
+                color:black;
+              }
+              .table-striped tr{
+                border-radius:5px!important;
+              }
+              td{
+                color:grey;
+                font-family: Roboto-Regular;
+              }
+                th, td{
+                  padding:12px 21px;
+                }
+              .table tr th, td{
+                border-width:0!important;
+              }
+              .others .table-striped tbody tr:last-child
+              {
+                background-color: #8d8d8d;
+                td{
+                color:white;
+                }
+              }
+              .table-striped tbody tr:nth-of-type(odd) {
+              background-color: #f0f4f7;
+          }
+              td{
+                width:33.3%;
+              }
+              th:not(.left),td:not(.left){
+                text-align:right;
+              }
+            }
         }
     }
     .button-wrapper {
@@ -622,7 +812,7 @@
             }
             .suspensionCount {
                 padding: 4px 10px;
-                color: @secondary-color;
+                color: grey;
                 background: @primary-color;
                 border-radius: 11px;
                 margin-left: 10px;

@@ -95,6 +95,7 @@ header {
         label {
             margin-top: 5px;
             font-size: 13px;
+            color: grey;
         }
         span {
             display: inline-block;
@@ -102,6 +103,8 @@ header {
         }
         i {
             padding-left: 15px;
+            color: grey;
+            font-size: 18px;
         }
         h3 {
             color: @secondary-background;
@@ -117,21 +120,22 @@ header {
         h3 {
             font-size: 18px;
             padding: 19px 0;
-            letter-spacing:-1px;
             white-space: nowrap;
+            font-family: Roboto-Light;
+            color: black;
         }
         .loanInformation {
             padding: 12px 0;
             label {
                 display: block;
                 font-size: 13px;
-                color: @secondary-color;
+                color: grey;
             }
             span {
-                font-family: Roboto-Medium;
                 font-size: 15px;
                 padding-top: 5px;
                 display: inline-block;
+                color:black;
             }
         }
         .loanAvg {
@@ -161,20 +165,24 @@ header {
               vertical-align: middle;
           }
           label {
-              padding-left: 10px;
+            padding-left: 10px;
+            /* font-weight: bold; */
+            font-size: 16px;
           }
         }
         .loanReport {
             padding: 15px;
             li {
                 label {
-                    display: block;
-                    .pstyle();
-                    margin-bottom: 5px;
+                  display: block;
+                  font-family: Roboto-Regular;
+                  /* font-family: Roboto-Light; */
+                  font-size: 13px;
+                  margin-bottom: 5px;
                 }
                 span {
-                    font-family: Roboto-Light;
-                    font-size: 14px;
+                    // font-family: Roboto-Light;
+                    font-size: 15px;
                 }
                 button {
                     background: @primary-color;
@@ -190,13 +198,15 @@ header {
             background: @navbar-background;
             padding: 15px 0;
             label {
-                display: block;
-                .pstyle();
-                margin-bottom: 5px;
+              display: block;
+              font-family: Roboto-Regular;
+              /* font-family: Roboto-Light; */
+              font-size: 13px;
+              margin-bottom: 5px;
             }
             span {
-                font-family: Roboto-Light;
-                font-size: 14px;
+                // font-family: Roboto-Light;
+                font-size: 15px;
                 @media screen and (max-width: 1250px) {
                     font-size: 12px;
                 }
@@ -205,7 +215,7 @@ header {
                 }
             }
             button {
-                font-family: Roboto-Light;
+                // font-family: Roboto-Light;
                 font-size: 14px;
                 color: @primary-color;
                 background: @secondary-background;

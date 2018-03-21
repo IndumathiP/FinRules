@@ -22,7 +22,6 @@
         padding: 4px 8px;
     }
 }
-
 .cardCheck {
   position: absolute;
   cursor: pointer;
@@ -118,6 +117,11 @@
                     color: @secondary-color;
                 }
             }
+            .form-group{
+              input{
+                color:grey;
+              }
+            }
             .duCards {
                 margin-bottom: 20px;
                 margin-right: 20px;
@@ -184,8 +188,10 @@
                     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
                     color: @secondary-text;
                     width: 100%;
-                    height: 100px;
+                    height: 166px;
                     resize: none;
+                    line-height: 1.3;
+                    text-align: justify;
                 }
             }
         } //Condition tab styling ends
@@ -367,6 +373,33 @@
             width: 25%;
             position: relative;
             color: #C0C0C0;
+            .chevronStatus
+            {
+              &:before {
+                background: url(../images/Sprite_FinRules1.png) -643px -195px;
+                content: '';
+                position: absolute;
+                width: 19px;
+                height: 35px;
+                z-index: 99999;
+                left: 106%;
+                top: -15%;
+            }
+          }
+              .chevronStatus3
+              {
+                &:before 
+                {
+              background: url(../images/Sprite_FinRules1.png) -643px -195px;
+              content: '';
+              position: absolute;
+              width: 19px;
+              height: 35px;
+              z-index: 99999;
+              left: 180%;
+              top: -15%;
+                }
+          }
             i+label {
                 // padding: 8px;
                 &:nth-child(even) {
@@ -410,17 +443,29 @@
                 content: '';
                 position: absolute;
                 right: -30px;
-                top: -5px;
+                top: 4px;
                 width: 0;
                 height: 0;
-                border-top: 35px solid transparent;
+                border-top: 30px solid transparent;
                 border-bottom: 30px solid transparent;
-                z-index: 9;
                 border-left: 30px solid #f9f9f9;
+                width: 19px;
+                height: 35px;
+                z-index: 122;
             }
             &:last-child:after {
                 border: 0;
+                width:0;
             }
+        }
+        @media only screen and (max-width:1300px){
+          #navtab-3{
+            padding:15px 0;
+            .col-xs-7{
+              padding:0;
+            }
+          }
+
         }
     }
     .tab-content {
@@ -447,6 +492,7 @@
             position: absolute;
             right: 0;
             top: 0;
+            z-index:4444;
         }
     }
     .iconAlignment {
@@ -466,7 +512,7 @@
             }
         }
         p {
-            line-height: 16px;
+            line-height:1.5em;
         }
         .taskContent {
             padding-left: 7%;
@@ -519,7 +565,6 @@
                 color: @base-background;
             }
             .noteText {
-                font-family: Roboto-Medium;
                 color: #BEBEBE;
             }
             .tasklabel {
@@ -529,7 +574,6 @@
                 width: 100%;
                 margin: 15px 0;
                 padding: 7px;
-                font-family: Roboto-Medium;
                 color: @base-background;
                 border: 2px solid @primary-border;
                 border-radius: 2px;
@@ -597,8 +641,10 @@
             textarea {
                 width: 100%;
                 padding: 15px;
-                margin-top: 15px;
-                font-family: Roboto-Medium;
+                margin-top: 15px;                
+                font-size: 14px;
+                line-height: 1.5em;
+                text-align: justify;
                 color: @secondary-text;
                 resize: none;
                 border: 2px solid @primary-border;
@@ -668,7 +714,7 @@
             }
         }
         p {
-            line-height: 16px;
+            line-height: 1.5em;
         }
         .taskContent {
             padding-left: 7%;
@@ -780,8 +826,8 @@
     background: black;
 }
 
-// .buttonAndFooter {
-//     position: fixed;
-//     bottom:0vh;
-//     width:100%;
+// .buttonAndFooter {     
+//   position: absolute;
+//   bottom:0;
+//   width:100%;
 // }
