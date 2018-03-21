@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <title>document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet/less" type="text/css" href="../assets/css/styles.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
+</head>
+
+<body>
+    <div class="conditionWrapper">
+        <!-- header part   -->
+        <header>
+            <div class="headerLogo row">
+                <ul class="col-md-6 col-xs-6 padding0">
+                    <li class="col icon">
+                        <span class="logoIcon"></span>
+                    </li>
+                    <li class="col">
+                        <span class="logoName"></span>
+                    </li>
+                </ul>
+                <ul class="col-md-3 col-xs-3 padding0 pull-right">
+                    <div class="pull-right">
+                        <li class="col text-right padding0">
+                            <h3>John Smith</h3>
+                            <label>UnderWriter</label>
+                        </li>
+                        <li class="col">
+                            <span class="userIcon"></span>
+                            <i class="fa fa-caret-down"></i>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <!-- loan details header -->
+            <div class="loanDetails row">
+                <h3 class="col-md-2 col-xs-2">LOAN #W2018030139</h3>
+                <ul class="loanInformation col-md-7 col-xs-7">
+                    <li class="col-md-3 col-xs-3">
+                        <label>Borrower</label>
+                        <span>Firstimer,Alice</span>
+                    </li>
+                    <li class="col-md-3 col-xs-3">
+                        <label>Loan Status</label>
+                        <span>In UnderWriting</span>
+                    </li>
+                    <li class="col-md-3 col-xs-3">
+                        <label>Purchase Price</label>
+                        <span>$ 250,000.00</span>
+                    </li>
+                    <li class="col-md-3 col-xs-3">
+                        <label>Total Loan Amount</label>
+                        <span>$ 217,150.00</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="row loanMenu">
+                <div class="hamMenu">
+                    <div class="hamIcon col paddingLeft">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <label class="summaryLabel">Recommendation</label>
+                </div>
+            </div>
+        </header>
+        <!-- header part end     -->
+        <!-- mainsection -->
+        <div class="verification clearfix">
+            <div class="panelContainer">
+                <div class="panelWrapper">
+                    <div class="duEligibility panel panel-default">
+                        <div class="panel-heading">
+                            <span class="panelTitle">DU-PIW Eligibility</span>
+                            <span class="pull-right">FannieMae</span>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row contentWrapper">
+                                <div class="col-xs-5">
+                                    <div class="verificationWrapper">
+                                        <div class="icon"></div>
+                                        <span class="verified">Eiligibility</span>
+                                        <span class="verified">Qualified</span>
+                                        <div class="successIcon"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-7">
+                                    <div class="content">
+                                        <p>
+                                            The Loan file is not eligible foe PIW if submitted to Fannie Mae.
+                                        </p>
+                                        <div class="matchedCriteria">
+                                            <span class="verifiedIcon"></span>
+                                            <span class="text">One Unit Property</span>
+                                        </div>
+                                        <div class="matchedCriteria">
+                                            <span class="verifiedIcon"></span>
+                                            <span>Property Type Condominium</span>
+                                        </div>
+                                        <div class="matchedCriteria">
+                                            <span class="verifiedIcon"></span>
+                                            <span>Residence Type is Investment</span>
+                                        </div>
+                                        <div class="matchedCriteria">
+                                            <span class="verifiedIcon"></span>
+                                            <span>Cash Out Refinance with LTV 79% (Cash Out Refinance with LTV less than or equal)</span>
+                                        </div>
+                                        <div class="matchedCriteria">
+                                            <span class="verifiedIcon"></span>
+                                            <span>DU Recommendation is Approve/Eligible</span>
+                                        </div>
+                                        <button class="btn btn-primary proceed">Proceed with DU</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panelContainer">
+                <div class="panelWrapper">
+                    <div class="lpEligibility panel panel-default">
+                        <div class="panel-heading">
+                            <span class="panelTitle">LP-ACE Eligibility</span>
+                            <span class="pull-right">Freddie Mac</span>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row contentWrapper">
+                                <div class="col-xs-5">
+                                    <div class="verificationWrapper">
+                                        <div class="icon"></div>
+                                        <span class="verified">Eiligibility</span>
+                                        <span class="verified">Qualified</span>
+                                        <div class="successIcon"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-7">
+                                    <div class="content">
+                                        <p>
+                                            The Loan file is Eligible for PIW is submitted to Freddie Mac.
+                                        </p>
+                                        <div class="matchedCriteria">
+                                            <span class="verifiedIcon"></span>
+                                            <span class="text">One Unit Property</span>
+                                        </div>
+                                        <div class="matchedCriteria">
+                                            <span class="verifiedIcon"></span>
+                                            <span>Property Type Condominium</span>
+                                        </div>
+                                        <div class="matchedCriteria">
+                                            <span class="verifiedIcon"></span>
+                                            <span>Residence Type is Investment</span>
+                                        </div>
+                                        <div class="matchedCriteria">
+                                            <span class="verifiedIcon"></span>
+                                            <span>Cash Out Refinance with LTV 79%</span>
+                                        </div>
+                                        <div class="matchedCriteria">
+                                            <span class="verifiedIcon"></span>
+                                            <span>LP Recommendation is Eligible</span>
+                                        </div>
+                                        <div class="matchedCriteria">
+                                            <span class="verifiedIcon"></span>
+                                            <span>LP Underwriting Funding returned the below feedbback message.</span>
+                                        </div>
+                                        <div class="matchedCriteria">
+
+                                            <span>"This Loan is eligible for the apprisal wavier.If wavier is not accepted an apprisal is required".</span>
+                                        </div>
+                                        <button class="btn btn-primary proceed">Proceed with DU</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigationWrapper">
+            <div class="navigation text-center">
+                <ul class="list-inline">
+                    <li><a href="javascript:void(0)" class="active">Income</a></li>
+                    <li><a href="javascript:void(0)">Assets</a></li>
+                    <li><a href="javascript:void(0)">Property</a></li>
+                    <li><a href="javascript:void(0)">Borrower</a></li>
+                    <li><a href="javascript:void(0)">Credit</a></li>
+                </ul>
+            </div>
+            <div class="navigationContent">
+                <div class="iconWrapper"><span class="collapseIcon"></span></div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <span class="heading">DU-Findings (05)</span>
+                    </div>
+                    <div class="col-xs-6">
+                        <span class="heading">LP-Findings (05)</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="taskContent">
+                            <p>Obtain a completed and signed Form 4506-T for each borrower at or before closing. If all of a borrower's income has been validated through the DU validation service, a completed and signed Form 4506T is not required for that borrower. Form 4506. Form... <a href="javascript:void(0)" class="pull-right">More</a></p>
+                            <div class="contentFooter">
+                                <span class="complexityIcon"></span>
+                                <span class="name">Complexity-Low</span>
+                                <span class="viewTaskIcon"></span>
+                                <span class="name">View All Task</span>
+                                <span class="name pull-right">Download</span>
+                                <span class="downloadIcon  pull-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="taskContent">
+                            <p>Signed IRS Form 4506-T: Any borrower. whose income is used to qualify, must sign IRS
+                                    Form 4506-T at both application and on the Note Date. If the signed IRS Form 4506-T from
+                                    application submitted to IRS. and transcripts are received back from ... 
+                                    <a href="javascript:void(0)" class="pull-right">More</a>
+                            </p>
+                            <div class="contentFooter">
+                                <span class="complexityIcon"></span>
+                                <span class="name">Complexity-Low</span>
+                                <span class="viewTaskIcon"></span>
+                                <span class="name">View All Task</span>
+                                <span class="name pull-right">Download</span>
+                                <span class="downloadIcon  pull-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="taskContent">
+                            <p>Alice Firstimer's income must be supported by a paystub and a W-2 from the prior year. or
+                                    by a standard Verification of Employment (1005). The paystub must be dated no earlier
+                                    than 30 days prior to the initial loan application date and it must include<a href="javascript:void(0)" class="pull-right">More</a>
+                                     </p>
+                            <div class="contentFooter">
+                                <span class="complexityIcon"></span>
+                                <span class="name">Complexity-Low</span>
+                                <span class="viewTaskIcon"></span>
+                                <span class="name">View All Task</span>
+                                <span class="name pull-right">Download</span>
+                                <span class="downloadIcon  pull-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="taskContent">
+                            <p>A 1OEday pre-closing verification (1 0-day PCV) foe’ AUGE FIRSTIMER is required from each
+                                    employer for which income is used to qualify. The 10-day PCV must be dated no more than
+                                    
+                                    lo Business Days prior to the Note Date &amp; after the Note Date but prior to ... <a href="javascript:void(0)" class="pull-right">More</a></p>
+                            <div class="contentFooter">
+                                <span class="complexityIcon"></span>
+                                <span class="name">Complexity-Low</span>
+                                <span class="viewTaskIcon"></span>
+                                <span class="name">View All Task</span>
+                                <span class="name pull-right">Download</span>
+                                <span class="downloadIcon  pull-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
