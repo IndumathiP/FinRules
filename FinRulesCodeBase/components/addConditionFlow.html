@@ -79,47 +79,52 @@
       <h2>ADD CONDITION</h2>
       <!-- stepwise tabs -->
       <ul class="tabs">
-        <li class="tablink current pull-left text-center " id="navtab-1">
-          <div class="col-xs-8 text-left paddingLeft">
+        <li class="tablink current pull-left " id="navtab-1">
+          <div class="col-xs-8 paddingLeft conditionName">
             <label class="step">Step 1 : </label>
             <label class="stepTitle"> Conditions</label>
           </div>
           <span class="col-xs-4 chevronStatus verticallyCenter">
-            Tip Income
-            <span class="backToThePage" id="firstStep" onclick="summaryNavigation()"></span>
+            <span class="value">Tip Income</span>
+          <span class="backToThePage" id="firstStep" onclick="summaryNavigation()"></span>
           </span>
+          <span class="stepArrow"></span>
         </li>
-        <li class="tablink pull-left text-center clearfix" id="navtab-2">
+        <li class="tablink pull-left clearfix" id="navtab-2">
 
-          <div class="col-xs-6">
+          <div class="col-xs-6 col-lg-5 conditionName">
             <!-- <i class="fa fa-angle-right"></i> -->
             <label class="step">Step 2 : </label>
             <label class="stepTitle">Task</label>
           </div>
-          <div class="col-xs-6 padding0 chevronStatus">
-            <span class="col-xs-6 ">Complete Verbal Verification</span>
+          <div class="col-lg-7 col-xs-6 padding0 chevronStatus clearfix">
+            <span class="col-lg-8 value">Complete Verbal Verification</span>
 
-            <button class="col-xs-4 change" onclick="changeTask()">Change</button>
+            <button class="col-lg-4 col-xs-8 change pull-right" onclick="changeTask()">Change</button>
             <span class="backToThePage" id="secondStep" onclick="summaryNavigation()"></span>
           </div>
+          <span class="stepArrow"></span>
         </li>
-        <li class="tablink pull-left text-center clearfix" id="navtab-3">
-          <div class="col-xs-7">
+        <li class="tablink pull-left clearfix" id="navtab-3">
+          <div class="col-lg-8 col-xs-10 conditionName">
             <!-- <i class="fa fa-angle-right"></i> -->
             <label class="step">Step 3 : </label>
             <label class="stepTitle"> Business Rule</label>
           </div>
-          <span class="col-xs-3 chevronStatus chevronStatus3 paddingRight ">Validate Document
-            <span class="backToThePage iconAlignment" id="thirdStep" onclick="summaryNavigation()"></span>
+          <span class="col-lg-4 col-xs-2 chevronStatus chevronStatus3 paddingRight">
+            <span class="value">Validate<br> Document</span>
+          <span class="backToThePage" id="thirdStep" onclick="summaryNavigation()"></span>
+          
           </span>
+          <span class="stepArrow"></span>
         </li>
-        <li class="tablink pull-left text-center clearfix" id="navtab-4">
-          <div class="col-xs-8">
+        <li class="tablink pull-left clearfix" id="navtab-4">
+          <div class="col-xs-8 conditionName">
             <!-- <i class="fa fa-angle-right"></i> -->
-            <label class="step">Step 4 : </label>
+            <label class="step"><span>Step</span> 4 : </label>
             <label class="stepTitle"> Summary</label>
           </div>
-          <span class="col-xs-4 chevronStatus verticallyCenter">Review
+          <span class="col-xs-4 chevronStatus verticallyCenter"><span class="value">Review</span>
 
           </span>
         </li>
@@ -189,7 +194,7 @@
               </div>
               <div class="form-group col-md-4 col-xs-4">
                 <label for="category">Findings from LP</label>
-                <textarea name="Text1">Employment/base income for ALICE FIRSTIMER for base non-fluctuating earnings or fluctuating hourly earnings must be supported by a YTD paystub documenting all YTD earnings and W-2(s) for the most recent calendar year, OR a written VOE documenting all YTD earnings and earnings for the most recent calendar year.</textarea>              </div>
+                <textarea name="Text1">Employment/base income for ALICE FIRSTIMER for base non-fluctuating earnings or fluctuating hourly earnings must be supported by a YTD paystub documenting all YTD earnings and W-2(s) for the most recent calendar year, OR a written VOE documenting all YTD earnings and earnings for the most recent calendar year.</textarea>                </div>
             </div>
           </div>
         </div>
@@ -244,7 +249,7 @@
                 <input type="text" class="form-control" placeholder="Task Name">
               </div>
               <div class="col-md-3 col-sm-3">
-                  <select class="form-control">
+                <select class="form-control">
                       <option>Condition Type 1</option>
                       <option>Condition Type 2</option>
                       <option>Condition Type 3</option>
