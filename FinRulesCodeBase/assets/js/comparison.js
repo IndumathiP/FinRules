@@ -1,4 +1,4 @@
-var n,data;
+var n,data,counter=1;
 function displayDuLp(m){
  n=m;
  sessionStorage.setItem('key',n);
@@ -23,3 +23,15 @@ function displayDuLp(m){
   
   
 })();
+function rotate() {
+  if(counter&1)
+  {
+    document.getElementsByClassName("downIcon")[0].style.transform="rotate(180deg)";
+    counter=counter+1;
+  }
+  else{
+    document.getElementsByClassName("downIcon")[0].style.transform="rotate(0deg)";
+    counter=counter+1;
+  }
+  
+}
