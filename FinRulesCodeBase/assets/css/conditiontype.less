@@ -242,11 +242,12 @@ header {
             }
             .cards {
                 .individualCard {
-                    position: relative;
-                    transition: transform 0.5s;
+                    position: relative;    
+                    transition: all 500ms ease;
+                    transform: scale(1);
                     &:hover {
-                        transform: scale(1.05, 1.05);
-                        height: 101%;
+                        transition: all 500ms ease;
+                        transform: scale(1.07);
                         border: 2px solid @secondary-background;
                         .configuration {
                             display: block;
