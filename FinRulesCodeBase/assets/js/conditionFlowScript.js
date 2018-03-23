@@ -30,6 +30,9 @@ function clear() {
             document.getElementsByClassName("taskDetails")[0].style.display="";
         }
     }
+
+      document.getElementsByClassName("chevronStatus")[3].style.display="";
+    
 }
 
 function button(pageNo) {
@@ -71,6 +74,9 @@ function navTabs(pageNo) {
 
     if(pageNo-1>=0){navEffect[pageNo-1].classList.add("visited");}
     navEffect[pageNo].classList.add("current");
+    if(pageNo==3){
+      document.getElementsByClassName("chevronStatus")[pageNo].style.display="inline-block";
+    }
 }
 function changeTask(event)
 {
