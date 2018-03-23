@@ -52,3 +52,5 @@ function hideMenu(e) {
     hideFilters();    
   }
 }
+ sessionStorage.removeItem('key');
+  sessionStorage.clear();

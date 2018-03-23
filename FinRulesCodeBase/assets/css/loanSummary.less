@@ -54,6 +54,9 @@
     padding: 15px;
     width: 80%;
     float: left;
+    @media screen and (max-width:1200px) and (min-width:1024px) {
+        width:75%;
+    }
     .nameToggler {
         width: 200px;
         margin: 25px auto;
@@ -205,6 +208,9 @@
     padding: 15px;
     color: @link-background;
     font-family: Roboto-Medium;
+    @media screen and (max-width:1200px) and (min-width:1024px) {
+        width:25%;
+    }
     .documents {
         .listHead {
             color: @secondary-background; //border-bottom: 1px solid @primary-border;
@@ -219,7 +225,6 @@
             padding: 15px;
             span {
                 display: inline-block;
-                padding: 0 15px;
             }
             .documentIcon {
                 background: url('../images/Sprite_FinRules.png') no-repeat -764px -199px;
@@ -228,6 +233,7 @@
                 vertical-align: middle;
                 padding: 0;
                 margin-left: 15px;
+                margin-right: 10px;
                 cursor: pointer;
             }
         }

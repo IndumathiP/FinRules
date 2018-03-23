@@ -12,11 +12,13 @@ function displayDuLp(m){
     document.getElementsByClassName("verification")[0].classList.remove("none");
     document.getElementsByClassName("navigationWrapper")[0].classList.remove("none");
     document.getElementsByClassName("lpFindings")[0].classList.add("none"); 
+  //  document.getElementsByClassName("footer")[0].classList.remove("bottom");
   }
   else if (data==2) {
     document.getElementsByClassName("lpFindings")[0].classList.remove("none"); 
     document.getElementsByClassName("verification")[0].classList.add("none");
     document.getElementsByClassName("navigationWrapper")[0].classList.add("none");
+  //  document.getElementsByClassName("footer")[0].classList.add("bottom");
   }
   
   
