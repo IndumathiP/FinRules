@@ -120,6 +120,7 @@
         .duFindings {
             h2 {
                 .h2style();
+                padding: 30px 15px;
                 font-size: 14px;
                 span {
                     color: @secondary-color;
@@ -465,14 +466,14 @@
     .tab-content {
         display: none;
         background: #fff;
-        padding: 15px;
+        padding: 15px 30px;
         font-size: 14px;
     }
     .tab-content.current {
         display: inherit;
     }
     .chevronStatus {
-        border-left: 1px solid grey;
+        border-left: 1px solid #d6d3d3;
         font-size: 12px;
         text-align: left;
         display: inline-block;
@@ -791,6 +792,9 @@
         display: inline-block;
         cursor: pointer;
     }
+    span{
+      color: #656464;
+    }
 }
 
 .taskSelected {
@@ -872,3 +876,9 @@
 //   bottom:0;
 //   width:100%;
 // }
+.helpIcon {
+  background: url('../images/Sprite_FinRules1.png') no-repeat -450px -146px;
+  width: 18px;
+  height: 16px;
+  vertical-align: middle;
+}

@@ -97,7 +97,7 @@
     -webkit-transition: all 0.5s;
     /* For Safari 3.1 to 6.0 */
     transition: all 0.5s;
-    height: 50%;
+    height: calc(~"100vh - 200px"); 
     position: absolute;
     right: -300px;
     top: 0;
@@ -496,8 +496,8 @@
             }
             .editCondition {
                 border: 1px solid @primary-border;
-                -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
-                box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+                // -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+                // box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
                 background: @primary-background;
                 h3 {
                     padding: 12px;
@@ -514,6 +514,10 @@
                         border: 1px solid @primary-border;
                         position: relative;
                         background: @primary-color;
+                        &.inner-content{
+                          -webkit-box-shadow: 0 2px 2px rgba(185, 185, 185, 0.2);
+                          box-shadow: 0 2px 2px rgba(185, 185, 185, 0.2);
+                        }
                         .collapse.in.displayNone {
                             display: none;
                         } // margin-bottom: 10px;
@@ -830,7 +834,6 @@
     }
     .taskButton {
         margin: 0 auto;
-        width: 55%;
         float: right;
         .add {
             color: @primary-color;
@@ -948,6 +951,23 @@
             }
         }
     }
+}
+.disabled-switch{
+  background: #92929254;
+  border: 1px solid #a5a5a5 !important;  
+  cursor: not-allowed;
+  .btn{
+    cursor: not-allowed;
+  }
+}
+.activeConditionContainer .taskButton .add{
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 285px;
 }
 
 
