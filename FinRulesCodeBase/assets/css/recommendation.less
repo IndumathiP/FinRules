@@ -39,6 +39,7 @@ header {
         position: absolute;
         left: 0;
         top: 0;
+        z-index: 4;
         .lpEligibility {
             margin: 0;
         }
@@ -85,16 +86,18 @@ header {
             }
         }
         .eligibleConditionWrapper {
-            padding: 15px 0px;
-            background-color: @table-color;
             font-family: Roboto-Medium;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+            transition: top 1s ease-in;
+            top:calc(100% - 56px);
             .downIcon {
                 background: url('../images/Sprite_FinRules.png') no-repeat -682px -204px;
                 width: 18px;
                 height: 18px;
                 vertical-align: middle;
                 margin-right: 10px;
-                margin-left: 30px;
                 cursor: pointer;
                 &+span {
                     cursor: pointer;
@@ -119,6 +122,12 @@ header {
                 top: 7px;
             }
         }
+        .panelWrapper {
+            padding:0;
+            opacity: 1;
+            transition: opacity 1s ease-in;
+            height: 100%;
+        }
     }
     .lpHeading {
         background-color: @table-color;
@@ -139,6 +148,7 @@ header {
     width: 50%;
     float: left;
     margin: 25px 15px 25px 15px;
+    padding-bottom: 60px;
     border: 1px solid @primary-border;
     box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
     border-radius: 3px;
@@ -258,7 +268,9 @@ header {
         }
     }
 }
-
+.reasonForNotEligible {
+    display: none;
+}
 .navigationContent {
     padding: 20px 20px 20px 40px;
     border: 1px solid @primary-border;
