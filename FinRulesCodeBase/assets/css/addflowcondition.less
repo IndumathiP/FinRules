@@ -11,6 +11,7 @@
 @selectbox-background: #D3D7DA;
 @list-background: #F1F5F6;
 @base-background: #8F989D;
+ @tables-background:#f0f4f7;
 .cancelbtn {
     background: @primary-color;
     border: 1px solid @primary-color;
@@ -802,7 +803,70 @@
     }
     background: black;
 }
-
+  .task-wrap{
+    border-bottom:1px solid @tables-background;
+    margin-bottom:20px;
+    .row{
+      padding:20px 15px;
+      margin:0;
+      &:nth-child(even){        
+          background-color: @tables-background;
+      }
+    }
+    .content{
+      font-size:15px;
+      color:@secondary-color;
+    }
+    
+    .failure-row{
+      padding:15px;
+    }
+    .text-right{
+      text-align:right;
+    }
+    .vertical{
+      padding-top:5px;
+    }    
+  .topic{
+    color:@secondary-background;
+    font-size:15px;
+    font-family:Roboto-bold;
+  }
+  
+  .success-icon{
+    background: url('../images/Sprite_FinRules1.png') no-repeat -341px -76px;
+    width: 23px;
+    height: 23px;
+}
+.failure-icon{
+  background: url('../images/Sprite_FinRules1.png') no-repeat -288px -73px;
+  width: 27px;
+  height: 23px;    
+  position: absolute;
+  right: 23px;
+  top:0;
+}
+.btn-default{
+  color:#ffaa31;
+  border:1px solid #dbdbdb;
+  padding:2px 20px;
+  margin-right:100px;
+  &:hover{
+    background:#ffaa31;
+    color: @primary-background;
+    border:1px solid #ffaa31;
+  }
+}
+.statuz-wrap{
+  position:relative;
+}
+.statuz
+{
+  position: absolute;
+  right: 25px;
+  top: -4px;
+}
+  }
 // .buttonAndFooter {     
 //   position: absolute;
 //   bottom:0;
