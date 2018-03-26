@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>::FinRules::</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet/less" type="text/css" href="../assets/css/styles.less" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
+
+</head>
+
+<body>
+  <div class="conditionWrapper">
+    <!-- Header section -->
+    <header>
+      <div class="headerLogo row">
+        <ul class="col-md-6 col-xs-6 padding0">
+          <li class="col icon">
+            <span class="logoIcon"></span>
+          </li>
+          <li class="col">
+            <span class="logoName"></span>
+          </li>
+        </ul>
+        <ul class="col-md-3 col-xs-3 padding0 pull-right">
+          <div class="pull-right">
+            <li class="col text-right padding0">
+              <h3>John Smith</h3>
+              <label>Underwriter</label>
+            </li>
+            <li class="col">
+              <span class="userIcon"></span>
+              <i class="fa fa-caret-down"></i>
+            </li>
+          </div>
+        </ul>
+      </div>
+      <!-- loan details header -->
+      <div class="loanDetails row">
+        <h3 class="col-md-2 col-xs-2">LOAN # W2018030139</h3>
+        <ul class="loanInformation col-md-7 col-xs-7">
+          <li class="col-md-3 col-xs-3">
+            <label>Borrower</label>
+            <span>Firstimer, Alice</span>
+          </li>
+          <li class="col-md-3 col-xs-3">
+            <label>Loan Status</label>
+            <span>In Underwriting</span>
+          </li>
+          <li class="col-md-3 col-xs-3">
+            <label>Purchase Price</label>
+            <span>$ 250,000.00</span>
+          </li>
+          <li class="col-md-3 col-xs-3">
+            <label>Total Loan Amount</label>
+            <span>$ 217,150.00</span>
+          </li>
+        </ul>
+      </div>
+      <!-- select condition type -->
+      <div class="row loanMenu">
+        <div class="hamMenu">
+          <div class="hamIcon col paddingLeft">
+            <i class="fa fa-bars"></i>
+          </div>
+          <a href="activecondition.html" class="leftArrow"></a>
+          <label>Condition Type: Income</label>
+        </div>
+      </div>
+    </header>
+    <section class="businessrulestatus">
+      <div class="fluid-container">
+        <section class="heading">
+          <h3>BUSINESS RULES</h3>
+        </section>
+        <section class="taskdetails">
+          <h4>Task Details</h4>
+          <div class="taskdetails-description">
+            <div class="row row1">
+              <div class="col-xs-5">
+                <div class="row">
+                  <div class="col-xs-3"><span class="verticals">Task Name</span></div>
+                  <div class="col-xs-9"><input type="text" class="content form-control" value="Upload W2 of Previous Year"></div>
+                </div>
+              </div>
+              <div class="col-xs-4">
+                <div class="row">
+                  <span class="topic-txtbx col-xs-5">Assigned to</span>
+                  <div class="col-xs-7"><input type="text" class="content form-control" value="Loan Officer"></div>
+                </div>
+              </div>
+              <div class="col-xs-3">
+                <div class="row">
+                  <span class="topic col-xs-6">Condition Type</span>
+                  <span class="content col-xs-6">Income</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-5">
+                <div class="row">
+                  <span class="topic-txtbx col-xs-3">Task Description</span>
+                  <div class="col-xs-9"><input type="text" class="content form-control" value="Document supporting Stable Income Source"></div>
+                </div>
+              </div>
+              <div class="col-xs-7">
+                <div class="row">
+                  <span class="topic-txtbx col-xs-3 verification-stat">Verification Type</span>
+                  <div class="col-xs-4">
+                    <select class="form-control">
+                    <option class="content">Automated</option>
+                    <option class="content">Manual</option>
+                  </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="task-wrap">
+          <div class="row">
+            <div class="col-xs-4"><span class="topic">Fields</span></div>
+            <div class="col-xs-8"><span class="topic">Business Rule</span></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-4"><span class="content">Year</span></div>
+            <div class="col-xs-8">
+              <div class="row">
+                <div class="col-xs-4"><select class="form-control">
+                <option class="content">Equal to</option>
+                <option class="content">Less than</option>                
+                <option class="content">Greater than</option>
+              </select></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-4"><span class="content">Employee Name ( Last, First )</span></div>
+            <div class="col-xs-8"><span class="content">Firstimer, Alice</span></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-4"><span class="content">Social Security Number</span></div>
+            <div class="col-xs-8"><span class="content">xxxx-xxx-123</span></div>
+          </div>
+          <div class="row failure-row">
+            <div class="vertical col-xs-4"><span class="content">Employer Name</span></div>
+            <div class="vertical col-xs-8"><span class="content">Google</span></div>
+          </div>
+        </section>
+        <section class="income-calculator">
+          <h4 class="topic">Income Calculator</h4>
+          <div class="row">
+            <div class="col-xs-4"><span class="content">Wages, Tips and Compensation</span></div>
+            <div class="col-xs-3"><span class="content">$2400 Yearly ($200 Per Month)</span></div>
+            <div class="col-xs-3"><span class="content">$210 Per Month</span></div>
+            <div class="col-xs-2"></div>
+          </div>
+        </section>
+        <section class="edit-wrap">
+          <button type="button" class="btn btn-primary">Edit Business Rule</button>
+        </section>
+
+      </div>
+      </main>
+</body>
+
+</html>
