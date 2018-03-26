@@ -34,6 +34,7 @@ header {
     position: relative;
     padding-left: 400px;
     padding-top: 25px;
+    min-height: calc(~"100vh - 218px"); 
     .panelContainer {
         width: 370px;
         position: absolute;
@@ -243,8 +244,11 @@ header {
         .contentWrapper {
             .content {
                 .matchedCriteria {
-                    padding: 10px 10px 10px 25px;
+                    padding: 5px 10px 5px 25px;
                     line-height: 20px;
+                    .verifiedIcon {
+                        top:8px;
+                    }
                 }
             }
         }
