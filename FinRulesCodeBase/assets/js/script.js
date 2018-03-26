@@ -6,29 +6,36 @@ var listOfOptions = document.getElementById("options"),
 
 document.getElementById("viewDu").addEventListener("click", showDu);
 document.getElementById("viewNotes").addEventListener("click", showNotes);
+document.getElementById("viewCondition").addEventListener("click", showCondition);
 window.addEventListener("click",hideMenu);
-var ElehideDu = document.getElementsByClassName("hideDu")
-var EleNotesDu = document.getElementsByClassName("hideNotes")
+var ElehideDu = document.getElementsByClassName("hideDu");
+var EleNotesDu = document.getElementsByClassName("hideNotes");
+var EleLoan = document.getElementsByClassName("hideloan");
 
-for(var i=0;i<ElehideDu.length;i++)
-  ElehideDu[i].addEventListener("click",hideDu);
-
+// for(var i=0;i<ElehideDu.length;i++);
+  ElehideDu[0].addEventListener("click",hideDu);
+  ElehideDu[1].addEventListener("click",hideDu);
 
 for(var i=0;i<EleNotesDu.length;i++)
   EleNotesDu[i].addEventListener("click",hideNotes);
 
+for(var i=0;i<EleLoan.length;i++)
+  EleLoan[i].addEventListener("click",hideLoan);
+
 function hideMenu(e) {
-  console.log(e.target);
+  // console.log(e.target);
   // if(e.target !=  document.getElementById("viewDu")) || e.target.parentNode == duFindings{
   if(e.target ==  document.getElementById("duFindingsWrapper")){
     hideDu();
     hideNotes();
+    hideLoan();
     display(document.getElementById("pop-up"),false);
     display(document.getElementById("pop-up2"),false);
     display(document.getElementById("pop-up3"),false);
     // document.getElementById("duFindingsWrapper").addEventListener("hide-overlay");
   }
 }
+
 function showPopup(){
   display(document.getElementById("pop-up"),true);
   showOverlay();
@@ -72,10 +79,14 @@ function showNotes() {
   notes.classList.add("showMenu");
   showOverlay();
 }
-
-function hideDu() {
+function showCondition() {
+  display(listOfOptions, false);
+  document.getElementById("loan").classList.add("showMenu");
+  showOverlay();
+}
+function hideLoan() {
   display(listOfOptions, true);
-  duFindings.classList.remove("showMenu");
+  document.getElementById("loan").classList.remove("showMenu");
   hideOverlay();
 }
 
@@ -85,7 +96,11 @@ function hideNotes() {
   hideOverlay();
   // display(notes, false);
 }
-
+function hideDu() {
+  display(listOfOptions, true);
+  duFindings.classList.remove("showMenu");
+  hideOverlay();
+}
 function toggleactive(){
   document.getElementById("active").classList.remove("btn-active");
   document.getElementById("active").classList.add("btn-inactive");

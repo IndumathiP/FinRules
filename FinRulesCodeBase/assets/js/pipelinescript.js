@@ -9,12 +9,12 @@ function addIcon(event) {
   {
       window.event.currentTarget.children[0].style.transform="rotate(180deg)";
       window.event.currentTarget.setAttribute("counter","1");
-      window.event.currentTarget.parentNode.parentNode.style.border = "1px solid #E7E7E7";
+      window.event.currentTarget.parentNode.parentNode.parentNode.style.border = "1px solid #E7E7E7";
   }
   else {
       window.event.currentTarget.children[0].style.transform="rotate(0deg)";
       window.event.currentTarget.setAttribute("counter","0");
-      window.event.currentTarget.parentNode.parentNode.style.border = "0";
+      window.event.currentTarget.parentNode.parentNode.parentNode.style.border = "1px solid transparent";
   }
 }
 

@@ -5,10 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>:: FinRules ::</title>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet/less" type="text/css" href="../assets/css/styles.less" />
   <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
@@ -44,9 +43,6 @@
       <!-- select pipeline -->
       <div class="row loanMenu">
         <div class="hamMenu">
-          <div class="col hamIcon paddingLeft">
-            <i class="fa fa-bars"></i>
-          </div>
           <label>Pipeline</label>
         </div>
       </div>
@@ -55,39 +51,59 @@
     <div class="pipelineContent row">
       <!-- sidebar -->
       <div id="duFindingsWrapper">
-        </div>
+      </div>
       <div class="col-lg-2 sideMenu paddingRight" id="filter">
         <div class="sideBar">
           <!-- Top section -->
           <div class="filterSection">
-            <h3>FILTERS</h3>
+            <h3>FILTERS
+              <span class="fa fa-times" onclick="hideFilters()"></span>
+            </h3>
             <div class="filterDetails clearfix">
               <h4>Loan Amount</h4>
               <section class="clearfix">
-              <div class="value">
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                    <label>16000</label>
+                     <span></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">20000</a></li>
+                    <li><a href="#">25000</a></li>
+                  </ul>
+                </div>
+                <!-- <div class="value">
                 <label>16000</label>
                 <span></span>
-              </div>
-              <div class="middleIcon">-</div>
-              <div class="value">
+              </div> -->
+                <div class="middleIcon">-</div>
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                    <label>200000</label>
+                      <span></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">300000</a></li>
+                    <li><a href="#">400000</a></li>
+                  </ul>
+                </div>
+                <!-- <div class="value">
                 <label>200000</label>
                 <span></span>
-              </div>
+              </div> -->
               </section>
               <div class="range clearfix">
+                <div class="min">
+                  <div class="minValue"></div>
+                </div>
+                <div class="max">
+                </div>
+                <div class="selected">
                   <div class="min">
                     <div class="minValue"></div>
-                    </div>
-                    <div class="max">	
-                    </div>
-                    <div class="selected">
-                      <div class="min">
-                      <div class="minValue"></div>
-                      </div>
-                        <div class="max">	
-                        </div>
+                  </div>
+                  <div class="max">
                   </div>
                 </div>
+              </div>
             </div>
             <section>
               <h4>Loan Type</h4>
@@ -144,15 +160,16 @@
       </div>
       <div class="col-xs-12 col-lg-10">
         <div class="searchRecord clearfix">
+          <span class="fa fa-filter" id="showFilters"></span>
           <input type="search" class="col-xs-3" placeholder="Search by Keyword">
           <span class="searchIcon"></span>
           <div class="col-xs-5 text">
             <input type="text" placeholder="Last Week - 10/20/18-10/27/18">
             <label class="leftView">Viewing</label>
             <span class="rightView"></span>
-            
+
           </div>
-          <span class="fa fa-bars" id="showFilters"></span>
+
         </div>
         <!-- list of Records -->
         <section>
@@ -162,7 +179,7 @@
               <label>Loan Number</label>
               <a href="javascript:void(0)"></a>
             </li>
-            <li class="col">
+            <li class="col largeCol">
               <label>Borrower</label>
               <a href="javascript:void(0)"></a>
             </li>
@@ -191,11 +208,13 @@
           <!-- first record -->
           <div class="recordInformation">
             <ul class="clearfix evenList">
-              <li class="col largeCol" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse1">
-                <span></span>
-                <label>W2018030139</label>
+              <li class="col largeCol">
+                <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse1">
+                  <span></span>
+                </span>
+                <a href="loanSummary.html"><label>W2018030139</label></a>
               </li>
-              <li class="col">
+              <li class="col largeCol">
                 <label><span class="name">Firstimer,</span> Alice</label>
               </li>
               <li class="col">
@@ -246,7 +265,7 @@
                   <label>Ready For Underwritter</label>
                 </span>
                 <span class="comparisonSection">
-                  <a href="recommendation.html"><button onclick="displayDuLp(1)">DU-LP Comparison</button></a>
+                  <a href="recommendation.html"><button onclick="displayDuLp(1)">DU - LP Comparison</button></a>
                 </span>
               </div>
             </div>
@@ -254,11 +273,13 @@
           <!-- second record -->
           <div class="recordInformation">
             <ul class="clearfix">
-              <li class="col largeCol" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse2">
-                <span></span>
-                <label>W2017110023</label>
+              <li class="col largeCol">
+                <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse2">
+                      <span></span>
+                </span>
+                <a href="loanSummary.html"><label>W2017110023</label></a>
               </li>
-              <li class="col">
+              <li class="col largeCol">
                 <label><span class="name">Bancroft,</span> Cameron</label>
               </li>
               <li class="col">
@@ -275,7 +296,7 @@
               </li>
               <li class="col largeCol">
                 <span class="loan"></span>
-                <label>DU Loan</label>
+                <label>LP Loan</label>
               </li>
             </ul>
             <div id="collapse2" class="info collapse clearfix">
@@ -315,15 +336,17 @@
               <div class="detail conditionStatus pull-left clearfix text-center">
                 <h3>Condition Status</h3>
                 <div class="progressWrapper clearfix text-center">
-                  <div class="progressBar">
-                    <div class="item progress-1">
-                      <div class="radial-inner-bg">
-                        <span class="progressValue">1/4</span>
+                  <a href="activecondition.html">
+                    <div class="progressBar">
+                      <div class="item progress-1">
+                        <div class="radial-inner-bg">
+                          <span class="progressValue">1/4</span>
+                        </div>
                       </div>
+                      <p>Income</p>
                     </div>
-                    <p>Income</p>
-                  </div>
-
+                  </a>
+                  <a href="activecondition.html">
                   <div class="progressBar">
                     <div class="item progress-2">
                       <div class="radial-inner-bg">
@@ -332,6 +355,8 @@
                     </div>
                     <p>Borrower</p>
                   </div>
+                  </a>
+                  <a href="activecondition.html">
                   <div class="progressBar">
                     <div class="item progress-3">
                       <div class="radial-inner-bg">
@@ -340,6 +365,8 @@
                     </div>
                     <p>Credit</p>
                   </div>
+                  </a>
+                  <a href="activecondition.html">
                   <div class="progressBar">
                     <div class="item progress-4">
                       <div class="radial-inner-bg">
@@ -348,6 +375,8 @@
                     </div>
                     <p>Assets</p>
                   </div>
+                  </a>
+                  <a href="activecondition.html">
                   <div class="progressBar">
                     <div class="item progress-5">
                       <div class="radial-inner-bg">
@@ -356,6 +385,7 @@
                     </div>
                     <p>Property</p>
                   </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -363,11 +393,13 @@
           <!-- third record -->
           <div class="recordInformation">
             <ul class="clearfix evenList">
-              <li class="col largeCol" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse3">
-                <span></span>
-                <label>W2018030163</label>
+              <li class="col largeCol">
+                <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse3">
+                      <span></span>
+                </span>
+                <a href="loanSummary.html"><label>W2018030163</label></a>
               </li>
-              <li class="col">
+              <li class="col largeCol">
                 <label><span class="name">Clarke,</span> Michael</label>
               </li>
               <li class="col">
@@ -425,18 +457,20 @@
                 <h3>discrepencies</h3>
                 <label>Income</label>
                 <p>LTV exceed 97% for fixed rate purchase <br> - Under Credit Categor</p>
-                <a href="javascript:void(0)">READ MORE</a>
+                <a href="loanSummary.html">READ MORE</a>
               </div>
             </div>
           </div>
           <!-- fourth record -->
           <div class="recordInformation">
             <ul class="clearfix">
-              <li class="col largeCol" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse4">
-                <span></span>
-                <label>W2017110132</label>
+              <li class="col largeCol">
+                <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse4">
+                      <span></span>
+                </span>
+                <a href="loanSummary.html"><label>W2017110132</label></a>
               </li>
-              <li class="col">
+              <li class="col largeCol">
                 <label><span class="name">Mateo,</span> Pedro</label>
               </li>
               <li class="col">
@@ -457,51 +491,53 @@
               </li>
             </ul>
             <div id="collapse4" class="info collapse clearfix">
-                <div class="description pull-left">
-                  <ul class="clearfix">
-                    <li class="col">
-                      <label>Loan Amount</label>
-                      <p>156000</p>
-                    </li>
-                    <li class="col">
-                      <label>LTV/CLTV</label>
-                      <p>78 % / 112 %</p>
-                    </li>
-                    <li class="col-xs-1 padding0">
-                      <label>DTI </label>
-                      <p>23 % </p>
-                    </li>
-                    <li class="col-xs-2 pull-right">
-                      <label>Second Ratio</label>
-                      <p>26 %</p>
-                    </li>
-                    <li class="col-xs-2 pull-right">
-                      <label>First Ratio</label>
-                      <p>13 %</p>
-                    </li>
-                  </ul>
-                  <div class="notifications">
-                    <p>
-                      Notifications on 12/27/2017 12:30 PM <span class="pull-right">Total Notification : <span class="number">05</span></span>
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prom eget hendrerit dolor. <br> Aliquam fermentum
-                      luctus metus, ut commodo enim sodales.
-                    </p>
-                  </div>
+              <div class="description pull-left">
+                <ul class="clearfix">
+                  <li class="col">
+                    <label>Loan Amount</label>
+                    <p>156000</p>
+                  </li>
+                  <li class="col">
+                    <label>LTV/CLTV</label>
+                    <p>78 % / 112 %</p>
+                  </li>
+                  <li class="col-xs-1 padding0">
+                    <label>DTI </label>
+                    <p>23 % </p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>Second Ratio</label>
+                    <p>26 %</p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>First Ratio</label>
+                    <p>13 %</p>
+                  </li>
+                </ul>
+                <div class="notifications">
+                  <p>
+                    Notifications on 12/27/2017 12:30 PM <span class="pull-right">Total Notification : <span class="number">05</span></span>
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prom eget hendrerit dolor. <br> Aliquam fermentum
+                    luctus metus, ut commodo enim sodales.
+                  </p>
                 </div>
-                <div class="conditionStatus pull-left clearfix text-center">
-                  <h3>Condition Status</h3>
-                  <div class="progressWrapper clearfix text-center">
-                    <div class="progressBar">
-                      <div class="item progress-1">
-                        <div class="radial-inner-bg">
-                          <span class="progressValue">1/4</span>
+              </div>
+              <div class="detail conditionStatus pull-left clearfix text-center">
+                <h3>Condition Status</h3>
+                <div class="progressWrapper clearfix text-center">
+                    <a href="activecondition.html">
+                      <div class="progressBar">
+                        <div class="item progress-1">
+                          <div class="radial-inner-bg">
+                            <span class="progressValue">1/4</span>
+                          </div>
                         </div>
+                        <p>Income</p>
                       </div>
-                      <p>Income</p>
-                    </div>
-  
+                    </a>
+                    <a href="activecondition.html">
                     <div class="progressBar">
                       <div class="item progress-2">
                         <div class="radial-inner-bg">
@@ -510,6 +546,8 @@
                       </div>
                       <p>Borrower</p>
                     </div>
+                    </a>
+                    <a href="activecondition.html">
                     <div class="progressBar">
                       <div class="item progress-3">
                         <div class="radial-inner-bg">
@@ -518,6 +556,8 @@
                       </div>
                       <p>Credit</p>
                     </div>
+                    </a>
+                    <a href="activecondition.html">
                     <div class="progressBar">
                       <div class="item progress-4">
                         <div class="radial-inner-bg">
@@ -526,6 +566,8 @@
                       </div>
                       <p>Assets</p>
                     </div>
+                    </a>
+                    <a href="activecondition.html">
                     <div class="progressBar">
                       <div class="item progress-5">
                         <div class="radial-inner-bg">
@@ -534,18 +576,21 @@
                       </div>
                       <p>Property</p>
                     </div>
+                    </a>
                   </div>
-                </div>
               </div>
+            </div>
           </div>
           <!-- fifth record -->
           <div class="recordInformation">
             <ul class="clearfix evenList">
-              <li class="col largeCol" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse5">
-                <span></span>
-                <label>W2017110127</label>
+              <li class="col largeCol">
+                <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse5">
+                      <span></span>
+                </span>
+                <a href="loanSummary.html"><label>W2017110127</label></a>
               </li>
-              <li class="col">
+              <li class="col largeCol">
                 <label><span class="name">Ella,</span> Alice</label>
               </li>
               <li class="col">
@@ -565,50 +610,108 @@
                 <label>Private Investor</label>
               </li>
             </ul>
-             <!-- information for DU and LP -->
-             <div id="collapse5" class="info collapse clearfix">
-                <div class="description pull-left">
-                  <ul class="clearfix">
-                    <li class="col">
-                      <label>Loan Amount</label>
-                      <p>&dollar; 217,150.00</p>
-                    </li>
-                    <li class="col">
-                      <label>LTV/CLTV</label>
-                      <p>86 % / 86 %</p>
-                    </li>
-                    <li class="col-xs-1 padding0">
-                      <label>DTI </label>
-                      <p>23 % </p>
-                    </li>
-                    <li class="col-xs-2 pull-right">
-                      <label>Second Ratio</label>
-                      <p>26 %</p>
-                    </li>
-                    <li class="col-xs-2 pull-right">
-                      <label>First Ratio</label>
-                      <p>13 %</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="pull-left">
-                  <span class="underwriterSection">
-                    <label>Ready For Underwritter</label>
-                  </span>
-                  <span class="comparisonSection">
-                    <button>DU-LP Comparison</button>
-                  </span>
+            <!-- information for DU and LP -->
+            <div id="collapse5" class="info collapse clearfix">
+              <div class="description pull-left">
+                <ul class="clearfix">
+                  <li class="col">
+                    <label>Loan Amount</label>
+                    <p>156000</p>
+                  </li>
+                  <li class="col">
+                    <label>LTV/CLTV</label>
+                    <p>78 % / 112 %</p>
+                  </li>
+                  <li class="col-xs-1 padding0">
+                    <label>DTI </label>
+                    <p>23 % </p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>Second Ratio</label>
+                    <p>26 %</p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>First Ratio</label>
+                    <p>13 %</p>
+                  </li>
+                </ul>
+                <div class="notifications">
+                  <p>
+                    Notifications on 12/27/2017 12:30 PM <span class="pull-right">Total Notification : <span class="number">05</span></span>
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prom eget hendrerit dolor. <br> Aliquam fermentum
+                    luctus metus, ut commodo enim sodales.
+                  </p>
                 </div>
               </div>
+              <div class="detail conditionStatus pull-left clearfix text-center">
+                <h3>Condition Status</h3>
+                <div class="progressWrapper clearfix text-center">
+                    <a href="activecondition.html">
+                      <div class="progressBar">
+                        <div class="item progress-1">
+                          <div class="radial-inner-bg">
+                            <span class="progressValue">1/4</span>
+                          </div>
+                        </div>
+                        <p>Income</p>
+                      </div>
+                    </a>
+                    <a href="activecondition.html">
+                    <div class="progressBar">
+                      <div class="item progress-2">
+                        <div class="radial-inner-bg">
+                          <span class="progressValue">2/5</span>
+                        </div>
+                      </div>
+                      <p>Borrower</p>
+                    </div>
+                    </a>
+                    <a href="activecondition.html">
+                    <div class="progressBar">
+                      <div class="item progress-3">
+                        <div class="radial-inner-bg">
+                          <span class="progressValue">2/4</span>
+                        </div>
+                      </div>
+                      <p>Credit</p>
+                    </div>
+                    </a>
+                    <a href="activecondition.html">
+                    <div class="progressBar">
+                      <div class="item progress-4">
+                        <div class="radial-inner-bg">
+                          <span class="progressValue">1/6</span>
+                        </div>
+                      </div>
+                      <p>Assets</p>
+                    </div>
+                    </a>
+                    <a href="activecondition.html">
+                    <div class="progressBar">
+                      <div class="item progress-5">
+                        <div class="radial-inner-bg">
+                          <span class="progressValue">2</span>
+                        </div>
+                      </div>
+                      <p>Property</p>
+                    </div>
+                    </a>
+                  </div>
+              </div>
+            </div>
           </div>
           <!-- sixth record -->
           <div class="recordInformation">
             <ul class="clearfix">
-              <li class="col largeCol" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse6">
-                <span></span>
-                <label>W2017120035</label>
+              <li class="col largeCol">
+                <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse6">
+                      <span></span>
+                </span>
+                <a href="loanSummary.html"><label>W2017120035</label></a>
               </li>
-              <li class="col">
+              <li class="col largeCol">
                 <label><span class="name">Lara,</span> Maria</label>
               </li>
               <li class="col">
@@ -628,50 +731,52 @@
                 <label>DU Eligible</label>
               </li>
             </ul>
-             <!-- information for DU and LP -->
-             <div id="collapse6" class="info collapse clearfix">
-                <div class="description pull-left">
-                  <ul class="clearfix">
-                    <li class="col">
-                      <label>Loan Amount</label>
-                      <p>&dollar; 217,150.00</p>
-                    </li>
-                    <li class="col">
-                      <label>LTV/CLTV</label>
-                      <p>86 % / 86 %</p>
-                    </li>
-                    <li class="col-xs-1 padding0">
-                      <label>DTI </label>
-                      <p>23 % </p>
-                    </li>
-                    <li class="col-xs-2 pull-right">
-                      <label>Second Ratio</label>
-                      <p>26 %</p>
-                    </li>
-                    <li class="col-xs-2 pull-right">
-                      <label>First Ratio</label>
-                      <p>13 %</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="pull-left">
-                  <span class="underwriterSection">
+            <!-- information for DU and LP -->
+            <div id="collapse6" class="info collapse clearfix">
+              <div class="description pull-left">
+                <ul class="clearfix">
+                  <li class="col">
+                    <label>Loan Amount</label>
+                    <p>&dollar; 217,150.00</p>
+                  </li>
+                  <li class="col">
+                    <label>LTV/CLTV</label>
+                    <p>86 % / 86 %</p>
+                  </li>
+                  <li class="col-xs-1 padding0">
+                    <label>DTI </label>
+                    <p>23 % </p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>Second Ratio</label>
+                    <p>26 %</p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>First Ratio</label>
+                    <p>13 %</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="detail pull-left">
+                <span class="underwriterSection">
                     <label>Ready For Underwritter</label>
                   </span>
-                  <span class="comparisonSection">
+                <span class="comparisonSection">
                     <button>DU-LP Comparison</button>
                   </span>
-                </div>
               </div>
+            </div>
           </div>
           <!-- seventh record -->
           <div class="recordInformation">
             <ul class="clearfix evenList">
-              <li class="col largeCol"  counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse7">
-                <span></span>
-                <label>W2017120034</label>
+              <li class="col largeCol">
+                <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse7">
+                      <span></span>
+                </span>
+                <a href="loanSummary.html"><label>W2017120034</label></a>
               </li>
-              <li class="col">
+              <li class="col largeCol">
                 <label><span class="name">Leo,</span> Johnson</label>
               </li>
               <li class="col">
@@ -691,50 +796,52 @@
                 <label>LP Eligible</label>
               </li>
             </ul>
-             <!-- information for DU and LP -->
-             <div id="collapse7" class="info collapse clearfix">
-                <div class="description pull-left">
-                  <ul class="clearfix">
-                    <li class="col">
-                      <label>Loan Amount</label>
-                      <p>&dollar; 217,150.00</p>
-                    </li>
-                    <li class="col">
-                      <label>LTV/CLTV</label>
-                      <p>86 % / 86 %</p>
-                    </li>
-                    <li class="col-xs-1 padding0">
-                      <label>DTI </label>
-                      <p>23 % </p>
-                    </li>
-                    <li class="col-xs-2 pull-right">
-                      <label>Second Ratio</label>
-                      <p>26 %</p>
-                    </li>
-                    <li class="col-xs-2 pull-right">
-                      <label>First Ratio</label>
-                      <p>13 %</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="pull-left">
-                  <span class="underwriterSection">
+            <!-- information for DU and LP -->
+            <div id="collapse7" class="info collapse clearfix">
+              <div class="description pull-left">
+                <ul class="clearfix">
+                  <li class="col">
+                    <label>Loan Amount</label>
+                    <p>&dollar; 217,150.00</p>
+                  </li>
+                  <li class="col">
+                    <label>LTV/CLTV</label>
+                    <p>86 % / 86 %</p>
+                  </li>
+                  <li class="col-xs-1 padding0">
+                    <label>DTI </label>
+                    <p>23 % </p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>Second Ratio</label>
+                    <p>26 %</p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>First Ratio</label>
+                    <p>13 %</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="detail pull-left">
+                <span class="underwriterSection">
                     <label>Ready For Underwritter</label>
                   </span>
-                  <span class="comparisonSection">
-                    <a href="recommendation.html"><button onclick="displayDuLp(2)">DU-LP Comparison</button></a>
+                <span class="comparisonSection">
+                    <a href="recommendation.html"><button onclick="displayDuLp(2)">DU - LP Comparison</button></a>
                   </span>
-                </div>
               </div>
+            </div>
           </div>
           <!-- eighth record -->
           <div class="recordInformation">
-            <ul class="clearfix" >
-              <li class="col largeCol" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse8">
-                <span></span>
-                <label>W2018030029</label>
+            <ul class="clearfix">
+              <li class="col largeCol">
+                <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse8">
+                      <span></span>
+                </span>
+                <a href="loanSummary.html"><label>W2018030029</label></a>
               </li>
-              <li class="col">
+              <li class="col largeCol">
                 <label><span class="name">Martin,</span> Josh</label>
               </li>
               <li class="col">
@@ -754,50 +861,52 @@
                 <label>DU, LP Eligible</label>
               </li>
             </ul>
-             <!-- information for DU and LP -->
-             <div id="collapse8" class="info collapse clearfix">
-                <div class="description pull-left">
-                  <ul class="clearfix">
-                    <li class="col">
-                      <label>Loan Amount</label>
-                      <p>&dollar; 217,150.00</p>
-                    </li>
-                    <li class="col">
-                      <label>LTV/CLTV</label>
-                      <p>86 % / 86 %</p>
-                    </li>
-                    <li class="col-xs-1 padding0">
-                      <label>DTI </label>
-                      <p>23 % </p>
-                    </li>
-                    <li class="col-xs-2 pull-right">
-                      <label>Second Ratio</label>
-                      <p>26 %</p>
-                    </li>
-                    <li class="col-xs-2 pull-right">
-                      <label>First Ratio</label>
-                      <p>13 %</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="pull-left">
-                  <span class="underwriterSection">
+            <!-- information for DU and LP -->
+            <div id="collapse8" class="info collapse clearfix">
+              <div class="description pull-left">
+                <ul class="clearfix">
+                  <li class="col">
+                    <label>Loan Amount</label>
+                    <p>&dollar; 217,150.00</p>
+                  </li>
+                  <li class="col">
+                    <label>LTV/CLTV</label>
+                    <p>86 % / 86 %</p>
+                  </li>
+                  <li class="col-xs-1 padding0">
+                    <label>DTI </label>
+                    <p>23 % </p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>Second Ratio</label>
+                    <p>26 %</p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>First Ratio</label>
+                    <p>13 %</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="detail pull-left">
+                <span class="underwriterSection">
                     <label>Ready For Underwritter</label>
                   </span>
-                  <span class="comparisonSection">
-                    <button>DU-LP Comparison</button>
+                <span class="comparisonSection">
+                    <button>DU - LP Comparison</button>
                   </span>
-                </div>
               </div>
+            </div>
           </div>
           <!-- nineth record -->
           <div class="recordInformation">
-            <ul class="clearfix evenList" >
-              <li class="col largeCol" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse9">
-                <span></span>
-                <label>W2018030027</label>
+            <ul class="clearfix evenList">
+              <li class="col largeCol">
+                <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse9">
+                      <span></span>
+                </span>
+                <a href="loanSummary.html"><label>W2018030027</label></a>
               </li>
-              <li class="col">
+              <li class="col largeCol">
                 <label><span class="name">Harley,</span> Michael</label>
               </li>
               <li class="col">
@@ -817,50 +926,52 @@
                 <label>LP Eligible</label>
               </li>
             </ul>
-             <!-- information for DU and LP -->
-             <div id="collapse9" class="info collapse clearfix">
-                <div class="description pull-left">
-                  <ul class="clearfix">
-                    <li class="col">
-                      <label>Loan Amount</label>
-                      <p>&dollar; 217,150.00</p>
-                    </li>
-                    <li class="col">
-                      <label>LTV/CLTV</label>
-                      <p>86 % / 86 %</p>
-                    </li>
-                    <li class="col-xs-1 padding0">
-                      <label>DTI </label>
-                      <p>23 % </p>
-                    </li>
-                    <li class="col-xs-2 pull-right">
-                      <label>Second Ratio</label>
-                      <p>26 %</p>
-                    </li>
-                    <li class="col-xs-2 pull-right">
-                      <label>First Ratio</label>
-                      <p>13 %</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="pull-left">
-                  <span class="underwriterSection">
+            <!-- information for DU and LP -->
+            <div id="collapse9" class="info collapse clearfix">
+              <div class="description pull-left">
+                <ul class="clearfix">
+                  <li class="col">
+                    <label>Loan Amount</label>
+                    <p>&dollar; 217,150.00</p>
+                  </li>
+                  <li class="col">
+                    <label>LTV/CLTV</label>
+                    <p>86 % / 86 %</p>
+                  </li>
+                  <li class="col-xs-1 padding0">
+                    <label>DTI </label>
+                    <p>23 % </p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>Second Ratio</label>
+                    <p>26 %</p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>First Ratio</label>
+                    <p>13 %</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="detail pull-left">
+                <span class="underwriterSection">
                     <label>Ready For Underwritter</label>
                   </span>
-                  <span class="comparisonSection">
-                    <a href="recommendation.html"><button>DU-LP Comparison</button></a>
+                <span class="comparisonSection">
+                    <a href="recommendation.html"><button>DU - LP Comparison</button></a>
                   </span>
-                </div>
               </div>
+            </div>
           </div>
           <!-- tenth record -->
           <div class="recordInformation">
             <ul class="clearfix">
-              <li class="col largeCol" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse10">
-                <span></span>
-                <label>W2018030160</label>
+              <li class="col largeCol">
+                <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse10">
+                      <span></span>
+                </span>
+                <a href="loanSummary.html"><label>W2018030160</label></a>
               </li>
-              <li class="col">
+              <li class="col largeCol">
                 <label><span class="name">Tomas,</span> Peter</label>
               </li>
               <li class="col">
@@ -881,51 +992,53 @@
               </li>
             </ul>
             <div id="collapse10" class="info collapse clearfix">
-                <div class="description pull-left">
-                  <ul class="clearfix">
-                    <li class="col">
-                      <label>Loan Amount</label>
-                      <p>156000</p>
-                    </li>
-                    <li class="col">
-                      <label>LTV/CLTV</label>
-                      <p>78 % / 112 %</p>
-                    </li>
-                    <li class="col-xs-1 padding0">
-                      <label>DTI </label>
-                      <p>23 % </p>
-                    </li>
-                    <li class="col-xs-2 pull-right">
-                      <label>Second Ratio</label>
-                      <p>26 %</p>
-                    </li>
-                    <li class="col-xs-2 pull-right">
-                      <label>First Ratio</label>
-                      <p>13 %</p>
-                    </li>
-                  </ul>
-                  <div class="notifications">
-                    <p>
-                      Notifications on 12/27/2017 12:30 PM <span class="pull-right">Total Notification : <span class="number">05</span></span>
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prom eget hendrerit dolor. <br> Aliquam fermentum
-                      luctus metus, ut commodo enim sodales.
-                    </p>
-                  </div>
+              <div class="description pull-left">
+                <ul class="clearfix">
+                  <li class="col">
+                    <label>Loan Amount</label>
+                    <p>156000</p>
+                  </li>
+                  <li class="col">
+                    <label>LTV/CLTV</label>
+                    <p>78 % / 112 %</p>
+                  </li>
+                  <li class="col-xs-1 padding0">
+                    <label>DTI </label>
+                    <p>23 % </p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>Second Ratio</label>
+                    <p>26 %</p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>First Ratio</label>
+                    <p>13 %</p>
+                  </li>
+                </ul>
+                <div class="notifications">
+                  <p>
+                    Notifications on 12/27/2017 12:30 PM <span class="pull-right">Total Notification : <span class="number">05</span></span>
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prom eget hendrerit dolor. <br> Aliquam fermentum
+                    luctus metus, ut commodo enim sodales.
+                  </p>
                 </div>
-                <div class="conditionStatus pull-left clearfix text-center">
-                  <h3>Condition Status</h3>
-                  <div class="progressWrapper clearfix text-center">
-                    <div class="progressBar">
-                      <div class="item progress-1">
-                        <div class="radial-inner-bg">
-                          <span class="progressValue">1/4</span>
+              </div>
+              <div class="detail conditionStatus pull-left clearfix text-center">
+                <h3>Condition Status</h3>
+                <div class="progressWrapper clearfix text-center">
+                    <a href="activecondition.html">
+                      <div class="progressBar">
+                        <div class="item progress-1">
+                          <div class="radial-inner-bg">
+                            <span class="progressValue">1/4</span>
+                          </div>
                         </div>
+                        <p>Income</p>
                       </div>
-                      <p>Income</p>
-                    </div>
-  
+                    </a>
+                    <a href="activecondition.html">
                     <div class="progressBar">
                       <div class="item progress-2">
                         <div class="radial-inner-bg">
@@ -934,6 +1047,8 @@
                       </div>
                       <p>Borrower</p>
                     </div>
+                    </a>
+                    <a href="activecondition.html">
                     <div class="progressBar">
                       <div class="item progress-3">
                         <div class="radial-inner-bg">
@@ -942,6 +1057,8 @@
                       </div>
                       <p>Credit</p>
                     </div>
+                    </a>
+                    <a href="activecondition.html">
                     <div class="progressBar">
                       <div class="item progress-4">
                         <div class="radial-inner-bg">
@@ -950,6 +1067,8 @@
                       </div>
                       <p>Assets</p>
                     </div>
+                    </a>
+                    <a href="activecondition.html">
                     <div class="progressBar">
                       <div class="item progress-5">
                         <div class="radial-inner-bg">
@@ -958,18 +1077,21 @@
                       </div>
                       <p>Property</p>
                     </div>
+                    </a>
                   </div>
-                </div>
               </div>
+            </div>
           </div>
           <!-- eleventh record -->
           <div class="recordInformation">
             <ul class="clearfix evenList">
-              <li class="col largeCol" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse11">
-                <span></span>
-                <label>W2018030151</label>
+              <li class="col largeCol">
+                <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse11">
+                      <span></span>
+                </span>
+                <a href="loanSummary.html"><label>W2018030151</label></a>
               </li>
-              <li class="col">
+              <li class="col largeCol">
                 <label><span class="name">Ryan,</span> David</label>
               </li>
               <li class="col">
@@ -990,46 +1112,46 @@
               </li>
             </ul>
             <div id="collapse11" class="info collapse clearfix">
-                <div class="description pull-left">
-                  <ul class="clearfix">
-                    <li class="col">
-                      <label>Loan Amount</label>
-                      <p>156000</p>
-                    </li>
-                    <li class="col">
-                      <label>LTV/CLTV</label>
-                      <p>78 % / 112 %</p>
-                    </li>
-                    <li class="col-xs-1 padding0">
-                      <label>DTI </label>
-                      <p>23 % </p>
-                    </li>
-                    <li class="col-xs-2 pull-right">
-                      <label>Second Ratio</label>
-                      <p>26 %</p>
-                    </li>
-                    <li class="col-xs-2 pull-right">
-                      <label>First Ratio</label>
-                      <p>13 %</p>
-                    </li>
-                  </ul>
-                  <div class="notifications">
-                    <p>
-                      Notifications on 12/27/2017 12:30 PM <span class="pull-right">Total Notification : <span class="number">02</span></span>
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prom eget hendrerit dolor. <br> Aliquam fermentum
-                      luctus metus, ut commodo enim sodales.
-                    </p>
-                  </div>
-                </div>
-                <div class="discrepencies pull-left">
-                  <h3>discrepencies</h3>
-                  <label>Income</label>
-                  <p>LTV exceed 97% for fixed rate purchase <br> - Under Credit Categor</p>
-                  <a href="javascript:void(0)">READ MORE</a>
+              <div class="description pull-left">
+                <ul class="clearfix">
+                  <li class="col">
+                    <label>Loan Amount</label>
+                    <p>156000</p>
+                  </li>
+                  <li class="col">
+                    <label>LTV/CLTV</label>
+                    <p>78 % / 112 %</p>
+                  </li>
+                  <li class="col-xs-1 padding0">
+                    <label>DTI </label>
+                    <p>23 % </p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>Second Ratio</label>
+                    <p>26 %</p>
+                  </li>
+                  <li class="col-xs-2 pull-right">
+                    <label>First Ratio</label>
+                    <p>13 %</p>
+                  </li>
+                </ul>
+                <div class="notifications">
+                  <p>
+                    Notifications on 12/27/2017 12:30 PM <span class="pull-right">Total Notification : <span class="number">02</span></span>
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prom eget hendrerit dolor. <br> Aliquam fermentum
+                    luctus metus, ut commodo enim sodales.
+                  </p>
                 </div>
               </div>
+              <div class="discrepencies pull-left">
+                <h3>discrepencies</h3>
+                <label>Income</label>
+                <p>LTV exceed 97% for fixed rate purchase <br> - Under Credit Categor</p>
+                <a href="loanSummary.html">READ MORE</a>
+              </div>
+            </div>
           </div>
         </section>
         <div class="showEntries clearfix">
@@ -1040,14 +1162,14 @@
           </div>
           <div class="col-xs-3 pull-right">
             <span class="prev"></span><label>PREV</label>
-            <span class="numberOfEntries"><label>2</label></span> of 8
+            <span class="numberOfEntries"><label>1</label></span> of 8
             <label class="nxtLabel">NEXT</label><span class="next"></span>
           </div>
         </div>
       </div>
     </div>
     <div class="footer row">
-        <span>Copyright &#169; 2018 - FinRules. All rights reserved.</span><span class="right-content">Powered By:<span class="logo"></span></span>
+      <span>Copyright &#169; 2018 - FinRules. All rights reserved.</span><span class="right-content">Powered By:<span class="logo"></span></span>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
