@@ -36,6 +36,9 @@
         vertical-align: middle;
         margin-right: 10px;
     }
+    .heading{
+      font-family: Roboto-Medium;
+    }
     .rightArrow {
         background: url('../images/Sprite_FinRules-psd.png') no-repeat -194px -209px;
         width: 12px;
@@ -145,14 +148,16 @@
             }
         }
         .row {
-            margin: 15px 0 30px 0;
+            margin: 15px 0 40px 0;
             line-height: 20px;
             .labels {
                 font-family: Roboto-Regular;
+                color: #8a8a8a;
             }
             .labelValue {
-                font-family: Roboto-Bold;
-                color: @secondary-text;
+              font-family: Roboto-Medium;
+              color: #656464;
+              margin-top: 5px;
             }
             .none {
                 display: none;
@@ -183,7 +188,8 @@
                 font-family: Roboto-Regular;
             }
             .th {
-                font-family: Roboto-Bold;
+              font-family: Roboto-Medium;
+              color: #656464;
             }
             .td,
             .th {
@@ -220,17 +226,24 @@
         width:25%;
     }
     .documents {
+      padding-top: 10px;
+      padding-bottom: 10px;
         .listHead {
-            color: @secondary-background; //border-bottom: 1px solid @primary-border;
-            span {
-                margin-top: 15px;
-            }
-            hr {
-                margin-bottom: 0px;
-            }
+            color: @secondary-background; 
+            border-bottom: 1px solid @primary-border;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            margin-bottom: 10px;
+            // span {
+            //     margin-top: 15px;
+            // }
+            // hr {
+            //     margin-bottom: 0px;
+            // }
         }
         li {
-            padding: 15px;
+          padding: 15px 0;
+          margin: 0 25px;
             span {
                 display: inline-block;
                 cursor: pointer;
@@ -241,7 +254,7 @@
                 height: 24px;
                 vertical-align: text-bottom;
                 padding: 0;
-                margin-left: 15px;
+                // margin-left: 15px;
                 margin-right: 10px;
                 cursor: pointer;
             }
