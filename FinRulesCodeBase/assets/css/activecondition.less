@@ -129,7 +129,9 @@
 .displayNone {
     display: none;
 }
-
+.marginalSpace{
+  margin-bottom: 20px;
+}
 
 /*** container ***/
 
@@ -300,8 +302,9 @@
             .closeSection {
                 span {
                     padding: 15px;
-                    width: 50%;
+                    width: 100%;
                     float: left;
+                    text-align: center;
                 }
                 .view {
                     background-color: @secondary-background;
@@ -310,9 +313,11 @@
             }
         }
     }
+
     .mainSection {
         display: flex;
         margin-bottom: 10px;
+
         .leftMenu {
             border: 1px solid @primary-border;
             -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
@@ -496,7 +501,7 @@
                 background: @primary-background;
                 h3 {
                     padding: 12px;
-                    background: #6E7D9A;
+                    background: #9ea8bb;
                     color: @primary-color;
                 }
                 .descriptionList {
@@ -832,7 +837,7 @@
             background-color: @navbar-background;
             border: 1px solid @navbar-background;
             border-radius: 2px;
-            width: 115px;
+            // width: 115px;
             height: 45px;
             padding: 0 10px;
             float: left;
@@ -931,7 +936,7 @@
             }
         }
         .btn-inactive {
-            background-color: #6E7D9A;
+            background-color: #9ea8bb;
             color: @primary-color;
             width: 50px;
             &:focus,

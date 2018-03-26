@@ -147,7 +147,29 @@
             <div class="vertical col-xs-4"><span class="content">Employer Name</span></div>
             <div class="vertical col-xs-3"><span class="content">Google</span></div>
             <div class="vertical col-xs-2"><span class="content">Google</span></div>
-            <div class="col-xs-3 statuz-wrap"><button type="button content verify-btn" class="btn btn-default">Verify Manually</button><span class="failure-icon"></span></div>
+            <div class="col-xs-3 statuz-wrap"><button type="button content verify-btn" class="btn btn-default" data-toggle="modal" data-target="#myModal">Verify Manually</button><span class="failure-icon"></span></div>
+            <!-- Modals -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Confirmation</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Do you want to verify?</p>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="businessRuleEdit.html"><button type="button" class="btn btn-default">Verify</button></a>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <!-- modals -->
           </div>
         </section>
         <section class="income-calculator">
@@ -160,11 +182,13 @@
           </div>
         </section>
         <section class="edit-wrap">
-          <button type="button" class="btn btn-primary">Edit Business Rule</button>
+            <a href="businessRuleEdit.html"><button type="button" class="btn btn-primary">Edit Business Rule</button></a>
         </section>
 
       </div>
       </main>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>
