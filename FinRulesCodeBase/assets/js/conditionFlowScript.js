@@ -12,7 +12,7 @@ function enabledCheckbox(event) {
     
 }
 
-var getClass=document.getElementsByClassName("tab-content") ;
+var getClass=document.getElementsByClassName("tabContent") ;
 var leng=getClass.length;
 var i,j,counter=0,backfromTask,count=0,k;
 document.getElementsByClassName("next")[0].style.display="inline-block";

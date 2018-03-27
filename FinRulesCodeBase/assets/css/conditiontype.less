@@ -486,6 +486,9 @@ header {
         }
         .duFindings {
             padding: 0 15px;
+            .align{
+              display: flex;
+            }
             h2 {
                 .h2style();
                 span {
@@ -501,6 +504,7 @@ header {
                     width: 250px;
                     margin: 0;
                     border-bottom: 3px solid @open-status-border;
+                    height: 100%;
                     h2 {
                         background: @primary-background;
                         padding: 25px 20px;
@@ -513,6 +517,7 @@ header {
                         text-align: justify;
                         font-size: 13px;
                         color:grey;
+                        height: calc(100% - 68px);
                     }
                 }
             }
