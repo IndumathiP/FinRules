@@ -2,448 +2,446 @@
 <html lang="en-us">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>::FinRules::</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-		crossorigin="anonymous" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet/less" type="text/css" href="../assets/css/styles.less" />
-	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>::FinRules::</title>
+  <link rel="stylesheet/less" type="text/css" href="../assets/css/styles.less" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
 
 </head>
 
 <body>
-	<div class="conditionWrapper">
-		<!-- Header section -->
-		<header>
-			<div class="headerLogo row">
-				<ul class="col-md-6 col-xs-6 padding0">
-					<li class="col icon">
-						<span class="logoIcon"></span>
-					</li>
-					<li class="col">
-						<span class="logoName"></span>
-					</li>
-				</ul>
-				<ul class="col-md-3 col-xs-3 padding0 pull-right">
-					<div class="pull-right">
-						<li class="col text-right padding0">
-							<h3>John Smith</h3>
-							<label>Underwriter</label>
-						</li>
-						<li class="col">
-							<span class="userIcon"></span>
-							<i class="fa fa-caret-down"></i>
-						</li>
-					</div>
-				</ul>
-			</div>
-			<!-- loan details header -->
-			<div class="loanDetails row">
-				<h3 class="col-md-2 col-xs-2">LOAN # W2018030139</h3>
-				<ul class="loanInformation col-md-7 col-xs-7">
-					<li class="col-md-3 col-xs-3">
-						<label>Borrower</label>
-						<span>Firstimer, Alice</span>
-					</li>
-					<li class="col-md-3 col-xs-3">
-						<label>Loan Status</label>
-						<span>In Underwriting</span>
-					</li>
-					<li class="col-md-3 col-xs-3">
-						<label>Purchase Price</label>
-						<span>$ 250,000.00</span>
-					</li>
-					<li class="col-md-3 col-xs-3">
-						<label>Total Loan Amount</label>
-						<span>$ 217,150.00</span>
-					</li>
-				</ul>
-			</div>
-			<!-- select condition type -->
-			<div class="row loanMenu">
-				<div class="hamMenu">
-					<div class="hamIcon col paddingLeft">
-						<i class="fa fa-bars"></i>
-					</div>
-					<a href="activecondition.html" class="leftArrow"></a>
-					<label>Condition Type: Income</label>
-				</div>
-			</div>
-		</header>
-		<!-- main content -->
-		<div class="mainSection row">
-			<h2>ADD CONDITION</h2>
-			<!-- stepwise tabs -->
-			<ul class="tabs">
-				<li class="tablink current pull-left " id="navtab-1">
-					<div class="col-xs-8 paddingLeft conditionName">
-						<label class="step">Step 1 : </label>
-						<label class="stepTitle"> Conditions</label>
-					</div>
-					<span class="col-xs-4 chevronStatus verticallyCenter">
+  <div class="conditionWrapper">
+    <!-- Header section -->
+    <header>
+      <div class="headerLogo row">
+        <ul class="col-md-6 col-xs-6 padding0">
+          <li class="col icon">
+            <span class="logoIcon"></span>
+          </li>
+          <li class="col">
+            <span class="logoName"></span>
+          </li>
+        </ul>
+        <ul class="col-md-3 col-xs-3 padding0 pull-right">
+          <div class="pull-right">
+            <li class="col text-right padding0">
+              <h3>John Smith</h3>
+              <label>Underwriter</label>
+            </li>
+            <li class="col">
+              <span class="userIcon"></span>
+              <i class="fa fa-caret-down"></i>
+            </li>
+          </div>
+        </ul>
+      </div>
+      <!-- loan details header -->
+      <div class="loanDetails row">
+        <h3 class="col-md-2 col-xs-2">LOAN # W2018030139</h3>
+        <ul class="loanInformation col-md-7 col-xs-7">
+          <li class="col-md-3 col-xs-3">
+            <label>Borrower</label>
+            <span>Firstimer, Alice</span>
+          </li>
+          <li class="col-md-3 col-xs-3">
+            <label>Loan Status</label>
+            <span>In Underwriting</span>
+          </li>
+          <li class="col-md-3 col-xs-3">
+            <label>Purchase Price</label>
+            <span>$ 250,000.00</span>
+          </li>
+          <li class="col-md-3 col-xs-3">
+            <label>Total Loan Amount</label>
+            <span>$ 217,150.00</span>
+          </li>
+        </ul>
+      </div>
+      <!-- select condition type -->
+      <div class="row loanMenu">
+        <div class="hamMenu">
+          <div class="hamIcon col paddingLeft">
+            <i class="fa fa-bars"></i>
+          </div>
+          <a href="activecondition.html" class="leftArrow"></a>
+          <label>Condition Type: Income</label>
+        </div>
+      </div>
+    </header>
+    <!-- main content -->
+    <div class="mainSection row">
+      <h2>ADD CONDITION</h2>
+      <!-- stepwise tabs -->
+      <ul class="tabs">
+        <li class="tablink current pull-left " id="navtab-1">
+          <div class="col-xs-8 paddingLeft conditionName">
+            <label class="step">Step 1 : </label>
+            <label class="stepTitle"> Conditions</label>
+          </div>
+          <span class="col-xs-4 chevronStatus verticallyCenter">
             <span class="value">Tip Income</span>
-					<span class="backToThePage" id="firstStep" onclick="summaryNavigation()"></span>
-					</span>
-					<span class="stepArrow"></span>
-				</li>
-				<li class="tablink pull-left clearfix" id="navtab-2">
+          <span class="backToThePage" id="firstStep" onclick="summaryNavigation()"></span>
+          </span>
+          <span class="stepArrow"></span>
+        </li>
+        <li class="tablink pull-left clearfix" id="navtab-2">
 
-					<div class="col-xs-6 col-lg-5 conditionName">
-						<!-- <i class="fa fa-angle-right"></i> -->
-						<label class="step">Step 2 : </label>
-						<label class="stepTitle">Task</label>
-					</div>
-					<div class="col-lg-7 col-xs-6 padding0 chevronStatus clearfix">
-						<span class="col-lg-8 value">Complete Verbal Verification</span>
+          <div class="col-xs-6 col-lg-5 conditionName">
+            <!-- <i class="fa fa-angle-right"></i> -->
+            <label class="step">Step 2 : </label>
+            <label class="stepTitle">Task</label>
+          </div>
+          <div class="col-lg-7 col-xs-6 padding0 chevronStatus clearfix">
+            <span class="col-lg-8 value">Complete Verbal Verification</span>
 
-						<button class="col-lg-4 col-xs-8 change pull-right" onclick="changeTask()">Change</button>
-						<span class="backToThePage" id="secondStep" onclick="summaryNavigation()"></span>
-					</div>
-					<span class="stepArrow"></span>
-				</li>
-				<li class="tablink pull-left clearfix" id="navtab-3">
-					<div class="col-lg-8 col-xs-10 conditionName">
-						<!-- <i class="fa fa-angle-right"></i> -->
-						<label class="step">Step 3 : </label>
-						<label class="stepTitle"> Business Rule</label>
-					</div>
-					<span class="col-lg-4 col-xs-2 chevronStatus chevronStatus3 paddingRight">
+            <button class="col-lg-4 col-xs-8 change pull-right" onclick="changeTask()">Change</button>
+            <span class="backToThePage" id="secondStep" onclick="summaryNavigation()"></span>
+          </div>
+          <span class="stepArrow"></span>
+        </li>
+        <li class="tablink pull-left clearfix" id="navtab-3">
+          <div class="col-lg-8 col-xs-10 conditionName">
+            <!-- <i class="fa fa-angle-right"></i> -->
+            <label class="step">Step 3 : </label>
+            <label class="stepTitle"> Business Rule</label>
+          </div>
+          <span class="col-lg-4 col-xs-2 chevronStatus chevronStatus3 paddingRight">
             <span class="value">Validate<br> Document</span>
-					<span class="backToThePage" id="thirdStep" onclick="summaryNavigation()"></span>
+          <span class="backToThePage" id="thirdStep" onclick="summaryNavigation()"></span>
 
-					</span>
-					<span class="stepArrow"></span>
-				</li>
-				<li class="tablink pull-left clearfix" id="navtab-4">
-					<div class="col-xs-8 conditionName">
-						<!-- <i class="fa fa-angle-right"></i> -->
-						<label class="step"><span>Step</span> 4 : </label>
-						<label class="stepTitle"> Summary</label>
-					</div>
-					<span class="col-xs-4 chevronStatus verticallyCenter"><span class="value">Review</span>
+          </span>
+          <span class="stepArrow"></span>
+        </li>
+        <li class="tablink pull-left clearfix" id="navtab-4">
+          <div class="col-xs-8 conditionName">
+            <!-- <i class="fa fa-angle-right"></i> -->
+            <label class="step"><span>Step</span> 4 : </label>
+            <label class="stepTitle"> Summary</label>
+          </div>
+          <span class="col-xs-4 chevronStatus verticallyCenter"><span class="value">Review</span>
 
-					</span>
-				</li>
-			</ul>
-			<!-- Start of step-1 -->
-			<div id="tab-1" class="tab-content conditionTab" data-tab="tab-1">
+          </span>
+        </li>
+      </ul>
+      <!-- Start of step-1 -->
+      <div id="tab-1" class="tab-content conditionTab" data-tab="tab-1">
 
-				<div class="duFindings clearfix">
-					<div class="unassignedCondition">
-						<h3>CREATE CONDITION FRON UNASSIGNED</h3>
-						<div class="duCards">
-							<div class="singleduCard">
-								<label class="cardCheck">
+        <div class="duFindings clearfix">
+          <div class="unassignedCondition">
+            <h3>CREATE CONDITION FRON UNASSIGNED</h3>
+            <div class="duCards">
+              <div class="singleduCard">
+                <label class="cardCheck">
                   <input type="checkbox" onclick="enabledCheckbox()">
                   <span class="checkmark"></span>
                 </label>
-								<h2>DU Findings</h2>
-								<p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no
-									greater
-								</p>
-							</div>
-							<div class="singleduCard">
-								<label class="cardCheck">
+                <h2>DU Findings</h2>
+                <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct
+                  no greater
+                </p>
+              </div>
+              <div class="singleduCard">
+                <label class="cardCheck">
                   <input type="checkbox" onclick="enabledCheckbox()">
                   <span class="checkmark"></span>
                 </label>
-								<h2>DU Findings</h2>
-								<p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no
-									greater
-								</p>
-							</div>
-							<div class="singleduCard">
-								<label class="cardCheck">
+                <h2>DU Findings</h2>
+                <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct
+                  no greater
+                </p>
+              </div>
+              <div class="singleduCard">
+                <label class="cardCheck">
                   <input type="checkbox" onclick="enabledCheckbox()">
                   <span class="checkmark"></span>
                 </label>
-								<h2>DU Findings</h2>
-								<p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct no
-									greater
-								</p>
-							</div>
-							<div class="subDivider">
-								<span>OR</span>
-							</div>
-						</div>
-					</div>
-					<div class="createNewCondition">
-						<h2>CREATE NEW CONDITION</h2>
-						<div class="form-row">
-							<div class="form-group col-md-4 col-xs-4">
-								<label for="name">Condition Name</label>
-								<input type="text" class="form-control" value="Tip Income">
-							</div>
-							<div class="form-group col-md-4 col-xs-4">
-								<label for="category">Condition Category</label>
-								<input type="text" class="form-control" value="Prior To Finding">
-							</div>
-							<div class="form-group col-md-4 col-xs-4">
-								<label for="type">Condition Type</label>
-								<input type="text" class="form-control" value="Income">
-							</div>
-						</div>
-						<div class="form-row">
-							<div class="form-group col-md-4 col-xs-4">
-								<label for="name">Condition for Loan</label>
-								<textarea name="Text1">Credit: Paystubs / W-2S or other income validation per AUS findings to support income and meet AUS finding requirements (Paystubs must be dated within 30 days of application).</textarea>
-							</div>
-							<div class="form-group col-md-4 col-xs-4">
-								<label for="category">Findings from LP</label>
-								<textarea name="Text1">Employment/base income for ALICE FIRSTIMER for base non-fluctuating earnings or fluctuating hourly earnings must be supported by a YTD paystub documenting all YTD earnings and W-2(s) for the most recent calendar year, OR a written VOE documenting all YTD earnings and earnings for the most recent calendar year.</textarea>								</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- end of tab1 -->
-			<!-- start of tab2 -->
-			<div id="tab-2" class="tab-content taskTab" data-tab="tab-2">
-				<!-- task details -->
-				<div class="taskDetails">
-					<h2>Task Details</h2>
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<span class="noteIcon"></span>
-							<span class="note">Note:</span>
-							<span class="noteText">You have the option to delete the existing task details,suggest you to change the task name to avoid confusion</span>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-4 col-sm-4">
-							<span class="tasklabel">Task Name</span>
-							<br>
-							<input type="text" class="taskName" value="Complete Verbal verification">
-						</div>
-						<div class="col-md-2 col-sm-2">
-							<div class="genericTask">
-								<label class="cardCheck">
+                <h2>DU Findings</h2>
+                <p>Hazard ins for 100 percent of insured value or equal to total liens if 80 percent of insured value max deduct
+                  no greater
+                </p>
+              </div>
+              <div class="subDivider">
+                <span>OR</span>
+              </div>
+            </div>
+          </div>
+          <div class="createNewCondition">
+            <h2>CREATE NEW CONDITION</h2>
+            <div class="form-row">
+              <div class="form-group col-md-4 col-xs-4">
+                <label for="name">Condition Name</label>
+                <input type="text" class="form-control" value="Tip Income">
+              </div>
+              <div class="form-group col-md-4 col-xs-4">
+                <label for="category">Condition Category</label>
+                <input type="text" class="form-control" value="Prior To Finding">
+              </div>
+              <div class="form-group col-md-4 col-xs-4">
+                <label for="type">Condition Type</label>
+                <input type="text" class="form-control" value="Income">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-4 col-xs-4">
+                <label for="name">Condition for Loan</label>
+                <textarea name="Text1">Credit: Paystubs / W-2S or other income validation per AUS findings to support income and meet AUS finding requirements (Paystubs must be dated within 30 days of application).</textarea>
+              </div>
+              <div class="form-group col-md-4 col-xs-4">
+                <label for="category">Findings from LP</label>
+                <textarea name="Text1">Employment/base income for ALICE FIRSTIMER for base non-fluctuating earnings or fluctuating hourly earnings must be supported by a YTD paystub documenting all YTD earnings and W-2(s) for the most recent calendar year, OR a written VOE documenting all YTD earnings and earnings for the most recent calendar year.</textarea>                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of tab1 -->
+      <!-- start of tab2 -->
+      <div id="tab-2" class="tab-content taskTab" data-tab="tab-2">
+        <!-- task details -->
+        <div class="taskDetails">
+          <h2>Task Details</h2>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <span class="noteIcon"></span>
+              <span class="note">Note:</span>
+              <span class="noteText">You have the option to delete the existing task details,suggest you to change the task name to avoid confusion</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 col-sm-4">
+              <span class="tasklabel">Task Name</span>
+              <br>
+              <input type="text" class="taskName" value="Complete Verbal verification">
+            </div>
+            <div class="col-md-2 col-sm-2">
+              <div class="genericTask">
+                <label class="cardCheck">
                   <input type="checkbox">
                   <span class="checkmark"></span>
                 </label>
-								<label class="genericTaskMessage">Mark as generic task</label>
-								<span class="helpIcon"></span>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12" "col-sm-12">
-							<div class="taskDescription">
-								<label class="description">Description</label>
-								<textarea rows="8">‘Tip income was entered on the loan application. This income must have been received for the last two years and must be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005). The paystub must be dated no earlier than 30 days prior to the initial loan application date and it must include all year-to-date earnings. Additionally, the paystub must include sufficient information to appropriately calculate the tip income; otherwise, additional documentation must be obtained. If a standard Verification of Employment (1005) will be obtained it must include all year-to-date earnings, as well as prior year earnings if a W-2 is not being provided. The lender must determine the amount of tip income that may be considered in qualifying the borrower. Refer to the Fannie Mae Selling Guide for additional information. Direct verifications provided by a third party employment verification vendor are acceptable if completed in accordance with the Selling Guide.  
+                <label class="genericTaskMessage">Mark as generic task</label>
+                <span class="helpIcon"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12" "col-sm-12">
+              <div class="taskDescription">
+                <label class="description">Description</label>
+                <textarea rows="8">‘Tip income was entered on the loan application. This income must have been received for the last two years and must be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005). The paystub must be dated no earlier than 30 days prior to the initial loan application date and it must include all year-to-date earnings. Additionally, the paystub must include sufficient information to appropriately calculate the tip income; otherwise, additional documentation must be obtained. If a standard Verification of Employment (1005) will be obtained it must include all year-to-date earnings, as well as prior year earnings if a W-2 is not being provided. The lender must determine the amount of tip income that may be considered in qualifying the borrower. Refer to the Fannie Mae Selling Guide for additional information. Direct verifications provided by a third party employment verification vendor are acceptable if completed in accordance with the Selling Guide.  
                 </textarea>
-							</div>
-						</div>
+              </div>
+            </div>
 
-					</div>
-				</div>
-				<!-- select task -->
-				<div class="taskWrapper">
-					<h2>SELECT A TASK FROM EXISTING LIST</h2>
-					<div class="taskList">
-						<div class="form-row">
-							<div class="col-md-3 col-sm-3">
-								<input type="text" class="form-control" placeholder="Task Name">
-							</div>
-							<div class="col-md-3 col-sm-3">
-								<select class="form-control">
+          </div>
+        </div>
+        <!-- select task -->
+        <div class="taskWrapper">
+          <h2>SELECT A TASK FROM EXISTING LIST</h2>
+          <div class="taskList">
+            <div class="form-row">
+              <div class="col-md-3 col-sm-3">
+                <input type="text" class="form-control" placeholder="Task Name">
+              </div>
+              <div class="col-md-3 col-sm-3">
+                <select class="form-control">
                       <option>Condition Type 1</option>
                       <option>Condition Type 2</option>
                       <option>Condition Type 3</option>
                       <option>Condition Type 4</option>                  
                       <option>Condition Type 5</option>
                     </select>
-							</div>
-							<button type="submit" class="search btn btn-primary">Search</button>
-							<button type="reset" class="reset btn btn-primary">Reset</button>
-						</div>
-					</div>
-					<div class="accordion">
-						<ul>
-							<li>
-								<span class="expand"></span>
-								<label>Provide signed 1005 form</label>
-								<a href="javascript:void(0)">Select</a>
-							</li>
-							<li>
-								<span class="expand"></span>
-								<label>Verify income through equifax</label>
-								<a href="javascript:void(0)">Select</a>
-							</li>
-							<li>
-								<span class="expand"></span>
-								<label>Provide leave and earning statement</label>
-								<a href="javascript:void(0)">Select</a>
-							</li>
-							<li>
-								<div class="listContent" data-toggle="collapse" data-target="#verbalVerification" onclick="rotate()">
-									<span class="expand"></span>
-									<label>Complete Verbal Verification</label>
-								</div>
-								<div class="verbalVerification collapse" id="verbalVerification">
-									<label>
+              </div>
+              <button type="submit" class="search btn btn-primary">Search</button>
+              <button type="reset" class="reset btn btn-primary">Reset</button>
+            </div>
+          </div>
+          <div class="accordion">
+            <ul>
+              <li>
+                <span class="expand"></span>
+                <label>Provide signed 1005 form</label>
+                <a href="javascript:void(0)">Select</a>
+              </li>
+              <li>
+                <span class="expand"></span>
+                <label>Verify income through equifax</label>
+                <a href="javascript:void(0)">Select</a>
+              </li>
+              <li>
+                <span class="expand"></span>
+                <label>Provide leave and earning statement</label>
+                <a href="javascript:void(0)">Select</a>
+              </li>
+              <li>
+                <div class="listContent" data-toggle="collapse" data-target="#verbalVerification" onclick="rotate()">
+                  <span class="expand"></span>
+                  <label>Complete Verbal Verification</label>
+                </div>
+                <div class="verbalVerification collapse" id="verbalVerification">
+                  <label>
                     <span>Descriptions</span>The verbal verification must be dtaed no earlier than 30 days prior to the initial
                     loan application date and it must include all year-to-date earnings.</label>
-									<label>
+                  <label>
                     <span>Business Rules</span>Fields to be checked in document against 1003 form</label>
-									<div class="verbalList">
-										<ul>
-											<li>Income Payslip Availability</li>
-											<li>Employee name matching</li>
-											<li>Tip income was entered on the loan application. This income must have received for the last two years and must
-												be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005).</li>
-										</ul>
-										<ul>
-											<li>Income Payslip Availability</li>
-											<li>Employee name matching</li>
+                  <div class="verbalList">
+                    <ul>
+                      <li>Income Payslip Availability</li>
+                      <li>Employee name matching</li>
+                      <li>Tip income was entered on the loan application. This income must have received for the last two years
+                        and must be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005).</li>
+                    </ul>
+                    <ul>
+                      <li>Income Payslip Availability</li>
+                      <li>Employee name matching</li>
 
-										</ul>
-									</div>
-								</div>
-								<a href="javascript:void(0)" onclick="verbalVerification() " class="select">Select</a>
-							</li>
-							<li>
-								<span class="expand"></span>
-								<label>Provide form 16</label>
-								<a href="javascript:void(0)">Select</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div id="tab-3" class="tab-content businessRule" data-tab="tab-3">
-				<h2>BUSINESS RULES</h2>
-				<section class="task-wrap">
-					<div class="row">
-						<div class="col-xs-4"><span class="topic">Fields</span></div>
-						<div class="col-xs-8"><span class="topic">Business Rule</span></div>
-					</div>
-					<div class="row">
-						<div class="col-xs-4"><span class="content">Year</span></div>
-						<div class="col-xs-2"><select class="form-control">
+                    </ul>
+                  </div>
+                </div>
+                <a href="javascript:void(0)" onclick="verbalVerification() " class="select">Select</a>
+              </li>
+              <li>
+                <span class="expand"></span>
+                <label>Provide form 16</label>
+                <a href="javascript:void(0)">Select</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="tab-3" class="tab-content businessRule" data-tab="tab-3">
+        <h2>BUSINESS RULES</h2>
+        <section class="task-wrap">
+          <div class="row">
+            <div class="col-xs-4"><span class="topic">Fields</span></div>
+            <div class="col-xs-8"><span class="topic">Business Rule</span></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-4"><span class="content">Year</span></div>
+            <div class="col-xs-2"><select class="form-control">
                 <option class="content">Equal to</option>
                 <option class="content">Less than</option>                
                 <option class="content">Greater than</option>
               </select></div>
-					</div>
-					<div class="row">
-						<div class="col-xs-4"><span class="content">Employee Name ( Last, First )</span></div>
-						<div class="col-xs-8"><span class="content">Firstimer, Alice</span></div>
-					</div>
-					<div class="row">
-						<div class="col-xs-4"><span class="content">Social Security Number</span></div>
-						<div class="col-xs-8"><span class="content">xxxx-xxx-123</span></div>
-					</div>
-					<div class="row failure-row">
-						<div class="vertical col-xs-4"><span class="content">Employer Name</span></div>
-						<div class="vertical col-xs-8"><span class="content">Google</span></div>
-					</div>
-				</section>
-			</div>
-			<!-- start of tab4 -->
-			<div id="tab-4" class="tab-content summary" data-tab="tab-4">
-				<h2 class="legend">CONDITION
-					<span class="condition-link edit condition-head" id="condition_" onclick="summaryNavigation()"></span>
-				</h2>
-				<div class="legend-description">
-					<div class="row condition">
-						<div class="col-xs-3 condition-col">
-							<ul>
-								<li>
-									<label class="col-xs-6">Condtion Name</label>
-									<span class="col-xs-6 nobreak">Tip income</span>
-								</li>
-								<li>
-									<label class="col-xs-6">Condtion Type</label>
-									<span class="col-xs-6">Income</span>
-								</li>
-								<li>
-									<label class="col-xs-6">Condtion Category</label>
-									<span class="col-xs-6 nobreak">Prior to funding</span>
-								</li>
-							</ul>
+          </div>
+          <div class="row">
+            <div class="col-xs-4"><span class="content">Employee Name ( Last, First )</span></div>
+            <div class="col-xs-8"><span class="content">Firstimer, Alice</span></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-4"><span class="content">Social Security Number</span></div>
+            <div class="col-xs-8"><span class="content">xxxx-xxx-123</span></div>
+          </div>
+          <div class="row failure-row">
+            <div class="vertical col-xs-4"><span class="content">Employer Name</span></div>
+            <div class="vertical col-xs-8"><span class="content">Google</span></div>
+          </div>
+        </section>
+      </div>
+      <!-- start of tab4 -->
+      <div id="tab-4" class="tab-content summary" data-tab="tab-4">
+        <h2 class="legend">CONDITION
+          <span class="condition-link edit condition-head" id="condition_" onclick="summaryNavigation()"></span>
+        </h2>
+        <div class="legend-description">
+          <div class="row condition">
+            <div class="col-xs-3 condition-col">
+              <ul>
+                <li>
+                  <label class="col-xs-6">Condtion Name</label>
+                  <span class="col-xs-6 nobreak">Tip income</span>
+                </li>
+                <li>
+                  <label class="col-xs-6">Condtion Type</label>
+                  <span class="col-xs-6">Income</span>
+                </li>
+                <li>
+                  <label class="col-xs-6">Condtion Category</label>
+                  <span class="col-xs-6 nobreak">Prior to funding</span>
+                </li>
+              </ul>
 
-						</div>
-						<div class="col-xs-5 condition-col">
-							<label class="col-xs-4">Condition for Loan :</label>
-							<p class="col-xs-8 text-justify">Tip income was entered on the loan application. This income must have been received for the last two years and must
-								be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005). The paystub must be
-								dated no earlier than 30 days prior to the initial loan application date and it must include all.
-							</p>
-						</div>
-						<div class="col-xs-4 condition-col">
-							<label class="col-xs-5">Findings From LP : </label>
-							<p class="col-xs-7 text-justify">Hazard ins for 100 percent of insured value or equal to 10 liens if 80 percent of insured value max deduct no greater</p>
-						</div>
-					</div>
-				</div>
-				<h2 class="legend">TASK
-					<span class="task-link edit legend-head" id="task_" onclick="summaryNavigation()"></span>
-				</h2>
-				<div class="legend-description">
-					<div class="row condition">
-						<div class="col-xs-3 taskname">
-							<label class="col-xs-6">Task Name </label>
-							<span class="col-xs-6 nobreak">Tip Income</span>
-						</div>
-						<div class="col-xs-3">
-							<span class="task">
+            </div>
+            <div class="col-xs-5 condition-col">
+              <label class="col-xs-4">Condition for Loan :</label>
+              <p class="col-xs-8 text-justify">Tip income was entered on the loan application. This income must have been received for the last two years
+                and must be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005). The
+                paystub must be dated no earlier than 30 days prior to the initial loan application date and it must include
+                all.
+              </p>
+            </div>
+            <div class="col-xs-4 condition-col">
+              <label class="col-xs-5">Findings From LP : </label>
+              <p class="col-xs-7 text-justify">Hazard ins for 100 percent of insured value or equal to 10 liens if 80 percent of insured value max deduct
+                no greater</p>
+            </div>
+          </div>
+        </div>
+        <h2 class="legend">TASK
+          <span class="task-link edit legend-head" id="task_" onclick="summaryNavigation()"></span>
+        </h2>
+        <div class="legend-description">
+          <div class="row condition">
+            <div class="col-xs-3 taskname">
+              <label class="col-xs-6">Task Name </label>
+              <span class="col-xs-6 nobreak">Tip Income</span>
+            </div>
+            <div class="col-xs-3">
+              <span class="task">
                 <i class="fa fa-check-circle"></i>Task marked as generic
                 <i class="help"></i>
               </span>
-						</div>
-					</div>
-					<div class="row condition">
-						<div class="col-xs-1">
-							<label class="col-xs-6">Description</label>
-						</div>
-						<p class="col-xs-11 text-justify taskContent">Tip income was entered on the loan application. This income must have been received for the last two years and must
-							be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005). The paystub must be
-							dated no earlier than 30 days prior to the initial loan application date and it must include all.Tip income was entered
-							on the loan application. This income must have been received for the last two years and must be supported by a paystub
-							and 2 years W-2s or by a standard Verification of Employment (1005). The paystub must be dated no earlier than 30
-							days prior to the initial loan application date and it must include all.Tip income was entered on the loan application.
-							This income must have been received for the last two years and must be supported by a paystub and 2 years W-2s or
-							by a standard Verification of Employment (1005). The paystub must be dated no earlier than 30 days prior to the initial
-							loan application date and it must include all.</p>
-					</div>
-				</div>
-				<h2 class="legend">BUSINESS RULES
-					<span class="businessrule-link edit businessrules-head" id="businessrule_" onclick="summaryNavigation()"></span>
-				</h2>
-				<div class="businessrule-wrap">
-					<div class="businessrules-description">
+            </div>
+          </div>
+          <div class="row condition">
+            <div class="col-xs-1">
+              <label class="col-xs-6">Description</label>
+            </div>
+            <p class="col-xs-11 text-justify taskContent">Tip income was entered on the loan application. This income must have been received for the last two years and
+              must be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005). The paystub
+              must be dated no earlier than 30 days prior to the initial loan application date and it must include all.Tip
+              income was entered on the loan application. This income must have been received for the last two years and
+              must be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005). The paystub
+              must be dated no earlier than 30 days prior to the initial loan application date and it must include all.Tip
+              income was entered on the loan application. This income must have been received for the last two years and
+              must be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005). The paystub
+              must be dated no earlier than 30 days prior to the initial loan application date and it must include all.</p>
+          </div>
+        </div>
+        <h2 class="legend">BUSINESS RULES
+          <span class="businessrule-link edit businessrules-head" id="businessrule_" onclick="summaryNavigation()"></span>
+        </h2>
+        <div class="businessrule-wrap">
+          <div class="businessrules-description">
 
-					</div>
-				</div>
-			</div>
-			<!-- end of tab4 -->
-			<!-- cancel,next,back buttons -->
+          </div>
+        </div>
+      </div>
+      <!-- end of tab4 -->
+      <!-- cancel,next,back buttons -->
 
-		</div>
-		<div class="buttonAndFooter row">
-			<div class="buttonWrapper clearfix">
-				<button type="submit" class="btn btn-primary back" id="back-link" onclick="back()">
+    </div>
+    <div class="buttonAndFooter row">
+      <div class="buttonWrapper clearfix">
+        <button type="submit" class="btn btn-primary back" id="back-link" onclick="back()">
             <span></span>
             <label>Back</label>
           </button>
-				<button type="submit" class="btn btn-primary next" id="next-link" onclick="next()">
+        <button type="submit" class="btn btn-primary next" id="next-link" onclick="next()">
 
             <span>
             </span>
             <label>Next</label>
           </button>
-				<button type="submit" class="btn btn-primary saveUser" id="savej-link" onclick="cancel()">
+        <button type="submit" class="btn btn-primary saveUser" id="savej-link" onclick="cancel()">
             <span>
 
             </span>
             <label>Save &amp; Add to All Borrowers - John</label>
 
           </button>
-				<button type="submit" class="btn btn-primary save" id="save-link" onclick="cancel()">
+        <button type="submit" class="btn btn-primary save" id="save-link" onclick="cancel()">
             <span>
 
             </span>
@@ -451,23 +449,22 @@
 
           </button>
 
-				<button type="submit" class="btn btn-primary cancel" id="cancel-link" onclick="cancel()">
+        <button type="submit" class="btn btn-primary cancel" id="cancel-link" onclick="cancel()">
             <span></span>
 
             </span>
             <label>Cancel</label>
 
           </button>
-			</div>
-			<div class="footer">
-				<span>Copyright &#169; 2018 - FinRules. All rights reserved.</span><span class="right-content">Powered By:<span class="logo"></span></span>
-			</div>
-		</div>
-	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<!-- <script src="../assets/jquery/jquery.js"></script> -->
-	<script src="../assets/js/conditionFlowScript.js"></script>
+      </div>
+      <div class="footer">
+        <span>Copyright &#169; 2018 - FinRules. All rights reserved.</span><span class="right-content">Powered By:<span class="logo"></span></span>
+      </div>
+    </div>
+  </div>
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/conditionFlowScript.js"></script>
 </body>
 
 </html>
