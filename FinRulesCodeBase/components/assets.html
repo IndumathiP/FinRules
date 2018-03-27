@@ -318,16 +318,275 @@
         <!-- borrower list -->
         <div class="rightMenu col-md-10 col-xs-10 paddingRight">
           <ul class="borrowerList">
-            <li><a href="javascript:void(0)">Firstimer, Alice</a></li>
-            <li><a href="javascript:void(0)">HomeOwner, John</a></li>
+            <li class="active"><a data-toggle="pill" href="#alice">Firstimer, Alice</a></li>
+            <li><a data-toggle="pill" href="#john">HomeOwner, John</a></li>
           </ul>
           <!-- Task lists -->
+          <div class="tab-content">
+            <div id="alice" class="tab-pane fade in active">
+              <ul class="nav nav-pills taskList clearfix">
+                <li class="task active"><a data-toggle="pill" href="#task">Task List</a></li>
+                <li class="task"><a data-toggle="pill" href="#assets">1003 Form</a></li>
+              </ul>
+              <div class="tab-content">
+                <div id="task" class="tab-pane fade  in active">
+                  <!-- Required tasks -->
+                  <h3>Task Validation Category 1</h3>
+                  <div class="editCondition">
+                    <h3>(And) all required Validation</h3>
+                    <div class="descriptionList">
+                      <div class="detail">
+                        <ul class="clearfix">
+                          <div data-toggle="collapse" href="#collapse1" onclick="addIcon()">
+                            <li class="col-xs-6"><span class="dropdownIcon" id="rotateArrow"></span>Upload Document to verify Assets Totaling
+                              $21,066.00 </li>
+                          </div>
+                          <li class=" col-xs-1">Pending</li>
+                          <li class="col-xs-2">10/27/2017 12:30 PM</li>
+                          <li class="col">Loan Officer</li>
+                          <li class="col manage-validation paddingLeft text-center">
+                            <span class="settingIcon" onclick="showPopup()">
+                            <ul class="validation_action text-left" id="pop-up">
+                              <div class="option"><span class="delete"></span>Delete</div>
+                      <div class="option"><span class="manage"></span>Manage</div>
+                      <div class="option"><span class="reopen"></span>Reopen</div>
+                      <div class="tip"></div>
+                      <div class="tip in"></div>
+                      </ul>
+                      </span>
+                      <span class="plusIcon">OR</span>
+                      <span class="dropDown"></span>
+                      <span class="addIconTop"></span>
+                      <span id="bottomIcon" class="addIconMiddle"></span>
+                      </li>
+                      </ul>
+                      <div id="collapse1" class="panel-collapse collapse">
+                        <div class="sourceInformation">
+                          <span class="closeIcon"></span>
+                          <label class="soruce">
+                          <span>Source : </span> System Default</label>
+                          <!-- <label>
+                          <span>Reason :</span> Info Closed after discusssion with loan Officer</label> -->
+                          <p>
+                            <span>Task : </span>Document supporting Stable Income Source</p>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="clearfix">
+                      <li class="col-xs-6 paddingRight"><span class="dropdownIcon"></span>Assets Totaling $21,066.00 can be verified by third party verification
+                        services
+                      </li>
+                      <li class="col-xs-1">Pending</li>
+                      <li class="col-xs-2">10/27/2017 12:30 PM</li>
+                      <li class="col">Loan Officer</li>
+                      <li class="col manage-validation paddingLeft text-center">
+                        <span class="settingIcon" onclick="showPopup2()">
+                              <ul class="validation_action displayNone text-left" id="pop-up2">
+                                <div class="option"><span class="delete"></span>Delete</div>
+                  <div class="option"><span class="manage"></span>Manage</div>
+                  <div class="option"><span class="reopen"></span>Reopen</div>
+                  <div class="tip"></div>
+                  <div class="tip in"></div>
+                  </ul>
+                  </span>
+                  <span class="plusIcon">OR</span>
+                  <span class="dropDown"></span>
+                  <span class="addIconMiddle"></span>
+                  </li>
+
+                  </ul>
+                </div>
+                <!-- Optional task -->
+                <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+                <div class="descriptionList">
+                  <ul class="addTask clearfix">
+                    <li class="col-md-2">
+                      <span></span>
+                      <label>Add Task</label>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+
+              <div class="toggleBtn">
+                <div class="btn-toggle clearfix disabled-switch">
+                  <button class="btn btn-disabled">And</button>
+                  <button class="btn btn-disabled">Or</button>
+                </div>
+              </div>
+              <div class="button-wrapper clearfix">
+                <div class="col-md-12 col-xs-12 clearfix taskButton positionBottom padding0">
+                  <button type="submit" class=" btn btn-primary add">
+                                  <label>Add Task Validation Category 2</label>
+                                  <span></span>
+                              </button>
+                  <button type="submit" class="btn btn-primary start">
+                                  <label>Start Execution</label>
+                                  <span></span>
+                              </button>
+                </div>
+              </div>
+            </div>
+            <div id="assets" class="assets tab-pane fade">
+              <h2>Assets</h2>
+              <div class="subtotal row">
+                <div class="col-xs-3">
+                  <label>Subtotal Liquid :</label>
+                  <span>$20,000.00</span>
+                </div>
+                <div class="col-xs-3">
+                  <label>Subtotal Other :</label>
+                  <span>$11,000.00</span>
+                </div>
+                <div class="col-xs-3">
+                  <label>Borrower Total :</label>
+                  <span>$31,000.00</span>
+                </div>
+              </div>
+              <div class="heading row">
+                <label class="col-xs-1">Owner</label>
+                <label class="col-xs-3">Asset Type</label>
+                <label class="col-xs-6">Description</label>
+                <label class="col-xs-2">Market Value</label>
+              </div>
+              <div class="description">
+                <div data-toggle="collapse" href="#expand1003" class="panel-heading row" onclick="expand1003()">
+                  <span id="icon" class="icon"></span>
+                  <label class="col-xs-1">Alice</label>
+                  <label class="col-xs-3">Checking</label>
+                  <label class="col-xs-6">Checking Accounts</label>
+                  <label class="col-xs-2">$ 20000.00</label>
+                </div>
+                <div id="expand1003" class="panel-collapse collapse in panel-description">
+                  <div class="panel-content">
+                    <div class="row">
+                      <div class="col-xs-1">
+                        <label>
+                          Owner:
+                      </label>
+                        <span>
+                          Borrower
+                      </span>
+                      </div>
+                      <div class="col-xs-1">
+                        <label>
+                          Type:
+                    </label>
+                        <span>
+                        Checking
+                    </span></div>
+                      <div class="col-xs-2">
+                        <label>
+                          Company Name:
+                    </label>
+                        <span>
+                        Bank of America
+                    </span></div>
+                      <div class="col-xs-3">
+                        <label>
+                            Department:
+                        </label>
+                        <span>
+                            -
+                        </span>
+                      </div>
+                      <div class="col-xs-3">
+                        <label>
+                            Address:
+                        </label>
+                        <span>
+                            Address San Ramon, CA, 94583
+                        </span>
+                      </div>
+                      <div class="col-xs-2">
+                        <label>
+                            Phone Number:
+                        </label>
+                        <span>
+                            (123)223-2222
+                        </span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-2">
+                        <label>
+                                Description:
+                            </label>
+                        <span>
+                                Checking Accounts
+                            </span>
+                      </div>
+                      <div class="col-xs-2">
+                        <label>
+                                Value:
+                            </label>
+                        <span>
+                                $ 20,000.00
+                            </span>
+                      </div>
+                      <div class="col-xs-3">
+                        <label>
+                                Account Holder Name:
+                            </label>
+                        <span>
+                                Alice
+                            </span>
+                      </div>
+                      <div class="col-xs-5">
+                        <label>
+                                Account Number:
+                            </label>
+                        <span>
+                                787838982
+                            </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panelfooter">
+                    <div class="row">
+                      <div class="col-xs-2">
+                        <label>
+                              Verif.Sent
+                          </label>
+                        <span>
+                          12/13/17 18 : 20 PM
+                          </span>
+                      </div>
+                      <div class="col-xs-10">
+                        <label>
+                              Received
+                          </label>
+                        <span>
+                          12/3/17 19 : 20 PM
+                          </span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="panel-heading unexpand row">
+                <span id="icon" class="icon"></span>
+                <label class="col-xs-1">Alice</label>
+                <label class="col-xs-3">Checking</label>
+                <label class="col-xs-6">Checking Accounts</label>
+                <label class="col-xs-2">$ 20000.00</label>
+              </div>
+            </div>
+           
+            <!-- task -->
+
+          </div>
+         
+        </div>
+        <div id="john" class="tab-pane fade">
           <ul class="nav nav-pills taskList clearfix">
-            <li class="task active"><a data-toggle="pill" href="#task">Task List</a></li>
-            <li class="task"><a data-toggle="pill" href="#assets">1003 Form</a></li>
+            <li class="task active"><a data-toggle="pill" href="#task1">Task List</a></li>
+            <li class="task"><a data-toggle="pill" href="#assets1">1003 Form</a></li>
           </ul>
           <div class="tab-content">
-            <div id="task" class="tab-pane fade  in active">
+            <div id="task1" class="tab-pane fade  in active">
               <!-- Required tasks -->
               <h3>Task Validation Category 1</h3>
               <div class="editCondition">
@@ -336,21 +595,23 @@
                   <div class="detail">
                     <ul class="clearfix">
                       <div data-toggle="collapse" href="#collapse1" onclick="addIcon()">
-                        <li class="col-md-4 col-xs-4"><span class="dropdownIcon" id="rotateArrow"></span>Upload Document  to verify Assets Totaling $21,066.00  </li>
+                        <li class="col-xs-6"><span class="dropdownIcon" id="rotateArrow"></span>Upload Document to verify Assets Totaling $21,066.00
+                        </li>
                       </div>
-                      <li class="col-md-1 col-xs-1">Pending</li>
-                      <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
-                      <li class="col-md-2 col-xs-2">Loan Officer</li>
-                      <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
-                        <span class="settingIcon" onclick="showPopup()">
-                            <ul class="validation_action" id="pop-up">
-                              <div class="option"><span class="delete"></span>Delete</div>
+                      <li class=" col-xs-1">Pending</li>
+                      <li class="col-xs-2">10/27/2017 12:30 PM</li>
+                      <li class="col">Loan Officer</li>
+                      <li class="col manage-validation paddingLeft text-center">
+                        <span class="settingIcon" onclick="showPopup3()">
+                      <ul class="validation_action text-left" id="pop-up3">
+                        <div class="option"><span class="delete"></span>Delete</div>
                   <div class="option"><span class="manage"></span>Manage</div>
                   <div class="option"><span class="reopen"></span>Reopen</div>
                   <div class="tip"></div>
                   <div class="tip in"></div>
                   </ul>
                   </span>
+                  <span class="plusIcon">OR</span>
                   <span class="dropDown"></span>
                   <span class="addIconTop"></span>
                   <span id="bottomIcon" class="addIconMiddle"></span>
@@ -360,29 +621,32 @@
                     <div class="sourceInformation">
                       <span class="closeIcon"></span>
                       <label class="soruce">
-                          <span>Source : </span> System Default</label>
+                    <span>Source : </span> System Default</label>
                       <!-- <label>
-                          <span>Reason :</span> Info Closed after discusssion with loan Officer</label> -->
+                    <span>Reason :</span> Info Closed after discusssion with loan Officer</label> -->
                       <p>
                         <span>Task : </span>Document supporting Stable Income Source</p>
                     </div>
                   </div>
                 </div>
                 <ul class="clearfix">
-                  <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Assets Totaling $21,066.00 can be verified by third party verification services</li>
-                  <li class="col-md-1 col-xs-1">Pending</li>
-                  <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
-                  <li class="col-md-2 col-xs-2">Loan Officer</li>
-                  <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
-                    <span class="settingIcon" onclick="showPopup2()">
-                            <ul class="validation_action" id="pop-up2">
-                              <div class="option"><span class="delete"></span>Delete</div>
+                  <li class="col-xs-6 paddingRight"><span class="dropdownIcon"></span>Assets Totaling $21,066.00 can be verified by third party verification
+                    services
+                  </li>
+                  <li class="col-xs-1">Pending</li>
+                  <li class="col-xs-2">10/27/2017 12:30 PM</li>
+                  <li class="col">Loan Officer</li>
+                  <li class="col manage-validation paddingLeft text-center">
+                    <span class="settingIcon" onclick="showPopup4()">
+                        <ul class="validation_action displayNone text-left" id="pop-up4">
+                          <div class="option"><span class="delete"></span>Delete</div>
               <div class="option"><span class="manage"></span>Manage</div>
               <div class="option"><span class="reopen"></span>Reopen</div>
               <div class="tip"></div>
               <div class="tip in"></div>
               </ul>
               </span>
+              <span class="plusIcon">OR</span>
               <span class="dropDown"></span>
               <span class="addIconMiddle"></span>
               </li>
@@ -401,283 +665,176 @@
 
             </div>
           </div>
-          <!-- <div class="toggleBtn">
-            <div class="btn-toggle clearfix">
-              <button class="btn btn-active" id="active" onclick="toggleactive()">AND</button>
-              <button class="btn btn-inactive" id="inactive" onclick="toggleinactive()">OR</button>
+
+          <div class="toggleBtn">
+            <div class="btn-toggle clearfix disabled-switch">
+              <button class="btn btn-disabled">And</button>
+              <button class="btn btn-disabled">Or</button>
             </div>
           </div>
-          <h3>Task Validation Category 2</h3>
-          <div class="editCondition">
-            <h3>(And) all required Validation</h3>
-            <div class="descriptionList">
-              <ul class="clearfix">
-                <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload VOE document</li>
-                <li class="col-md-1 col-xs-1">Pending</li>
-                <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
-                <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
-                  <span class="settingIcon" onclick="showPopup3()">
-                          <ul class="validation_action" id="pop-up3">
-                              <div class="option"><span class="delete"></span>Delete</div>
-            <div class="option"><span class="manage"></span>Manage</div>
-            <div class="option"><span class="reopen"></span>Reopen</div>
-            <div class="tip"></div>
-            <div class="tip in"></div>
-            </ul>
-            </span>
-            <span class="dropDown"></span>
-            <span class="addIconTop"></span>
-            <span class="addIconMiddle"></span>
-            </li>
-
-            </ul>
-          </div>
-          <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
-          <div class="descriptionList">
-            <ul class="addTask clearfix">
-
-              <span></span>
-              <label>Add Task</label>
-
-            </ul>
-
-          </div>
-
-        </div> -->
-        <div class="toggleBtn">
-          <div class="btn-toggle clearfix disabled-switch">
-            <button class="btn btn-disabled">AND</button>
-            <button class="btn btn-disabled">OR</button>
+          <div class="button-wrapper clearfix">
+            <div class="col-md-12 col-xs-12 clearfix taskButton positionBottom padding0">
+              <button type="submit" class=" btn btn-primary add">
+                            <label>Add Task Validation Category 2</label>
+                            <span></span>
+                        </button>
+              <button type="submit" class="btn btn-primary start">
+                            <label>Start Execution</label>
+                            <span></span>
+                        </button>
+            </div>
           </div>
         </div>
-        <div class="button-wrapper clearfix">
-            <div class="col-md-12 col-xs-12 clearfix taskButton padding0">
-            <button type="submit" class=" btn btn-primary add">
-                                  <label>Add Task Validation Category 2</label>
-                                  <span></span>
-                              </button>
-            <button type="submit" class="btn btn-primary start">
-                                  <label>Start Execution</label>
-                                  <span></span>
-                              </button>
+        <div id="assets1" class="assets tab-pane fade">
+          <h2>Assets</h2>
+          <div class="subtotal row">
+            <div class="col-xs-3">
+              <label>Subtotal Liquid :</label>
+              <span>$20,000.00</span>
+            </div>
+            <div class="col-xs-3">
+              <label>Subtotal Other :</label>
+              <span>$11,000.00</span>
+            </div>
+            <div class="col-xs-3">
+              <label>Borrower Total :</label>
+              <span>$31,000.00</span>
+            </div>
           </div>
-        </div>
-      </div>
-      <div id="assets" class="assets tab-pane fade">
-        <h2>Assets</h2>
-        <div class="subtotal row">
-          <div class="col-xs-3">
-            <label>Subtotal Liquid :</label>
-            <span>$20,000.00</span>
+          <div class="heading row">
+            <label class="col-xs-1">Owner</label>
+            <label class="col-xs-3">Asset Type</label>
+            <label class="col-xs-6">Description</label>
+            <label class="col-xs-2">Market Value</label>
           </div>
-          <div class="col-xs-3">
-            <label>Subtotal Other :</label>
-            <span>$11,000.00</span>
+          <div class="description">
+            <div data-toggle="collapse" href="#expand1003" class="panel-heading row" onclick="expand1003()">
+              <span id="icon" class="icon"></span>
+              <label class="col-xs-1">Alice</label>
+              <label class="col-xs-3">Checking</label>
+              <label class="col-xs-6">Checking Accounts</label>
+              <label class="col-xs-2">$ 20000.00</label>
+            </div>
+            <div id="expand1003" class="panel-collapse collapse in panel-description">
+              <div class="panel-content">
+                <div class="row">
+                  <div class="col-xs-1">
+                    <label>
+                    Owner:
+                </label>
+                    <span>
+                    Borrower
+                </span>
+                  </div>
+                  <div class="col-xs-1">
+                    <label>
+                    Type:
+              </label>
+                    <span>
+                  Checking
+              </span></div>
+                  <div class="col-xs-2">
+                    <label>
+                    Company Name:
+              </label>
+                    <span>
+                  Bank of America
+              </span></div>
+                  <div class="col-xs-3">
+                    <label>
+                      Department:
+                  </label>
+                    <span>
+                      -
+                  </span>
+                  </div>
+                  <div class="col-xs-3">
+                    <label>
+                      Address:
+                  </label>
+                    <span>
+                      Address San Ramon, CA, 94583
+                  </span>
+                  </div>
+                  <div class="col-xs-2">
+                    <label>
+                      Phone Number:
+                  </label>
+                    <span>
+                      (123)223-2222
+                  </span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-2">
+                    <label>
+                          Description:
+                      </label>
+                    <span>
+                          Checking Accounts
+                      </span>
+                  </div>
+                  <div class="col-xs-2">
+                    <label>
+                          Value:
+                      </label>
+                    <span>
+                          $ 20,000.00
+                      </span>
+                  </div>
+                  <div class="col-xs-3">
+                    <label>
+                          Account Holder Name:
+                      </label>
+                    <span>
+                          Alice
+                      </span>
+                  </div>
+                  <div class="col-xs-5">
+                    <label>
+                          Account Number:
+                      </label>
+                    <span>
+                          787838982
+                      </span>
+                  </div>
+                </div>
+              </div>
+              <div class="panelfooter">
+                <div class="row">
+                  <div class="col-xs-2">
+                    <label>
+                        Verif.Sent
+                    </label>
+                    <span>
+                    12/13/17 18 : 20 PM
+                    </span>
+                  </div>
+                  <div class="col-xs-10">
+                    <label>
+                        Received
+                    </label>
+                    <span>
+                    12/3/17 19 : 20 PM
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
-          <div class="col-xs-3">
-            <label>Borrower Total :</label>
-            <span>$31,000.00</span>
-          </div>
-        </div>
-        <div class="heading row">
-          <label class="col-xs-1">Owner</label>
-          <label class="col-xs-3">Asset Type</label>
-          <label class="col-xs-6">Description</label>
-          <label class="col-xs-2">Market Value</label>
-        </div>
-        <div class="description">
-          <div data-toggle="collapse" href="#expand1003" class="panel-heading row" onclick="expand1003()">
+          <div class="panel-heading unexpand row">
             <span id="icon" class="icon"></span>
             <label class="col-xs-1">Alice</label>
             <label class="col-xs-3">Checking</label>
             <label class="col-xs-6">Checking Accounts</label>
             <label class="col-xs-2">$ 20000.00</label>
           </div>
-          <div id="expand1003" class="panel-collapse collapse in panel-description">
-            <div class="panel-content">
-              <div class="row">
-                <div class="col-xs-1">
-                  <label>
-                          Owner:
-                      </label>
-                  <span>
-                          Borrower
-                      </span>
-                </div>
-                <div class="col-xs-1">
-                  <label>
-                          Type:
-                    </label>
-                  <span>
-                        Checking
-                    </span></div>
-                <div class="col-xs-2">
-                  <label>
-                          Company Name:
-                    </label>
-                  <span>
-                        Bank of America
-                    </span></div>
-                <div class="col-xs-3">
-                  <label>
-                            Department:
-                        </label>
-                  <span>
-                            -
-                        </span>
-                </div>
-                <div class="col-xs-3">
-                  <label>
-                            Address:
-                        </label>
-                  <span>
-                            Address San Ramon, CA, 94583
-                        </span>
-                </div>
-                <div class="col-xs-2">
-                  <label>
-                            Phone Number:
-                        </label>
-                  <span>
-                            (123)223-2222
-                        </span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-2">
-                  <label>
-                                Description:
-                            </label>
-                  <span>
-                                Checking Accounts
-                            </span>
-                </div>
-                <div class="col-xs-2">
-                  <label>
-                                Value:
-                            </label>
-                  <span>
-                                $ 20,000.00
-                            </span>
-                </div>
-                <div class="col-xs-3">
-                  <label>
-                                Account Holder Name:
-                            </label>
-                  <span>
-                                Alice
-                            </span>
-                </div>
-                <div class="col-xs-5">
-                  <label>
-                                Account Number:
-                            </label>
-                  <span>
-                                787838982
-                            </span>
-                </div>
-              </div>
-            </div>
-            <div class="panelfooter">
-              <div class="row">
-                <div class="col-xs-2">
-                  <label>
-                              Verif.Sent
-                          </label>
-                  <span>
-                          12/13/17 18 : 20 PM
-                          </span>
-                </div>
-                <div class="col-xs-10">
-                  <label>
-                              Received
-                          </label>
-                  <span>
-                          12/3/17 19 : 20 PM
-                          </span>
-                </div>
-              </div>
+        </div>
 
-            </div>
-          </div>
-        </div>
-        <div class="panel-heading unexpand row">
-          <span id="icon" class="icon"></span>
-          <label class="col-xs-1">Alice</label>
-          <label class="col-xs-3">Checking</label>
-          <label class="col-xs-6">Checking Accounts</label>
-          <label class="col-xs-2">$ 20000.00</label>
-        </div>
+        <!-- task -->
       </div>
-      <div id="additionalincome" class="additionalincome tab-pane fade">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th class="left">Gross Monthly Income</th>
-              <th>Borrower</th>
-              <th>Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="left">Base Employee income</td>
-              <td>$3800</td>
-              <td>$3800</td>
-            </tr>
-            <tr>
-              <td class="left">Overtime</td>
-              <td>$0.00</td>
-              <td>$0.00</td>
-            </tr>
-            <tr>
-              <td class="left">Bonuses</td>
-              <td>$0.00</td>
-              <td>$0.00</td>
-            </tr>
-            <tr>
-              <td class="left">Commissions</td>
-              <td>$100.00</td>
-              <td>$100.00</td>
-            </tr>
-            <tr>
-              <td class="left">Dividends /Interest</td>
-              <td>$1000.00</td>
-              <td>$1000.00</td>
-            </tr>
-            <tr>
-              <td class="left">Net Rental Income</td>
-              <td>$0-00</td>
-              <td>$0-00</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="others">
-          <table class="table table-striped">
-            <tbody>
-              <h3>OTHERS</h3>
-              <tr>
-                <td class="left">Automobile/Expense Account Income</td>
-                <td>$0.00</td>
-                <td>$0.00</td>
-              </tr>
-              <tr>
-                <td class="left">Others Total</td>
-                <td>$99.00</td>
-                <td>$99.00</td>
-              </tr>
-              <tr>
-                <td class="left">OTHERS TOTAL</td>
-                <td>$4999.00</td>
-                <td>$4999.00</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <!-- task -->
-
     </div>
-    <!-- end of task -->
   </div>
   </div>
   </div>

@@ -32,6 +32,9 @@ function hideMenu(e) {
     display(document.getElementById("pop-up"),false);
     display(document.getElementById("pop-up2"),false);
     display(document.getElementById("pop-up3"),false);
+    display(document.getElementById("pop-up4"),false);
+    display(document.getElementById("pop-up5"),false);
+    display(document.getElementById("pop-up6"),false);
     // document.getElementById("duFindingsWrapper").addEventListener("hide-overlay");
   }
 }
@@ -48,6 +51,18 @@ function showPopup3(){
   display(document.getElementById("pop-up3"),true);
   showOverlay();
 }
+function showPopup4(){
+  display(document.getElementById("pop-up4"),true);
+  showOverlay();
+}
+function showPopup5(){
+  display(document.getElementById("pop-up5"),true);
+  showOverlay();
+}
+function showPopup6(){
+  display(document.getElementById("pop-up6"),true);
+  showOverlay();
+}
 function display(ele, res) {
   if (res) {
     ele.classList.remove("displayNone");
@@ -59,6 +74,9 @@ function display(ele, res) {
 display(document.getElementById("pop-up"),false);
 display(document.getElementById("pop-up2"),false);
 display(document.getElementById("pop-up3"),false);
+display(document.getElementById("pop-up4"),false);
+display(document.getElementById("pop-up5"),false);
+display(document.getElementById("pop-up6"),false);
 
 function showOverlay() {
   document.getElementById("duFindingsWrapper").classList.add("duFindingsWrapper");
