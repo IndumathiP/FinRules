@@ -176,11 +176,18 @@
               </div>
               <div class="form-group col-md-4 col-xs-4">
                 <label for="category">Condition Category</label>
-                <input type="text" class="form-control" value="Prior To Finding">
+                <!-- <input type="text" class="form-control" value="Prior To Finding"> -->
+                <select class="form-control">
+                  <option>Income</option>
+                  <option>Assets</option>
+                  <option>Property</option>
+                  <option>Borrower</option>                  
+                  <option>Credit</option>
+                </select>
               </div>
               <div class="form-group col-md-4 col-xs-4">
                 <label for="type">Condition Type</label>
-                <input type="text" class="form-control" value="Income">
+                <input type="text" class="form-control" value="Income" readonly>
               </div>
             </div>
             <div class="form-row">
@@ -246,11 +253,11 @@
               </div>
               <div class="col-md-3 col-sm-3">
                 <select class="form-control">
-                      <option>Condition Type 1</option>
-                      <option>Condition Type 2</option>
-                      <option>Condition Type 3</option>
-                      <option>Condition Type 4</option>                  
-                      <option>Condition Type 5</option>
+                    <option>Income</option>
+                    <option>Assets</option>
+                    <option>Property</option>
+                    <option>Borrower</option>                  
+                    <option>Credit</option>
                     </select>
               </div>
               <button type="submit" class="search btn btn-primary">Search</button>
@@ -277,26 +284,32 @@
               <li>
                 <div class="listContent" data-toggle="collapse" data-target="#verbalVerification" onclick="rotate()">
                   <span class="expand"></span>
-                  <label>Complete Verbal Verification</label>
+                  <label>Provide the most recent Paystub</label>
                 </div>
-                <div class="verbalVerification collapse" id="verbalVerification">
-                  <label>
-                    <span>Descriptions</span>The verbal verification must be dtaed no earlier than 30 days prior to the initial
+                <div class="collapse" id="verbalVerification">
+                  <div class="verbalVerification">
+                    <label>
+                    <span>Description</span>The Paystub must be dated no earlier than 30 days prior to the initial
                     loan application date and it must include all year-to-date earnings.</label>
-                  <label>
+                    <label>
                     <span>Business Rules</span>Fields to be checked in document against 1003 form</label>
-                  <div class="verbalList">
-                    <ul>
-                      <li>Income Payslip Availability</li>
+                    <div class="verbalList clearfix">
+                      <ul>
+                        <!-- <li>Income Payslip Availability</li>
                       <li>Employee name matching</li>
                       <li>Tip income was entered on the loan application. This income must have received for the last two years
-                        and must be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005).</li>
-                    </ul>
-                    <ul>
-                      <li>Income Payslip Availability</li>
-                      <li>Employee name matching</li>
-
-                    </ul>
+                        and must be supported by a paystub and 2 years W-2s or by a standard Verification of Employment (1005).</li> -->
+                        <li>Name of the Applicant.</li>
+                        <li>Social Security Number of the applicant.</li>
+                        <li>Name of the Employer.</li>
+                        <li>Employee Address</li>
+                      </ul>
+                      <ul>
+                        <li>YTD Earnings</li>
+                        <li>Year</li>
+                        <li>Paystub Date</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
                 <a href="javascript:void(0)" onclick="verbalVerification() " class="select">Select</a>
