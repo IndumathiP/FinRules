@@ -189,3 +189,12 @@ function positionIcon(counter){
 //   }
 //   count=count+1;
 // }
+document.getElementById("name").innerHTML ="ALICE FIRSTIMER";
+function changeName(value){
+  if(value == 1){
+  document.getElementById("name").innerHTML ="ALICE FIRSTIMER";
+  }
+  else{
+  document.getElementById("name").innerHTML ="HOMEOWNER JOHN";
+  }
+}
