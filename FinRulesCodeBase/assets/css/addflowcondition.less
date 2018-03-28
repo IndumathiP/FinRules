@@ -96,6 +96,9 @@
     }
 }
 
+.businessrule-wrap{
+  margin-bottom:60px;
+}
 .conditionWrapper {
     padding: 0 15px; // Conditions Tab Styling Starts
     span {
@@ -658,6 +661,9 @@
             }
         }
     }
+    .businessRule{
+      margin-bottom:40px;
+    }
     .summary {
         margin: 60px 20px 0 20px;
         padding: 0;
@@ -674,6 +680,7 @@
         }
         .task {
             font-family: Roboto-bold;
+            position:relative;
         }
         .edit {
             background: #ffffff url('../images/Sprite_FinRules-psd.png') no-repeat -768px -201px;
@@ -692,8 +699,10 @@
             width: 16px;
             height: 16px;
             display: inline-block;
-            margin-left: 10px;
-            vertical-align: middle;
+            margin-left: 10px;    
+            position: absolute;
+            right: -27px;
+            top: 3px;
         }
         .taskname {
             padding-top: 4px;
@@ -747,6 +756,10 @@
         }
         .condition-col {
             padding: 0;
+            .condition-topic{
+              text-align:right;
+              padding-top:5px;
+            }
         }
         .fa-check-circle {
             color: #6DC25E;
