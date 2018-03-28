@@ -30,11 +30,14 @@ header {
     }
 }
 
+span{
+  display: inline-block;
+}
 .lpFindings {
     position: relative;
     padding-left: 400px;
     padding-top: 25px;
-    min-height: calc(~"100vh - 218px"); 
+    min-height: calc(~"100vh - 218px");
     .panelContainer {
         width: 370px;
         position: absolute;
@@ -45,7 +48,7 @@ header {
             margin: 0;
         }
         .marginBottom {
-          margin-bottom: 60px;
+            margin-bottom: 60px;
         }
         .panel-body {
             padding-bottom: 0;
@@ -95,9 +98,9 @@ header {
             width: 100%;
             z-index: 10;
             transition: top 1s ease-in;
-            top:calc(100% - 56px);
+            top: calc(100% - 56px);
             .lpEligibility {
-              margin-bottom: 60px;
+                margin-bottom: 60px;
             }
             .downIcon {
                 background: url('../images/Sprite_FinRules.png') no-repeat -682px -204px;
@@ -131,7 +134,7 @@ header {
             }
         }
         .panelWrapper {
-            padding:0;
+            padding: 0;
             opacity: 1;
             transition: opacity 1s ease-in;
             height: 100%;
@@ -155,8 +158,7 @@ header {
 .panelContainer {
     width: 50%;
     float: left;
-    margin: 25px 15px 25px 15px;
-    // padding-bottom: 60px;
+    margin: 25px 15px 25px 15px; // padding-bottom: 60px;
     border: 1px solid @primary-border;
     box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
     border-radius: 3px;
@@ -210,13 +212,13 @@ header {
                 @media screen and (min-width: 1024px) and (max-width:1200px) {
                     margin-top:70%;
                 }
-                @media screen and (min-width:1800px){
-                    margin-top:25%;
+                @media screen and (min-width:1800px) {
+                    margin-top: 25%;
                 }
             }
             .content {
                 font-family: Roboto-Medium;
-                padding:0 20px 20px 20px;
+                padding: 0 20px 20px 20px;
                 border-left: 1px solid @primary-border;
                 p {
                     line-height: 22px;
@@ -255,7 +257,7 @@ header {
                     padding: 5px 10px 5px 25px;
                     line-height: 20px;
                     .verifiedIcon {
-                        top:8px;
+                        top: 8px;
                     }
                 }
             }
@@ -265,24 +267,32 @@ header {
 
 // .navigationWrapper {
 .list-inline {
-    li .active {
+    .active {
         border-bottom: 2px solid @secondary-background;
-        color: @secondary-color;
-    }
-    li a {
-        padding: 10px 10px 15px 10px;
-        display: inline-block;
-        color: @secondary-text;
-        font-family: Roboto-Medium;
-        &:hover {
-            border-bottom: 2px solid @secondary-background;
+        a {
             color: @secondary-color;
         }
     }
+    li {
+        &:hover {
+            border-bottom: 2px solid @secondary-background;
+            a {
+                color: @secondary-color;
+            }
+        }
+        a {
+            padding: 10px 10px 15px 10px;
+            display: inline-block;
+            color: @secondary-text;
+            font-family: Roboto-Medium;
+        }
+    }
 }
+
 .reasonForNotEligible {
     display: none;
 }
+
 .navigationContent {
     padding: 20px 20px 20px 40px;
     border: 1px solid @primary-border;
@@ -330,10 +340,19 @@ header {
             a {
                 color: #6485C1;
             }
+            label{
+              display: none;
+            }
+            .displayMore{
+              display: inline;
+            }
         }
-        .in{
-          display: inline;
+        .in {
+            display: inline;
         }
+        // .collapse{
+        //   display: inline;
+        // }
         .contentFooter {
             border-top: 1px solid @primary-border;
             padding-top: 10px;

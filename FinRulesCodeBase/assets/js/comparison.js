@@ -1,4 +1,4 @@
-var n, data, counter = 1;
+var n, data, counter = 1,count=0;
 function displayDuLp(m) {
   n = m;
   sessionStorage.setItem('key', n);
@@ -35,4 +35,18 @@ function rotate(event) {
     window.event.currentTarget.previousElementSibling.style.opacity = "1";
   }
 
+}
+// function displayContent(name){
+//  console.log(name);
+//  document.getElementById("name").classList.add("displayMore");
+// }
+function displayLess(name){
+  console.log(name);
+  if(count%2 == 0){
+    name.innerHTML = "Less";
+    count++;}
+    else{
+      name.innerHTML = "More";
+      count++;
+    }
 }
