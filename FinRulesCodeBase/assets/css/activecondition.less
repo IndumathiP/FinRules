@@ -546,12 +546,24 @@
                         
                         li:nth-child(4),
                         li:nth-child(5) {
+                          .settingsIcon-wrap{
+                            display: inline-block;
+                            padding: 17px 10px;
+                            position: absolute;
+                            left: -9px;
+                            margin-top: -15px;
+                            margin-bottom: -15px;
+                            cursor: pointer;
                             .settingIcon {
+                                // background: url('../images/Sprite_FinRules1.png') no-repeat -809px -79px;
+                                // width: 3px;
+                                // height: 13px;
+                                // float: left;
+                                // cursor: pointer; //  display: inline-block;  
+                                // position: relative;
                                 background: url('../images/Sprite_FinRules1.png') no-repeat -809px -79px;
                                 width: 3px;
                                 height: 13px;
-                                float: left;
-                                cursor: pointer; //  display: inline-block;  
                                 position: relative;
                                 .validation_action {
                                     position: absolute;
@@ -580,6 +592,7 @@
                                             width: 16px;
                                             height: 16px;
                                             display: inline-block;
+                                            vertical-align: middle;
                                         }
                                         .reopen {
                                             background: url('../images/Sprite_FinRules1.png') no-repeat -346px -146px;
@@ -591,20 +604,31 @@
                                         }
                                     }
                                     .tip {
-                                        border: 10px solid;
+                                        // border: 10px solid;
+                                        // border-color: transparent transparent transparent #B1B9C9;
+                                        // position: absolute;
+                                        // top: 22%;
+                                        // left: 100%;
+                                        border: 15px solid;
                                         border-color: transparent transparent transparent #B1B9C9;
                                         position: absolute;
-                                        top: 22%;
+                                        top: 17%;
                                         left: 100%;
                                     }
                                     .in {
-                                        top: 23%;
-                                        left: 99%;
-                                        border: 8px solid;
+                                        // top: 23%;
+                                        // left: 99%;
+                                        // border: 8px solid;
+                                        // border-color: transparent transparent transparent #ffffff;
+                                        top: 20%;
+                                        left: 100%;
+                                        border: 12px solid;
                                         border-color: transparent transparent transparent #ffffff;
+                                        position: absolute;
                                     }
                                 }
                             }
+                          }
                         }
                         .col{
                           width: 12.5%;
@@ -930,6 +954,9 @@
         margin: 20px auto;
         text-align: center;
         width: 102px;
+        .btn-and{
+          background:white!important;
+        }
         .btn-toggle {
             border-radius: 40px;
             border: 1px solid @primary-border;
@@ -940,8 +967,9 @@
                 border-radius: 40px;
             }
             .btn-disabled {
-                background-color: #d3d3d354;
-                color: @secondary-color;
+                // background-color: #d3d3d354;   
+                 -webkit-box-shadow: none;
+                color:#867e7e;
                 width: 50px;
                 &:focus,
                 &.focus {
@@ -980,9 +1008,9 @@
     }
 }
 .disabled-switch{
-  background: #92929254;
-  border: 1px solid #a5a5a5 !important;  
-  cursor: not-allowed;
+  background: #dddddd;
+  // border: 1px solid #a5a5a5 !important;  
+  // cursor: not-allowed;
   .btn{
     cursor: not-allowed;
   }
