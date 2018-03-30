@@ -1,22 +1,7 @@
-@primary-border: #E7E7E7;
-@primary-background: #F8F8F8;
-@open-status-border: #FECD62;
-@closed-status-border: #F48185;
-@primary-button-color: #FFAB31;
-@secondary-background: #47AE9D;
-@primary-color: #fff;
-@secondary-color: #000;
-@navbar-background: #41A292;
-@secondary-text :#767F85;
-@selectbox-background: #D3D7DA;
-@list-background: #F1F5F6;
-@base-background: #8F989D;
-@link-background: #6E7D9A;
-@title-color: #989898;
-@table-color: #F0F4F7;
+
 .hamMenu {
     .summaryLabel {
-        margin-top: 3px;
+        margin-top: 2px;
     }
 }
 
@@ -36,8 +21,8 @@
         vertical-align: middle;
         margin-right: 10px;
     }
-    .heading{
-      font-family: Roboto-Medium;
+    .heading {
+        font-family: Roboto-Medium;
     }
     .rightArrow {
         background: url('../images/Sprite_FinRules2.png') no-repeat -194px -209px;
@@ -58,11 +43,11 @@
     padding: 15px;
     width: 80%;
     float: left;
-    @media screen and (max-width:1200px) and (min-width:1024px) {
+    @media screen and (max-width: 1200px) and (min-width:1024px) {
         width:75%;
-    }    
-    .city{
-      display:block;
+    }
+    .city {
+        display: block;
     }
     .nameToggler {
         width: 200px;
@@ -89,17 +74,22 @@
         }
     }
     .summaryContent {
+        .nav-tabs li a {
+            border: 0;
+        }
         .nav {
             .currentLink {
                 border-bottom: 2px solid @navbar-background;
+                color: @secondary-text;
             }
             a {
                 color: @secondary-text;
+                border-bottom: 2px solid transparent;
                 &:hover,
                 &:active,
                 &:focus {
                     border: none;
-                    background: none;
+                    background: none; 
                     border-bottom: 2px solid @navbar-background;
                     color: @secondary-color;
                 }
@@ -158,9 +148,9 @@
                 color: #8a8a8a;
             }
             .labelValue {
-              font-family: Roboto-Medium;
-              color: #656464;
-              margin-top: 5px;
+                font-family: Roboto-Medium;
+                color: #656464;
+                margin-top: 5px;
             }
             .none {
                 display: none;
@@ -177,7 +167,8 @@
         }
         .table {
             display: table;
-            margin-top:30px;
+            margin-top: 30px;
+            text-align: right;
             .row {
                 margin-top: 0;
                 margin-bottom: 0;
@@ -186,13 +177,16 @@
             .th {
                 padding: 10px 10px 10px 15px;
                 display: table-cell;
+                &:first-child{
+                  text-align: left;
+                }
             }
             .td {
                 font-family: Roboto-Regular;
             }
             .th {
-              font-family: Roboto-Medium;
-              color: #656464;
+                font-family: Roboto-Medium;
+                color: #656464;
             }
             .td,
             .th {
@@ -225,19 +219,18 @@
     padding: 15px;
     color: @link-background;
     font-family: Roboto-Medium;
-    @media screen and (max-width:1200px) and (min-width:1024px) {
+    @media screen and (max-width: 1200px) and (min-width:1024px) {
         width:25%;
     }
     .documents {
-      padding-top: 10px;
-      padding-bottom: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         .listHead {
-            color: @secondary-background; 
+            color: @secondary-background;
             border-bottom: 1px solid @primary-border;
             padding-top: 25px;
             padding-bottom: 25px;
-            margin-bottom: 10px;
-            // span {
+            margin-bottom: 10px; // span {
             //     margin-top: 15px;
             // }
             // hr {
@@ -245,8 +238,8 @@
             // }
         }
         li {
-          padding: 15px 0;
-          margin: 0 25px;
+            padding: 15px 0;
+            margin: 0 25px;
             span {
                 display: inline-block;
                 cursor: pointer;
@@ -256,8 +249,7 @@
                 width: 20px;
                 height: 24px;
                 vertical-align: text-bottom;
-                padding: 0;
-                // margin-left: 15px;
+                padding: 0; // margin-left: 15px;
                 margin-right: 10px;
                 cursor: pointer;
             }
@@ -265,6 +257,7 @@
         border:1px solid @primary-border;
     }
 }
-.summary-wrapper{
-    min-height: calc(~"100vh - 218px"); 
+
+.summary-wrapper {
+    min-height: calc(~"100vh - 218px");
 }

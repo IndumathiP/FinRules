@@ -1,6 +1,3 @@
-@primary-button-color: #f7a551;
-@text-color: #ffffff;
-@import "common.less";
 body,
 html {
     height: 100%;
@@ -12,139 +9,107 @@ body {
     min-width: 1024px;
     box-sizing: border-box;
 }
-button{
-  outline:none!important;
+
+button {
+    outline: none!important;
 }
+
 main {
-    // padding: 20px;
     height: 100%;
     width: 100%;
     background: url("../images/BG.png") no-repeat;
     background-size: cover;
     position: relative;
+    .loginWrapper {
+        width: 350px;
+        height: 500px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        margin: auto;
+        .tavant-logo {
+            background: url(../images/logo.png) no-repeat;
+            width: 200px;
+            height: 100px;
+            margin: auto;
+        }
+        .logo {
+            margin: auto;
+            background-origin: content-box;
+            background: url('../images/Sprite_FinRules2.png') no-repeat -327px -22px;
+            width: 129px;
+            height: 21px;
+        }
+        .border-bottom {
+            border-bottom: 1px solid #84C5B8;
+            margin: 45px 0;
+        }
+        form {
+            padding: 15px;
+            #email {
+                margin-bottom: 40px;
+            }
+        }
+        input {
+            height: 40px;
+            color: @text-color;
+            border: 1px solid #ffffff;
+            border-radius: 2px;
+            background-color: transparent;
+            font-family: Roboto-Light;
+        }
+         ::placeholder {
+            color: #ffffff;
+        }
+        .buttonWrapper {
+            margin: 35px 0 20px 0;
+            button {
+                background-color: @primary-button-color;
+                border: 1px solid @primary-button-color;
+                color: @text-color;
+                font-family: Roboto-light;
+                width: 160px;
+                padding: 10px;
+                border-radius: 2px;
+            }
+        }
+        a {
+            display: inline-block;
+            color: @text-color;
+            font-family: Roboto-Regular;
+            font-size: 12px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .bottom {
+            position: absolute;
+            left: 20px;
+            width: 98%;
+            clear: both;
+            content: "";
+            display: block;
+            background: none;
+            span {
+                display: inline-block;
+                padding: 15px;
+                font-size: 12px;
+                font-family: Roboto-Regular;
+                color: white;
+            }
+        }
+    }
     .footer {
         position: absolute;
-        left: 20px;
-        bottom: 20px;
-        width: 98%;
+        bottom: 0;
+        width: 100%;
         clear: both;
         content: "";
         display: block;
         background: none;
-        span {
-            display: inline-block;
-            padding: 15px;
-            font-size: 12px;
-            font-family: Roboto-Regular;
-            color: white;
-        }
-        .right-content {
-            float: right;
-            padding: 0;
-            margin-top: 10px;
-        }
-        .logo {
-            background: url("../images/logo.png") no-repeat;
-            width: 100px;
-            height: 22px;
-            margin: 0 20px;
-            vertical-align: middle;
-        }
-    }
-}
-
-.loginWrapper {
-    width: 350px;
-    height: 500px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    text-align: center;
-    margin: auto;
-    .tavant-logo {
-        background: url(../images/logo.png) no-repeat;
-        width: 200px;
-        height: 100px;
-        margin: auto;
-    }
-    .logo {
-        margin: auto;
-        background-origin: content-box;
-        background: url('../images/Sprite_FinRules2.png') no-repeat -327px -22px;
-        width: 129px;
-        height: 21px;
-    }
-    .border-bottom {
-        border-bottom: 1px solid #84C5B8;
-        margin: 45px 0;
-    }
-    form {
-        padding: 15px;
-        #email {
-          margin-bottom: 40px;
-        }
-    }
-    input {
-        height: 40px;
-        color: @text-color;
-        border: 1px solid #ffffff;
-        border-radius: 2px;
-        background-color: transparent;
-        font-family: Roboto-Light;
-    }
-    ::placeholder {
-        color: #ffffff;
-    }
-    .buttonWrapper {
-        margin: 35px 0 20px 0;
-        button {
-            background-color: @primary-button-color;
-            border: 1px solid @primary-button-color;
-            color: @text-color;
-            font-family: Roboto-light;
-            width: 160px;
-            padding: 10px;
-            border-radius: 2px;
-        }
-    }
-    a {
-        display: inline-block;
-        color: @text-color;
-        font-family: Roboto-Regular;
-        font-size: 12px;
-        &:hover {
-            text-decoration: none;
-        }
-    }
-}
-
-.bottom {
-    position: absolute;
-    left: 20px;
-    width: 98%;
-    clear: both;
-    content: "";
-    display: block;
-    background: none;
-    span {
-        display: inline-block;
-        padding: 15px;
-        font-size: 12px;
-        font-family: Roboto-Regular;
-        color: white;
-    }
-    // .right-content {
-    //     float: right;
-    //     padding: 0;
-    //     margin-top: 10px;
-    // }
-    .logo {
-        background: url("../images/logo.png") no-repeat;
-        width: 100px;
-        height: 22px;
-        margin: 0 20px;
-        vertical-align: middle;
+        color: @primary-color;
     }
 }

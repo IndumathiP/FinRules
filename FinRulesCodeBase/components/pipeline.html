@@ -15,35 +15,32 @@
   <div class="pipelineContainer">
     <!-- Header section -->
     <header>
-        <div class="headerLogo row">
-            <ul class="pull-left clearfix">
-              <li class="col icon">
-                <span class="logoIcon"></span>
-              </li>
-              <li class="col">
-                <span class="logoName"></span>
-              </li>
-            </ul>
-            <ul class="pull-right">
-              
-                <li class="col text-right padding0">
-                  <h3>John Smith</h3>
-                  <label>underWriter</label>
-                </li>
-                <li class="col">
-                  <span class="userIcon"></span>
-                  <i class="fa fa-caret-down"></i>
-                </li>
-            
-            </ul>
+        <div class="row">       
+            <span class="col icon">
+              <span class="logoIcon"></span>
+            </span>
+            <span class="col">
+              <span class="logoName"></span>
+            </span>
+          <div class="pull-right">
+            <span class="col text-right padding0">
+              <h3>John Smith</h3>
+              <label>UnderWriter</label>
+            </span>
+            <span class="col">
+              <span class="userIcon"></span>
+              <i class="fa fa-caret-down"></i>
+            </span>
           </div>
+        </div>
+      </header>
       <!-- select pipeline -->
       <div class="row loanMenu">
         <div class="hamMenu">
-          <label>Pipeline</label>
+          <h3>Pipeline</h3>
         </div>
       </div>
-    </header>
+  
     <!-- pipeline information -->
     <div class="pipelineContent row">
       <!-- sidebar -->
@@ -776,7 +773,7 @@
                     <label>Ready For Underwritter</label>
                   </span>
                 <span class="comparisonSection">
-                    <button>DU-LPA Comparison</button>
+                    <a href="recommendation.html"><button onclick="displayDuLp(1)">DU - LPA Comparison</button></a>
                   </span>
               </div>
             </div>
@@ -841,7 +838,7 @@
                     <label>Ready For Underwritter</label>
                   </span>
                 <span class="comparisonSection">
-                    <a href="recommendation.html"><button onclick="displayDuLp(2)">DU - LPA Comparison</button></a>
+                    <a href="recommendation.html"><button onclick="displayDuLp(2)">View LPA Eligibility</button></a>
                   </span>
               </div>
             </div>
@@ -906,7 +903,7 @@
                     <label>Ready For Underwritter</label>
                   </span>
                 <span class="comparisonSection">
-                    <button>DU - LPA Comparison</button>
+                    <a href="recommendation.html"><button onclick="displayDuLp(1)">DU - LPA Comparison</button></a>
                   </span>
               </div>
             </div>
@@ -971,7 +968,7 @@
                     <label>Ready For Underwritter</label>
                   </span>
                 <span class="comparisonSection">
-                    <a href="recommendation.html"><button>DU - LPA Comparison</button></a>
+                    <a href="recommendation.html"><button onclick="displayDuLp(2)">View LPA Eligibility</button></a>
                   </span>
               </div>
             </div>
@@ -1183,7 +1180,11 @@
       </div>
     </div>
     <div class="footer row">
-      <span>Copyright &#169; 2018 - FinRules. All rights reserved.</span><span class="right-content">Powered By:<span class="logo"></span></span>
+        <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
+        <span class="right-content">
+          <label>Powered By:</label>
+          <span class="logo"></span>
+        </span>
     </div>
   </div>
   <script src="../assets/js/jquery.min.js"></script>

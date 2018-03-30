@@ -1,38 +1,21 @@
-@primary-border: #E7E7E7;
-@primary-background: #F8F8F8;
-@open-status-border: #FECD62;
-@closed-status-border: #F48185;
-@primary-button-color: #FFAB31;
-@secondary-background: #47AE9D;
-@primary-color: #fff;
-@secondary-color: #000;
-@navbar-background: #41A292;
-@secondary-text :#767F85;
-@selectbox-background: #D3D7DA;
-@list-background: #F1F5F6;
-@base-background: #8F989D;
-@link-background: #6E7D9A;
-@title-color: #989898;
-@table-color: #F0F4F7;
 .verification,
 {
     display: flex;
 }
 
-header {
-    .loanMenu {
-        .hamMenu {
-            .recommendation {
-                margin-top: 3px;
-                padding-left: 15px;
-            }
+.loanMenu {
+    .hamMenu {
+        .recommendation {
+            margin-top: 3px;
+            padding-left: 15px;
         }
     }
 }
 
-span{
-  display: inline-block;
+span {
+    display: inline-block;
 }
+
 .lpFindings {
     position: relative;
     padding-left: 400px;
@@ -273,18 +256,13 @@ span{
             color: @secondary-color;
         }
     }
-    li {
+    a {
+        padding: 10px 10px 15px 10px;
+        display: inline-block;
+        color: #626669;
+        font-family: Roboto-Medium;
         &:hover {
-            border-bottom: 2px solid @secondary-background;
-            a {
-                color: @secondary-color;
-            }
-        }
-        a {
-            padding: 10px 10px 15px 10px;
-            display: inline-block;
-            color: @secondary-text;
-            font-family: Roboto-Medium;
+            color: #989393;
         }
     }
 }
@@ -337,22 +315,23 @@ span{
             font-family: Roboto-Regular;
             color: #656464;
             line-height: 20px;
+            min-height: 50px;
+            @media screen and (max-width:1200px){
+              min-height: 75px;
+            }
             a {
                 color: #6485C1;
             }
-            label{
-              display: none;
+            label {
+                display: none;
             }
-            .displayMore{
-              display: inline;
+            .displayMore {
+                display: inline;
             }
         }
         .in {
             display: inline;
-        }
-        // .collapse{
-        //   display: inline;
-        // }
+        } 
         .contentFooter {
             border-top: 1px solid @primary-border;
             padding-top: 10px;

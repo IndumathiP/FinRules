@@ -13,28 +13,25 @@
   <div class="conditionWrapper">
     <!-- header part   -->
     <header>
-        <div class="headerLogo row">
-            <ul class="pull-left clearfix">
-              <li class="col icon">
-                <span class="logoIcon"></span>
-              </li>
-              <li class="col">
-                <span class="logoName"></span>
-              </li>
-            </ul>
-            <ul class="pull-right">
-              
-                <li class="col text-right padding0">
-                  <h3>John Smith</h3>
-                  <label>underWriter</label>
-                </li>
-                <li class="col">
-                  <span class="userIcon"></span>
-                  <i class="fa fa-caret-down"></i>
-                </li>
-            
-            </ul>
+        <div class="row">       
+            <span class="col icon">
+              <span class="logoIcon"></span>
+            </span>
+            <span class="col">
+              <span class="logoName"></span>
+            </span>
+          <div class="pull-right">
+            <span class="col text-right padding0">
+              <h3>John Smith</h3>
+              <label>UnderWriter</label>
+            </span>
+            <span class="col">
+              <span class="userIcon"></span>
+              <i class="fa fa-caret-down"></i>
+            </span>
           </div>
+        </div>
+      </header>
       <!-- loan details header -->
       <div class="loanDetails row">
         <h3 class="col-md-2 col-xs-2">LOAN #W2018030139</h3>
@@ -62,10 +59,9 @@
           <div class="hamIcon col paddingLeft">
             <i class="fa fa-bars"></i>
           </div>
-          <label class="summaryLabel recommendation">Recommendation</label>
+          <label class="summaryLabel recommendation">AUS Findings</label>
         </div>
       </div>
-    </header>
     <!-- header part end     -->
     <!-- mainsection -->
     <div class="verification clearfix">
@@ -111,7 +107,7 @@
                       <span class="verifiedIcon"></span>
                       <span>DU Recommendation is Approve/Eligible</span>
                     </div>
-                    <a href="conditiontypeDu.html"><button class="btn btn-primary proceed">Proceed with DU</button></a>
+                    <a href="conditiontype.html"><button class="btn btn-primary proceed">Proceed with DU</button></a>
                   </div>
                 </div>
               </div>
@@ -330,9 +326,7 @@
               <div class="col-xs-6">
                 <div class="taskContent">
                   <p>Based on Freddie Mac's overall assessment, the loan is not eligible for income representation and warranty
-                    relief; however, it may be eligible for relief offered through Freddie Mac's
-                    <label class="collapse" id="overall">selling representation and warranty framework.</label>
-                    <a href="#overall" class="pull-right" data-toggle="collapse">More</a></p>
+                    relief; however, it may be eligible for relief offered through Freddie Mac's selling representation and warranty framework.</p>
                   <div class="contentFooter">
                     <span class="complexityIcon"></span>
                     <span class="name">Complexity-Low</span>
@@ -374,7 +368,8 @@
                 <div class="taskContent">
                   <p>Employment/base income for ALICE FIRSTIMER for base non-fluctuating earnings or fluctuating hourly earnings
                     must be supported by a YTD paystub documenting all YTD earnings and W-2(s) for the most recent calendar
-                    year, OR a written VOE documenting all YTD earnings and earnings for the most recent calendar year.</p>
+                    year, <label class="collapse" id="empIncome">OR a written VOE documenting all YTD earnings and earnings for the most recent calendar year.</label>
+                    <a href="#empIncome" class="pull-right" data-toggle="collapse">More</a></p>
                   <div class="contentFooter">
                     <span class="complexityIcon"></span>
                     <span class="name">Complexity-Low</span>
@@ -570,8 +565,8 @@
                 <div class="taskContent">
                   <p> Life insurance: Borrower must be the policy owner and only cash value may be used. For each account used
                     to qualify the borrower, obtain documentation from the life insurance company verifying the policy owner(s),
-                    showing the period covered, current cash value and any outstanding loans.
-
+                    showing the period covered, <label class="collapse" id="insurAssetLp">current cash value and any outstanding loans.</label>
+                    <a href="#insurAssetLp" class="pull-right" data-toggle="collapse">More</a>
                   </p>
                   <div class="contentFooter">
                     <span class="complexityIcon"></span>
@@ -664,8 +659,8 @@
                 <div class="taskContent">
                   <p> Desktop Underwriter returned the following standardized address and census tract for the subject property:
                     430 PRINCE ST, BORDENTOWN, NJ 08505-1719, 701700. This is the address that Desktop Underwriter used in
-                    its property valuation and fieldwork recommendation.
-                    <label class="collapse" id="propDes"> Regardless of the property fieldwork required by
+                    its property
+                    <label class="collapse" id="propDes"> valuation and fieldwork recommendation. Regardless of the property fieldwork required by
                         Desktop Underwriter, if this address is not valid for the subject property, an appraisal based on an
                         interior and exterior property inspection reported on Form 1004 is required for this transaction. If
                         the subject property is located in a condominium project, the appraisal must be reported on Form 1073.</label>
@@ -851,10 +846,10 @@
             <div class="iconWrapper"><span class="collapseIcon"></span></div>
             <div class="row">
               <div class="col-xs-6">
-                <span class="heading">DU-Findings (03)</span>
+                <span class="heading">DU-Findings (04)</span>
               </div>
               <div class="col-xs-6">
-                <span class="heading">LPA-Findings (04)</span>
+                <span class="heading">LPA-Findings (03)</span>
               </div>
             </div>
             <div class="row">
@@ -896,8 +891,8 @@
                 <div class="taskContent">
                   <p> According to the Social Security Administration (SSA), the Social Security number (SSN) for Alice Firstimer
                     either has not been issued, or was recently issued. The SSN accuracy must be confirmed, and if incorrect,
-                    the SSN must be updated and the loan casefile resubmitted to DU.
-                    <label class="collapse" id="genDes">  If the SSN is determined to be correct,
+                    the SSN must be 
+                    <label class="collapse" id="genDes"> updated and the loan casefile resubmitted to DU. If the SSN is determined to be correct,
                         it must be validated directly with the SSA (direct validation by a third party is acceptable), and the
                         loan must be delivered with SFC 162. If the SSN cannot be validated with the SSA, the loan is not eligible
                         for delivery to Fannie Mae. If an Individual Taxpayer Identification Number (ITIN) has been entered as
@@ -1019,7 +1014,8 @@
                 <div class="taskContent">
                   <p>The following debt(s) was omitted from the debt-to-income (DTI) ratio due to 10 months or fewer payments
                     remaining. Confirm the number of months remaining, and if the payment will continue for more than 10
-                    months, resubmit the loan to LPA: Installment, Bal: $260, Pymt: $52, Rem mos: 5.
+                    months, resubmit the loan to LPA: Installment,<label class="collapse" id="debt">   Bal: $260, Pymt: $52, Rem mos: 5.</label>
+                    <a href="#debt" class="pull-right" data-toggle="collapse">More</a>
                   </p>
                   <div class="contentFooter">
                     <span class="complexityIcon"></span>
@@ -1040,7 +1036,7 @@
                     on the age of the appraisal or property inspection report, refer to the Fannie Mae Selling Guide.</label>
                     <a href="#creditRep" class="pull-right" data-toggle="collapse">More</a>
                   </p>
-                  </p>
+                 
                   <div class="contentFooter">
                     <span class="complexityIcon"></span>
                     <span class="name">Complexity-Low</span>
@@ -1818,7 +1814,11 @@
 
 
   <div class="footer row">
-    <span>Copyright &#169; 2018 - FinRules. All rights reserved.</span><span class="right-content">Powered By:<span class="logo"></span></span>
+      <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
+      <span class="right-content">
+        <label>Powered By:</label>
+        <span class="logo"></span>
+      </span>
   </div>
   </div>
 

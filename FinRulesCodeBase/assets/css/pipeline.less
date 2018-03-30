@@ -1,14 +1,5 @@
-@secondary-border-color : #D6EAE8;
 .pipelineContainer {
     padding: 0 15px;
-    header {
-        .hamMenu {
-            label {
-                padding-left: 0;
-            }
-        }
-    }
-    font-family: Roboto-Regular;
     span,
     a {
         display: inline-block;
@@ -57,13 +48,13 @@
                         .h3Style();
                         padding: 18px 0;
                         border-bottom: 1px solid @secondary-border-color;
-                        .fa-times{
-                          display: none;
-                          float: right;
-                          @media screen and (max-width: 1200px){
-                            display: block;
-                            cursor: pointer;
-                          }
+                        .fa-times {
+                            display: none;
+                            float: right;
+                            @media screen and (max-width: 1200px) {
+                                display: block;
+                                cursor: pointer;
+                            }
                         }
                     }
                     .filterDetails {
@@ -185,6 +176,7 @@
                         color: #999A9A;
                         background-color: @primary-background;
                         padding: 15px;
+                        font-size: 15px;
                     }
                     .statusDes {
                         padding: 10px 15px;
@@ -206,12 +198,13 @@
                 position: absolute;
                 top: 12px;
                 left: 18px;
-                @media screen and (max-width: 1200px){
-                  left: 52px;
+                @media screen and (max-width: 1200px) {
+                    left: 65px;
                 }
             }
             input[type="search"],
-            input[type="text"] {
+            input[type="text"],
+            .fa-filter {
                 border: 1px solid @secondary-background;
                 border-radius: 3px;
                 padding: 10px 10px 10px 30px;
@@ -243,12 +236,13 @@
                 }
             }
             .fa-filter {
-              float: left;
+                float: left;
                 color: @secondary-background;
-                font-size: 20px;
+                font-size: 17px;
                 padding: 10px;
                 cursor: pointer;
                 display: none;
+                margin-right: 15px;
                 @media screen and (max-width: 1200px) {
                     display: inline-block;
                 }
@@ -266,7 +260,7 @@
                 white-space: nowrap;
             }
             .recordHeading {
-                font-family: Roboto-Bold;
+                font-family: Roboto-Medium;
                 li {
                     padding-top: 25px;
                     padding-bottom: 25px;
@@ -274,13 +268,13 @@
                         padding-left: 35px;
                     }
                     label {
-                      padding-right: 8px;
-                      color: #656464;
-                      float: left;
+                        padding-right: 8px;
+                        color: #656464;
+                        float: left;
                     }
                     a {
-                        background: url('../images/Sprite_FinRules1.png') no-repeat -547px -151px;
-                        width: 12px;
+                        background: url('../images/Sprite_FinRules1.png') no-repeat -144px -216px;
+                        width: 10px;
                         height: 6px;
                         padding-top: 10px;
                         vertical-align: middle;
@@ -297,7 +291,7 @@
                 background-color: #F0F4F7;
             }
             .recordInformation {
-              border: 1px solid transparent;
+                border: 1px solid transparent;
                 ul {
                     li {
                         padding-top: 20px;
@@ -464,8 +458,8 @@
                     p {
                         margin-bottom: 15px;
                     }
-                    .more{
-                      font-weight: 600;
+                    .more {
+                        font-weight: 600;
                     }
                 }
                 ul {
@@ -473,7 +467,7 @@
                     li {
                         padding-top: 12px;
                         padding-bottom: 12px;
-                        font-family: Roboto-Bold;
+                        font-family: Roboto-Medium;
                         span {
                             background: none;
                             width: auto;

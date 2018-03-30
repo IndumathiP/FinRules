@@ -15,61 +15,58 @@
   <div class="activeConditionContainer">
     <!-- Header section -->
     <header>
-        <div class="headerLogo row">
-            <ul class="pull-left clearfix">
-              <li class="col icon">
-                <span class="logoIcon"></span>
-              </li>
-              <li class="col">
-                <span class="logoName"></span>
-              </li>
-            </ul>
-            <ul class="pull-right">
-              
-                <li class="col text-right padding0">
-                  <h3>John Smith</h3>
-                  <label>underWriter</label>
-                </li>
-                <li class="col">
-                  <span class="userIcon"></span>
-                  <i class="fa fa-caret-down"></i>
-                </li>
-            
-            </ul>
-          </div>
-      <!-- loan details header -->
-      <div class="loanDetails row">
-        <h3 class="col-md-2 col-xs-2">LOAN # W2018030139</h3>
-        <ul class="loanInformation col-md-7 col-xs-7">
-          <li class="col-md-3 col-xs-3">
-            <label>Borrower</label>
-            <span>Firstimer, Alice</span>
-          </li>
-          <li class="col-md-3 col-xs-3">
-            <label>Loan Status</label>
-            <span>In Underwriting</span>
-          </li>
-          <li class="col-md-3 col-xs-3">
-            <label>Purchase Price</label>
-            <span>$ 250,000.00</span>
-          </li>
-          <li class="col-md-3 col-xs-3">
-            <label>Total Loan Amount</label>
-            <span>$ 217,150.00</span>
-          </li>
-        </ul>
-      </div>
-      <!-- select condition type -->
-      <div class="row loanMenu">
-        <div class="hamMenu">
-          <div class="col hamIcon paddingLeft">
-            <i class="fa fa-bars"></i>
-          </div>
-          <a href="conditiontype.html" class="leftArrow"></a>
-          <label>Condition Type: Income</label>
+      <div class="row">
+        <span class="col icon">
+              <span class="logoIcon"></span>
+        </span>
+        <span class="col">
+              <span class="logoName"></span>
+        </span>
+        <div class="pull-right">
+          <span class="col text-right padding0">
+              <h3>John Smith</h3>
+              <label>UnderWriter</label>
+            </span>
+          <span class="col">
+              <span class="userIcon"></span>
+          <i class="fa fa-caret-down"></i>
+          </span>
         </div>
       </div>
     </header>
+    <!-- loan details header -->
+    <div class="loanDetails row">
+      <h3 class="col-md-2 col-xs-2">LOAN # W2018030139</h3>
+      <ul class="loanInformation col-md-7 col-xs-7">
+        <li class="col-md-3 col-xs-3">
+          <label>Borrower</label>
+          <span>Firstimer, Alice</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Loan Status</label>
+          <span>In Underwriting</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Purchase Price</label>
+          <span>$ 250,000.00</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Total Loan Amount</label>
+          <span>$ 217,150.00</span>
+        </li>
+      </ul>
+    </div>
+    <!-- select condition type -->
+    <div class="row loanMenu">
+      <div class="hamMenu">
+        <div class="col hamIcon paddingLeft">
+          <i class="fa fa-bars"></i>
+        </div>
+        <a href="conditiontype.html" class="leftArrow"></a>
+        <label>Condition Type: Income</label>
+      </div>
+    </div>
+
     <!-- main content -->
     <div class="content row">
       <!-- Add conditions -->
@@ -409,7 +406,7 @@
                           <li class="col-md-2 col-xs-2">Loan Officer</li>
                           <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
                             <!-- <span class="settingIcon" onclick="showPopup()"> -->
-                                <span class="settingsIcon-wrap" onclick="showPopup()">
+                            <span class="settingsIcon-wrap" onclick="showPopup()">
                                   <span class="settingIcon">
                         <ul class="validation_action text-left" id="pop-up">
                           <div class="option"><span class="delete"></span>Delete</div>
@@ -420,8 +417,8 @@
                       <!-- <div class="tip"></div> -->
                       <div class="tip in"></div>
                       </ul>
-                      </span>                      
-                    </span>
+                      </span>
+                      </span>
                       <span class="plusIcon">OR</span>
                       <a href=""><span class="dropDown"></span></a>
                       <a href=""><span class="addIconTop"></span></a>
@@ -446,7 +443,7 @@
                       <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
                       <li class="col-md-2 col-xs-2">Loan Officer</li>
                       <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
-                        <span class="settingsIcon-wrap"  onclick="showPopup2()">
+                        <span class="settingsIcon-wrap" onclick="showPopup2()">
                         <span class="settingIcon">
                         <ul class="validation_action text-left" id="pop-up2">
                           <div class="option"><span class="delete"></span>Delete</div>
@@ -458,7 +455,7 @@
                   <div class="tip in"></div>
                   </ul>
                   </span>
-                </span>
+                  </span>
                   <span class="plusIcon">OR</span>
                   <span class="dropDown"></span>
                   <span class="addIconMiddle"></span>
@@ -480,8 +477,8 @@
               </div>
               <div class="toggleBtn">
                 <div class="btn-toggle clearfix">
-                  <button class="btn btn-active" id="active" onclick="toggleactive()">And</button>
-                  <button class="btn btn-inactive" id="inactive" onclick="toggleinactive()">Or</button>
+                  <button class="btn btn-inactive" id="inactive" onclick="toggleinactive()">And</button>
+                  <button class="btn btn-active" id="active" onclick="toggleactive()">Or</button>
                 </div>
               </div>
               <h3>Task Validation Category 2</h3>
@@ -505,7 +502,7 @@
                 <div class="tip in"></div>
                 </ul>
                 </span>
-              </span>
+                </span>
                 <span class="dropDown"></span>
                 <span class="addIconTop"></span>
                 <span class="addIconMiddle"></span>
@@ -558,14 +555,14 @@
               <thead>
                 <tr>
                   <th class="left">Gross Monthly Income</th>
-                  <th>Borrower</th>
+                  <th>Co-Borrower</th>
                   <!-- <th>Total</th> -->
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="left">Base Employee income</td>
-                  <td>$3800.00</td>
+                  <td>$2500.00</td>
                   <!-- <td>$3800</td> -->
                 </tr>
                 <tr>
@@ -580,12 +577,12 @@
                 </tr>
                 <tr>
                   <td class="left">Commissions</td>
-                  <td>$100.00</td>
+                  <td>$0.00</td>
                   <!-- <td>$100.00</td> -->
                 </tr>
                 <tr>
                   <td class="left">Dividends /Interest</td>
-                  <td>$1000.00</td>
+                  <td>$0.00</td>
                   <!-- <td>$1000.00</td> -->
                 </tr>
                 <tr>
@@ -606,12 +603,12 @@
                   </tr>
                   <tr>
                     <td class="left">Others Total</td>
-                    <td>$99.00</td>
+                    <td>$0.00</td>
                     <!-- <td>$99.00</td> -->
                   </tr>
                   <tr>
                     <td class="left">TOTAL</td>
-                    <td>$4999.00</td>
+                    <td>$2500.00</td>
                     <!-- <td>$4999.00</td> -->
                   </tr>
                 </tbody>
@@ -646,7 +643,7 @@
                 <div class="tip in"></div>
                 </ul>
                 </span>
-              </span>
+                </span>
                 <span class="plusIcon">OR</span>
                 <a href=""><span class="dropDown"></span></a>
                 <a href=""><span class="addIconTop"></span></a>
@@ -671,7 +668,7 @@
                 <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
                 <li class="col-md-2 col-xs-2">Loan Officer</li>
                 <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
-                    <span class="settingsIcon-wrap"  onclick="showPopup5()">
+                  <span class="settingsIcon-wrap" onclick="showPopup5()">
                   <span class="settingIcon">
                       <ul class="validation_action text-left" id="pop-up5">
                         <div class="option"><span class="delete"></span>Delete</div>
@@ -683,7 +680,7 @@
             <div class="tip in"></div>
             </ul>
             </span>
-          </span>
+            </span>
             <span class="plusIcon">OR</span>
             <span class="dropDown"></span>
             <span class="addIconMiddle"></span>
@@ -705,8 +702,8 @@
         </div>
         <div class="toggleBtn">
           <div class="btn-toggle clearfix">
-            <button class="btn btn-active" id="active" onclick="toggleactive()">And</button>
-            <button class="btn btn-inactive" id="inactive" onclick="toggleinactive()">Or</button>
+            <button class="btn btn-inactive" id="inactive" onclick="toggleinactive()">And</button>
+            <button class="btn btn-active" id="active" onclick="toggleactive()">Or</button>
           </div>
         </div>
         <h3>Task Validation Category 2</h3>
@@ -730,7 +727,7 @@
           <div class="tip in"></div>
           </ul>
           </span>
-        </span>
+          </span>
           <span class="dropDown"></span>
           <span class="addIconTop"></span>
           <span class="addIconMiddle"></span>
@@ -778,7 +775,11 @@
 
 
   <div class="footer row">
-    <span>Copyright &#169; 2018 - FinRules. All rights reserved.</span><span class="right-content">Powered By:<span class="logo"></span></span>
+      <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
+      <span class="right-content">
+        <label>Powered By:</label>
+        <span class="logo"></span>
+      </span>
   </div>
   </div>
   <script src="../assets/js/jquery.min.js"></script>
