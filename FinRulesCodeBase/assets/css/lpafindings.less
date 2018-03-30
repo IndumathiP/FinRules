@@ -1,0 +1,102 @@
+.p-20 {
+ padding:20px;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.border {
+    border:1px solid @secondary-background;
+    border-radius: 5px;
+}
+.border-bottom {
+    border-bottom: 1px solid @primary-border;
+}
+.margin-lr {
+    margin:0 20px;
+}
+.border-0 {
+ border:none;
+ box-shadow: none;
+}
+.verifyIcon {
+    background: url('../images/Sprite_FinRules2.png') no-repeat -285px -299px;
+	width: 61px;
+    height: 61px;
+    vertical-align: middle;
+    margin-right:15px; 
+    left: 0px;
+    top:5px;
+}
+.lpaCards {
+    text-align: center;
+    margin:70px 0;
+}
+.card {
+    width:350px;
+    display: inline-block;
+    text-align: left;
+    h3 {
+        padding-left: 80px;
+        line-height: 24px;
+        font-family: Roboto-Bold;
+    }
+}
+.cardHead {
+    padding: 15px 0 25px 0;
+    border-bottom:1px solid #96E0D5;
+}
+.cardContent {
+    margin-top:20px;
+    span {
+        font-size: 16px;
+        line-height: 22px;
+        font-family: Roboto-Medium;
+    }
+}
+
+.table {
+    display: table;
+    text-align: right;
+    width:1000px;
+    margin:45px auto;
+    .tableHead {
+        .td {
+            color:@secondary-background;
+        }
+    }
+    .row {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .td,
+    .th {
+        padding: 20px;
+        display: table-cell;
+        &:first-child{
+          text-align: left;
+        }
+    }
+    .td {
+        font-family: Roboto-Medium;
+        font-size: 15px;
+    }
+    .th {
+        font-family: Roboto-Medium;
+        color: #656464;
+    }
+    .td,
+    .th {
+        border: none;
+    }
+    .even {
+        background: @table-color;
+    }
+    .glyphicon {
+        left: 40px;
+        top: 20px;
+        color:@secondary-background;
+    }
+}
