@@ -259,7 +259,6 @@
                     }
                 }
                 h3 {
-                    font-size: 15px;
                     font-weight: 600;
                     color: @secondary-color;
                 }
@@ -363,14 +362,16 @@
             ul {
                 li {
                     padding: 10px;
+                    h4{
+                      font-weight: 600;
+                    }
                 }
-                li:first-child {
-                    background: @list-background;
-                    color: @secondary-text;
-                    font-size: 12px;
-                    margin: 0;
-                    font-weight: bold;
-                }
+                .subHeading {
+                  background: @list-background;
+                  color: @secondary-text;
+                  font-size: 12px;
+                  margin: 0;
+              }
                 li:nth-child(2) {
                     background: @base-background;
                     color: @primary-color;
@@ -392,7 +393,7 @@
                         float: right;
                     }
                 }
-                li:nth-child(3),
+                li:nth-child(3), li:nth-child(4),
                 li:nth-child(5) {
                     .incomeStatus {
                         .pstyle();
@@ -409,13 +410,8 @@
                         float: right;
                     }
                 }
-                li:nth-child(4) {
-                    background: @list-background;
-                    color: @secondary-text;
-                    font-size: 12px;
-                    font-weight: bold;
-                }
-                li:nth-child(5) {
+              
+                .commonList {
                     border-bottom: 1px solid @primary-border;
                 }
             }
@@ -458,27 +454,7 @@
             .nav-pills li.active a:hover {
                 color: #fff;
                 background: #6E7D9A;
-            } // .taskList {
-            //     text-align: center;
-            //     padding: 15px 0;
-            //     width: 21%;
-            //     margin: 0 auto;
-            //     li {
-            //         float: left;
-            //         a {
-            //             padding: 10px;
-            //             display: block;
-            //         }
-            //     }
-            //     li:first-child a {
-            //         background: #6E7D9A;
-            //         color: @primary-color;
-            //     }
-            //     li:last-child a {
-            //         border: 1px solid @primary-border;
-            //         border-radius: 3px;
-            //     }
-            // }
+            } 
             h3 {
                 padding-bottom: 15px;
                 color: #757E86;

@@ -359,8 +359,13 @@
                     border-right: 1px solid @secondary-border-color;
                     width: 60%;
                     .col {
-                        width: 25%;
+                        width: 20%;
                         padding-left: 15px;
+                    }
+                    .largewidth{
+                      width: 33%;
+                      padding-left: 15px;
+                      float: left;
                     }
                     .notifications {
                         padding-top: 15px;
@@ -429,13 +434,28 @@
                                 background-image: linear-gradient(90deg, #DCDCDC 50%, transparent 50%, transparent), linear-gradient(400deg, #DCDCDC 50%, #47AE9D 50%, #47AE9D);
                             }
                             .progress-3 {
-                                background-image: linear-gradient(-45deg, #47AE9D 50%, transparent 50%, transparent), linear-gradient(270deg, #47AE9D 50%, #DCDCDC 50%, #DCDCDC);
+                                background-image: linear-gradient(90deg, #DCDCDC 50%, transparent 50%, transparent), linear-gradient(90deg, #47AE9D 50%, #47AE9D 50%, #47AE9D);
                             }
                             .progress-4 {
                                 background-image: linear-gradient(90deg, #DCDCDC 50%, transparent 50%, transparent), linear-gradient(320deg, #DCDCDC 50%, #47AE9D 50%, #47AE9D);
                             }
                             .progress-5 {
-                                background-image: linear-gradient(90deg, #DCDCDC 50%, transparent 50%, transparent), linear-gradient(400deg, #DCDCDC 50%, #47AE9D 50%, #47AE9D);
+                                background-image: linear-gradient(0deg, #47AE9D 50%, #47AE9D 50%, #47AE9D), linear-gradient(0deg, #DCDCDC 50%, #47AE9D 50%, #47AE9D);
+                            }
+                            .progress-6 {
+                              background-image: linear-gradient(90deg, #DCDCDC 50%, transparent 50%, transparent), linear-gradient(420deg, #DCDCDC 50%, #47AE9D 50%, #47AE9D);
+                            }
+                            .progress-7 {
+                              background-image: linear-gradient(0deg, #47AE9D 50%, transparent 50%, transparent), linear-gradient(270deg, #47AE9D 50%, #DCDCDC 50%, #DCDCDC);
+                            }
+                            .progress-8 {
+                              background-image: linear-gradient(-40deg, #47AE9D 50%, transparent 50%, transparent), linear-gradient(90deg,#DCDCDC 50%, #47AE9D 50%, #47AE9D);
+                            }
+                            .progress-9 {
+                              background-image: linear-gradient(30deg, #47AE9D 50%, transparent 50%, transparent), linear-gradient(270deg, #47AE9D 50%, #DCDCDC 50%, #DCDCDC);
+                            }
+                            .progress-10 {
+                              background-image: linear-gradient(90deg, #DCDCDC 50%, transparent 50%, transparent), linear-gradient(300deg, #DCDCDC 50%, #47AE9D 50%, #47AE9D);
                             }
                             p {
                                 margin-top: 25px;
@@ -445,8 +465,9 @@
                     }
                 }
                 .discrepencies {
-                    margin-left: 35px;
+                    // margin-left: 35px;
                     margin-top: 20px;
+                    width: 40%;
                     h3 {
                         margin-bottom: 15px;
                     }
@@ -457,11 +478,16 @@
                     }
                     p {
                         margin-bottom: 15px;
+                        white-space: normal;
                     }
-                    .more {
-                        font-weight: 600;
+                    
+                    .rightBorder{
+                      border-right: 1px solid @secondary-border-color;
                     }
                 }
+                .more {
+                  font-weight: 600;
+              }
                 ul {
                     border: 0;
                     li {
@@ -489,7 +515,7 @@
                             }
                         }
                         p {
-                            font-size: 22px;
+                            font-size: 20px;
                             color: @secondary-background;
                             margin-top: 10px;
                         }

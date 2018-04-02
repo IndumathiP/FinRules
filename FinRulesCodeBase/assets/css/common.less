@@ -1,18 +1,18 @@
 .col {
-  padding: 0 15px;
-  float: left;
+    padding: 0 15px;
+    float: left;
 }
 
 .padding0 {
-  padding: 0;
+    padding: 0;
 }
 
 .paddingRight {
-  padding-right: 0;
+    padding-right: 0;
 }
 
 .paddingLeft {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 .loanDetails {
@@ -69,8 +69,10 @@
         }
         label {
             padding-left: 15px;
-            /* font-weight: bold; */
             font-size: 16px;
+        }
+        h3 {
+            font-size: 18px;
         }
     }
     .loanReport {
@@ -127,6 +129,39 @@
         }
     }
 }
-h3 {
-  font-size: 18px;
+
+.nameToggler {
+    margin: 25px auto;
+    li {
+        float: left;
+        a {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid @primary-border;
+            border-radius: 2px;
+            width: 100px;
+            display: block;
+            color: @secondary-color;
+            font-size: 12px;
+            &:active,
+            &:focus {
+                background: @link-background;
+                color: @primary-color;
+                border-color: @link-background;
+            }
+        }
+    }
+    .active {
+        a {
+            background: @link-background;
+            color: @primary-color;
+            border-color: @link-background;
+        }
+    }
+}
+.tabWidth1{
+  width: 200px;
+}
+.tabWidth2{
+  width: 300px;
 }

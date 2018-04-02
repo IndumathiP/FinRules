@@ -49,30 +49,6 @@
     .city {
         display: block;
     }
-    .nameToggler {
-        width: 200px;
-        margin: 25px auto;
-        a {
-            padding: 10px;
-            text-align: center;
-            width: 100px;
-            border: 1px solid @primary-border;
-            border-radius: 2px;
-            float: left;
-            color: @secondary-color;
-            &:active,
-            &:focus {
-                background: @link-background;
-                color: @primary-color;
-                border-color: @link-background;
-            }
-        }
-        .active {
-            background: @link-background;
-            color: @primary-color;
-            border-color: @link-background;
-        }
-    }
     .summaryContent {
         .nav-tabs li a {
             border: 0;
@@ -217,7 +193,7 @@
     width: 20%;
     display: inline-block;
     padding: 15px;
-    color: @link-background;
+    // color: @link-background;
     font-family: Roboto-Medium;
     @media screen and (max-width: 1200px) and (min-width:1024px) {
         width:25%;
@@ -240,9 +216,15 @@
         li {
             padding: 15px 0;
             margin: 0 25px;
+            a{
+              color:@link-background;
+              display: inline-block;
+              &:hover{
+                color:@link-background;
+              } 
+            }
             span {
                 display: inline-block;
-                cursor: pointer;
             }
             .documentIcon {
                 background: url('../images/Sprite_FinRules2.png') no-repeat -764px -199px;

@@ -1,3 +1,15 @@
+.task-wrap {
+  border-bottom: 1px solid @tables-background;
+  margin-bottom: 20px;
+}
+.select-icon{
+  background: url('../images/Sprite_FinRules2.png') no-repeat -757px -45px;
+  width: 10px;
+  height: 6px;
+  position:absolute;
+  top:14px;
+  right:20px;
+}    
 .businessruleedit {
     .heading {
         h3 {
@@ -64,26 +76,17 @@
             }
         }
     }
-    .select-icon{
-      background: url('../images/Sprite_FinRules2.png') no-repeat -757px -45px;
-      width: 10px;
-      height: 6px;
-      position:absolute;
-      top:14px;
-      right:20px;
-    }    
     .task-wrap {
-        border-bottom: 1px solid @tables-background;
-        margin-bottom: 20px;
-        .row {
-            padding: 20px 15px;
-            margin: 0;
-            &:nth-child(even) {
-                background-color: @tables-background;
-            }
+      .row {
+        padding: 20px 15px;
+        margin: 0;
+        &:nth-child(even) {
+            background-color: @tables-background;
         }
+    }
         .select-wrap{
           margin-bottom:20px;
+          
         }
         .name-content{
           color:@secondary-text;

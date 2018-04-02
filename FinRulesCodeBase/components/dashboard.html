@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>:: FinRules ::</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet/less" type="text/css" href="../assets/css/styles.less" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
+</head>
+
+<body class="dashboard">
+  <header>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand logo-wrap" href="javascript:void(0)"><span class="logo"></span></a>
+        </div>
+        <ul class="nav navbar-nav nav-pill headerlinks">
+          <li class="active"><a href="javascript:void(0)">DASHBOARD</a></li>
+          <li><a href="javascript:void(0)">PIPELINE</a></li>
+          <li><a href="javascript:void(0)">ADMIN CONFIG</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right dashboardhead-right">
+          <li class="username-wrap">
+            <span class="user">John Smith</span>
+            <span class="profession">Underwriter</span>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+            <span class="usericon-wrap"><span class="user-icon"></span></span>
+            <span class="dropdown-icon"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="dashboard-title">
+    <h1>Dashboard</h1>
+  </section>
+  <section class="dashboardselect-row">
+    <form class="form-inline">
+      <div class="form-group report-wrap">
+        <label>Report Timeline</label>
+        <div class="reportinput-wrap">
+        <input type='text' class="form-control" value="January 1 - 2018 to February 1 - 2018" />
+        <span class="calendar-icon"></span>
+      </div>
+      </div>
+        <div class="form-group channel-wrap">
+          <label>Channel</label>
+          <div class="channelselect-wrap">
+            <select class="form-control" id="sel1">
+                <option>Retail</option>
+              </select>
+              <span class="dropdown-icon"></span>
+            </div>
+        </div>
+          <div class="form-group branch-wrap">
+            <label>Branch</label>
+            <div class="branchselect-wrap">
+              <select class="form-control" id="sel1">
+                  <option>San Ramon, CA</option>
+                </select>
+                <span class="dropdown-icon"></span>
+              </div>
+          </div>
+          <button type="button" class="btn btn-default pull-right">Refresh</button>
+        </form>
+  </section>
+  <section class="main">
+
+  </section>
+</body>
+
+</html>

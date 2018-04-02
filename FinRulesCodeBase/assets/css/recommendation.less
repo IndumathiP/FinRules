@@ -152,13 +152,17 @@ span {
     .panel-heading {
         background-color: @table-color;
         padding: 20px;
-        .panelTitle {
-            font-family: Roboto-Medium;
-            font-size: 16px;
+        .sideHeading,.panelTitle {
+        font-family: Roboto-Medium;
+        font-size: 16px;
         }
-        span:nth-of-type(2) {
-            font-family: Roboto-Medium;
-            font-size: 15px;
+        .sideHeading{
+          padding-right : 15px;
+          border-right: 1px solid #00000059;
+        }
+        .findingLen{
+          padding-left: 15px;
+          padding-top: 2px;
         }
     }
     .panel-body {
