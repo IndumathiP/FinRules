@@ -1,4 +1,4 @@
-.dashboard{
+.admin-wrap{
   header{
     padding:0;
     font-family:Roboto-Medium;
@@ -29,10 +29,10 @@
       padding: 3px;
     }
     a{
-      color:@secondary-background;      
+      color:@secondary-background; 
+      background-color:@primary-color!important;           
       &:focus, &:active, &:hover{
         color:@secondary-color;
-        background-color:@primary-color;
         outline:none;
       }
     }
@@ -87,6 +87,8 @@
       height: 6px;
     }
   }
+
+  .dashboard-wrap{
   .dashboard-title{
     background:@secondary-background;
     padding:18px 25px;
@@ -155,4 +157,7 @@
   background:@dashboard-body;
   height:300px;
 }
+  }
+
+  
 }

@@ -12,17 +12,18 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
 </head>
 
-<body class="dashboard">
+<body>
+  <div class="admin-wrap">
   <header>
     <nav class="navbar">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand logo-wrap" href="javascript:void(0)"><span class="logo"></span></a>
         </div>
-        <ul class="nav navbar-nav nav-pill headerlinks">
-          <li class="active"><a href="javascript:void(0)">DASHBOARD</a></li>
-          <li><a href="javascript:void(0)">PIPELINE</a></li>
-          <li><a href="javascript:void(0)">ADMIN CONFIG</a></li>
+        <ul class="nav navbar-nav nav-pills headerlinks">
+          <li class="active"><a data-toggle="pill" href="#dashboard-wrap">DASHBOARD</a></li>
+          <li><a data-toggle="pill" href="#pipeline-wrap">PIPELINE</a></li>
+          <li><a data-toggle="pill" href="#adminconfig-wrap">ADMIN CONFIG</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right dashboardhead-right">
           <li class="username-wrap">
@@ -39,6 +40,8 @@
       </div>
     </nav>
   </header>
+  <div class="tab-content">
+    <div class="dashboard-wrap tab-pane fade in active" id="dashboard-wrap">
   <section class="dashboard-title">
     <h1>Dashboard</h1>
   </section>
@@ -75,6 +78,18 @@
   <section class="main">
 
   </section>
+</div>
+<div class="tab-pane fade" id="pipeline-wrap">
+
+
+</div>
+
+<div class="tab-pane fade" id="adminconfig-wrap">
+
+
+</div>
+</div>
+</div>
 </body>
 
 </html>
