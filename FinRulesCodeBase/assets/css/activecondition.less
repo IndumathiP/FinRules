@@ -125,6 +125,24 @@
 
 .activeConditionContainer {
     padding: 0 15px;
+    .tipincomesuccess{
+      .alert-success{
+        padding:18px;        
+        margin: 25px 0 5px 0;
+        border:1px solid @success-border;
+        background:@success-background;
+        .close{
+          position: relative;
+          top: -2px;
+          right: 0;
+        }
+        p{
+          font-size: 15px;
+          font-family: Roboto-Medium;
+          color:@success-color;
+        }
+      }
+    }
     span {
         display: inline-block;
         font-family: Roboto-Regular;
@@ -394,7 +412,7 @@
                     }
                 }
                 li:nth-child(3), li:nth-child(4),
-                li:nth-child(5) {
+                li:nth-child(5), li:nth-child(6) {
                     .incomeStatus {
                         .pstyle();
                         margin-top: 10px;
