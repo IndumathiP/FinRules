@@ -1,7 +1,8 @@
 .maincontent-wrap{
+  display:inline-block;
   -webkit-box-shadow:0px 1px 3px 0px #e8e8e8;
   background:@primary-color;
-  padding:0 15px;
+  padding:0 10px;
   border-radius:3px;
   h2{
     padding:15px 0;
@@ -10,7 +11,10 @@
     color:@secondary-background;
   }
   .description{
-    padding:20px 0;
+    margin:5px 0;
+    img{
+      width:100%;
+    }
   }
 }
 .margin-right{
@@ -92,6 +96,7 @@
       a{
         padding:25px 15px 15px;
         font-size:14px;
+        font-family:Roboto-Medium;
       }
     }
     }
@@ -140,8 +145,18 @@
   }
   button{
     border:1px solid @button-border;    
-    padding: 10px 15px;
+    padding: 9px 12px;
     margin-top:-4px;
+    .refresh-icon{
+      background: url('../images/Sprite_FinRules3.png') no-repeat -858px -274px;
+      width: 16px;
+      height: 16px;
+      margin-right:10px;
+      vertical-align:middle;
+    }
+    &:hover,&:focus,&:active{
+      background-color:@dashboard-body;
+    }
   }
   .report-wrap{
     .reportinput-wrap{
@@ -175,12 +190,23 @@
     }
   }
 }
+@media screen and (max-width:1100px){
+  .dashboardselect-row{
+  padding:20px 8px;
+  }
+}
 .main{
   background:@dashboard-body;
   padding:25px;
   border-bottom:1px solid @footer-line;
+  .container{
+    width:1366px;
+    margin:auto;
+    padding:0;
+  }
   .row{
     margin:0 0 25px;
+    display:flex;
   }
   .last-row{
     margin:0;
@@ -193,6 +219,36 @@
    }
    .aus-wrap{
      width:56.953%;
+   }
+   .piw-chart{
+     background:url('../images/piw.png');
+     width:446px;
+     height:194px;
+   }
+   .loans-chart{
+    background:url('../images/loans.png');
+    width:799px;
+    height:194px;
+   }
+   .topfindings-chart{
+    background:url('../images/loans.png');
+    width:773px;
+    height:288px;
+   }
+   .averagefindings-chart{
+    background:url('../images/averagefindings.png');
+    width:470px;
+    height:288px;
+   }
+   .aus-chart{
+    background:url('../images/aus.png');
+    width:683px;
+    height:335px;
+   }
+   .conditions-chart{
+    background:url('../images/count.png');
+    width:555px;
+    height:335px;
    }
 }
   }
