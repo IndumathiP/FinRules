@@ -72,12 +72,14 @@
             </div>
             <div class="row">
               <label class="col-xs-3">Set Priority</label>
-              <label class="col-xs-3 text-center">
-                  <span class="duLogo"></span>Primary
-                </label>
-              <label class="col-xs-3 text-center">Primary
-                    <span class="lpaLogo"></span>
-                  </label>
+              <label class="checkboxx col-xs-3 text-center">Primary
+                  <input type="radio" checked="checked" name="radio">
+                  <span class="radiocheckmark"></span>
+              </label>
+              <label class="checkboxx col-xs-3 text-center">Primary
+                  <input type="radio" name="radio">
+                  <span class="radiocheckmark"></span>
+              </label>
             </div>
           </section>
           <div class="contentWrapper clearfix">
@@ -110,19 +112,21 @@
                 <section class="adminContent">
                   <div class="row">
                     <label class="col-xs-3">Mortgage Type - FHA</label>
-                    <label class="col-xs-3  checkboxx">
+                    <label class="col-xs-3 checkboxx">
                     <input type="checkbox" checked="checked">
                     <span class="checkmark"></span>
-                  </label>
+                    </label>
                     <label class="col-xs-3  checkboxx">
                       <input type="checkbox" checked="checked">
                       <span class="checkmark"></span>
                     </label>
-                    <label class="col-xs-3 checkboxx">
+                    <span class="col-xs-3 text-center">
+                    <label class="checkboxx">
                     <input type="checkbox">
                     <span class="checkmark"></span>
+                    </label>
                     <span class="pull-right closeIcon"></span>
-                  </label>
+                    </span>
                   </div>
                   <div class="row">
                     <label class="col-xs-3">Assets - Stocks and Bonds</label>
@@ -141,7 +145,7 @@
                   </label>
                   </div>
                   <div class="row">
-                    <label class="col-xs-3">Monthly Income Tip</label>
+                    <label class="col-xs-3">Monthly Income Tip <span class="select-icon dropOption"></span></label>
                     <label class="col-xs-3  checkboxx">
                     <input type="checkbox" checked="checked">
                     <span class="checkmark"></span>
@@ -157,7 +161,7 @@
                   </label>
                   </div>
                   <div class="row">
-                    <label class="col-xs-3">Asset Income</label>
+                    <label class="col-xs-3">Asset Income <span class="select-icon dropOption"></span></label>
                     <label class="col-xs-3  checkboxx">
                     <input type="checkbox" checked="checked">
                     <span class="checkmark"></span>
@@ -174,7 +178,7 @@
                   </div>
                 </section>
               </div>
-              <p class="clearfix"><span class="roundedplusIcon col-xs-1"></span><span class="text col-xs-1">Add</span></p>
+              <p class="clearfix"><span class="roundedplusIcon col-xs-1"></span><span class="text col-xs-1 padding0">Add</span></p>
             </div>
             <div class="subcontentWrapper">
               <div class="contentHeading clearfix">
@@ -190,7 +194,7 @@
               </div>
               <section class="adminContent">
                 <div class="row">
-                  <label class="col-xs-3">DTI</label>
+                  <label class="col-xs-3">DTI <span class="select-icon dropOption"></span></label>
                   <div class="col-xs-3">
                     <div class="input-group col-xs-6 ">
                       <input type="text" class="form-control" value="0.00">
@@ -217,7 +221,7 @@
                   </label>
                 </div>
                 <div class="row">
-                  <label class="col-xs-3">LTV/CLTV/HCLTV</label>
+                  <label class="col-xs-3">LTV/CLTV/HCLTV <span class="select-icon dropOption"></span></label>
                   <div class="col-xs-3">
                     <div class="input-group col-xs-6 ">
                       <input type="text" class="form-control" value="0.00">
@@ -244,7 +248,7 @@
                     </label>
                 </div>
                 <div class="row">
-                  <label class="col-xs-3">Top Ratio</label>
+                  <label class="col-xs-3">Top Ratio <span class="select-icon dropOption"></span></label>
                   <div class="col-xs-3">
                     <div class="input-group col-xs-6 ">
                       <input type="text" class="form-control" value="0.00">
@@ -271,7 +275,7 @@
                     </label>
                 </div>
                 <div class="row">
-                  <label class="col-xs-3">Bottom Ratio</label>
+                  <label class="col-xs-3">Bottom Ratio <span class="select-icon dropOption"></span></label>
                   <div class="col-xs-3">
                     <div class="input-group col-xs-6 ">
                       <input type="text" class="form-control" value="0.00">
@@ -298,7 +302,7 @@
                     </label>
                 </div>
                 <div class="row">
-                  <label class="col-xs-3">Total Monthly Income</label>
+                  <label class="col-xs-3">Total Monthly Income <span class="select-icon dropOption"></span></label>
                   <div class="col-xs-3">
                     <div class="input-group col-xs-6">
                       <span class="input-group-addon">$</span>
@@ -325,7 +329,7 @@
                     </label>
                 </div>
                 <div class="row">
-                  <label class="col-xs-3">Total Liquid Assets</label>
+                  <label class="col-xs-3">Total Liquid Assets <span class="select-icon dropOption"></span></label>
                   <div class="col-xs-3">
                     <div class="input-group col-xs-6">
                       <span class="input-group-addon">$</span>
@@ -352,7 +356,7 @@
                     </label>
                 </div>
               </section>
-              <p class="clearfix"><span class="roundedplusIcon col-xs-1"></span><span class="text col-xs-1">Add</span></p>
+              <p class="clearfix"><span class="roundedplusIcon col-xs-1"></span><span class="text col-xs-1 padding0">Add</span></p>
             </div>
             <a href="businessRuleStatus.html" class="pull-right marginbottom15"><button type="button" class="btn btn-save">Save</button></a>
           </div>

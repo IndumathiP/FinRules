@@ -15,58 +15,58 @@
   <div class="conditionWrapper">
     <!-- Header section -->
     <header>
-        <div class="row">       
-            <span class="col icon">
+      <div class="row">
+        <span class="col icon">
               <span class="logoIcon"></span>
-            </span>
-            <span class="col">
+        </span>
+        <span class="col">
               <span class="logoName"></span>
-            </span>
-          <div class="pull-right">
-            <span class="col text-right padding0">
+        </span>
+        <div class="pull-right">
+          <span class="col text-right padding0">
               <h3>John Smith</h3>
               <label>Underwriter</label>
             </span>
-            <span class="col">
+          <span class="col">
               <span class="userIcon"></span>
-              <i class="fa fa-caret-down"></i>
-            </span>
-          </div>
-        </div>
-      </header>
-      <!-- loan details header -->
-      <div class="loanDetails row">
-        <h3 class="col-md-2 col-xs-2">LOAN # W2018030139</h3>
-        <ul class="loanInformation col-md-7 col-xs-7">
-          <li class="col-md-3 col-xs-3">
-            <label>Borrower</label>
-            <span>Firstimer, Alice</span>
-          </li>
-          <li class="col-md-3 col-xs-3">
-            <label>Loan Status</label>
-            <span>In Underwriting</span>
-          </li>
-          <li class="col-md-3 col-xs-3">
-            <label>Purchase Price</label>
-            <span>$ 250,000.00</span>
-          </li>
-          <li class="col-md-3 col-xs-3">
-            <label>Total Loan Amount</label>
-            <span>$ 217,150.00</span>
-          </li>
-        </ul>
-      </div>
-      <!-- select condition type -->
-      <div class="row loanMenu">
-        <div class="hamMenu">
-          <div class="hamIcon col paddingLeft">
-            <i class="fa fa-bars"></i>
-          </div>
-          <a href="activecondition.html" class="leftArrow"></a>
-          <label>Condition Type: Income</label>
+          <i class="fa fa-caret-down"></i>
+          </span>
         </div>
       </div>
-   
+    </header>
+    <!-- loan details header -->
+    <div class="loanDetails row">
+      <h3 class="col-md-2 col-xs-2">LOAN # W2018030139</h3>
+      <ul class="loanInformation col-md-7 col-xs-7">
+        <li class="col-md-3 col-xs-3">
+          <label>Borrower</label>
+          <span>Firstimer, Alice</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Loan Status</label>
+          <span>In Underwriting</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Purchase Price</label>
+          <span>$ 250,000.00</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Total Loan Amount</label>
+          <span>$ 217,150.00</span>
+        </li>
+      </ul>
+    </div>
+    <!-- select condition type -->
+    <div class="row loanMenu">
+      <div class="hamMenu">
+        <div class="hamIcon col paddingLeft">
+          <i class="fa fa-bars"></i>
+        </div>
+        <a href="activecondition.html" class="leftArrow"></a>
+        <label>Condition Type: Income</label>
+      </div>
+    </div>
+
     <!-- main content -->
     <div class="mainSection row">
       <h2>ADD CONDITION</h2>
@@ -213,20 +213,20 @@
               <span class="noteText">You have the option to delete the existing task details,suggest you to change the task name to avoid confusion</span>
             </div>
           </div>
-        
-            <p class="tasklabel">Task Name</p>
-            <div class="taskName clearfix">
-              <input type="text" class="col-xs-4" value="Provide the most recent Paystub">
-              <label class="checkboxx col">Mark as generic task
+
+          <p class="tasklabel">Task Name</p>
+          <div class="taskName clearfix">
+            <input type="text" class="col-xs-4" value="Provide the most recent Paystub">
+            <label class="checkboxx col">Mark as generic task
                   <input type="checkbox">
                   <span class="checkmark"></span>
                   <span class="helpIcon"></span>
                 </label>
-                
-            
-                    
-            </div>
-            <!-- <div class="col-md-2 col-sm-2">
+
+
+
+          </div>
+          <!-- <div class="col-md-2 col-sm-2">
               <div class="genericTask">
                 <label class="cardCheck">
                   <input type="checkbox">
@@ -237,7 +237,7 @@
                     <span class="helpIcon"></span></label>
               </div>
             </div> -->
-        
+
           <div class="row">
             <div class="col-md-12" "col-sm-12">
               <div class="taskDescription">
@@ -610,41 +610,42 @@
             </span>
             <label>Next</label>
           </button>
-        <button type="submit" class="btn btn-primary saveUser" id="savej-link" onclick="cancel()">
+        <a href="activecondition.html" onclick="displayDuLp(5)"><button type="submit" class="btn btn-primary saveUser" id="savej-link" >
             <span>
 
             </span>
             <label>Save &amp; Add to All Borrowers - John</label>
 
-          </button>
-        <button type="submit" class="btn btn-primary save" id="save-link" onclick="cancel()">
+          </button></a>
+        <a href="activecondition.html" onclick="displayDuLp(5)"><button type="submit" class="btn btn-primary save" id="save-link">
             <span>
 
             </span>
             <label>Save &amp; Add to All Borrowers</label>
 
-          </button>
+          </button></a>
 
-        <button type="submit" class="btn btn-primary cancel" id="cancel-link" onclick="cancel()">
+        <a href="activecondition.html" onclick="displayDuLp(5)"><button type="submit" class="btn btn-primary cancel" id="cancel-link">
             <span></span>
 
             </span>
             <label>Cancel</label>
 
-          </button>
+          </button></a>
       </div>
       <div class="footer">
-          <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
-          <span class="right-content">
+        <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
+        <span class="right-content">
             <label>Powered By:</label>
             <span class="logo"></span>
-          </span>
+        </span>
       </div>
     </div>
   </div>
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
   <script src="../assets/js/conditionFlowScript.js"></script>
+  <script src="../assets/js/comparison.js"></script>
 </body>
 
 </html>

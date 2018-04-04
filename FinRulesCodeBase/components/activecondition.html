@@ -67,7 +67,7 @@
       </div>
     </div>
     <!-- success message -->
-    <div class="tipincomesuccess">
+    <div class="tipincomesuccess hideSuccess" id="successMessage">
         <div class="alert alert-success alert-dismissible fade in">
             <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
             <p><span class="success-icon"></span>New Condition " Tip Income " has been successfully added in the condition list.</p>
@@ -304,7 +304,7 @@
                 <span class="closed">Closed 0</span>
               </div>
             </li>
-            <li class="commonList newtipincome-wrap">
+            <li class="commonList hideSuccess newtipincome-wrap" id="tipIncome">
               <span class="new-icon"></span>
                 <h4>Tip Income</h4>
                 <span class="threeDotIcon"></span>
@@ -799,6 +799,7 @@
   </div>
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/comparison.js"></script>
   <script src="../assets/js/script.js"></script>
   <script src="../assets/js/activeCondition.js"></script>
 </body>

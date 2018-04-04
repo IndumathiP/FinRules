@@ -152,17 +152,18 @@ span {
     .panel-heading {
         background-color: @table-color;
         padding: 20px;
-        .sideHeading,.panelTitle {
-        font-family: Roboto-Medium;
-        font-size: 16px;
+        .sideHeading,
+        .panelTitle {
+            font-family: Roboto-Medium;
+            font-size: 16px;
         }
-        .sideHeading{
-          padding-right : 15px;
-          border-right: 1px solid #00000059;
+        .sideHeading {
+            padding-right: 15px;
+            border-right: 1px solid #00000059;
         }
-        .findingLen{
-          padding-left: 15px;
-          padding-top: 2px;
+        .findingLen {
+            padding-left: 15px;
+            padding-top: 2px;
         }
     }
     .panel-body {
@@ -320,8 +321,14 @@ span {
             color: #656464;
             line-height: 20px;
             min-height: 50px;
-            @media screen and (max-width:1200px){
-              min-height: 75px;
+            .collapse.in+a:after {
+                content: "Less";
+            }
+            .collapse+a:after {
+                content: "More";
+            }
+            @media screen and (max-width:1200px) {
+                min-height: 75px;
             }
             a {
                 color: #6485C1;
@@ -335,7 +342,7 @@ span {
         }
         .in {
             display: inline;
-        } 
+        }
         .contentFooter {
             border-top: 1px solid @primary-border;
             padding-top: 10px;

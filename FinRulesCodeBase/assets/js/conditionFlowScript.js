@@ -59,9 +59,9 @@ function button(pageNo) {
     }
     navTabs(j);
 }
-function cancel() {
-    window.open("activecondition.html","_self");
-}
+// function cancel() {
+//     window.open("activecondition.html","_self");
+// }
 function navTabs(pageNo) {
     var navEffect=document.getElementsByClassName("tablink");
     var navLength=navEffect.length;
