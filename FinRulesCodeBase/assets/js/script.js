@@ -64,11 +64,13 @@ function showPopup6(){
   showOverlay();
 }
 function display(ele, res) {
+  if(ele){
   if (res) {
     ele.classList.remove("displayNone");
   } else {
     ele.classList.add("displayNone");
   }
+}
 }
 // display(duFindings, false);
 display(document.getElementById("pop-up"),false);
@@ -189,7 +191,8 @@ function positionIcon(counter){
 //   }
 //   count=count+1;
 // }
-document.getElementById("name").innerHTML ="ALICE FIRSTIMER";
+if(document.getElementById("name")){
+  document.getElementById("name").innerHTML ="ALICE FIRSTIMER";}
 function changeName(value){
   if(value == 1){
   document.getElementById("name").innerHTML ="ALICE FIRSTIMER";

@@ -14,24 +14,22 @@
 <body>
   <div class="activeConditionContainer">
     <!-- Header section -->
-    <header>
-      <div class="row">
-        <span class="col icon">
+    <header class="row">
+      <span class="col icon">
               <span class="logoIcon"></span>
-        </span>
-        <span class="col">
+      </span>
+      <span class="col">
               <span class="logoName"></span>
-        </span>
-        <div class="pull-right">
-          <span class="col text-right padding0">
+      </span>
+      <div class="pull-right">
+        <span class="col text-right padding0">
               <h3>John Smith</h3>
               <label>Underwriter</label>
             </span>
-          <span class="col">
+        <span class="col">
               <span class="userIcon"></span>
-          <i class="fa fa-caret-down"></i>
-          </span>
-        </div>
+        <i class="fa fa-caret-down"></i>
+        </span>
       </div>
     </header>
     <!-- loan details header -->
@@ -58,20 +56,30 @@
     </div>
     <!-- select condition type -->
     <div class="row loanMenu">
-      <div class="hamMenu">
+      <div class="hamMenu clearfix">
         <div class="col hamIcon paddingLeft">
-          <i class="fa fa-bars"></i>
+          <a href="javascript:void(0)" class="hamperIcon" onclick="showsideMenu()"></a>
         </div>
-        <a href="conditiontype.html" class="leftArrow"></a>
-        <label>Condition Type: Income</label>
+        <a href="conditiontype.html" class="col leftArrow padding0"></a>
+        <h3 class="col summaryLabel">Condition Type: Income</h3>
       </div>
+      <nav id="sideMenu">
+        <ul>
+          <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
+          <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
+          <li><a class="mainMenu" href="recommendation.html" id="aus">AUS COMPARISON</a></li>
+          <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION MANAGEMENT</a></li>
+          <li><a class="mainMenu" href="activecondition.html" id="data">Loan Data</a></li>
+        </ul>
+      </nav>
     </div>
+
     <!-- success message -->
     <div class="tipincomesuccess hideSuccess" id="successMessage">
-        <div class="alert alert-success alert-dismissible fade in">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
-            <p><span class="success-icon"></span>New Condition " Tip Income " has been successfully added in the condition list.</p>
-          </div>
+      <div class="alert alert-success alert-dismissible fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
+        <p><span class="success-icon"></span>New Condition " Tip Income " has been successfully added in the condition list.</p>
+      </div>
     </div>
     <!-- main content -->
     <div class="content row">
@@ -306,13 +314,13 @@
             </li>
             <li class="commonList hideSuccess newtipincome-wrap" id="tipIncome">
               <span class="new-icon"></span>
-                <h4>Tip Income</h4>
-                <span class="threeDotIcon"></span>
-                <div class="incomeStatus">
-                  <span>Open 1</span>
-                  <span class="closed">Closed 0</span>
-                </div>
-              </li>
+              <h4>Tip Income</h4>
+              <span class="threeDotIcon"></span>
+              <div class="incomeStatus">
+                <span>Open 1</span>
+                <span class="closed">Closed 0</span>
+              </div>
+            </li>
           </ul>
           <div class="button-wrapper-suspended clearfix">
             <div class="col-xs-12 suspended">
@@ -336,7 +344,7 @@
             <div id="alice" class="tab-pane fade in active">
               <ul class="nav nav-pills taskList clearfix">
                 <li class="task active"><a data-toggle="pill" href="#task">Task List</a></li>
-                <li class="task"><a data-toggle="pill" href="#additionalincome">1003 Form</a></li>
+                <li class="task"><a data-toggle="pill" href="#additionalincome">Loan Data</a></li>
               </ul>
               <div class="tab-content">
                 <div id="additionalincome" class="additionalincome tab-pane fade">
@@ -561,7 +569,7 @@
       <div id="john" class="tab-pane fade">
         <ul class="nav nav-pills taskList clearfix">
           <li class="task active"><a data-toggle="pill" href="#task1">Task List</a></li>
-          <li class="task"><a data-toggle="pill" href="#additionalincome1">1003 Form</a></li>
+          <li class="task"><a data-toggle="pill" href="#additionalincome1">Loan Data</a></li>
         </ul>
         <div class="tab-content">
 
@@ -790,15 +798,16 @@
 
 
   <div class="footer row">
-      <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
-      <span class="right-content">
+    <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
+    <span class="right-content">
         <label>Powered By:</label>
         <span class="logo"></span>
-      </span>
+    </span>
   </div>
   </div>
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/sideMenu.js"></script>
   <script src="../assets/js/comparison.js"></script>
   <script src="../assets/js/script.js"></script>
   <script src="../assets/js/activeCondition.js"></script>

@@ -14,8 +14,7 @@
 <body>
   <div class="conditionWrapper">
     <!-- Header section -->
-    <header>
-      <div class="row">
+    <header class="row">
         <span class="col icon">
               <span class="logoIcon"></span>
         </span>
@@ -32,7 +31,6 @@
           <i class="fa fa-caret-down"></i>
           </span>
         </div>
-      </div>
     </header>
     <!-- loan details header -->
     <div class="loanDetails row">
@@ -56,16 +54,27 @@
         </li>
       </ul>
     </div>
+    <div id="duFindingsWrapper" class="row">
+      </div>
     <!-- select condition type -->
     <div class="row loanMenu">
-      <div class="hamMenu">
-        <div class="hamIcon col paddingLeft">
-          <i class="fa fa-bars"></i>
+        <div class="hamMenu clearfix">
+          <div class="col hamIcon paddingLeft">
+              <a href="javascript:void(0)" class="hamperIcon" onclick ="showsideMenu()"></a>
+          </div>
+          <a href="conditiontype.html" class="col leftArrow padding0"></a>
+          <h3 class="col summaryLabel">Condition Type: Income</h3>
         </div>
-        <a href="activecondition.html" class="leftArrow"></a>
-        <label>Condition Type: Income</label>
+        <nav id="sideMenu">
+            <ul>
+                <li><a href="javascript:void(0)"><span class="closeSideMenu"></span></a></li>
+                <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
+                <li><a class="mainMenu" href="recommendation.html" id="aus">AUS COMPARISON</a></li>
+                <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION MANAGEMENT</a></li>
+                <li><a class="mainMenu" href="activecondition.html" id="data">Loan Data</a></li>
+              </ul>
+          </nav>
       </div>
-    </div>
 
     <!-- main content -->
     <div class="mainSection row">
@@ -644,6 +653,7 @@
   </div>
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/sideMenu.js"></script>
   <script src="../assets/js/conditionFlowScript.js"></script>
   <script src="../assets/js/comparison.js"></script>
 </body>

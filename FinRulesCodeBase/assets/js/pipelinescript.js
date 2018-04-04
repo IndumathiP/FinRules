@@ -29,8 +29,8 @@ function display(ele, res) {
 }
 
 function showFilters() {
-  document.getElementById("filter").classList.add("showFilters");
   showOverlay();
+  document.getElementById("filter").classList.add("showFilters");
 }
 function hideFilters() {
   document.getElementById("filter").classList.remove("showFilters");

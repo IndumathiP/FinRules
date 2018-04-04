@@ -12,8 +12,7 @@
 
 <body>
   <div class="conditionContainer">
-    <header>
-      <div class="row">
+      <header class="row">
         <span class="col icon">
                 <span class="logoIcon"></span>
         </span>
@@ -30,7 +29,6 @@
           <i class="fa fa-caret-down"></i>
           </span>
         </div>
-      </div>
     </header>
     <div class="loanDetails row">
       <h3 class="col-md-2 col-xs-2">LOAN # W2018030139</h3>
@@ -54,9 +52,9 @@
       </ul>
     </div>
     <div class="row loanMenu">
-      <div class="hamMenu col-md-2 col-xs-2">
-        <i class="fa fa-bars"></i>
-        <label>AUS - LPA</label>
+      <div class="hamMenu clearfix col-md-2 col-xs-2">
+          <a href="javascript:void(0)" class="col hamperIcon" onclick ="showsideMenu()"></a>
+        <h3 class="col summaryLabel">AUS - LPA</h3>
       </div>
       <ul class="col-md-7 col-xs-7 loanReport">
         <li class="col-md-3 col-xs-3">
@@ -86,7 +84,18 @@
           </div>
         </div>
       </div>
+      <nav id="sideMenu">
+          <ul>
+              <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
+              <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
+              <li><a class="mainMenu" href="recommendation.html" id="aus">AUS COMPARISON</a></li>
+              <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION MANAGEMENT</a></li>
+              <li><a class="mainMenu" href="activecondition.html" id="data">Loan Data</a></li>
+            </ul>
+      </nav>
     </div>
+    <div id="duFindingsWrapper" class="row">
+      </div>
 
     <div class="row mainContent">
       <div class="cardView">
@@ -356,7 +365,8 @@
   </div>
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
-  <script src="../assets/js/activeCondition.js"></script>
+  <script src="../assets/js/sideMenu.js"></script>
+  <script src="../assets/js/conditiontype.js"></script>
 </body>
 
 </html>

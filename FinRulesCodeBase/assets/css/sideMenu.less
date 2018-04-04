@@ -1,0 +1,131 @@
+.loanMenu {
+    background: @secondary-background;
+    color: #fff;
+    position: relative;
+    .hamMenu {
+        padding: 15px 15px;
+        a {
+            display: inline-block;
+        }
+        .hamperIcon {
+            background: url('../images/Sprite_FinRules.png') no-repeat -276px -24px;
+            width: 23px;
+            height: 16px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .hamIcon {
+            border-right: 1px solid @primary-color;
+        }
+        .summaryLabel {
+            margin-top: 5px;
+        }
+        .leftArrow {
+            background: url('../images/Sprite_FinRules2.png') no-repeat -446px -79px;
+            width: 23px;
+            height: 16px;
+            display: inline-block;
+            margin-left: 15px;
+            margin-top: 5px;
+            vertical-align: middle;
+        }
+        h3 {
+            font-size: 17px;
+        }
+    }
+    nav{
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #34897c;
+      height: calc(100vh - 180px);
+      z-index: 3;
+      display: none;
+      ul{
+        li{
+          .activeMenu{
+            border: 1px solid #43b4a3;
+            background-color: #48a99a;
+            border-right: 5px solid #ffaa30;
+          }
+          a{
+            display: block;
+            padding: 15px 20px 15px 10px;
+            color:@primary-color;
+            &:hover{
+              background-color: #465452;            
+            }
+          }
+          .closeSideMenu{
+            background: url('../images/Sprite_FinRules.png') no-repeat -193px -149px;
+            width: 10px;
+            height: 9px;
+          }
+        }
+      }
+    }
+    .showsideMenu{
+      display: block;
+    }
+    .loanReport {
+        padding: 15px;
+        li {
+            label {
+                display: block;
+                font-family: Roboto-Regular;
+                font-size: 13px;
+                margin-bottom: 5px;
+            }
+            span {
+                // font-family: Roboto-Light;
+                font-size: 15px;
+            }
+            button {
+                background: @primary-color;
+                color: @secondary-color;
+                font-size: 0.9em;
+                padding: 4%;
+                border: 1px solid #fff;
+                border-radius: 3px;
+            }
+        }
+    }
+    .runDu {
+        background: @navbar-background;
+        padding: 15px 0;
+        label {
+            display: block;
+            font-family: Roboto-Regular;
+            /* font-family: Roboto-Light; */
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+        span {
+            // font-family: Roboto-Light;
+            font-size: 15px;
+            @media screen and (max-width: 1250px) {
+                font-size: 12px;
+            }
+            @media screen and (max-width:1120px) {
+                font-size: 10px;
+            }
+        }
+        button {
+            // font-family: Roboto-Light;
+            font-size: 14px;
+            color: @primary-color;
+            background: @secondary-background;
+            border: 1px solid @primary-color;
+            padding: 5%;
+            border-radius: 3px;
+        }
+    }
+}
+.duFindingsWrapper {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.4);
+}

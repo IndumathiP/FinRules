@@ -13,8 +13,7 @@
 <body>
   <div class="conditionWrapper clearfix">
     <!-- header part   -->
-    <header>
-      <div class="row">
+    <header class="row">
         <span class="col icon">
               <span class="logoIcon"></span>
         </span>
@@ -31,7 +30,6 @@
           <i class="fa fa-caret-down"></i>
           </span>
         </div>
-      </div>
     </header>
     <!-- loan details header -->
     <div class="loanDetails row">
@@ -59,51 +57,62 @@
     <div class="row loanMenu">
       <div class="clearfix hamMenu">
         <div class="hamIcon col paddingLeft">
-          <i class="fa fa-bars"></i>
+          <a href="javascript:void(0)" class="hamperIcon" onclick ="showsideMenu()"></a>
         </div>
         <!-- <span class="leftArrow"></span> -->
         <h3 class="col summaryLabel">Summary</h3>
       </div>
+      <nav id="sideMenu">
+          <ul>
+              <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
+              <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
+              <li><a class="mainMenu" href="recommendation.html" id="aus">AUS COMPARISON</a></li>
+              <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION MANAGEMENT</a></li>
+              <li><a class="mainMenu" href="activecondition.html" id="data">Loan Data</a></li>
+            </ul>
+      </nav>
     </div>
+    <div id="duFindingsWrapper" class="row">
+      </div>
     <!-- header part end-->
     <!-- main section -->
     <div class="summary-wrapper">
       <div class="subHeader" id="headerContent">
-      <div class="mainSummary displayRecommendation">
-        <div class="summaryInfo">
-          <span class="infoIcon"></span>
-          <span>Recommended DU &amp; LPA</span>
-          <span class="rightArrow"></span>
-          <span>In Progress - LPA</span>
-          <a href="conditiontype.html" class="btn btn-primary goTo">Go to Conditions</a>
+        <div class="mainSummary displayRecommendation">
+          <div class="summaryInfo">
+            <span class="infoIcon"></span>
+            <span>Recommended DU &amp; LPA</span>
+            <span class="rightArrow"></span>
+            <span>In Progress - LPA</span>
+            <a href="conditiontype.html" class="btn btn-primary goTo">Go to Conditions</a>
+          </div>
         </div>
-      </div>
-      <div class="mainSummary displayDiscrepancy">
-        <div class="summaryInfo">
-          <span class="discrepences"></span>
-          <span>Discrepancies</span>
-          <span class="subHeadingDis">Voilations Found in Loan File</span>
-          <span class="pull-right" data-toggle="collapse" data-target="#demo" onclick="iconToggle()" count="0">
+        <div class="mainSummary displayDiscrepancy">
+          <div class="summaryInfo">
+            <span class="discrepences"></span>
+            <span>Discrepancies</span>
+            <span class="subHeadingDis">Voilations Found in Loan File</span>
+            <span class="pull-right" data-toggle="collapse" data-target="#demo" onclick="iconToggle()" count="0">
             <span class="upArrow"></span>
-          </span>
-        </div>
-        <div class="collapse in summarytabs" id="demo">
-          <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#loan">Loan <span class="numberedCircle">2</span></a></li>
-            <li><a data-toggle="tab" href="#incomeloan">Income <span class="numberedCircle">2</span></a></li>
-            <li><a data-toggle="tab" href="#creditloan">Credit <span class="numberedCircle">1</span></a></li>
-            <li><a data-toggle="tab" href="#propertyloan">Property <span class="numberedCircle">1</span></a></li>
-          </ul>
-          <div class="tab-content summaryDes">
-            <div id="loan" class="tab-pane fade in active">
-              <ol>
-                <li>Loan Amount exceeds the FHA 1-Unit County Limit for Contra Costa (S 679,650)</li>
-                <li>FHA 92900 A for Underwriting</li>
-              </ol>
+            </span>
+          </div>
+          <div class="collapse in summarytabs" id="demo">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#loan">Loan <span class="numberedCircle">2</span></a></li>
+              <li><a data-toggle="tab" href="#incomeloan">Income <span class="numberedCircle">2</span></a></li>
+              <li><a data-toggle="tab" href="#creditloan">Credit <span class="numberedCircle">1</span></a></li>
+              <li><a data-toggle="tab" href="#propertyloan">Property <span class="numberedCircle">1</span></a></li>
+            </ul>
+            <div class="tab-content summaryDes">
+              <div id="loan" class="tab-pane fade in active">
+                <ol>
+                  <li>Loan Amount exceeds the FHA 1-Unit County Limit for Contra Costa (S 679,650)</li>
+                  <li>FHA 92900 A for Underwriting</li>
+                </ol>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </div>
       <div class="mainWrapper">
         <div class="summaryContent">
@@ -693,8 +702,9 @@
   </div>
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
-  <script src="../assets/js/loanSummary.js"></script>
+  <script src="../assets/js/sideMenu.js"></script> 
   <script src="../assets/js/comparison.js"></script>
+  <script src="../assets/js/loanSummary.js"></script>
 </body>
 
 </html>

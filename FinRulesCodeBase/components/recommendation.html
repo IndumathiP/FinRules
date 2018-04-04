@@ -12,8 +12,7 @@
 <body>
   <div class="conditionWrapper">
     <!-- header part   -->
-    <header>
-      <div class="row">
+    <header class="row">
         <span class="col icon">
               <span class="logoIcon"></span>
         </span>
@@ -30,7 +29,6 @@
           <i class="fa fa-caret-down"></i>
           </span>
         </div>
-      </div>
     </header>
     <!-- loan details header -->
     <div class="loanDetails row">
@@ -55,13 +53,24 @@
       </ul>
     </div>
     <div class="row loanMenu">
-      <div class="hamMenu">
-        <div class="hamIcon col paddingLeft">
-          <i class="fa fa-bars"></i>
-        </div>
-        <label class="summaryLabel recommendation">AUS Findings</label>
+      <div class="hamMenu clearfix">
+          <div class="hamIcon col paddingLeft">
+              <a href="javascript:void(0)" class="hamperIcon" onclick ="showsideMenu()"></a>
+            </div>
+            <h3 class="col summaryLabel">AUS Findings</h3>
       </div>
+      <nav id="sideMenu">
+          <ul>
+              <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
+              <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
+              <li><a class="mainMenu" href="recommendation.html" id="aus">AUS COMPARISON</a></li>
+              <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION MANAGEMENT</a></li>
+              <li><a class="mainMenu" href="activecondition.html" id="data">Loan Data</a></li>
+            </ul>
+      </nav>
     </div>
+    <div id="duFindingsWrapper" class="row">
+      </div>
     <!-- header part end     -->
     <!-- mainsection -->
     <div class="verification clearfix">
@@ -1423,6 +1432,7 @@
   </div>
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/sideMenu.js"></script>
   <script src="../assets/js/comparison.js"></script>
 </body>
 
