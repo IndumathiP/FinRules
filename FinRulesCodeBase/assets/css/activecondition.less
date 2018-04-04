@@ -127,16 +127,27 @@
     padding: 0 15px;
     .tipincomesuccess{
       .alert-success{
-        padding:18px;        
+        padding:10px;        
         margin: 25px 0 5px 0;
         border:1px solid @success-border;
         background:@success-background;
         .close{
           position: relative;
-          top: -2px;
-          right: 0;
+          top: 7px;
+          right: 9px;
+          background: url('../images/Sprite_FinRules3.png') no-repeat -771px -334px;
+          width: 14px;
+          height: 14px;
+          opacity:1;
         }
         p{
+          .success-icon{
+            background: url('../images/Sprite_FinRules3.png') no-repeat -802px -327px;
+            width: 27px;
+            height: 28px;
+            margin-right:15px;
+            vertical-align:middle;
+          }
           font-size: 15px;
           font-family: Roboto-Medium;
           color:@success-color;
@@ -428,7 +439,17 @@
                         float: right;
                     }
                 }
-              
+                .newtipincome-wrap{    
+                  position:relative;              
+                  .new-icon{
+                    background: url('../images/Sprite_FinRules3.png') no-repeat -842px -336px;
+                    width: 33px;
+                    height: 13px;
+                    position:absolute;
+                    top:1px;
+                    right:0;
+                  }
+                }
                 .commonList {
                     border-bottom: 1px solid @primary-border;
                 }
