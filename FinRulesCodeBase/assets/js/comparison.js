@@ -1,5 +1,4 @@
-var n, data, counter = 1,
-  count = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var n, data, counter = 1;
 
 function displayDuLp(m) {
   n = m;
@@ -57,5 +56,7 @@ function rotate(event) {
     a[i].classList.remove("activeMenu");
   
   }
+  if(document.getElementById("aus")){
   document.getElementById("aus").classList.add("activeMenu");
+  }
   }) ();

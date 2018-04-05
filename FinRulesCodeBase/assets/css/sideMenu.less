@@ -36,11 +36,13 @@
     nav{
       position: absolute;
       top: 0;
-      left: 0;
+      left: -200px;
       background-color: #34897c;
       height: calc(100vh - 180px);
       z-index: 3;
-      display: none;
+      -webkit-transition: all 0.5s;
+      /* For Safari 3.1 to 6.0 */
+      transition: all 0.5s;
       ul{
         li{
           .activeMenu{
@@ -65,7 +67,7 @@
       }
     }
     .showsideMenu{
-      display: block;
+      left: 0;
     }
     .loanReport {
         padding: 15px;

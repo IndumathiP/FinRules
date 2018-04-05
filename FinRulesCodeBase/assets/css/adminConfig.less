@@ -13,6 +13,11 @@
             font-size: 13px;
         }
     }
+    .nameToggler {
+        .inactive {
+            cursor: not-allowed;
+        }
+    }
     .adminCategory {
         padding: 0 15px;
         .row {
@@ -38,14 +43,14 @@
                 .radiocheckmark {
                     position: absolute;
                     top: 0;
-                    left:-2px;
+                    left: -2px;
                     height: 20px;
                     width: 20px;
                     background-color: @primary-color;
                     border-radius: 50%;
                     border: 1px solid #808080;
-                    @media screen and (max-width: 1300px){
-                      right: 25%;
+                    @media screen and (max-width: 1300px) {
+                        right: 25%;
                     }
                     &:after {
                         content: "";
@@ -53,23 +58,22 @@
                         display: none;
                     }
                 }
-                input:checked ~ .radiocheckmark {
-                  background-color: @secondary-background;
-                  border: 1px solid @secondary-background;
-              }
-                input:checked ~ .radiocheckmark:after {
-                  display: block;
-              }
-              
-              /* Style the indicator (dot/circle) */
-              .radiocheckmark:after {
-                top: 5px;
-                left: 5px;
-                width: 8px;
-                height: 8px;
-                border-radius: 50%;
-                background: white;
-              }
+                input:checked~.radiocheckmark {
+                    background-color: @secondary-background;
+                    border: 1px solid @secondary-background;
+                }
+                input:checked~.radiocheckmark:after {
+                    display: block;
+                }
+                /* Style the indicator (dot/circle) */
+                .radiocheckmark:after {
+                    top: 5px;
+                    left: 5px;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: white;
+                }
             }
         }
     }
@@ -102,9 +106,9 @@
             .adminContent {
                 padding: 0 15px;
                 border-bottom: 1px solid @secondary-background;
-                .align{
-                  position:absolute;
-                  top:-11px;
+                .align {
+                    position: absolute;
+                    top: -11px;
                 }
                 .row {
                     padding: 15px 0;
@@ -127,9 +131,9 @@
                             left: 50%;
                         }
                     }
-                    .dropOption{
-                      top: 4px;
-                      left: 145px;
+                    .dropOption {
+                        top: 4px;
+                        left: 145px;
                     }
                     .input-group {
                         float: left;
