@@ -45,22 +45,138 @@
     font-family: Roboto-Regular;
     font-size: 12px;
 }
+.totalfindings-row{
+  background-color:#308a7b;
+  color:@primary-color;
+  padding:15px;
+  vertical-align:middle;
+  .col-xs-2{
+    width:20%;
+    margin-right:35px;
+  }
+  .totalopen{
+  }
+  .totalclosed{
 
+  }
+  .totalunassigned{
+
+  }
+  label{
+    font-size:1.1em;
+  }
+  span{
+    font-size: 33px;
+    font-family: Roboto-Medium;
+    vertical-align:middle;
+  }
+.totalfindings-wrap{
+    padding:13px 15px;
+    text-align:right;
+  span{
+    vertical-align:top;
+    margin-right:30px;
+  }
+label{
+  width:66px;
+  text-align:left;
+  margin-right:15px;
+}
+  border-right:1px solid @totalfindings-border;
+}
+.totalcondition-wrap{
+  background:@totalfindings-wrap;
+  padding:10px 20px 10px 15px;
+  .total-value{
+    float:right;
+    padding-top:3px;
+  }
+  .totalopen-icon{
+    background: url('../images/Sprite_FinRules4.png') no-repeat -704px -384px;
+    width: 34px;
+    height: 39px;
+  }
+  .totalclosed-icon{
+    background: url('../images/Sprite_FinRules4.png') no-repeat -775px -381px;
+    width: 39px;
+    height: 39px;
+  }
+  .totalunassigned-icon{
+    background: url('../images/Sprite_FinRules4.png') no-repeat -855px -383px;
+    width: 18px;
+    height: 39px;
+  }
+  .totalunassigned-icon,.totalclosed-icon,.totalopen-icon{
+    margin-right:20px;
+  }
+  @media screen and (max-width:1300px){
+  .totalunassigned-icon,.totalclosed-icon,.totalopen-icon{
+    margin-right:10px;
+  }}
+}
+}
+@media screen and (max-width:1300px){
+  .totalfindings-row{
+    // padding:10px;
+    .col-xs-2{
+      margin-right:10px;
+      width:23.99%
+    }
+    // span{
+    //   font-size:2em;
+    // }
+    // .totalcondition-wrap{
+    //   padding:7px 1px;
+    // }
+  }
+}
 .conditionContainer {
   box-sizing: border-box;
-    padding: 0 15px;   
+    padding: 0 15px; 
+  //   .heading-link {
+  //     .h2style();
+  //     padding: 20px 0;
+  // }  
+  .condition-tabs{
+      //padding-top:10px;
+      background-color: #F4F4F4;
+     
+      padding: 0 15px;
+      ul{
+        border-bottom:1px solid #c0c0c0;
+      }
+      li.active{
+        border-bottom:4px solid @secondary-background;
+        a{
+          color:@secondary-background;
+        }
+      }
+      li{
+        //padding:10px 0;
+        margin:0 20px;
+      a{
+        padding:25px 15px 15px;
+        font-size:14px;
+        font-family:Roboto-Medium;
+        display: block;
+        background:transparent!important;
+        color:@secondary-background;
+      }
+    }
+  }
     .mainContent {
         background-color: #F4F4F4;
+        height:calc(100vh - 425px);
         .cardView {
-            display: inline-block;
-            padding: 0 15px;;
-            margin-bottom: 5em;
+            //display: inline-block;
+            // padding: 0 15px;;
+            // margin-bottom: 5em;
+            padding: 20px;
+            // margin-bottom: 60px;
             width:100%;
-            h2 {
-                .h2style();
-                padding: 20px 0;
-            }
+            
             .cards {
+              margin:30px 0 65px 0;
                 .individualCard {
                     position: relative;    
                     transition: all 500ms ease;
@@ -284,15 +400,28 @@
         }
         .duFindings {
             padding: 0 15px;
-            .align{
-              display: flex;
-            }
             h2 {
                 .h2style();
                 span {
                     color: @secondary-color;
                 }
             }
+          }
+            .unassigned-wrap{
+              position: relative;
+              height: 334px;
+              width: 100%;
+              margin-top: 35px;
+            .unassigned-row{
+              display: flex;
+              position:absolute;
+              top:0;
+              left:0;
+              bottom:0;
+              right:0;
+              width: 788px;
+              height: 334px;
+              margin: 0 auto;
             .duCards {
                 margin-bottom: 20px;
                 float: left;
@@ -301,7 +430,7 @@
                     .cardStyle();
                     width: 250px;
                     margin: 0;
-                    border-bottom: 3px solid @open-status-border;
+                    border-bottom: 2px solid @totalfindings-backgrnd;
                     height: 100%;
                     h2 {
                         background: @primary-background;
@@ -316,12 +445,23 @@
                         font-size: 13px;
                         color:grey;
                         line-height: 17px;
-                        height: calc(100% - 68px);
+                        height: 100%;
+                        position: relative;
+                        .btn-convert{
+                          position: absolute;
+                          bottom: 20px;
+                          left: 35px;
+                          width: 180px;
+                          border: 1px solid @totalfindings-backgrnd;
+                          background: @primary-color;
+                          color: @primary-text;
+                        }
                     }
                 }
             }
         }
     }
+  }
     @media only screen and (min-width: 1367px){
       .cards {
         padding:0 10%;
