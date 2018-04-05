@@ -166,7 +166,10 @@ label{
   }
     .mainContent {
         background-color: #F4F4F4;
-        height:calc(100vh - 425px);
+        @media screen and (min-height:900px){
+          height:calc(100vh - 425px);
+        }
+       
         .cardView {
             //display: inline-block;
             // padding: 0 15px;;
