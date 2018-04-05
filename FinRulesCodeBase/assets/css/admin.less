@@ -12,8 +12,10 @@
   }
   .description{
     margin:5px 0;
+    height:calc(100% - 54px);
     img{
       width:100%;
+      height:100%;
     }
   }
 }
@@ -206,6 +208,9 @@
 .main{
   background:@dashboard-body;
   padding:25px;
+  h2{
+    font-family:Roboto-Medium;
+  }
   .row{
     margin:0 0 25px;
     display:flex;
@@ -252,6 +257,11 @@
     width:555px;
     height:335px;
    }
+}
+@media screen and (min-width:1400px){
+  .main{
+    padding:25px 15%;
+  }
 }
   }
 footer{
