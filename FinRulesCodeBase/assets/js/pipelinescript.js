@@ -47,7 +47,7 @@ function hideOverlay() {
 window.addEventListener("click",hideMenu);
 
 function hideMenu(e) {
-  console.log(e.target);
+  // console.log(e.target);
   if(e.target ==  document.getElementById("duFindingsWrapper")){
     hideFilters();    
   }

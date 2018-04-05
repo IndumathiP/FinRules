@@ -5,10 +5,8 @@
   <title>:: FinRules ::</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet/less" type="text/css" href="../assets/css/styles.less" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
 </head>
 
@@ -77,29 +75,29 @@
         </section>
         <section class="main">
           <div class="row">
-          <div class="piw-wrap col-xs-4 margin-right">
+            <div class="piw-wrap col-xs-4 margin-right">
               <!-- <div class="piw-wrap margin-right"> -->
-            <h2>PIW / ACE ELIGIBILITY CHECK</h2>
-            <div class="description piw-description">
-              <!-- <div class="piw-chart">
+              <h2>PIW / ACE ELIGIBILITY CHECK</h2>
+              <div class="description piw-description">
+                <!-- <div class="piw-chart">
 
               </div> --><img src="../assets/images/piw.png">
+              </div>
             </div>
-          </div>
-          <div class="loans-wrap col-xs-8">
+            <div class="loans-wrap col-xs-8">
               <!-- <div class="loans-wrap"> -->
-            <h2>LOANS SUBMITTED</h2>
-            <div class="description">
-              <!-- <div class="loans-chart">
+              <h2>LOANS SUBMITTED</h2>
+              <div class="description">
+                <!-- <div class="loans-chart">
 
               </div> --><img src="../assets/images/loans.png">
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="row">
+          <div class="row">
             <div class="topfindings-wrap col-xs-8 margin-right">
-                <!-- <div class="topfindings-wrap margin-right"> -->
+              <!-- <div class="topfindings-wrap margin-right"> -->
               <h2>TOP FINDINGS</h2>
               <div class="description">
                 <!-- <div class="topfindings-chart">
@@ -119,9 +117,9 @@
             </div>
           </div>
 
-        <div class="row last-row">
+          <div class="row last-row">
             <div class="aus-wrap col-xs-7 margin-right">
-                <!-- <div class="aus-wrap margin-right"> -->
+              <!-- <div class="aus-wrap margin-right"> -->
               <h2>PERCENTAGE OF LOANS WHICH RECEIVED AUS ELIGIBILITY</h2>
               <div class="description">
                 <!-- <div class="aus-chart">
@@ -142,1514 +140,1514 @@
         </section>
       </div>
       <div class="tab-pane fade" id="pipeline-wrap">
-          <section class="dashboard-title">
-              <h1>Pipeline</h1>
-            </section>
-            <div class="pipelineContainer">
-            <div class="pipelineContent row">
-                <!-- sidebar -->
-                <div id="duFindingsWrapper">
-                </div>
-                <div class="col-lg-2 sideMenu paddingRight" id="filter">
-                  <div class="sideBar">
-                    <!-- Top section -->
-                    <div class="filterSection">
-                      <h3>FILTERS
-                        <span class="fa fa-times" onclick="hideFilters()"></span>
-                      </h3>
-                      <div class="filterDetails clearfix">
-                        <h4>Loan Amount</h4>
-                        <section class="clearfix">
-                          <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                              <label>16000</label>
-                               <span></span></button>
-                            <ul class="dropdown-menu">
-                              <li><a href="#">0</a></li>
-                              <li><a href="#">100000</a></li>
-                              <li><a href="#">200000</a></li>
-                              <li><a href="#">300000</a></li>
-                              <li><a href="#">400000</a></li>
-                              <li><a href="#">500000</a></li>
-                              <li><a href="#">600000</a></li>
-                              <li><a href="#">700000</a></li>
-                              <li><a href="#">800000</a></li>
-                              <li><a href="#">900000</a></li>
-                              <li><a href="#">1000000</a></li>
-                            </ul>
-                          </div>
-                          <!-- <div class="value">
-                          <label>16000</label>
-                          <span></span>
-                        </div> -->
-                          <div class="middleIcon">-</div>
-                          <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                              <label>200000</label>
-                                <span></span></button>
-                            <ul class="dropdown-menu">
-                              <li><a href="#">100000</a></li>
-                              <li><a href="#">200000</a></li>
-                              <li><a href="#">300000</a></li>
-                              <li><a href="#">400000</a></li>
-                              <li><a href="#">500000</a></li>
-                              <li><a href="#">600000</a></li>
-                              <li><a href="#">700000</a></li>
-                              <li><a href="#">800000</a></li>
-                              <li><a href="#">900000</a></li>
-                              <li><a href="#">1000000</a></li>
-                            </ul>
-                          </div>
-                          <!-- <div class="value">
-                          <label>200000</label>
-                          <span></span>
-                        </div> -->
-                        </section>
-                        <div class="range clearfix">
-                          <div class="min">
-                            <div class="minValue"></div>
-                          </div>
-                          <div class="max">
-                          </div>
-                          <div class="selected">
-                            <div class="min">
-                              <div class="minValue"></div>
-                            </div>
-                            <div class="max">
-                            </div>
-                          </div>
+        <section class="dashboard-title">
+          <h1>Pipeline</h1>
+        </section>
+        <div class="pipelineContainer">
+          <!-- pipeline information -->
+          <div class="pipelineContent row">
+            <!-- sidebar -->
+            <div id="duFindingsWrapper">
+            </div>
+            <div class="col-lg-2 sideMenu paddingRight" id="filter">
+              <div class="sideBar">
+                <!-- Top section -->
+                <div class="filterSection">
+                  <h3>FILTERS
+                    <span class="fa fa-times" onclick="hideFilters()"></span>
+                  </h3>
+                  <div class="filterDetails clearfix">
+                    <h4>Loan Amount</h4>
+                    <section class="clearfix">
+                      <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                      <label>16000</label>
+                       <span></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">0</a></li>
+                          <li><a href="#">100000</a></li>
+                          <li><a href="#">200000</a></li>
+                          <li><a href="#">300000</a></li>
+                          <li><a href="#">400000</a></li>
+                          <li><a href="#">500000</a></li>
+                          <li><a href="#">600000</a></li>
+                          <li><a href="#">700000</a></li>
+                          <li><a href="#">800000</a></li>
+                          <li><a href="#">900000</a></li>
+                          <li><a href="#">1000000</a></li>
+                        </ul>
+                      </div>
+                      <!-- <div class="value">
+                  <label>16000</label>
+                  <span></span>
+                </div> -->
+                      <div class="middleIcon">-</div>
+                      <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                      <label>200000</label>
+                        <span></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">100000</a></li>
+                          <li><a href="#">200000</a></li>
+                          <li><a href="#">300000</a></li>
+                          <li><a href="#">400000</a></li>
+                          <li><a href="#">500000</a></li>
+                          <li><a href="#">600000</a></li>
+                          <li><a href="#">700000</a></li>
+                          <li><a href="#">800000</a></li>
+                          <li><a href="#">900000</a></li>
+                          <li><a href="#">1000000</a></li>
+                        </ul>
+                      </div>
+                      <!-- <div class="value">
+                  <label>200000</label>
+                  <span></span>
+                </div> -->
+                    </section>
+                    <div class="range clearfix">
+                      <div class="min">
+                        <div class="minValue"></div>
+                      </div>
+                      <div class="max">
+                      </div>
+                      <div class="selected">
+                        <div class="min">
+                          <div class="minValue"></div>
+                        </div>
+                        <div class="max">
                         </div>
                       </div>
-                      <section>
-                        <h4>Loan Type</h4>
-                        <label class="cardCheck">Conventional
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        <label class="cardCheck">FHA 
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        <label class="cardCheck">VA 
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        <label class="cardCheck">
-                            <input type="checkbox">Jumbo
-                            <span class="checkmark"></span>
-                          </label>
-                      </section>
-                    </div>
-                    <!-- bottom section -->
-                    <div class="statusSection">
-                      <h3>FINRULES</h3>
-                      <div class="statusDes">
-                        <h4>AUS Status</h4>
-                        <label class="cardCheck">DU, LPA Eligible
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        <label class="cardCheck">DU Eligible
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        <label class="cardCheck">LPA Eligible
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        <label class="cardCheck">DU Loan
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        <label class="cardCheck">LPA Loan
-                              <input type="checkbox">
-                              <span class="checkmark"></span>
-                            </label>
-                        <label class="cardCheck">Private Investor
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                              </label>
-                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-xs-12 col-lg-10">
-                  <div class="searchRecord clearfix">
-                    <span class="fa fa-filter" id="showFilters"></span>
-                    <input type="search" class="col-xs-3" placeholder="Search by Keyword">
-                    <span class="searchIcon"></span>
-                    <div class="col-xs-5 text">
-                      <input type="text" placeholder="Last Week - 10/20/18-10/27/18">
-                      <label class="leftView">Viewing</label>
-                      <span class="rightView"></span>
-          
-                    </div>
-          
-                  </div>
-                  <!-- list of Records -->
                   <section>
-                    <!-- record heading -->
-                    <ul class="clearfix recordHeading">
-                      <li class="col largeCol">
-                        <label>Loan Number</label>
-                        <a href="javascript:void(0)"></a>
-                      </li>
-                      <li class="col largeCol">
-                        <label>Borrower</label>
-                        <a href="javascript:void(0)"></a>
-                      </li>
-                      <li class="col">
-                        <label>Purchase Price</label>
-                        <a href="javascript:void(0)"></a>
-                      </li>
-                      <li class="col">
-                        <label>Loan Amount</label>
-                        <a href="javascript:void(0)"></a>
-                      </li>
-                      <li class="col">
-                        <label>Loan Type</label>
-                        <a href="javascript:void(0)"></a>
-                      </li>
-                      <li class="col">
-                        <label>Last Updated</label>
-                        <a class="currentTime" href="javascript:void(0)"></a>
-                      </li>
-                      <li class="col largeCol">
-                        <label>AUS Status</label>
-                        <a href="javascript:void(0)"></a>
-                      </li>
-                    </ul>
-                    <!-- List of records -->
-                    <!-- first record -->
-                    <div class="recordInformation">
-                      <ul class="clearfix evenList">
-                        <li class="col largeCol">
-                          <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse1">
-                            <span></span>
-                          </span>
-                          <a href="loanSummary.html" onclick="displayDuLp(4)"><label>W2018030139</label></a>
-                        </li>
-                        <li class="col largeCol">
-                          <label><span class="name">Firstimer,</span> Alice</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;250,000.00</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;217,150.00</label>
-                        </li>
-                        <li class="col">
-                          <label>Conventional</label>
-                        </li>
-                        <li class="col">
-                          <label>1/2/18 <span>2:05 PM</span></label>
-                        </li>
-                        <li class="col largeCol">
-                          <span class="eligible"></span>
-                          <label>DU, LPA Eligible</label>
-                        </li>
-                      </ul>
-                      <!-- information for DU and LPA -->
-                      <div id="collapse1" class="info collapse clearfix">
-                        <div class="description pull-left">
-                          <ul class="clearfix">
-                            <li class="col">
-                              <label>Transaction Type</label>
-                              <p>Purchase</p>
-                            </li>
-                            <li class="largewidth">
-                              <label>LTV/CLTV</label>
-                              <p>86.860%/86.860%</p>
-                            </li>
-                            <li class="col-xs-1 padding0">
-                              <label>DTI </label>
-                              <p>22.145% </p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>Second Ratio</label>
-                              <p>29.441%</p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>First Ratio</label>                   
-                              <p>23.40%</p>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="detail pull-left">
-                          <span class="underwriterSection">
-                            <label>Ready For Underwriting</label>
-                          </span>
-                          <span class="comparisonSection">
-                            <a href="recommendation.html"><button onclick="displayDuLp(1)">DU - LPA Comparison</button></a>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- second record -->
-                    <div class="recordInformation">
-                      <ul class="clearfix">
-                        <li class="col largeCol">
-                          <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse2">
-                                <span></span>
-                          </span>
-                          <a href="loanSummary.html" onclick="displayDuLp(2)"><label>W2017110023</label></a>
-                        </li>
-                        <li class="col largeCol">
-                          <label><span class="name">Bancroft,</span> Cameron</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;215,090.00</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;199,804.00</label>
-                        </li>
-                        <li class="col">
-                          <label>VA</label>
-                        </li>
-                        <li class="col">
-                          <label>1/8/18 <span>11:05 AM</span></label>
-                        </li>
-                        <li class="col largeCol">
-                          <span class="loan"></span>
-                          <label>LPA Loan</label>
-                        </li>
-                      </ul>
-                      <div id="collapse2" class="info collapse clearfix">
-                        <div class="description pull-left">
-                          <ul class="clearfix">
-                            <li class="col">
-                              <label>Transaction Type</label>
-                              <p>Refinance</p>
-                            </li>
-                            <li class="largewidth">
-                              <label>LTV/CLTV</label>
-                              <p>92.864%/92.864%</p>
-                            </li>
-                            <li class="col-xs-1 padding0">
-                              <label>DTI </label>
-                              <p>22.442% </p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>Second Ratio</label>
-                              <p>38.675%</p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>First Ratio</label>
-                              <p>16.173%</p>                   
-                            </li>
-                          </ul>
-                          <div class="notifications">
-                            <p>
-                              Notifications on 01/08/2018 06:30 PM <span class="pull-right">Total Notification : <span class="number">05</span></span>
-                            </p>
-                            <p>
-                              LPA Findings Executed for the loan File. Notifications sent to the loan officer for<br> additional documentation.
-                            </p>
-                          </div>
-                        </div>
-                        <div class="detail conditionStatus pull-left clearfix text-center">
-                          <h3>Condition Status</h3>
-                          <div class="progressWrapper clearfix text-center">
-                            <a href="activecondition.html">
-                              <div class="progressBar">
-                                <div class="item progress-1">
-                                  <div class="radial-inner-bg">
-                                    <span class="progressValue">1/4</span>
-                                  </div>
-                                </div>
-                                <p>Income</p>
-                              </div>
-                            </a>
-                            <a href="activecondition.html">
-                              <div class="progressBar">
-                                <div class="item progress-2">
-                                  <div class="radial-inner-bg">
-                                    <span class="progressValue">2/5</span>
-                                  </div>
-                                </div>
-                                <p>Borrower</p>
-                              </div>
-                            </a>
-                            <a href="activecondition.html">
-                              <div class="progressBar">
-                                <div class="item progress-3">
-                                  <div class="radial-inner-bg">
-                                    <span class="progressValue">2/4</span>
-                                  </div>
-                                </div>
-                                <p>Credit</p>
-                              </div>
-                            </a>
-                            <a href="activecondition.html">
-                              <div class="progressBar">
-                                <div class="item progress-4">
-                                  <div class="radial-inner-bg">
-                                    <span class="progressValue">1/6</span>
-                                  </div>
-                                </div>
-                                <p>Assets</p>
-                              </div>
-                            </a>
-                            <a href="activecondition.html">
-                              <div class="progressBar">
-                                <div class="item progress-5">
-                                  <div class="radial-inner-bg">
-                                    <span class="progressValue">2/2</span>
-                                  </div>
-                                </div>
-                                <p>Property</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- third record -->
-                    <div class="recordInformation">
-                      <ul class="clearfix evenList">
-                        <li class="col largeCol">
-                          <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse3">
-                                <span></span>
-                          </span>
-                          <a href="loanSummary.html" onclick="displayDuLp(3)"><label>W2018030163</label></a>
-                        </li>
-                        <li class="col largeCol">
-                          <label><span class="name">Clarke,</span> Michael</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;750,000.00</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;700,000.00</label>
-                        </li>
-                        <li class="col">
-                          <label>FHA</label>
-                        </li>
-                        <li class="col">
-                          <label>1/15/18 <span>3:25 PM</span></label>
-                        </li>
-                        <li class="col largeCol">
-                          <span class="discrepences"></span>
-                          <label>Discrepancies</label>
-                        </li>
-                      </ul>
-                      <div id="collapse3" class="info collapse clearfix">
-                        <div class="description pull-left">
-                          <ul class="clearfix">
-                            <li class="col">
-                              <label>Transaction Type</label>
-                              <p>Purchase</p>
-                            </li>
-                            <li class="largewidth">
-                              <label>LTV/CLTV</label>
-                              <p>93.334%/93.334%</p>
-                            </li>
-                            <li class="col-xs-1 padding0">
-                              <label>DTI </label>
-                              <p>45.121% </p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>Second Ratio</label>
-                              <p>47.134%</p>                   
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>First Ratio</label>
-                              <p>38.659%</p>
-                            </li>
-                          </ul>
-                          <div class="notifications">
-                            <p>
-                              Notifications on 03/11/2018 03:30 PM <span class="pull-right">Total Notification : <span class="number">02</span></span>
-                            </p>
-                            <p>
-                              Loan File submitted to Underwriting for Approval. Loan Status changed to "In Underwriting"
-                            </p>
-                          </div>
-                        </div>
-                        <div class="discrepencies pull-left clearfix">
-                            <div class="col-xs-6 rightBorder">
-                          <h3>FinRules</h3>
-                          <label>Income</label>
-                          <p>Mandatory fields missing from Loan                   
-                              File <br> - 2 years of Employment History</p>
-                          </div>
-                          <div class="col-xs-6 rightBorder">
-                              <h3>Fannie Mae</h3>
-                             
-                              <p>124000: Error peparing credit
-                                  report request
-                                  </p>
-                              </div>
-                        </div>
-                        <p class="pull-left col-xs-3">
-                            <a href="loanSummary.html"  onclick="displayDuLp(3)"  class="more">READ MORE</a>
-                        </p>
-                      </div>
-                    </div>
-                    <!-- fourth record -->
-                    <div class="recordInformation">
-                      <ul class="clearfix">
-                        <li class="col largeCol">
-                          <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse4">
-                                <span></span>
-                          </span>
-                          <a href="loanSummary.html" onclick="displayDuLp(4)"><label>W2017110132</label></a>
-                        </li>
-                        <li class="col largeCol">
-                          <label><span class="name">Mateo,</span> Pedro</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;266,941.00</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;252,306.00</label>
-                        </li>
-                        <li class="col">
-                          <label>Conventional</label>
-                        </li>
-                        <li class="col">
-                          <label>1/23/18 <span>12:45 PM</span></label>
-                        </li>
-                        <li class="col largeCol">
-                          <span class="loan"></span>
-                          <label>LPA Loan</label>
-                        </li>
-                      </ul>
-                      <div id="collapse4" class="info collapse clearfix">
-                        <div class="description pull-left">
-                          <ul class="clearfix">
-                            <li class="col">
-                              <label>Transaction Type</label>
-                              <p>Refinance</p>
-                            </li>
-                            <li class="largewidth">
-                              <label>LTV/CLTV</label>
-                              <p>86.860%/86.860%</p>
-                            </li>
-                            <li class="col-xs-1 padding0">
-                              <label>DTI </label>
-                              <p>19.172% </p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>Second Ratio</label>
-                              <p>19.567%</p>
-                               </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>First Ratio</label>
-                              <p>15.256%</p>                   
-                            </li>
-                          </ul>
-                          <div class="notifications">
-                            <p>
-                              Notifications on 01/23/2018 02:55 PM <span class="pull-right">Total Notification : <span class="number">05</span></span>
-                            </p>
-                            <p>
-                              Income documentation - W2, Paystub successfully validated.<br> Income condition for Base Income closed
-                            </p>
-                          </div>
-                        </div>
-                        <div class="detail conditionStatus pull-left clearfix text-center">
-                          <h3>Condition Status</h3>
-                          <div class="progressWrapper clearfix text-center">
-                            <a href="activecondition.html">
-                              <div class="progressBar">
-                                <div class="item progress-1">
-                                  <div class="radial-inner-bg">
-                                    <span class="progressValue">1/4</span>
-                                  </div>
-                                </div>
-                                <p>Income</p>
-                              </div>
-                            </a>
-                            <a href="activecondition.html">
-                              <div class="progressBar">
-                                <div class="item progress-6">
-                                  <div class="radial-inner-bg">
-                                    <span class="progressValue">3/7</span>
-                                  </div>
-                                </div>
-                                <p>Borrower</p>
-                              </div>
-                            </a>
-                            <a href="activecondition.html">
-                              <div class="progressBar">
-                                <div class="item progress-7">
-                                  <div class="radial-inner-bg">
-                                    <span class="progressValue">3/4</span>
-                                  </div>
-                                </div>
-                                <p>Credit</p>
-                              </div>
-                            </a>
-                            <a href="activecondition.html">
-                              <div class="progressBar">
-                                <div class="item progress-4">
-                                  <div class="radial-inner-bg">
-                                    <span class="progressValue">1/6</span>
-                                  </div>
-                                </div>
-                                <p>Assets</p>
-                              </div>
-                            </a>
-                            <a href="activecondition.html">
-                              <div class="progressBar">
-                                <div class="item progress-5">
-                                  <div class="radial-inner-bg">
-                                    <span class="progressValue">1/2</span>
-                                  </div>
-                                </div>
-                                <p>Property</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- fifth record -->
-                    <div class="recordInformation">
-                      <ul class="clearfix evenList">
-                        <li class="col largeCol">
-                          <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse5">
-                                <span></span>
-                          </span>
-                          <a href="loanSummary.html" onclick="displayDuLp(4)"><label>W2017110127</label></a>
-                        </li>
-                        <li class="col largeCol">
-                          <label><span class="name">Ella,</span> Alice</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;800000.00</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;736,000.00</label>
-                        </li>
-                        <li class="col">
-                          <label>Jumbo </label>
-                        </li>
-                        <li class="col">
-                          <label>2/1/18 <span>4:25 PM</span></label>
-                        </li>
-                        <li class="col largeCol">
-                          <span class="eligible"></span>
-                          <label>Private Investor</label>
-                        </li>
-                      </ul>
-                      <!-- information for DU and LPA -->
-                      <div id="collapse5" class="info collapse clearfix">
-                        <div class="description pull-left">
-                          <ul class="clearfix">
-                            <li class="col">
-                              <label>Transaction Type</label>
-                              <p>Purchase</p>
-                            </li>
-                            <li class="largewidth">
-                              <label>LTV/CLTV</label>
-                              <p>92.117%/92.117%</p>
-                            </li>
-                            <li class="col-xs-1 padding0">
-                              <label>DTI </label>
-                              <p>50.124% </p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>Second Ratio</label>
-                              <p>56.228%</p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>First Ratio</label>
-                              <p>50.161%</p>                   
-                            </li>
-                          </ul>
-                          <div class="notifications">
-                            <p>
-                              Notifications on 02/01/2018 05:26 PM <span class="pull-right">Total Notification : <span class="number">05</span></span>
-                            </p>
-                            <p>
-                              Total Debt to Income ratio for the loan exceeds the limit set for DU/LP Submission to private Investor.
-                            </p>
-                          </div>
-                        </div>
-                        <div class="detail conditionStatus pull-left clearfix text-center">
-                            <h3>Condition Status</h3>
-                            <div class="progressWrapper clearfix text-center">
-                              <a href="activecondition.html">
-                                <div class="progressBar">
-                                  <div class="item progress-5">
-                                    <div class="radial-inner-bg">
-                                      <span class="progressValue">2/2</span>
-                                    </div>
-                                  </div>
-                                  <p>Income</p>
-                                </div>
-                              </a>
-                              <a href="activecondition.html">
-                                <div class="progressBar">
-                                  <div class="item progress-2">
-                                    <div class="radial-inner-bg">
-                                      <span class="progressValue">2/5</span>
-                                    </div>
-                                  </div>
-                                  <p>Borrower</p>
-                                </div>
-                              </a>
-                              <a href="activecondition.html">
-                                <div class="progressBar">
-                                  <div class="item progress-8">
-                                    <div class="radial-inner-bg">
-                                      <span class="progressValue">5/8</span>
-                                    </div>
-                                  </div>
-                                  <p>Credit</p>
-                                </div>
-                              </a>
-                              <a href="activecondition.html">
-                                <div class="progressBar">
-                                  <div class="item progress-4">
-                                    <div class="radial-inner-bg">
-                                      <span class="progressValue">1/7</span>
-                                    </div>
-                                  </div>
-                                  <p>Assets</p>
-                                </div>
-                              </a>
-                              <a href="activecondition.html">
-                                <div class="progressBar">
-                                  <div class="item progress-6">
-                                    <div class="radial-inner-bg">
-                                      <span class="progressValue">3/7</span>
-                                    </div>
-                                  </div>
-                                  <p>Property</p>
-                                </div>
-                              </a>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-                    <!-- sixth record -->
-                    <div class="recordInformation">
-                      <ul class="clearfix">
-                        <li class="col largeCol">
-                          <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse6">
-                                <span></span>
-                          </span>
-                          <a href="loanSummary.html" onclick="displayDuLp(4)"><label>W2017120035</label></a>
-                        </li>
-                        <li class="col largeCol">
-                          <label><span class="name">Lara,</span> Maria</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;477,300.00</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;475,827.00</label>
-                        </li>
-                        <li class="col">
-                          <label>Jumbo</label>
-                        </li>
-                        <li class="col">
-                          <label>2/9/18 <span>12:38 PM</span></label>
-                        </li>
-                        <li class="col largeCol">
-                          <span class="eligible"></span>
-                          <label>DU Eligible</label>
-                        </li>
-                      </ul>
-                      <!-- information for DU and LPA -->
-                      <div id="collapse6" class="info collapse clearfix">
-                        <div class="description pull-left">
-                          <ul class="clearfix">
-                            <li class="col">
-                              <label>Transaction Type</label>
-                              <p>Refinance</p>
-                            </li>
-                            <li class="largewidth">
-                              <label>LTV/CLTV</label>
-                              <p>92.141%/124.329%</p>
-                            </li>
-                            <li class="col-xs-1 padding0">
-                              <label>DTI </label>
-                              <p>35.124% </p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>Second Ratio</label>
-                              <p>35.033%</p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>First Ratio</label>
-                              <p>35.033%</p>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="detail pull-left">
-                          <span class="underwriterSection">
-                              <label>Ready For Underwriting</label>
-                            </span>
-                          <span class="comparisonSection">
-                              <a href="recommendation.html"><button onclick="displayDuLp(1)">DU - LPA Comparison</button></a>
-                            </span>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- seventh record -->
-                    <div class="recordInformation">
-                      <ul class="clearfix evenList">
-                        <li class="col largeCol">
-                          <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse7">
-                                <span></span>
-                          </span>
-                          <a href="loanSummary.html" onclick="displayDuLp(4)"><label>W2017120034</label></a>
-                        </li>
-                        <li class="col largeCol">
-                          <label><span class="name">Leo,</span> Johnson</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;426,405.00</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;400,173.00</label>
-                        </li>
-                        <li class="col">
-                          <label>Conventional</label>
-                        </li>
-                        <li class="col">
-                          <label>2/22/18 <span>10:45 AM</span></label>
-                        </li>
-                        <li class="col largeCol">
-                          <span class="eligible"></span>
-                          <label>LPA Eligible</label>
-                        </li>
-                      </ul>
-                      <!-- information for DU and LPA -->
-                      <div id="collapse7" class="info collapse clearfix">
-                        <div class="description pull-left">
-                          <ul class="clearfix">
-                            <li class="col">
-                              <label>Transaction Type</label>
-                              <p>Refinance</p>
-                            </li>
-                            <li class="largewidth">
-                              <label>LTV/CLTV</label>
-                              <p>93.928%/93.928%</p>
-                            </li>
-                            <li class="col-xs-1 padding0">
-                              <label>DTI </label>
-                              <p>25.124% </p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>Second Ratio</label>
-                              <p>24.359%</p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>First Ratio</label>
-                              <p>24.359%</p>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="detail pull-left">
-                          <span class="underwriterSection">
-                              <label>Ready For Underwriting</label>
-                            </span>
-                          <span class="comparisonSection">
-                              <a href="recommendation.html"><button onclick="displayDuLp(2)">View LPA Eligibility</button></a>
-                            </span>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- eighth record -->
-                    <div class="recordInformation">
-                      <ul class="clearfix">
-                        <li class="col largeCol">
-                          <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse8">
-                                <span></span>
-                          </span>
-                          <a href="loanSummary.html" onclick="displayDuLp(4)"><label>W2018030029</label></a>
-                        </li>
-                        <li class="col largeCol">
-                          <label><span class="name">Martin,</span> Josh</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;310,438.00</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;222,565.00</label>
-                        </li>
-                        <li class="col">
-                          <label>FHA</label>
-                        </li>
-                        <li class="col">
-                          <label>2/28/18 <span>5:35 PM</span></label>
-                        </li>
-                        <li class="col largeCol">
-                          <span class="eligible"></span>
-                          <label>DU, LPA Eligible</label>
-                        </li>
-                      </ul>
-                      <!-- information for DU and LPA -->
-                      <div id="collapse8" class="info collapse clearfix">
-                        <div class="description pull-left">
-                          <ul class="clearfix">
-                            <li class="col">
-                              <label>Transaction Type</label>
-                              <p>Purchase</p>
-                            </li>
-                            <li class="largewidth">
-                              <label>LTV/CLTV</label>
-                              <p>86.881%/86.881%</p>
-                            </li>
-                            <li class="col-xs-1 padding0">
-                              <label>DTI </label>
-                              <p>22.124% </p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>Second Ratio</label>
-                              <p>22.120%</p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>First Ratio</label>
-                              <p>22.120%</p>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="detail pull-left">
-                          <span class="underwriterSection">
-                              <label>Ready For Underwriting</label>
-                            </span>
-                          <span class="comparisonSection">
-                              <a href="recommendation.html"><button onclick="displayDuLp(1)">DU - LPA Comparison</button></a>
-                            </span>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- nineth record -->
-                    <div class="recordInformation">
-                      <ul class="clearfix evenList">
-                        <li class="col largeCol">
-                          <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse9">
-                                <span></span>
-                          </span>
-                          <a href="loanSummary.html" onclick="displayDuLp(4)"><label>W2018030027</label></a>
-                        </li>
-                        <li class="col largeCol">
-                          <label><span class="name">Harley,</span> Michael</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;243,301.00</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;241,878.00</label>
-                        </li>
-                        <li class="col">
-                          <label>Conventional</label>
-                        </li>
-                        <li class="col">
-                          <label>3/2/18 <span>9:30 AM</span></label>
-                        </li>
-                        <li class="col largeCol">
-                          <span class="eligible"></span>
-                          <label>LPA Eligible</label>
-                        </li>
-                      </ul>
-                      <!-- information for DU and LPA -->
-                      <div id="collapse9" class="info collapse clearfix">
-                        <div class="description pull-left">
-                          <ul class="clearfix">
-                            <li class="col">
-                              <label>Transaction Type</label>
-                              <p>Refinance</p>
-                            </li>
-                            <li class="largewidth">
-                              <label>LTV/CLTV</label>
-                              <p>97.416%/97.416%</p>
-                            </li>
-                            <li class="col-xs-1 padding0">
-                              <label>DTI </label>
-                              <p>14.674% </p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>Second Ratio</label>
-                              <p>15.176%</p>                   
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>First Ratio</label>
-                              <p>14.570%</p>
-                               </li>
-                          </ul>
-                        </div>
-                        <div class="detail pull-left">
-                          <span class="underwriterSection">
-                              <label>Ready For Underwriting</label>
-                            </span>
-                          <span class="comparisonSection">
-                              <a href="recommendation.html"><button onclick="displayDuLp(2)">View LPA Eligibility</button></a>
-                            </span>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- tenth record -->
-                    <div class="recordInformation">
-                      <ul class="clearfix">
-                        <li class="col largeCol">
-                          <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse10">
-                                <span></span>
-                          </span>
-                          <a href="loanSummary.html" onclick="displayDuLp(4)"><label>W2018030160</label></a>
-                        </li>
-                        <li class="col largeCol">
-                          <label><span class="name">Tomas,</span> Peter</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;439,731.00</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;429,738.00</label>
-                        </li>
-                        <li class="col">
-                          <label>Conventional</label>
-                        </li>
-                        <li class="col">
-                          <label>3/9/18 <span>11:45 AM</span></label>
-                        </li>
-                        <li class="col largeCol">
-                          <span class="loan"></span>
-                          <label>LPA Loan</label>
-                        </li>
-                      </ul>
-                      <div id="collapse10" class="info collapse clearfix">
-                        <div class="description pull-left">
-                          <ul class="clearfix">
-                            <li class="col">
-                              <label>Transaction Type</label>
-                              <p>Refinance</p>
-                            </li>
-                            <li class="largewidth">
-                              <label>LTV/CLTV</label>
-                              <p>97.728%/97.728%</p>
-                            </li>
-                            <li class="col-xs-1 padding0">
-                              <label>DTI </label>
-                              <p>14.785% </p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>Second Ratio</label>
-                              <p>14.178%</p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>First Ratio</label>
-                              <p>14.178%</p>
-                            </li>
-                          </ul>
-                          <div class="notifications">
-                            <p>
-                              Notifications on 03/09/2018 11:45 AM <span class="pull-right">Total Notification : <span class="number">05</span></span>
-                            </p>
-                            <p>
-                              Liquid Asset Validated through Account check. LPA - Asset finding for validating<br> required liquid asset closed
-                            </p>
-                          </div>
-                        </div>
-                        <div class="detail conditionStatus pull-left clearfix text-center">
-                          <h3>Condition Status</h3>
-                          <div class="progressWrapper clearfix text-center">
-                            <a href="activecondition.html">
-                              <div class="progressBar">
-                                <div class="item progress-1">
-                                  <div class="radial-inner-bg">
-                                    <span class="progressValue">1/4</span>
-                                  </div>
-                                </div>
-                                <p>Income</p>
-                              </div>
-                            </a>
-                            <a href="activecondition.html">
-                              <div class="progressBar">
-                                <div class="item progress-6">
-                                  <div class="radial-inner-bg">
-                                    <span class="progressValue">3/7</span>
-                                  </div>
-                                </div>
-                                <p>Borrower</p>
-                              </div>
-                            </a>
-                            <a href="activecondition.html">
-                              <div class="progressBar">
-                                <div class="item progress-9">
-                                  <div class="radial-inner-bg">
-                                    <span class="progressValue">4/5</span>
-                                  </div>
-                                </div>
-                                <p>Credit</p>
-                              </div>
-                            </a>
-                            <a href="activecondition.html">
-                              <div class="progressBar">
-                                <div class="item progress-5">
-                                  <div class="radial-inner-bg">
-                                    <span class="progressValue">2/2</span>
-                                  </div>
-                                </div>
-                                <p>Assets</p>
-                              </div>
-                            </a>
-                            <a href="activecondition.html">
-                              <div class="progressBar">
-                                <div class="item progress-10">
-                                  <div class="radial-inner-bg">
-                                    <span class="progressValue">1/3</span>
-                                  </div>
-                                </div>
-                                <p>Property</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- eleventh record -->
-                    <div class="recordInformation">
-                      <ul class="clearfix evenList">
-                        <li class="col largeCol">
-                          <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse11">
-                                <span></span>
-                          </span>
-                          <a href="loanSummary.html" onclick="displayDuLp(3)"><label>W2018030151</label></a>
-                        </li>
-                        <li class="col largeCol">
-                          <label><span class="name">Ryan,</span> David</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;253,958.00</label>
-                        </li>
-                        <li class="col">
-                          <label>&dollar;159,547.00</label>
-                        </li>
-                        <li class="col">
-                          <label>Jumbo</label>
-                        </li>
-                        <li class="col">
-                          <label>3/15/18 <span>5:45 PM</span></label>
-                        </li>
-                        <li class="col largeCol">
-                          <span class="discrepences"></span>
-                          <label>Discrepancies</label>
-                        </li>
-                      </ul>
-                      <div id="collapse11" class="info collapse clearfix">
-                        <div class="description pull-left">
-                          <ul class="clearfix">
-                            <li class="col">
-                              <label>Transaction Type</label>
-                              <p>Refinance</p>
-                            </li>
-                            <li class="largewidth">
-                              <label>LTV/CLTV</label>
-                              <p>62.825%/125.756%</p>
-                            </li>
-                            <li class="col-xs-1 padding0">
-                              <label>DTI </label>
-                              <p>18.653% </p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>Second Ratio</label>
-                              <p>20.154%</p>
-                            </li>
-                            <li class="col-xs-2 pull-right">
-                              <label>First Ratio</label>
-                             <p>18.196%</p>                    
-                            </li>
-                          </ul>
-                          <div class="notifications">
-                            <p>
-                              Notifications on 12/27/2017 12:30 PM <span class="pull-right">Total Notification : <span class="number">02</span></span>
-                            </p>
-                            <p>
-                              Loan Files Validated by Smart Processor. Mandatory Fields missing - 2 years <br>
-                              of Residence, Mailing Address
-                            </p>
-                          </div>
-                        </div>
-                        <div class="discrepencies pull-left clearfix">
-                          <div class="col-xs-6 rightBorder">
-                          <h3>FinRules</h3>
-                          <label>Income</label>
-                          <p>Required Documentation missing from                   
-                              loan application <br> 
-                              - Borrower Signed 1003, W2, Paystub
-                              </p>
-                        </div>
-                        <div class="col-xs-6">
-                            <h3>Freddie Mac</h3>
-                            <p>Error Code 11: No usable
-                                credit credit report were                      
-                                recieved for borrower(s)</p>
-                          </div>
-                          
-                        </div>
-                        <p class="pull-left col-xs-3">
-                            <a href="loanSummary.html"  onclick="displayDuLp(3)" class="more">READ MORE</a>
-                        </p>
-                      </div>
-                    </div>
+                    <h4>Loan Type</h4>
+                    <label class="cardCheck">Conventional
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                    <label class="cardCheck">FHA 
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                    <label class="cardCheck">VA 
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                    <label class="cardCheck">
+                    <input type="checkbox">Jumbo
+                    <span class="checkmark"></span>
+                  </label>
                   </section>
-                  <div class="showEntries clearfix">
-                    <div class="col-xs-3 paddingLeft">
-                      <label>
-                        Show <span class="numberOfEntries"><label>30</label><span></span> </span>of 460 Records
+                </div>
+                <!-- bottom section -->
+                <div class="statusSection">
+                  <h3>FINRULES</h3>
+                  <div class="statusDes">
+                    <h4>AUS Status</h4>
+                    <label class="cardCheck">DU, LPA Eligible
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                    <label class="cardCheck">DU Eligible
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                    <label class="cardCheck">LPA Eligible
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                    <label class="cardCheck">DU Loan
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                    <label class="cardCheck">LPA Loan
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="cardCheck">Private Investor
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
                       </label>
-                    </div>
-                    <div class="col-xs-3 pull-right">
-                      <span class="prev"></span><label>PREV</label>
-                      <span class="numberOfEntries"><label>1</label></span> of 15
-                      <label class="nxtLabel">NEXT</label><span class="next"></span>
-                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="col-xs-12 col-lg-10">
+              <div class="searchRecord clearfix">
+                <span class="fa fa-filter" id="showFilters"></span>
+                <input type="search" class="col-xs-3" placeholder="Search by Keyword">
+                <span class="searchIcon"></span>
+                <div class="col-xs-5 text">
+                  <input type="text" placeholder="Last Week - 10/20/18-10/27/18">
+                  <label class="leftView">Viewing</label>
+                  <span class="rightView"></span>
+
+                </div>
+
+              </div>
+              <!-- list of Records -->
+              <section>
+                <!-- record heading -->
+                <ul class="clearfix recordHeading">
+                  <li class="col largeCol">
+                    <label>Loan Number</label>
+                    <a href="javascript:void(0)"></a>
+                  </li>
+                  <li class="col largeCol">
+                    <label>Borrower</label>
+                    <a href="javascript:void(0)"></a>
+                  </li>
+                  <li class="col">
+                    <label>Purchase Price</label>
+                    <a href="javascript:void(0)"></a>
+                  </li>
+                  <li class="col">
+                    <label>Loan Amount</label>
+                    <a href="javascript:void(0)"></a>
+                  </li>
+                  <li class="col">
+                    <label>Loan Type</label>
+                    <a href="javascript:void(0)"></a>
+                  </li>
+                  <li class="col">
+                    <label>Last Updated</label>
+                    <a class="currentTime" href="javascript:void(0)"></a>
+                  </li>
+                  <li class="col largeCol">
+                    <label>AUS Status</label>
+                    <a href="javascript:void(0)"></a>
+                  </li>
+                </ul>
+                <!-- List of records -->
+                <!-- first record -->
+                <div class="recordInformation">
+                  <ul class="clearfix evenList">
+                    <li class="col largeCol">
+                      <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse1">
+                    <span></span>
+                      </span>
+                      <a href="loanSummary.html" onclick="displayDuLp(4)"><label>W2018030139</label></a>
+                    </li>
+                    <li class="col largeCol">
+                      <label><span class="name">Firstimer,</span> Alice</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;250,000.00</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;217,150.00</label>
+                    </li>
+                    <li class="col">
+                      <label>Conventional</label>
+                    </li>
+                    <li class="col">
+                      <label>1/2/18 <span>2:05 PM</span></label>
+                    </li>
+                    <li class="col largeCol">
+                      <span class="eligible"></span>
+                      <label>DU, LPA Eligible</label>
+                    </li>
+                  </ul>
+                  <!-- information for DU and LPA -->
+                  <div id="collapse1" class="info collapse clearfix">
+                    <div class="description pull-left">
+                      <ul class="clearfix">
+                        <li class="col">
+                          <label>Transaction Type</label>
+                          <p>Purchase</p>
+                        </li>
+                        <li class="largewidth">
+                          <label>LTV/CLTV</label>
+                          <p>86.860%/86.860%</p>
+                        </li>
+                        <li class="col-xs-1 padding0">
+                          <label>DTI </label>
+                          <p>22.145% </p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>Second Ratio</label>
+                          <p>29.441%</p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>First Ratio</label>
+                          <p>23.40%</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="detail pull-left">
+                      <span class="underwriterSection">
+                    <label>Ready For Underwriting</label>
+                  </span>
+                      <span class="comparisonSection">
+                    <a href="recommendation.html"><button onclick="displayDuLp(1)">DU - LPA Comparison</button></a>
+                  </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- second record -->
+                <div class="recordInformation">
+                  <ul class="clearfix">
+                    <li class="col largeCol">
+                      <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse2">
+                        <span></span>
+                      </span>
+                      <a href="loanSummary.html" onclick="displayDuLp(2)"><label>W2017110023</label></a>
+                    </li>
+                    <li class="col largeCol">
+                      <label><span class="name">Bancroft,</span> Cameron</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;215,090.00</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;199,804.00</label>
+                    </li>
+                    <li class="col">
+                      <label>VA</label>
+                    </li>
+                    <li class="col">
+                      <label>1/8/18 <span>11:05 AM</span></label>
+                    </li>
+                    <li class="col largeCol">
+                      <span class="loan"></span>
+                      <label>LPA Loan</label>
+                    </li>
+                  </ul>
+                  <div id="collapse2" class="info collapse clearfix">
+                    <div class="description pull-left">
+                      <ul class="clearfix">
+                        <li class="col">
+                          <label>Transaction Type</label>
+                          <p>Refinance</p>
+                        </li>
+                        <li class="largewidth">
+                          <label>LTV/CLTV</label>
+                          <p>92.864%/92.864%</p>
+                        </li>
+                        <li class="col-xs-1 padding0">
+                          <label>DTI </label>
+                          <p>22.442% </p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>Second Ratio</label>
+                          <p>38.675%</p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>First Ratio</label>
+                          <p>16.173%</p>
+                        </li>
+                      </ul>
+                      <div class="notifications">
+                        <p>
+                          Notifications on 01/08/2018 06:30 PM <span class="pull-right">Total Notification : <span class="number">05</span></span>
+                        </p>
+                        <p>
+                          LPA Findings Executed for the loan File. Notifications sent to the loan officer for<br> additional
+                          documentation.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="detail conditionStatus pull-left clearfix text-center">
+                      <h3>Condition Status</h3>
+                      <div class="progressWrapper clearfix text-center">
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-1">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">1/4</span>
+                              </div>
+                            </div>
+                            <p>Income</p>
+                          </div>
+                        </a>
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-2">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">2/5</span>
+                              </div>
+                            </div>
+                            <p>Borrower</p>
+                          </div>
+                        </a>
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-3">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">2/4</span>
+                              </div>
+                            </div>
+                            <p>Credit</p>
+                          </div>
+                        </a>
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-4">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">1/6</span>
+                              </div>
+                            </div>
+                            <p>Assets</p>
+                          </div>
+                        </a>
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-5">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">2/2</span>
+                              </div>
+                            </div>
+                            <p>Property</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- third record -->
+                <div class="recordInformation">
+                  <ul class="clearfix evenList">
+                    <li class="col largeCol">
+                      <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse3">
+                        <span></span>
+                      </span>
+                      <a href="loanSummary.html" onclick="displayDuLp(3)"><label>W2018030163</label></a>
+                    </li>
+                    <li class="col largeCol">
+                      <label><span class="name">Clarke,</span> Michael</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;750,000.00</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;700,000.00</label>
+                    </li>
+                    <li class="col">
+                      <label>FHA</label>
+                    </li>
+                    <li class="col">
+                      <label>1/15/18 <span>3:25 PM</span></label>
+                    </li>
+                    <li class="col largeCol">
+                      <span class="discrepences"></span>
+                      <label>Discrepancies</label>
+                    </li>
+                  </ul>
+                  <div id="collapse3" class="info collapse clearfix">
+                    <div class="description pull-left">
+                      <ul class="clearfix">
+                        <li class="col">
+                          <label>Transaction Type</label>
+                          <p>Purchase</p>
+                        </li>
+                        <li class="largewidth">
+                          <label>LTV/CLTV</label>
+                          <p>93.334%/93.334%</p>
+                        </li>
+                        <li class="col-xs-1 padding0">
+                          <label>DTI </label>
+                          <p>45.121% </p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>Second Ratio</label>
+                          <p>47.134%</p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>First Ratio</label>
+                          <p>38.659%</p>
+                        </li>
+                      </ul>
+                      <div class="notifications">
+                        <p>
+                          Notifications on 03/11/2018 03:30 PM <span class="pull-right">Total Notification : <span class="number">02</span></span>
+                        </p>
+                        <p>
+                          Loan File submitted to Underwriting for Approval. Loan Status changed to "In Underwriting"
+                        </p>
+                      </div>
+                    </div>
+                    <div class="discrepencies pull-left clearfix">
+                      <div class="col-xs-6 rightBorder">
+                        <h3>FinRules</h3>
+                        <label>Income</label>
+                        <p>Mandatory fields missing from Loan File <br> - 2 years of Employment History</p>
+                      </div>
+                      <div class="col-xs-6 rightBorder">
+                        <h3>Fannie Mae</h3>
+
+                        <p>124000: Error peparing credit report request
+                        </p>
+                      </div>
+                    </div>
+                    <p class="pull-left col-xs-3">
+                      <a href="loanSummary.html" onclick="displayDuLp(3)" class="more">READ MORE</a>
+                    </p>
+                  </div>
+                </div>
+                <!-- fourth record -->
+                <div class="recordInformation">
+                  <ul class="clearfix">
+                    <li class="col largeCol">
+                      <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse4">
+                        <span></span>
+                      </span>
+                      <a href="loanSummary.html" onclick="displayDuLp(4)"><label>W2017110132</label></a>
+                    </li>
+                    <li class="col largeCol">
+                      <label><span class="name">Mateo,</span> Pedro</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;266,941.00</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;252,306.00</label>
+                    </li>
+                    <li class="col">
+                      <label>Conventional</label>
+                    </li>
+                    <li class="col">
+                      <label>1/23/18 <span>12:45 PM</span></label>
+                    </li>
+                    <li class="col largeCol">
+                      <span class="loan"></span>
+                      <label>LPA Loan</label>
+                    </li>
+                  </ul>
+                  <div id="collapse4" class="info collapse clearfix">
+                    <div class="description pull-left">
+                      <ul class="clearfix">
+                        <li class="col">
+                          <label>Transaction Type</label>
+                          <p>Refinance</p>
+                        </li>
+                        <li class="largewidth">
+                          <label>LTV/CLTV</label>
+                          <p>86.860%/86.860%</p>
+                        </li>
+                        <li class="col-xs-1 padding0">
+                          <label>DTI </label>
+                          <p>19.172% </p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>Second Ratio</label>
+                          <p>19.567%</p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>First Ratio</label>
+                          <p>15.256%</p>
+                        </li>
+                      </ul>
+                      <div class="notifications">
+                        <p>
+                          Notifications on 01/23/2018 02:55 PM <span class="pull-right">Total Notification : <span class="number">05</span></span>
+                        </p>
+                        <p>
+                          Income documentation - W2, Paystub successfully validated.<br> Income condition for Base Income
+                          closed
+                        </p>
+                      </div>
+                    </div>
+                    <div class="detail conditionStatus pull-left clearfix text-center">
+                      <h3>Condition Status</h3>
+                      <div class="progressWrapper clearfix text-center">
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-1">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">1/4</span>
+                              </div>
+                            </div>
+                            <p>Income</p>
+                          </div>
+                        </a>
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-6">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">3/7</span>
+                              </div>
+                            </div>
+                            <p>Borrower</p>
+                          </div>
+                        </a>
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-7">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">3/4</span>
+                              </div>
+                            </div>
+                            <p>Credit</p>
+                          </div>
+                        </a>
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-4">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">1/6</span>
+                              </div>
+                            </div>
+                            <p>Assets</p>
+                          </div>
+                        </a>
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-5">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">1/2</span>
+                              </div>
+                            </div>
+                            <p>Property</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- fifth record -->
+                <div class="recordInformation">
+                  <ul class="clearfix evenList">
+                    <li class="col largeCol">
+                      <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse5">
+                        <span></span>
+                      </span>
+                      <a href="loanSummary.html" onclick="displayDuLp(4)"><label>W2017110127</label></a>
+                    </li>
+                    <li class="col largeCol">
+                      <label><span class="name">Ella,</span> Alice</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;800000.00</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;736,000.00</label>
+                    </li>
+                    <li class="col">
+                      <label>Jumbo </label>
+                    </li>
+                    <li class="col">
+                      <label>2/1/18 <span>4:25 PM</span></label>
+                    </li>
+                    <li class="col largeCol">
+                      <span class="eligible"></span>
+                      <label>Private Investor</label>
+                    </li>
+                  </ul>
+                  <!-- information for DU and LPA -->
+                  <div id="collapse5" class="info collapse clearfix">
+                    <div class="description pull-left">
+                      <ul class="clearfix">
+                        <li class="col">
+                          <label>Transaction Type</label>
+                          <p>Purchase</p>
+                        </li>
+                        <li class="largewidth">
+                          <label>LTV/CLTV</label>
+                          <p>92.117%/92.117%</p>
+                        </li>
+                        <li class="col-xs-1 padding0">
+                          <label>DTI </label>
+                          <p>50.124% </p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>Second Ratio</label>
+                          <p>56.228%</p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>First Ratio</label>
+                          <p>50.161%</p>
+                        </li>
+                      </ul>
+                      <div class="notifications">
+                        <p>
+                          Notifications on 02/01/2018 05:26 PM <span class="pull-right">Total Notification : <span class="number">05</span></span>
+                        </p>
+                        <p>
+                          Total Debt to Income ratio for the loan exceeds the limit set for DU/LP Submission to private Investor.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="detail conditionStatus pull-left clearfix text-center">
+                      <h3>Condition Status</h3>
+                      <div class="progressWrapper clearfix text-center">
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-5">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">2/2</span>
+                              </div>
+                            </div>
+                            <p>Income</p>
+                          </div>
+                        </a>
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-2">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">2/5</span>
+                              </div>
+                            </div>
+                            <p>Borrower</p>
+                          </div>
+                        </a>
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-8">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">5/8</span>
+                              </div>
+                            </div>
+                            <p>Credit</p>
+                          </div>
+                        </a>
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-4">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">1/7</span>
+                              </div>
+                            </div>
+                            <p>Assets</p>
+                          </div>
+                        </a>
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-6">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">3/7</span>
+                              </div>
+                            </div>
+                            <p>Property</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- sixth record -->
+                <div class="recordInformation">
+                  <ul class="clearfix">
+                    <li class="col largeCol">
+                      <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse6">
+                        <span></span>
+                      </span>
+                      <a href="loanSummary.html" onclick="displayDuLp(4)"><label>W2017120035</label></a>
+                    </li>
+                    <li class="col largeCol">
+                      <label><span class="name">Lara,</span> Maria</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;477,300.00</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;475,827.00</label>
+                    </li>
+                    <li class="col">
+                      <label>Jumbo</label>
+                    </li>
+                    <li class="col">
+                      <label>2/9/18 <span>12:38 PM</span></label>
+                    </li>
+                    <li class="col largeCol">
+                      <span class="eligible"></span>
+                      <label>DU Eligible</label>
+                    </li>
+                  </ul>
+                  <!-- information for DU and LPA -->
+                  <div id="collapse6" class="info collapse clearfix">
+                    <div class="description pull-left">
+                      <ul class="clearfix">
+                        <li class="col">
+                          <label>Transaction Type</label>
+                          <p>Refinance</p>
+                        </li>
+                        <li class="largewidth">
+                          <label>LTV/CLTV</label>
+                          <p>92.141%/124.329%</p>
+                        </li>
+                        <li class="col-xs-1 padding0">
+                          <label>DTI </label>
+                          <p>35.124% </p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>Second Ratio</label>
+                          <p>35.033%</p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>First Ratio</label>
+                          <p>35.033%</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="detail pull-left">
+                      <span class="underwriterSection">
+                      <label>Ready For Underwriting</label>
+                    </span>
+                      <span class="comparisonSection">
+                      <a href="recommendation.html"><button onclick="displayDuLp(1)">DU - LPA Comparison</button></a>
+                    </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- seventh record -->
+                <div class="recordInformation">
+                  <ul class="clearfix evenList">
+                    <li class="col largeCol">
+                      <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse7">
+                        <span></span>
+                      </span>
+                      <a href="loanSummary.html" onclick="displayDuLp(4)"><label>W2017120034</label></a>
+                    </li>
+                    <li class="col largeCol">
+                      <label><span class="name">Leo,</span> Johnson</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;426,405.00</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;400,173.00</label>
+                    </li>
+                    <li class="col">
+                      <label>Conventional</label>
+                    </li>
+                    <li class="col">
+                      <label>2/22/18 <span>10:45 AM</span></label>
+                    </li>
+                    <li class="col largeCol">
+                      <span class="eligible"></span>
+                      <label>LPA Eligible</label>
+                    </li>
+                  </ul>
+                  <!-- information for DU and LPA -->
+                  <div id="collapse7" class="info collapse clearfix">
+                    <div class="description pull-left">
+                      <ul class="clearfix">
+                        <li class="col">
+                          <label>Transaction Type</label>
+                          <p>Refinance</p>
+                        </li>
+                        <li class="largewidth">
+                          <label>LTV/CLTV</label>
+                          <p>93.928%/93.928%</p>
+                        </li>
+                        <li class="col-xs-1 padding0">
+                          <label>DTI </label>
+                          <p>25.124% </p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>Second Ratio</label>
+                          <p>24.359%</p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>First Ratio</label>
+                          <p>24.359%</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="detail pull-left">
+                      <span class="underwriterSection">
+                      <label>Ready For Underwriting</label>
+                    </span>
+                      <span class="comparisonSection">
+                      <a href="recommendation.html"><button onclick="displayDuLp(2)">View LPA Eligibility</button></a>
+                    </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- eighth record -->
+                <div class="recordInformation">
+                  <ul class="clearfix">
+                    <li class="col largeCol">
+                      <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse8">
+                        <span></span>
+                      </span>
+                      <a href="loanSummary.html" onclick="displayDuLp(4)"><label>W2018030029</label></a>
+                    </li>
+                    <li class="col largeCol">
+                      <label><span class="name">Martin,</span> Josh</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;310,438.00</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;222,565.00</label>
+                    </li>
+                    <li class="col">
+                      <label>FHA</label>
+                    </li>
+                    <li class="col">
+                      <label>2/28/18 <span>5:35 PM</span></label>
+                    </li>
+                    <li class="col largeCol">
+                      <span class="eligible"></span>
+                      <label>DU, LPA Eligible</label>
+                    </li>
+                  </ul>
+                  <!-- information for DU and LPA -->
+                  <div id="collapse8" class="info collapse clearfix">
+                    <div class="description pull-left">
+                      <ul class="clearfix">
+                        <li class="col">
+                          <label>Transaction Type</label>
+                          <p>Purchase</p>
+                        </li>
+                        <li class="largewidth">
+                          <label>LTV/CLTV</label>
+                          <p>86.881%/86.881%</p>
+                        </li>
+                        <li class="col-xs-1 padding0">
+                          <label>DTI </label>
+                          <p>22.124% </p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>Second Ratio</label>
+                          <p>22.120%</p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>First Ratio</label>
+                          <p>22.120%</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="detail pull-left">
+                      <span class="underwriterSection">
+                      <label>Ready For Underwriting</label>
+                    </span>
+                      <span class="comparisonSection">
+                      <a href="recommendation.html"><button onclick="displayDuLp(1)">DU - LPA Comparison</button></a>
+                    </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- nineth record -->
+                <div class="recordInformation">
+                  <ul class="clearfix evenList">
+                    <li class="col largeCol">
+                      <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse9">
+                        <span></span>
+                      </span>
+                      <a href="loanSummary.html" onclick="displayDuLp(4)"><label>W2018030027</label></a>
+                    </li>
+                    <li class="col largeCol">
+                      <label><span class="name">Harley,</span> Michael</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;243,301.00</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;241,878.00</label>
+                    </li>
+                    <li class="col">
+                      <label>Conventional</label>
+                    </li>
+                    <li class="col">
+                      <label>3/2/18 <span>9:30 AM</span></label>
+                    </li>
+                    <li class="col largeCol">
+                      <span class="eligible"></span>
+                      <label>LPA Eligible</label>
+                    </li>
+                  </ul>
+                  <!-- information for DU and LPA -->
+                  <div id="collapse9" class="info collapse clearfix">
+                    <div class="description pull-left">
+                      <ul class="clearfix">
+                        <li class="col">
+                          <label>Transaction Type</label>
+                          <p>Refinance</p>
+                        </li>
+                        <li class="largewidth">
+                          <label>LTV/CLTV</label>
+                          <p>97.416%/97.416%</p>
+                        </li>
+                        <li class="col-xs-1 padding0">
+                          <label>DTI </label>
+                          <p>14.674% </p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>Second Ratio</label>
+                          <p>15.176%</p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>First Ratio</label>
+                          <p>14.570%</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="detail pull-left">
+                      <span class="underwriterSection">
+                      <label>Ready For Underwriting</label>
+                    </span>
+                      <span class="comparisonSection">
+                      <a href="recommendation.html"><button onclick="displayDuLp(2)">View LPA Eligibility</button></a>
+                    </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- tenth record -->
+                <div class="recordInformation">
+                  <ul class="clearfix">
+                    <li class="col largeCol">
+                      <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse10">
+                        <span></span>
+                      </span>
+                      <a href="loanSummary.html" onclick="displayDuLp(4)"><label>W2018030160</label></a>
+                    </li>
+                    <li class="col largeCol">
+                      <label><span class="name">Tomas,</span> Peter</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;439,731.00</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;429,738.00</label>
+                    </li>
+                    <li class="col">
+                      <label>Conventional</label>
+                    </li>
+                    <li class="col">
+                      <label>3/9/18 <span>11:45 AM</span></label>
+                    </li>
+                    <li class="col largeCol">
+                      <span class="loan"></span>
+                      <label>LPA Loan</label>
+                    </li>
+                  </ul>
+                  <div id="collapse10" class="info collapse clearfix">
+                    <div class="description pull-left">
+                      <ul class="clearfix">
+                        <li class="col">
+                          <label>Transaction Type</label>
+                          <p>Refinance</p>
+                        </li>
+                        <li class="largewidth">
+                          <label>LTV/CLTV</label>
+                          <p>97.728%/97.728%</p>
+                        </li>
+                        <li class="col-xs-1 padding0">
+                          <label>DTI </label>
+                          <p>14.785% </p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>Second Ratio</label>
+                          <p>14.178%</p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>First Ratio</label>
+                          <p>14.178%</p>
+                        </li>
+                      </ul>
+                      <div class="notifications">
+                        <p>
+                          Notifications on 03/09/2018 11:45 AM <span class="pull-right">Total Notification : <span class="number">05</span></span>
+                        </p>
+                        <p>
+                          Liquid Asset Validated through Account check. LPA - Asset finding for validating<br> required liquid
+                          asset closed
+                        </p>
+                      </div>
+                    </div>
+                    <div class="detail conditionStatus pull-left clearfix text-center">
+                      <h3>Condition Status</h3>
+                      <div class="progressWrapper clearfix text-center">
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-1">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">1/4</span>
+                              </div>
+                            </div>
+                            <p>Income</p>
+                          </div>
+                        </a>
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-6">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">3/7</span>
+                              </div>
+                            </div>
+                            <p>Borrower</p>
+                          </div>
+                        </a>
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-9">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">4/5</span>
+                              </div>
+                            </div>
+                            <p>Credit</p>
+                          </div>
+                        </a>
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-5">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">2/2</span>
+                              </div>
+                            </div>
+                            <p>Assets</p>
+                          </div>
+                        </a>
+                        <a href="activecondition.html">
+                          <div class="progressBar">
+                            <div class="item progress-10">
+                              <div class="radial-inner-bg">
+                                <span class="progressValue">1/3</span>
+                              </div>
+                            </div>
+                            <p>Property</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- eleventh record -->
+                <div class="recordInformation">
+                  <ul class="clearfix evenList">
+                    <li class="col largeCol">
+                      <span class="arrow" counter="0" onclick="addIcon()" data-toggle="collapse" href="#collapse11">
+                        <span></span>
+                      </span>
+                      <a href="loanSummary.html" onclick="displayDuLp(3)"><label>W2018030151</label></a>
+                    </li>
+                    <li class="col largeCol">
+                      <label><span class="name">Ryan,</span> David</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;253,958.00</label>
+                    </li>
+                    <li class="col">
+                      <label>&dollar;159,547.00</label>
+                    </li>
+                    <li class="col">
+                      <label>Jumbo</label>
+                    </li>
+                    <li class="col">
+                      <label>3/15/18 <span>5:45 PM</span></label>
+                    </li>
+                    <li class="col largeCol">
+                      <span class="discrepences"></span>
+                      <label>Discrepancies</label>
+                    </li>
+                  </ul>
+                  <div id="collapse11" class="info collapse clearfix">
+                    <div class="description pull-left">
+                      <ul class="clearfix">
+                        <li class="col">
+                          <label>Transaction Type</label>
+                          <p>Refinance</p>
+                        </li>
+                        <li class="largewidth">
+                          <label>LTV/CLTV</label>
+                          <p>62.825%/125.756%</p>
+                        </li>
+                        <li class="col-xs-1 padding0">
+                          <label>DTI </label>
+                          <p>18.653% </p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>Second Ratio</label>
+                          <p>20.154%</p>
+                        </li>
+                        <li class="col-xs-2 pull-right">
+                          <label>First Ratio</label>
+                          <p>18.196%</p>
+                        </li>
+                      </ul>
+                      <div class="notifications">
+                        <p>
+                          Notifications on 12/27/2017 12:30 PM <span class="pull-right">Total Notification : <span class="number">02</span></span>
+                        </p>
+                        <p>
+                          Loan Files Validated by Smart Processor. Mandatory Fields missing - 2 years <br> of Residence,
+                          Mailing Address
+                        </p>
+                      </div>
+                    </div>
+                    <div class="discrepencies pull-left clearfix">
+                      <div class="col-xs-6 rightBorder">
+                        <h3>FinRules</h3>
+                        <label>Income</label>
+                        <p>Required Documentation missing from loan application <br> - Borrower Signed 1003, W2, Paystub
+                        </p>
+                      </div>
+                      <div class="col-xs-6">
+                        <h3>Freddie Mac</h3>
+                        <p>Error Code 11: No usable credit credit report were recieved for borrower(s)</p>
+                      </div>
+
+                    </div>
+                    <p class="pull-left col-xs-3">
+                      <a href="loanSummary.html" onclick="displayDuLp(3)" class="more">READ MORE</a>
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <div class="showEntries clearfix">
+                <div class="col-xs-3 paddingLeft">
+                  <label>
+                Show <span class="numberOfEntries"><label>30</label><span></span> </span>of 460 Records
+                  </label>
+                </div>
+                <div class="col-xs-3 pull-right">
+                  <span class="prev"></span><label>PREV</label>
+                  <span class="numberOfEntries"><label>1</label></span> of 15
+                  <label class="nxtLabel">NEXT</label><span class="next"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
       <div class="tab-pane fade" id="adminconfig-wrap">
         <section class="dashboard-title">
           <h1>Admin Configuration</h1>
         </section>
-          <div class="contentArea">
-              <ul class="nameToggler clearfix tabWidth2">
-                <li class="active"> <a data-toggle="pill" href="#retail">Retail</a></li>
-                <li> <a class="inactive" data-toggle="pill" href="#wholeSale">Wholesale</a></li>
-                <li> <a class="inactive" data-toggle="pill" href="#correspondent">Correspondent</a></li>
-              </ul>
-              <div class="tab-content">
-                <div id="retail" class="tab-pane fade in active">
-                  <div class="selectField row">
-                    <label class="col">Import configuration from other channel</label>
-                    <div class="col-xs-2">
-                      <select class="form-control">
+        <div class="contentArea">
+          <ul class="nameToggler clearfix tabWidth2">
+            <li class="active"> <a data-toggle="pill" href="#retail">Retail</a></li>
+            <li> <a class="inactive" data-toggle="pill" href="#wholeSale">Wholesale</a></li>
+            <li> <a class="inactive" data-toggle="pill" href="#correspondent">Correspondent</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="retail" class="tab-pane fade in active">
+              <div class="selectField row">
+                <label class="col">Import configuration from other channel</label>
+                <div class="col-xs-2">
+                  <select class="form-control">
                         <option>- Select -</option>
                         <option>Wholesale</option>                
                         <option>Correspondent</option>
                     </select>
-                      <span class="select-icon"></span>
-                    </div>
-                  </div>
-                  <section class="adminCategory">
-                    <div class="row">
-                      <label class="col-xs-3">Category</label>
-                      <label class="col-xs-3 text-center">
+                  <span class="select-icon"></span>
+                </div>
+              </div>
+              <section class="adminCategory">
+                <div class="row">
+                  <label class="col-xs-3">Category</label>
+                  <label class="col-xs-3 text-center">
                         <span class="duLogo"></span>Freddie Mac
                       </label>
-                      <label class="col-xs-3 text-center">
+                  <label class="col-xs-3 text-center">
                           <span class="lpaLogo"></span>Fannie Mae
                         </label>
-                      <label class="col-xs-3 text-center">Private Investor</label>
-                    </div>
-                    <div class="row">
-                      <label class="col-xs-3">Set Priority</label>
-                      <div class="col-xs-3 text-center">
-                      <label class="checkboxx">Primary
+                  <label class="col-xs-3 text-center">Private Investor</label>
+                </div>
+                <div class="row">
+                  <label class="col-xs-3">Set Priority</label>
+                  <div class="col-xs-3 text-center">
+                    <label class="checkboxx">Primary
                           <input type="radio" checked="checked" name="radio">
                           <span class="radiocheckmark"></span>
                       </label></div>
-                      <div><div class="col-xs-3 text-center">
+                  <div>
+                    <div class="col-xs-3 text-center">
                       <label class="checkboxx">Primary
                           <input type="radio" name="radio">
                           <span class="radiocheckmark"></span>
-                      </label></div></div>
+                      </label></div>
+                  </div>
+                </div>
+              </section>
+              <div class="contentWrapper clearfix">
+                <div class="subcontentWrapper">
+                  <h4>PRIORITY 1 <label class="paddingSpace"><span class="infoIcon"></span></label></h4>
+                  <section class="adminContent">
+                    <div class="row">
+                      <label class="col-xs-3">Community Lending - Eligible</label>
+                      <label class="col-xs-3 col-xs-offset-3 text-center"><span class="tickIcon"></span></label>
+                      <label class="col-xs-3 text-center"><span class="tickIcon"></span></label>
+                    </div>
+                    <div class="row">
+                      <label class="col-xs-3">Product Name - Home Possible</label>
+                      <label class="col-xs-3 text-center"><span class="tickIcon"></span></label>
+                      <label class="col-xs-3 col-xs-offset-3 text-center"><span class="tickIcon"></span></label>
+                    </div>
+                    <div class="row">
+                      <label class="col-xs-3">Product Name - Home Possible Advantage</label>
+                      <label class="col-xs-3 text-center"><span class="tickIcon"></span></label>
+                      <label class="col-xs-3 col-xs-offset-3 text-center"><span class="tickIcon"></span></label>
+                    </div>
+                    <div class="row">
+                      <label class="col-xs-3">Product Name - Home Ready</label>
+                      <label class="col-xs-3 col-xs-offset-3 text-center"><span class="tickIcon"></span></label>
+                      <label class="col-xs-3 text-center"><span class="tickIcon"></span></label>
                     </div>
                   </section>
-                  <div class="contentWrapper clearfix">
-                    <div class="subcontentWrapper">
-                      <h4>PRIORITY 1 <label class="paddingSpace"><span class="infoIcon"></span></label></h4>
-                      <section class="adminContent">
-                        <div class="row">
-                          <label class="col-xs-3">Community Lending - Eligible</label>
-                          <label class="col-xs-3 col-xs-offset-3 text-center"><span class="tickIcon"></span></label>
-                          <label class="col-xs-3 text-center"><span class="tickIcon"></span></label>
-                        </div>
-                        <div class="row">
-                          <label class="col-xs-3">Product Name - Home Possible</label>
-                          <label class="col-xs-3 text-center"><span class="tickIcon"></span></label>
-                          <label class="col-xs-3 col-xs-offset-3 text-center"><span class="tickIcon"></span></label>
-                        </div>
-                        <div class="row">
-                          <label class="col-xs-3">Product Name - Home Possible Advantage</label>
-                          <label class="col-xs-3 text-center"><span class="tickIcon"></span></label>
-                          <label class="col-xs-3 col-xs-offset-3 text-center"><span class="tickIcon"></span></label>
-                        </div>
-                        <div class="row">
-                          <label class="col-xs-3">Product Name - Home Ready</label>
-                          <label class="col-xs-3 col-xs-offset-3 text-center"><span class="tickIcon"></span></label>
-                          <label class="col-xs-3 text-center"><span class="tickIcon"></span></label>
-                        </div>
-                      </section>
-                      <div class="contentDes">
-                        <h4>1003 Category</h4>
-                        <section class="adminContent">
-                          <div class="row">
-                            <label class="col-xs-3">Mortgage Type - FHA</label>
-                            <label class="col-xs-3 checkboxx">
+                  <div class="contentDes">
+                    <h4>1003 Category</h4>
+                    <section class="adminContent">
+                      <div class="row">
+                        <label class="col-xs-3">Mortgage Type - FHA</label>
+                        <label class="col-xs-3 checkboxx">
                             <input type="checkbox" checked="checked">
                             <span class="checkmark"></span>
                             </label>
-                            <label class="col-xs-3  checkboxx">
+                        <label class="col-xs-3  checkboxx">
                               <input type="checkbox" checked="checked">
                               <span class="checkmark"></span>
                             </label>
-                            <span class="col-xs-3 text-center">
+                        <span class="col-xs-3 text-center">
                             <label class="checkboxx">
                             <input type="checkbox">
                             <span class="checkmark align"></span>
-                            </label>
-                            <span class="pull-right closeIcon"></span>
-                            </span>
-                          </div>
-                          <div class="row">
-                            <label class="col-xs-3">Assets - Stocks and Bonds</label>
-                            <label class="col-xs-3  checkboxx">
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                          </label>
-                            <label class="col-xs-3  checkboxx">
-                              <input type="checkbox" checked="checked">
-                              <span class="checkmark"></span>
-                            </label>
-                            <span class="col-xs-3 text-center">
-                                <label class="checkboxx">
-                                <input type="checkbox">
-                                <span class="checkmark align"></span>
-                                </label>
-                                <span class="pull-right closeIcon"></span>
-                                </span>
-                          </div>
-                          <div class="row">
-                            <label class="col-xs-3">Monthly Income Tip <span class="select-icon dropOption"></span></label>
-                            <label class="col-xs-3  checkboxx">
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                          </label>
-                            <label class="col-xs-3  checkboxx">
-                              <input type="checkbox" checked="checked">
-                              <span class="checkmark"></span>
-                            </label>
-                            <span class="col-xs-3 text-center">
-                                <label class="checkboxx">
-                                <input type="checkbox">
-                                <span class="checkmark align"></span>
-                                </label>
-                                <span class="pull-right closeIcon"></span>
-                                </span>
-                          </div>
-                          <div class="row">
-                            <label class="col-xs-3">Asset Income <span class="select-icon dropOption"></span></label>
-                            <label class="col-xs-3  checkboxx">
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                          </label>
-                            <label class="col-xs-3  checkboxx">
-                              <input type="checkbox" checked="checked">
-                              <span class="checkmark"></span>
-                            </label>
-                            <span class="col-xs-3 text-center">
-                                <label class="checkboxx">
-                                <input type="checkbox">
-                                <span class="checkmark align"></span>
-                                </label>
-                                <span class="pull-right closeIcon"></span>
-                                </span>
-                          </div>
-                        </section>
+                        </label>
+                        <span class="pull-right closeIcon"></span>
+                        </span>
                       </div>
-                      <p class="clearfix"><span class="roundedplusIcon col-xs-1"></span><span class="text col-xs-1 padding0">Add</span></p>
+                      <div class="row">
+                        <label class="col-xs-3">Assets - Stocks and Bonds</label>
+                        <label class="col-xs-3  checkboxx">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                          </label>
+                        <label class="col-xs-3  checkboxx">
+                              <input type="checkbox" checked="checked">
+                              <span class="checkmark"></span>
+                            </label>
+                        <span class="col-xs-3 text-center">
+                                <label class="checkboxx">
+                                <input type="checkbox">
+                                <span class="checkmark align"></span>
+                        </label>
+                        <span class="pull-right closeIcon"></span>
+                        </span>
+                      </div>
+                      <div class="row">
+                        <label class="col-xs-3">Monthly Income Tip <span class="select-icon dropOption"></span></label>
+                        <label class="col-xs-3  checkboxx">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                          </label>
+                        <label class="col-xs-3  checkboxx">
+                              <input type="checkbox" checked="checked">
+                              <span class="checkmark"></span>
+                            </label>
+                        <span class="col-xs-3 text-center">
+                                <label class="checkboxx">
+                                <input type="checkbox">
+                                <span class="checkmark align"></span>
+                        </label>
+                        <span class="pull-right closeIcon"></span>
+                        </span>
+                      </div>
+                      <div class="row">
+                        <label class="col-xs-3">Asset Income <span class="select-icon dropOption"></span></label>
+                        <label class="col-xs-3  checkboxx">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                          </label>
+                        <label class="col-xs-3  checkboxx">
+                              <input type="checkbox" checked="checked">
+                              <span class="checkmark"></span>
+                            </label>
+                        <span class="col-xs-3 text-center">
+                                <label class="checkboxx">
+                                <input type="checkbox">
+                                <span class="checkmark align"></span>
+                        </label>
+                        <span class="pull-right closeIcon"></span>
+                        </span>
+                      </div>
+                    </section>
+                  </div>
+                  <p class="clearfix"><span class="roundedplusIcon col-xs-1"></span><span class="text col-xs-1 padding0">Add</span></p>
+                </div>
+                <div class="subcontentWrapper">
+                  <div class="contentHeading clearfix">
+                    <h4 class="col-xs-3">PRIORITY 2 <label class="paddingSpace"><span class="infoIcon"></span></label></h4>
+                    <div class="col-xs-3">
+                      <h4 class="col-xs-6 paddingLeft">MIN</h4>
+                      <h4 class="col-xs-6 paddingLeft">MAX</h4>
                     </div>
-                    <div class="subcontentWrapper">
-                      <div class="contentHeading clearfix">
-                        <h4 class="col-xs-3">PRIORITY 2 <label class="paddingSpace"><span class="infoIcon"></span></label></h4>
-                        <div class="col-xs-3">
-                          <h4 class="col-xs-6 paddingLeft">MIN</h4>
-                          <h4 class="col-xs-6 paddingLeft">MAX</h4>
+                    <div class="col-xs-3">
+                      <h4 class="col-xs-6 paddingLeft">MIN</h4>
+                      <h4 class="col-xs-6 paddingLeft">MAX</h4>
+                    </div>
+                  </div>
+                  <section class="adminContent">
+                    <div class="row">
+                      <label class="col-xs-3">DTI <span class="select-icon dropOption"></span></label>
+                      <div class="col-xs-3">
+                        <div class="input-group col-xs-6 ">
+                          <input type="text" class="form-control" value="0.00">
+                          <span class="input-group-addon">%</span>
                         </div>
-                        <div class="col-xs-3">
-                          <h4 class="col-xs-6 paddingLeft">MIN</h4>
-                          <h4 class="col-xs-6 paddingLeft">MAX</h4>
+                        <div class="input-group col-xs-6 ">
+                          <input type="text" class="form-control" value="45.00">
+                          <span class="input-group-addon">%</span>
                         </div>
                       </div>
-                      <section class="adminContent">
-                        <div class="row">
-                          <label class="col-xs-3">DTI <span class="select-icon dropOption"></span></label>
-                          <div class="col-xs-3">
-                            <div class="input-group col-xs-6 ">
-                              <input type="text" class="form-control" value="0.00">
-                              <span class="input-group-addon">%</span>
-                            </div>
-                            <div class="input-group col-xs-6 ">
-                              <input type="text" class="form-control" value="45.00">
-                              <span class="input-group-addon">%</span>
-                            </div>
-                          </div>
-                          <div class="col-xs-3">
-                            <div class="input-group col-xs-6 ">
-                              <input type="text" class="form-control" value="0.00">
-                              <span class="input-group-addon">%</span>
-                            </div>
-                            <div class="input-group col-xs-6 ">
-                              <input type="text" class="form-control" value="45.00">
-                              <span class="input-group-addon">%</span>
-                            </div>
-                          </div>
-                          <label class="col-xs-3 text-right">
+                      <div class="col-xs-3">
+                        <div class="input-group col-xs-6 ">
+                          <input type="text" class="form-control" value="0.00">
+                          <span class="input-group-addon">%</span>
+                        </div>
+                        <div class="input-group col-xs-6 ">
+                          <input type="text" class="form-control" value="45.00">
+                          <span class="input-group-addon">%</span>
+                        </div>
+                      </div>
+                      <label class="col-xs-3 text-right">
                               <span class="verticallyCenter">Above 45%</span>
                               <span class="pull-right closeIcon"></span>
                           </label>
+                    </div>
+                    <div class="row">
+                      <label class="col-xs-3">LTV/CLTV/HCLTV <span class="select-icon dropOption"></span></label>
+                      <div class="col-xs-3">
+                        <div class="input-group col-xs-6 ">
+                          <input type="text" class="form-control" value="0.00">
+                          <span class="input-group-addon">%</span>
                         </div>
-                        <div class="row">
-                          <label class="col-xs-3">LTV/CLTV/HCLTV <span class="select-icon dropOption"></span></label>
-                          <div class="col-xs-3">
-                            <div class="input-group col-xs-6 ">
-                              <input type="text" class="form-control" value="0.00">
-                              <span class="input-group-addon">%</span>
-                            </div>
-                            <div class="input-group col-xs-6 ">
-                              <input type="text" class="form-control" value="45.00">
-                              <span class="input-group-addon">%</span>
-                            </div>
-                          </div>
-                          <div class="col-xs-3">
-                            <div class="input-group col-xs-6 ">
-                              <input type="text" class="form-control" value="0.00">
-                              <span class="input-group-addon">%</span>
-                            </div>
-                            <div class="input-group col-xs-6 ">
-                              <input type="text" class="form-control" value="45.00">
-                              <span class="input-group-addon">%</span>
-                            </div>
-                          </div>
-                          <label class="col-xs-3 text-right">
+                        <div class="input-group col-xs-6 ">
+                          <input type="text" class="form-control" value="45.00">
+                          <span class="input-group-addon">%</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-3">
+                        <div class="input-group col-xs-6 ">
+                          <input type="text" class="form-control" value="0.00">
+                          <span class="input-group-addon">%</span>
+                        </div>
+                        <div class="input-group col-xs-6 ">
+                          <input type="text" class="form-control" value="45.00">
+                          <span class="input-group-addon">%</span>
+                        </div>
+                      </div>
+                      <label class="col-xs-3 text-right">
                               <span class="verticallyCenter">Above 45%</span>
                                 <span class="pull-right closeIcon"></span>
                             </label>
+                    </div>
+                    <div class="row">
+                      <label class="col-xs-3">Top Ratio <span class="select-icon dropOption"></span></label>
+                      <div class="col-xs-3">
+                        <div class="input-group col-xs-6 ">
+                          <input type="text" class="form-control" value="0.00">
+                          <span class="input-group-addon">%</span>
                         </div>
-                        <div class="row">
-                          <label class="col-xs-3">Top Ratio <span class="select-icon dropOption"></span></label>
-                          <div class="col-xs-3">
-                            <div class="input-group col-xs-6 ">
-                              <input type="text" class="form-control" value="0.00">
-                              <span class="input-group-addon">%</span>
-                            </div>
-                            <div class="input-group col-xs-6 ">
-                              <input type="text" class="form-control" value="45.00">
-                              <span class="input-group-addon">%</span>
-                            </div>
-                          </div>
-                          <div class="col-xs-3">
-                            <div class="input-group col-xs-6 ">
-                              <input type="text" class="form-control" value="0.00">
-                              <span class="input-group-addon">%</span>
-                            </div>
-                            <div class="input-group col-xs-6 ">
-                              <input type="text" class="form-control" value="45.00">
-                              <span class="input-group-addon">%</span>
-                            </div>
-                          </div>
-                          <label class="col-xs-3 text-right">
+                        <div class="input-group col-xs-6 ">
+                          <input type="text" class="form-control" value="45.00">
+                          <span class="input-group-addon">%</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-3">
+                        <div class="input-group col-xs-6 ">
+                          <input type="text" class="form-control" value="0.00">
+                          <span class="input-group-addon">%</span>
+                        </div>
+                        <div class="input-group col-xs-6 ">
+                          <input type="text" class="form-control" value="45.00">
+                          <span class="input-group-addon">%</span>
+                        </div>
+                      </div>
+                      <label class="col-xs-3 text-right">
                               <span class="verticallyCenter">Above 45%</span>
                                 <span class="pull-right closeIcon"></span>
                             </label>
+                    </div>
+                    <div class="row">
+                      <label class="col-xs-3">Bottom Ratio <span class="select-icon dropOption"></span></label>
+                      <div class="col-xs-3">
+                        <div class="input-group col-xs-6 ">
+                          <input type="text" class="form-control" value="0.00">
+                          <span class="input-group-addon">%</span>
                         </div>
-                        <div class="row">
-                          <label class="col-xs-3">Bottom Ratio <span class="select-icon dropOption"></span></label>
-                          <div class="col-xs-3">
-                            <div class="input-group col-xs-6 ">
-                              <input type="text" class="form-control" value="0.00">
-                              <span class="input-group-addon">%</span>
-                            </div>
-                            <div class="input-group col-xs-6 ">
-                              <input type="text" class="form-control" value="45.00">
-                              <span class="input-group-addon">%</span>
-                            </div>
-                          </div>
-                          <div class="col-xs-3">
-                            <div class="input-group col-xs-6 ">
-                              <input type="text" class="form-control" value="0.00">
-                              <span class="input-group-addon">%</span>
-                            </div>
-                            <div class="input-group col-xs-6 ">
-                              <input type="text" class="form-control" value="45.00">
-                              <span class="input-group-addon">%</span>
-                            </div>
-                          </div>
-                          <label class="col-xs-3 text-right">
+                        <div class="input-group col-xs-6 ">
+                          <input type="text" class="form-control" value="45.00">
+                          <span class="input-group-addon">%</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-3">
+                        <div class="input-group col-xs-6 ">
+                          <input type="text" class="form-control" value="0.00">
+                          <span class="input-group-addon">%</span>
+                        </div>
+                        <div class="input-group col-xs-6 ">
+                          <input type="text" class="form-control" value="45.00">
+                          <span class="input-group-addon">%</span>
+                        </div>
+                      </div>
+                      <label class="col-xs-3 text-right">
                               <span class="verticallyCenter">Above 45%</span>
                                 <span class="pull-right closeIcon"></span>
                             </label>
+                    </div>
+                    <div class="row">
+                      <label class="col-xs-3">Total Monthly Income <span class="select-icon dropOption"></span></label>
+                      <div class="col-xs-3">
+                        <div class="input-group col-xs-6">
+                          <span class="input-group-addon">$</span>
+                          <input type="text" class="form-control" value="0.00">
                         </div>
-                        <div class="row">
-                          <label class="col-xs-3">Total Monthly Income <span class="select-icon dropOption"></span></label>
-                          <div class="col-xs-3">
-                            <div class="input-group col-xs-6">
-                              <span class="input-group-addon">$</span>
-                              <input type="text" class="form-control" value="0.00">
-                            </div>
-                            <div class="input-group col-xs-6">
-                              <span class="input-group-addon">$</span>
-                              <input type="text" class="form-control" value="10000.00">
-                            </div>
-                          </div>
-                          <div class="col-xs-3">
-                            <div class="input-group col-xs-6">
-                              <span class="input-group-addon">$</span>
-                              <input type="text" class="form-control" value="0.00">
-                            </div>
-                            <div class="input-group col-xs-6">
-                              <span class="input-group-addon">$</span>
-                              <input type="text" class="form-control" value="10000.00">
-                            </div>
-                          </div>
-                          <label class="col-xs-3 text-right">
+                        <div class="input-group col-xs-6">
+                          <span class="input-group-addon">$</span>
+                          <input type="text" class="form-control" value="10000.00">
+                        </div>
+                      </div>
+                      <div class="col-xs-3">
+                        <div class="input-group col-xs-6">
+                          <span class="input-group-addon">$</span>
+                          <input type="text" class="form-control" value="0.00">
+                        </div>
+                        <div class="input-group col-xs-6">
+                          <span class="input-group-addon">$</span>
+                          <input type="text" class="form-control" value="10000.00">
+                        </div>
+                      </div>
+                      <label class="col-xs-3 text-right">
                               <span class="verticallyCenter">Above $10000.00</span>
                                 <span class="pull-right closeIcon"></span>
                             </label>
+                    </div>
+                    <div class="row">
+                      <label class="col-xs-3">Total Liquid Assets <span class="select-icon dropOption"></span></label>
+                      <div class="col-xs-3">
+                        <div class="input-group col-xs-6">
+                          <span class="input-group-addon">$</span>
+                          <input type="text" class="form-control" value="0.00">
                         </div>
-                        <div class="row">
-                          <label class="col-xs-3">Total Liquid Assets <span class="select-icon dropOption"></span></label>
-                          <div class="col-xs-3">
-                            <div class="input-group col-xs-6">
-                              <span class="input-group-addon">$</span>
-                              <input type="text" class="form-control" value="0.00">
-                            </div>
-                            <div class="input-group col-xs-6">
-                              <span class="input-group-addon">$</span>
-                              <input type="text" class="form-control" value="500000.00">
-                            </div>
-                          </div>
-                          <div class="col-xs-3">
-                            <div class="input-group col-xs-6">
-                              <span class="input-group-addon">$</span>
-                              <input type="text" class="form-control" value="0.00">
-                            </div>
-                            <div class="input-group col-xs-6">
-                              <span class="input-group-addon">$</span>
-                              <input type="text" class="form-control" value="500000.00">
-                            </div>
-                          </div>
-                          <label class="col-xs-3 text-right">
+                        <div class="input-group col-xs-6">
+                          <span class="input-group-addon">$</span>
+                          <input type="text" class="form-control" value="500000.00">
+                        </div>
+                      </div>
+                      <div class="col-xs-3">
+                        <div class="input-group col-xs-6">
+                          <span class="input-group-addon">$</span>
+                          <input type="text" class="form-control" value="0.00">
+                        </div>
+                        <div class="input-group col-xs-6">
+                          <span class="input-group-addon">$</span>
+                          <input type="text" class="form-control" value="500000.00">
+                        </div>
+                      </div>
+                      <label class="col-xs-3 text-right">
                                 <span class="verticallyCenter">Above $500000.00</span>
                                 <span class="pull-right closeIcon"></span>
                             </label>
-                        </div>
-                      </section>
-                      <p class="clearfix"><span class="roundedplusIcon col-xs-1"></span><span class="text col-xs-1 padding0">Add</span></p>
                     </div>
-                    <a href="businessRuleStatus.html" class="pull-right marginbottom15"><button type="button" class="btn btn-save">Save</button></a>
-                  </div>
+                  </section>
+                  <p class="clearfix"><span class="roundedplusIcon col-xs-1"></span><span class="text col-xs-1 padding0">Add</span></p>
                 </div>
+                <a href="businessRuleStatus.html" class="pull-right marginbottom15"><button type="button" class="btn btn-save">Save</button></a>
               </div>
-            </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p>Copyright &copy; 2018 - FinRules, All rights reserved.</p>
+      </footer>
     </div>
-    <footer>
-      <p>Copyright &copy; 2018 - FinRules, All rights reserved.</p>
-    </footer>
-  </div>
-  <script src="../assets/js/jquery.min.js"></script>
-  <script src="../assets/js/bootstrap.min.js"></script>
-  <script src="../assets/js/pipelinescript.js"></script>
-  <script src="../assets/js/comparison.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/pipelinescript.js"></script>
+    <script src="../assets/js/comparison.js"></script>
 </body>
 
 </html>

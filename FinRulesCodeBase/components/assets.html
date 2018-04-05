@@ -71,7 +71,7 @@
               <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
               <li><a class="mainMenu" href="recommendation.html" id="aus">AUS COMPARISON</a></li>
               <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION MANAGEMENT</a></li>
-              <li><a class="mainMenu" href="activecondition.html" id="data">Loan Data</a></li>
+              <li><a class="mainMenu" href="activecondition.html" id="data">LOAN DATA</a></li>
             </ul>
           </nav>
       </div>
@@ -348,20 +348,25 @@
                           <li class="col-xs-2">10/27/2017 12:30 PM</li>
                           <li class="col">Loan Officer</li>
                           <li class="col manage-validation paddingLeft text-center">
-                            <span class="settingIcon" onclick="showPopup()">
-                            <ul class="validation_action text-left" id="pop-up">
-                              <div class="option"><span class="delete"></span>Delete</div>
-                      <div class="option"><span class="manage"></span> Business Rule</div>
-                      <div class="option"><span class="reopen"></span> Reopen</div>
-                      <div class="tip"></div>
-                      <div class="tip in"></div>
-                      </ul>
-                      </span>
-                      <span class="plusIcon">OR</span>
-                      <span class="dropDown"></span>
-                      <span class="addIconTop"></span>
-                      <span id="bottomIcon" class="addIconMiddle"></span>
-                      </li>
+                              <!-- <span class="settingIcon" onclick="showPopup()"> -->
+                              <span class="settingsIcon-wrap" onclick="showPopup()">
+                                    <span class="settingIcon">
+                          <ul class="validation_action text-left" id="pop-up">
+                            <div class="option"><span class="delete"></span>Delete</div>
+                        <a href="businessrulestatus.html">
+                          <div class="option"><span class="manage"></span> Business Rule</div>
+                        </a>
+                        <div class="option"><span class="reopen"></span> Reopen</div>
+                        <!-- <div class="tip"></div> -->
+                        <div class="tip in"></div>
+                        </ul>
+                        </span>
+                        </span>
+                        <span class="plusIcon">OR</span>
+                        <a href=""><span class="dropDown"></span></a>
+                        <a href=""><span class="addIconTop"></span></a>
+                        <span id="bottomIcon" class="addIconMiddle"></span>
+                        </li>
                       </ul>
                       <div id="collapse1" class="panel-collapse collapse">
                         <div class="sourceInformation">
@@ -383,7 +388,8 @@
                       <li class="col-xs-2">10/27/2017 12:30 PM</li>
                       <li class="col">Loan Officer</li>
                       <li class="col manage-validation paddingLeft text-center">
-                        <span class="settingIcon" onclick="showPopup2()">
+                          <span class="settingsIcon-wrap" onclick="showPopup2()">
+                              <span class="settingIcon">
                               <ul class="validation_action displayNone text-left" id="pop-up2">
                                 <div class="option"><span class="delete"></span>Delete</div>
                   <div class="option"><span class="manage"></span> Business Rule</div>
@@ -391,6 +397,7 @@
                   <div class="tip"></div>
                   <div class="tip in"></div>
                   </ul>
+                  </span>
                   </span>
                   <span class="plusIcon">OR</span>
                   <span class="dropDown"></span>
@@ -605,7 +612,8 @@
                       <li class="col-xs-2">10/27/2017 12:30 PM</li>
                       <li class="col">Loan Officer</li>
                       <li class="col manage-validation paddingLeft text-center">
-                        <span class="settingIcon" onclick="showPopup3()">
+                          <span class="settingsIcon-wrap" onclick="showPopup3()">
+                              <span class="settingIcon">
                       <ul class="validation_action text-left" id="pop-up3">
                         <div class="option"><span class="delete"></span>Delete</div>
                   <div class="option"><span class="manage"></span> Business Rule</div>
@@ -613,6 +621,7 @@
                   <div class="tip"></div>
                   <div class="tip in"></div>
                   </ul>
+                  </span>
                   </span>
                   <span class="plusIcon">OR</span>
                   <span class="dropDown"></span>
@@ -640,7 +649,8 @@
                   <li class="col-xs-2">10/27/2017 12:30 PM</li>
                   <li class="col">Loan Officer</li>
                   <li class="col manage-validation paddingLeft text-center">
-                    <span class="settingIcon" onclick="showPopup4()">
+                      <span class="settingsIcon-wrap" onclick="showPopup4()">
+                          <span class="settingIcon">
                         <ul class="validation_action displayNone text-left" id="pop-up4">
                           <div class="option"><span class="delete"></span>Delete</div>
               <div class="option"><span class="manage"></span> Business Rule</div>
@@ -648,6 +658,7 @@
               <div class="tip"></div>
               <div class="tip in"></div>
               </ul>
+              </span>
               </span>
               <span class="plusIcon">OR</span>
               <span class="dropDown"></span>
