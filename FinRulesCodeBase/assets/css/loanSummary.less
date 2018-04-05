@@ -1,4 +1,28 @@
+.customBreadcrums{
+  margin-bottom: 0;
+  border-top: 5px solid @secondary-background;
+  border-radius: 0;
+  padding: 13px 15px;
+  position: relative;
+  z-index: 3;
 
+  li{
+    a{
+      color: #8f8f8f;
+      font-family: Roboto-Medium;
+      padding: 0 5px;
+    }
+    .active{
+      color: @secondary-background;
+    }
+  }
+  li+li:before{
+    padding: 0 5px;
+    color: #8f8f8f;
+    content: ">";
+    font-family: Roboto-Medium;
+  }
+}
 .subHeader{
   .displayRecommendation{
     display: block;

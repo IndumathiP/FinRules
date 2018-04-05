@@ -10,8 +10,35 @@
 </head>
 
 <body>
+   <!-- header -->
+   <header>
+      <nav class="navbar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand logo-wrap" href="javascript:void(0)"><span class="logo"></span></a>
+          </div>
+          <ul class="nav navbar-nav nav-pills headerlinks">
+            <li><a href="admin.html">DASHBOARD</a></li>
+            <li class="active"><a href="pipeline.html">PIPELINE</a></li>
+            <li><a href="adminConfig.html">ADMIN CONFIG</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right dashboardhead-right">
+            <li class="username-wrap">
+              <span class="user">John Smith</span>
+              <span class="profession">Underwriter</span>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                  <span class="usericon-wrap"><span class="user-icon"></span></span>
+                  <span class="dropdown-icon"></span>
+                  </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
   <div class="conditionWrapper">
-    <!-- header -->
+<!--    
     <header class="row">
         <span class="col icon">
                       <span class="logoIcon"></span>
@@ -29,8 +56,13 @@
           <i class="fa fa-caret-down"></i>
           </span>
         </div>
-    </header>
-    <!-- header -->
+    </header> -->
+
+    <ol class="breadcrumb customBreadcrums row">
+        <li><a href="pipeline.html">Pipeline</a></li>
+        <li><a class="active" href="javascript:void(0)">LPA Findings</a></li>
+      </ol>
+    
     <!-- loan details -->
     <div class="loanDetails row">
       <h3 class="col-md-2 col-xs-2">LOAN #W2018030029</h3>
@@ -52,6 +84,9 @@
           <span>$ 222,565.00</span>
         </li>
       </ul>
+      <div class="backButton pull-right">
+          <a href="pipeline.html"><button class="btn btn-back">Back to Pipeline</button></a>
+        </div>
     </div>
     <div class="row loanMenu">
       <div class="hamMenu clearfix">
@@ -64,9 +99,9 @@
           <ul>
               <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
               <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
-              <li><a class="mainMenu" href="recommendation.html" id="aus">AUS COMPARISON</a></li>
+              <li><a class="mainMenu" href="recommendation.html" id="aus">AUS FINDING</a></li>
               <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION MANAGEMENT</a></li>
-              <li><a class="mainMenu" href="activecondition.html" id="data">LOAN DATA</a></li>
+              <li><a class="mainMenu" href="javascript:void(0)" id="data">LOAN DATA</a></li>
             </ul>
       </nav>
     </div>
@@ -216,7 +251,7 @@
       </div>
     </div>
     <div class="footer row">
-      <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
+      <span class="footerContent">Copyright &#169; 2018 - Finrules. All rights reserved.</span>
       <span class="right-content">
             <label>Powered By:</label>
             <span class="logo"></span>
@@ -226,6 +261,7 @@
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
   <script src="../assets/js/sideMenu.js"></script> 
+  <script src="../assets/js/activeCondition.js"></script>
 </body>
 
 </html>

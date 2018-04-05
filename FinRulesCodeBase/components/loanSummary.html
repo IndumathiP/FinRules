@@ -11,28 +11,40 @@
 </head>
 
 <body>
-  <div class="conditionWrapper clearfix">
-    <!-- header part   -->
-    <header class="row">
-        <span class="col icon">
-              <span class="logoIcon"></span>
-        </span>
-        <span class="col">
-              <span class="logoName"></span>
-        </span>
-        <div class="pull-right">
-          <span class="col text-right padding0">
-              <h3>John Smith</h3>
-              <label>Underwriter</label>
-            </span>
-          <span class="col">
-              <span class="userIcon"></span>
-          <i class="fa fa-caret-down"></i>
-          </span>
+  <header>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand logo-wrap" href="javascript:void(0)"><span class="logo"></span></a>
         </div>
-    </header>
+        <ul class="nav navbar-nav nav-pills headerlinks">
+          <li><a href="admin.html">DASHBOARD</a></li>
+          <li class="active"><a href="pipeline.html">PIPELINE</a></li>
+          <li><a href="adminConfig.html">ADMIN CONFIG</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right dashboardhead-right">
+          <li class="username-wrap">
+            <span class="user">John Smith</span>
+            <span class="profession">Underwriter</span>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <span class="usericon-wrap"><span class="user-icon"></span></span>
+              <span class="dropdown-icon"></span>
+              </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="summaryWrapper clearfix">
+    <!-- Breadcrums -->
+    <ol class="breadcrumb customBreadcrums">
+      <li><a href="pipeline.html">Pipeline</a></li>
+      <li><a class="active" href="javascript:void(0)">Summary</a></li>
+    </ol>
     <!-- loan details header -->
-    <div class="loanDetails row">
+    <div class="loanDetails clearfix">
       <h3 class="col-md-2 col-xs-2">LOAN #W2018030139</h3>
       <ul class="loanInformation col-md-7 col-xs-7">
         <li class="col-md-3 col-xs-3">
@@ -41,7 +53,7 @@
         </li>
         <li class="col-md-3 col-xs-3">
           <label>Loan Status</label>
-          <span>In Underwriting</span>
+          <span>Ready For Underwriting</span>
         </li>
         <li class="col-md-3 col-xs-3">
           <label>Purchase Price</label>
@@ -52,28 +64,31 @@
           <span>$ 217,150.00</span>
         </li>
       </ul>
+      <div class="backButton pull-right">
+        <a href="pipeline.html"><button class="btn btn-back">Back to Pipeline</button></a>
+      </div>
     </div>
     <!-- select condition type -->
-    <div class="row loanMenu">
+    <div class="clearfix loanMenu">
       <div class="clearfix hamMenu">
         <div class="hamIcon col paddingLeft">
-          <a href="javascript:void(0)" class="hamperIcon" onclick ="showsideMenu()"></a>
+          <a href="javascript:void(0)" class="hamperIcon" onclick="showsideMenu()"></a>
         </div>
         <!-- <span class="leftArrow"></span> -->
         <h3 class="col summaryLabel">Summary</h3>
       </div>
       <nav id="sideMenu">
-          <ul>
-              <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
-              <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
-              <li><a class="mainMenu" href="recommendation.html" id="aus">AUS COMPARISON</a></li>
-              <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION MANAGEMENT</a></li>
-              <li><a class="mainMenu" href="activecondition.html" id="data">LOAN DATA</a></li>
-            </ul>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
+          <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
+          <li><a class="mainMenu" href="recommendation.html" id="aus">AUS FINDING</a></li>
+          <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION MANAGEMENT</a></li>
+          <li><a class="mainMenu" href="javascript:void(0)" id="data">LOAN DATA</a></li>
+        </ul>
       </nav>
     </div>
-    <div id="duFindingsWrapper" class="row">
-      </div>
+    <div id="duFindingsWrapper">
+    </div>
     <!-- header part end-->
     <!-- main section -->
     <div class="summary-wrapper">
@@ -691,8 +706,8 @@
       </div>
     </div>
     <!-- main section end -->
-    <div class="footer row">
-      <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
+    <div class="footer">
+      <span class="footerContent">Copyright &#169; 2018 - Finrules. All rights reserved.</span>
       <span class="right-content">
           <label>Powered By:</label>
           <span class="logo"></span>
@@ -702,7 +717,7 @@
   </div>
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
-  <script src="../assets/js/sideMenu.js"></script> 
+  <script src="../assets/js/sideMenu.js"></script>
   <script src="../assets/js/comparison.js"></script>
   <script src="../assets/js/loanSummary.js"></script>
 </body>

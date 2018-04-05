@@ -9,5 +9,5 @@ for(i=0;i<len;i++) {
   a[i].classList.remove("activeMenu");
 
 }
-document.getElementById("data").classList.add("activeMenu");
+document.getElementById("cond").classList.add("activeMenu");
 }) ();

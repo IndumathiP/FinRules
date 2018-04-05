@@ -15,34 +15,40 @@
   <div class="pipelineContainer">
     <!-- Header section -->
     <header>
-      <div class="row">
-        <span class="col icon">
-              <span class="logoIcon"></span>
-        </span>
-        <span class="col">
-              <span class="logoName"></span>
-        </span>
-        <div class="pull-right">
-          <span class="col text-right padding0">
-              <h3>John Smith</h3>
-              <label>Underwriter</label>
-            </span>
-          <span class="col">
-              <span class="userIcon"></span>
-          <i class="fa fa-caret-down"></i>
-          </span>
-        </div>
-      </div>
-    </header>
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand logo-wrap" href="javascript:void(0)"><span class="logo"></span></a>
+            </div>
+            <ul class="nav navbar-nav nav-pills headerlinks">
+              <li><a href="admin.html">DASHBOARD</a></li>
+              <li class="active"><a href="pipeline.html">PIPELINE</a></li>
+              <li><a href="adminConfig.html">ADMIN CONFIG</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right dashboardhead-right">
+              <li class="username-wrap">
+                <span class="user">John Smith</span>
+                <span class="profession">Underwriter</span>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+              <span class="usericon-wrap"><span class="user-icon"></span></span>
+              <span class="dropdown-icon"></span>
+              </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
     <!-- select pipeline -->
-    <div class="row loanMenu">
+    <div class="loanMenu">
       <div class="hamMenu">
         <h3>Pipeline</h3>
       </div>
     </div>
 
     <!-- pipeline information -->
-    <div class="pipelineContent row">
+    <div class="pipelineContent clearfix">
       <!-- sidebar -->
       <div id="duFindingsWrapper">
       </div>
@@ -464,7 +470,7 @@
               </div>
               <div class="discrepencies pull-left clearfix">
                   <div class="col-xs-6 rightBorder">
-                <h3>FinRules</h3>
+                <h3>Finrules</h3>
                 <label>Income</label>
                 <p>Mandatory fields missing from Loan                   
                     File <br> - 2 years of Employment History</p>
@@ -1165,7 +1171,7 @@
               </div>
               <div class="discrepencies pull-left clearfix">
                 <div class="col-xs-6 rightBorder">
-                <h3>FinRules</h3>
+                <h3>Finrules</h3>
                 <label>Income</label>
                 <p>Required Documentation missing from                   
                     loan application <br> 
@@ -1200,8 +1206,8 @@
         </div>
       </div>
     </div>
-    <div class="footer row">
-      <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
+    <div class="footer">
+      <span class="footerContent">Copyright &#169; 2018 - Finrules. All rights reserved.</span>
       <span class="right-content">
           <label>Powered By:</label>
           <span class="logo"></span>

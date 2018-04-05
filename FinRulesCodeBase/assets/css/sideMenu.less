@@ -38,18 +38,13 @@
       top: 0;
       left: -200px;
       background-color: #34897c;
-      height: calc(100vh - 180px);
+      height: calc(100vh - 170px);
       z-index: 3;
       -webkit-transition: all 0.5s;
       /* For Safari 3.1 to 6.0 */
       transition: all 0.5s;
       ul{
-        li{
-          .activeMenu{
-            border: 1px solid #43b4a3;
-            background-color: #48a99a;
-            border-right: 5px solid #ffaa30;
-          }
+        li{         
           a{
             display: block;
             padding: 15px 20px 15px 10px;
@@ -58,10 +53,20 @@
               background-color: #465452;            
             }
           }
+          .activeMenu{
+            border: 1px solid #43b4a3;
+            background-color: #48a99a;
+            border-right: 5px solid #ffaa30;
+            &:hover{
+              background-color: #48a99a;
+            }
+          }
           .closeSideMenu{
             background: url('../images/Sprite_FinRules.png') no-repeat -193px -149px;
             width: 10px;
             height: 9px;
+            margin-top: 8px;
+            margin-bottom: 8px;
           }
         }
       }
