@@ -1,5 +1,5 @@
 .verification,
-{
+    {
     display: flex;
 }
 
@@ -142,7 +142,7 @@ span {
     }
     .panel-heading {
         background-color: @table-color;
-        padding: 20px;
+        padding: 15px;
         .sideHeading,
         .panelTitle {
             font-family: Roboto-Medium;
@@ -151,49 +151,73 @@ span {
         .sideHeading {
             padding-right: 15px;
             border-right: 1px solid #00000059;
+            margin-top: 10px;
         }
         .findingLen {
             padding-left: 15px;
             padding-top: 2px;
         }
+        .btn-report {
+            border: 1px solid @secondary-background;
+            color: @secondary-background;
+            background-color: @table-color;
+            font-family: Roboto-Medium;
+        }
     }
     .panel-body {
         .contentWrapper {
             .verified {
-                width: 100%;
-                text-align: center;
+                // width: 100%;
+                // text-align: center;
+                font-family: Roboto-Regular;
                 color: @secondary-background;
-                &:nth-of-type(1) {
-                    font-size: 24px;
-                    font-family: Roboto-Bold;
-                    padding-top: 10px;
+                margin-left: 15px;
+                .viewIcon{
+                  background: url('../images/Sprite_FinRules4.png') no-repeat -627px -394px;
+                  width: 9px;
+                  height: 12px;
+                  margin-right: 10px;
                 }
-                &:nth-of-type(2) {
-                    font-size: 18px;
-                    padding-top: 5px;
-                    padding-bottom: 10px;
-                }
+            }
+            .vertiallyCenter{
+              margin-top: 10px;
+              label{
+              font-family: Roboto-Medium;
+
+              }
+            }
+            .headingEligible {
+                font-size: 24px;
+                font-family: Roboto-Bold;
+                
+            }
+            .subHeadingqualified {
+                font-size: 18px;
+                // padding-top: 5px;
+                // padding-bottom: 10px;
             }
             .icon {
-                background: url('../images/Sprite_FinRules.png') no-repeat -150px -283px;
-                width: 100px;
-                height: 94px;
-                margin: auto;
-            }
-            .successIcon {
-                background: url('../images/Sprite_FinRules.png') no-repeat -285px -299px;
-                width: 61px;
-                height: 61px;
-                margin: auto;
-            }
+                background: url('../images/Sprite_FinRules4.png') no-repeat -388px -321px;
+                width: 39px;
+                height: 39px;
+                vertical-align: middle;
+            } // .successIcon {
+            //     background: url('../images/Sprite_FinRules.png') no-repeat -285px -299px;
+            //     width: 61px;
+            //     height: 61px;
+            //     margin: auto;
+            // }
             .verificationWrapper {
-                margin-top: 25%;
-                @media screen and (min-width: 1024px) and (max-width:1200px) {
-                    margin-top:70%;
-                }
-                @media screen and (min-width:1800px) {
-                    margin-top: 25%;
-                }
+              margin: 0 10px;
+              padding-bottom: 10px;
+              border-bottom: 1px solid #f1f1f1;
+                // margin-top: 25%;
+                // @media screen and (min-width: 1024px) and (max-width:1200px) {
+                //     margin-top:70%;
+                // }
+                // @media screen and (min-width:1800px) {
+                //     margin-top: 25%;
+                // }
             }
             .content {
                 font-family: Roboto-Medium;
