@@ -220,9 +220,13 @@ span {
             .vertiallyCenter {
                 margin-top: 10px;
                 cursor: pointer;
+                span{
+                  vertical-align: middle;
+                }
                 label {
                     font-family: Roboto-Medium;
                     cursor: pointer;
+                    vertical-align: middle;
                     // content: "Hide Details";
                 }
             }
@@ -232,9 +236,11 @@ span {
             .headingEligible {
                 font-size: 24px;
                 font-family: Roboto-Bold;
+                vertical-align: middle;
             }
             .subHeadingqualified {
-                font-size: 18px; // padding-top: 5px;
+                font-size: 18px;
+                vertical-align: middle; // padding-top: 5px;
                 // padding-bottom: 10px;
             }
             .icon {
@@ -267,11 +273,12 @@ span {
                 }
                 h3 {
                     color: @secondary-background;
-                    font-size: 18px;
+                    font-size: 17px;
                     margin-top: 5px;
                 }
                 p {
                     margin-top: 20px;
+                    text-align:justify;
                 }
             }
             .content {
