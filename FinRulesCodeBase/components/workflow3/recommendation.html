@@ -1,0 +1,1628 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <title>:: FinRules ::</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet/less" type="text/css" href="../../assets/css/styles.less" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
+</head>
+
+<body>
+  <!-- header part   -->
+  <header>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand logo-wrap" href="javascript:void(0)"><span class="logo"></span></a>
+        </div>
+        <ul class="nav navbar-nav nav-pills headerlinks">
+          <li><a href="../../admin.html">DASHBOARD</a></li>
+          <li class="active"><a href="../../pipeline.html">PIPELINE</a></li>
+          <li><a href="../../adminConfig.html">ADMIN CONFIG</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right dashboardhead-right">
+          <li class="username-wrap">
+            <span class="user">John Smith</span>
+            <span class="profession">Underwriter</span>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+                <span class="usericon-wrap"><span class="user-icon"></span></span>
+                <span class="dropdown-icon"></span>
+                </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="conditionWrapper">
+    <ol class="breadcrumb customBreadcrums row">
+      <li><a href="../../pipeline.html">Pipeline</a></li>
+      <li><a class="active" href="javascript:void(0)">AUS Findings</a></li>
+    </ol>
+    <!-- loan details header -->
+    <div class="loanDetails row">
+      <!-- <h3 class="col-md-2 col-xs-2">LOAN #W2018030139</h3> -->
+      <!-- <ul class="loanInformation col-md-7 col-xs-7">
+        <li class="col-md-3 col-xs-3">
+          <label>Borrower</label>
+          <span>Firstimer,Alice</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Loan Status</label>
+          <span>Ready For UnderWriting</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Purchase Price</label>
+          <span>$ 250,000.00</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Total Loan Amount</label>
+          <span>$ 217,150.00</span>
+        </li>
+      </ul> -->
+      <h3 class="col-md-2 col-xs-2">LOAN #W2017110035</h3>
+      <ul class="loanInformation col-md-7 col-xs-7">
+        <li class="col-md-3 col-xs-3">
+          <label>Borrower</label>
+          <span>Lara, Maria</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Loan Status</label>
+          <span>Ready For Underwriting</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Purchase Price</label>
+          <span>$ 477, 300.00</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Total Loan Amount</label>
+          <span>$ 475, 827.00</span>
+        </li>
+      </ul>
+      <div class="backButton pull-right">
+        <a href="../pipeline.html"><button class="btn btn-back">Back to Pipeline</button></a>
+      </div>
+    </div>
+    <div class="row loanMenu">
+      <div class="hamMenu clearfix">
+        <div class="hamIcon col paddingLeft">
+          <a href="javascript:void(0)" class="hamperIcon" onclick="showsideMenu()"></a>
+        </div>
+        <h3 class="col summaryLabel">AUS Findings</h3>
+      </div>
+      <nav id="sideMenu">
+        <ul>
+          <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
+          <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
+          <li><a class="mainMenu" href="recommendation.html" id="aus">AUS FINDING</a></li>
+          <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION CATEGORY</a></li>
+          <li><a class="mainMenu" href="javascript:void(0)" id="data">LOAN DATA</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="duFindingsWrapper" class="row">
+    </div>
+    <!-- header part end     -->
+    <!-- mainsection -->
+    <div class="verification clearfix">
+      <div class="panelContainer">
+        <div class="panelWrapper">
+          <div class="duEligibility panel panel-default">
+            <div class="panel-heading clearfix">
+              <!-- <span class="panelTitle">DU-PIW Eligibility</span> -->
+              <span class="sideHeading">DU - Fannie Mae</span>
+              <span class="findingLen">Findings 16</span>
+              <button class="pull-right btn btn-report">Download Report</button>
+            </div>
+            <div class="panel-body">
+              <div class="contentWrapper">
+                <!-- <div class="col-xs-5"> -->
+                <div class="verificationWrapper">
+                  <span class="icon"></span>
+                  <span class="headingEligible verified">Eligibility</span>
+                  <span class="subHeadingqualified verified">Qualified</span>
+                  <span class="verified vertiallyCenter pull-right" data-toggle="collapse" data-target="#demo">
+                      <span class="viewIcon"></span><label>View Details</label></span>
+                  <!-- <div class="successIcon"></div> -->
+                </div>
+                <div class="paneldescription">
+                  <h3>Property</h3>
+                  <h3>Inspection Waiver</h3>
+                  <p>
+                    Desktop Underwriter accepts the value submitted as the market value for this subject property. This loan is eligible foc
+                    delivery to Fannie Mae without an appraisal
+                  </p>
+                </div>
+                <a href="conditiontype.html"><button class="btn btn-primary proceed">Proceed with DU</button></a>
+                <div class="mainSummary displayDiscrepancy">
+                  <div id="demo" class="collapse viewDesCollapse">
+                    <div class="viewDes">
+                      <h3 class="viewheading">Eligibility Details
+                        <span class="viewCloseIcon pull-right collapsed" data-target="#demo" data-toggle="collapse"></span>
+                      </h3>
+                      <div class="content">
+                        <p>
+                          The Loan File is eligible for PIW if submitted to Fannie Mae.
+                        </p>
+                        <div class="matchedCriteria">
+                          <span class="verifiedIcon"></span>
+                          <span class="text">One Unit Property</span>
+                        </div>
+                        <div class="matchedCriteria">
+                          <span class="verifiedIcon"></span>
+                          <span>Property Type Condominium</span>
+                        </div>
+                        <div class="matchedCriteria">
+                          <span class="verifiedIcon"></span>
+                          <span>Residence Type is Investment</span>
+                        </div>
+                        <div class="matchedCriteria">
+                          <span class="verifiedIcon"></span>
+                          <span>Cash Out Refinance with LTV 79% (Cash Out Refinance with LTV less than or equal)</span>
+                        </div>
+                        <div class="matchedCriteria">
+                          <span class="verifiedIcon"></span>
+                          <span>DU Recommendation is Approve/Eligible</span>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="eligibleInfo">
+                    <span>Rep and Warrants</span>
+                    </span>
+                  </div>
+                  <div class="summarytabs">
+                    <ul class="nav nav-tabs eligible-nav">
+                      <li class="active"><a data-toggle="tab" href="#prop">Property <span class="numberedCircle">1</span></a></li>
+                    </ul>
+                    <div class="tab-content eligibledes">
+                      <p id="prop" class="tab-pane fade in active">
+                        Desktop Underwriter accepts the value submitted as the market value for this subject property. This loan is eligible for
+                        delivery to Fannie Mae without an appraisal if the Property Inspection Waiver is exercised by the
+                        lender at the time of loan delivery to Fannie Mae To exercise this Property Inspection Waiver and
+                        be eligible for representation and warranty relief on the value, condition and marketability of the
+                        subject properly, Special Feature Code 801 and the Casefile ID must be included in the load delivery
+                        file. If the waiver is not exercised, an appraisal is obtained for this transaction, or the transition
+                        is one identified as ineligible in the selling guide but DU in not able to identify the ineligible
+                        criteria (Home Style Energy mortgages, community land trusts or propertied with resale restrictions,
+                        and Texas Section 50(a)(6) mortgage), the Property Inspection Waiver may not be exercised and the
+                        loan cannot be delivered with Special Feature Code 801
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panelContainer">
+        <div class="panelWrapper">
+          <div class="lpEligibility panel panel-default">
+            <div class="panel-heading clearfix">
+              <!-- <span class="panelTitle">LPA-ACE Eligibility</span> -->
+              <span class="sideHeading">LPA - Freddie Mac</span>
+              <span class="findingLen">Findings 17</span>
+              <button class="pull-right btn btn-report">Download Report</button>
+            </div>
+            <div class="panel-body">
+              <div class="contentWrapper">
+                <!-- <div class="col-xs-5"> -->
+                <div class="verificationWrapper">
+                  <span class="icon"></span>
+                  <span class="headingEligible verified">Eligibility</span>
+                  <span class="subHeadingqualified verified">Qualified</span>
+                  <span class="verified vertiallyCenter pull-right" data-toggle="collapse" data-target="#viewLP">
+                          <span class="viewIcon"></span ><label>View Details</label></span>
+                  <!-- <div class="successIcon"></div> -->
+                </div>
+
+                <div class="paneldescription clearfix">
+                  <div class="col-xs-4">
+                    <h3>Automated Collateral Evaluation</h3>
+                    <p>
+                      Based on the Freddie Mac's Overall assesment, the loan is eligible for the income representation and warranty relief.
+                    </p>
+                  </div>
+
+                  <div class="col-xs-4">
+                    <h3>Income Reps and Warrants</h3>
+                    <p>
+                      Based on the Freddie Mac's Overall assesment, the loan is eligible for the income representation and warranty relief.
+                    </p>
+                  </div>
+
+                  <div class="col-xs-4">
+                    <h3>Asset Reps and Warrants</h3>
+                    <p>
+                      Based on the Freddie Mac's Overall assesment, the loan is eligible for the Assets representation and warranty relief.
+                    </p>
+                  </div>
+                </div>
+                <a href="conditiontype.html"><button class="btn btn-primary proceed">Proceed with DU</button></a>
+                <div class="mainSummary displayDiscrepancy">
+                  <div id="viewLP" class="collapse viewDesCollapse">
+                    <div class="viewDes">
+                      <h3 class="viewheading">Eligibility Details
+                        <span class="viewCloseIcon pull-right collapsed" data-target="#viewLP" data-toggle="collapse"></span>
+                      </h3>
+                      <div class="content">
+                        <p>
+                          The Loan File is eligible for ACE if submitted to Freddie Mac.
+                        </p>
+                        <div class="matchedCriteria">
+                          <span class="verifiedIcon"></span>
+                          <span class="text">One Unit Property</span>
+                        </div>
+                        <div class="matchedCriteria">
+                          <span class="verifiedIcon"></span>
+                          <span>Property Type Condominium</span>
+                        </div>
+                        <div class="matchedCriteria">
+                          <span class="verifiedIcon"></span>
+                          <span>Residence Type is Investment</span>
+                        </div>
+                        <div class="matchedCriteria">
+                          <span class="verifiedIcon"></span>
+                          <span>Cash Out Refinance with LTV 79%</span>
+                        </div>
+                        <div class="matchedCriteria">
+                          <span class="verifiedIcon"></span>
+                          <span>LPA Recommendation is Eligible</span>
+                        </div>
+                        <div class="matchedCriteria">
+                          <span class="verifiedIcon"></span>
+                          <span>LPA Underwriting Funding returned the below feedback message.</span>
+                        </div>
+                        <div class="matchedCriteria">
+
+                          <span>"This Loan is eligible for the appraisal waiver.If wavier is not accepted an appraisal is required".</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="eligibleInfo">
+                    <span>Rep and Warrants</span>
+                    </span>
+                  </div>
+                  <div class="summarytabs">
+                    <ul class="nav nav-tabs eligible-nav">
+                      <li><a data-toggle="tab" href="#inc">Income <span class="numberedCircle">1</span></a></li>
+                      <li><a data-toggle="tab" href="#asset">Assets <span class="numberedCircle">2</span></a></li>
+                      <li class="active"><a data-toggle="tab" href="#proper">Property <span class="numberedCircle">1</span></a></li>
+                    </ul>
+                    <div class="tab-content eligibledes">
+                      <p id="proper" class="tab-pane fade in active">
+                        "Loan is eligible for collateral representation and warranty relief with an appraisal waiver until 04/05/18. Freddie Mac
+                        accepts the submitted value estimate or purchase price as the value of the subject property; therefore,
+                        an appraisal is not required, and Seller will be relieved of representation and warranties related
+                        to value, condition and marketability If an appraisal is obtained, it must be submitted to the UCDP,
+                        and the associated loan will not be eligible for the appraisal waiver".
+
+                      </p>
+                      <div class="tab-pane fade" id="asset">
+                        <div class="table">
+                          <div class="tableHead">
+                            <div class="clearfix">
+                              <div class="col-xs-6 td">ELIGIBLE FOR INCOME R&amp;W RELIEF</div>
+                              <div class="col-xs-3  paddingLeft td">MARTIN, JOSH</div>
+                              <div class="col-xs-3 paddingLeft td">MARIAN, JOSH</div>
+                            </div>
+                          </div>
+                          <div class="tableBody">
+                            <div class="clearfix even">
+                              <div class="col-xs-6 td">Base Income</div>
+                              <div class="col-xs-3 td"><span class="glyphicon glyphicon-ok absolute"></span>$2,245.00</div>
+                              <div class="col-xs-3 td"><span class="glyphicon glyphicon-ok absolute"></span>$1,245.00</div>
+                            </div>
+                            <div class="clearfix">
+                              <div class="col-xs-6 td">Over Time</div>
+                              <div class="col-xs-3 col-xs-offset-3 td"><span class="glyphicon glyphicon-ok absolute"></span>$236.00</div>
+                            </div>
+                          </div>
+                          <div class="clearfix even">
+                            <div class="col-xs-6 td">Bonus</div>
+                            <div class="col-xs-offset-3 col-xs-3 td"><span class="glyphicon glyphicon-ok absolute"></span>$7499.00</div>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="inc">
+                        <div class="table">
+                          <div class="tableBody">
+                            <div class="clearfix even">
+                              <div class="col-xs-7 td">Total Funds to be verified</div>
+                              <div class="col-xs-5 td"><span class="glyphicon glyphicon-ok absolute"></span>$21,045.06</div>
+                            </div>
+                            <div class="clearfix">
+                              <div class="col-xs-7 td">Third Party Asset validation</div>
+                              <div class="col-xs-5 td"><span class="glyphicon glyphicon-ok absolute"></span>$18,000.00</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navigationWrapper">
+      <div class="navigation text-center ">
+        <ul class="list-inline">
+          <li class="active"><a href="#income" data-toggle="pill">Income (11)</a></li>
+          <li><a href="#assets" data-toggle="pill">Assets (11)</a></li>
+          <li><a href="#property" data-toggle="pill">Property (04)</a></li>
+          <li><a href="#borrower" data-toggle="pill">Borrower (01)</a></li>
+          <li><a href="#credit" data-toggle="pill">Credit (06)</a></li>
+        </ul>
+      </div>
+
+
+      <div class="tab-content">
+
+        <div class="tab-pane fade in active" id="income">
+          <div class="navigationContent">
+            <div class="iconWrapper"><span class="collapseIcon"></span></div>
+            <div class="row">
+              <div class="col-xs-6">
+                <span class="heading">DU-Findings (06)</span>
+              </div>
+              <div class="col-xs-6">
+                <span class="heading">LPA-Findings (05)</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>Obtain a completed and signed Form 4506-T for each borrower at or before closing. If all of a borrower's
+                    income has been validated through the DU validation service, a completed and signed Form 4506T is not
+                    required for that borrower.<label class="collapse" id="obtain">  Form 4506, Form 4506T-EZ, or Form 8821 may be used in lieu of Form 4506-T. Refer to the Fannie Mae Selling Guide for additional information.</label>
+                    <a href="#obtain" class="pull-right" data-toggle="collapse"></a></p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>Signed IRS Form 4506-T: Any borrower. whose income is used to qualify, must sign IRS Form 4506-T at both
+                    application and on the Note Date. If the signed IRS Form 4506-T from application submitted to IRS. and
+                    transcripts are received back from <label class="collapse" id="sign"> the IRS, the IRS Form 4506-T signed by the Borrower on the Note Date is not required</label>
+                    <a href="#sign" class="pull-right" data-toggle="collapse"></a>
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>Alice Firstimer's income must be supported by a paystub and a W-2 from the prior year. or by a standard
+                    Verification of Employment (1005). The paystub must be dated no earlier than 30 days prior to the initial
+                    loan application date and it must include <label class="collapse" id="first"> all year-to-date earnings. Additionally, the paystub must include sufficient information to appropriately calculate income; otherwise, additional documentation must be obtained. If a standard Verification of Employment (1005) will be obtained it must include all year-to-date earnings, as well as prior year earnings if a W-2 is not being provided. If a W-2 is not available from the prior year, the lender must determine if the income would still be acceptable per the Selling Guide. Direct verifications provided by a third party employment verification vendor are acceptable if completed in accordance with the Selling Guide.</label>
+                    <a href="#first" class="pull-right" data-toggle="collapse"></a>
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <a href="../../assets/images/W2 - Alice Firstimer.pdf" class="pull-right" download><span class="downloadIcon"></span>
+                          <span class="name">Download</span>
+                        </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>A 1O-day pre-closing verification (1 0-day PCV) foe’ AUGE FIRSTIMER is required from each employer for
+                    which income is used to qualify. The 10-day PCV must be dated no more than lo Business Days prior to
+                    the Note Date &amp; after the Note Date but prior toto the Delivery Date</p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>Alimony or child support must be verified with one of the following documents: divorce decree, separation
+                    agreement, court decree, any other legal agreement that describes the payment terms, or any applicable
+                    state law that
+                    <label class="collapse" id="child">requires such payments and specifies the conditions under which the payments must be made For loan casefiles that are not underwritten as DU Refi Plus, the borrower must have a minimum 6-month documented history of the borrower's most recent regular and timely receipt of the full payment, and the lender must verify the income will continue for at least three years. Refer to the Fannie Mae Selling Guide for additional information.</label>
+                    <a href="#child" class="pull-right" data-toggle="collapse"></a>
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>Alimony or child support income for ALICE FIRSTIMER must be supported by documentation evidencing receipt
+                    of the income for the most recent six months and signed court order, legally binding separation agreement
+                    and/or final
+                    <label class="collapse" id="alimony">divorce decree verifying the payor's obligation for the previous six months, including the amount and the duration of the obligation. Proof of the ages of the children for which child support is received.</label>
+                    <a href="#alimony" class="pull-right" data-toggle="collapse"></a></p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>Verification of Employment and/or Income (VOE/VOI) information on Alice Firstimer was not received from
+                    The Work Number. Either information was not ordered from The Work Number by the lender,
+                    <label class="collapse" id="verify"> The Work Number did not have information on the borrower when the lender placed the order, or the Lender Loan Number and borrower Social Security Number entered on the online loan application do not match those provided to The Work Number.</label>
+                    <a href="#verify" class="pull-right" data-toggle="collapse"></a>
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>Based on Freddie Mac's overall assessment, the loan is not eligible for income representation and warranty
+                    relief; however, it may be eligible for relief offered through Freddie Mac's selling representation and
+                    warranty framework.</p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>Employment has not been validated for the reasons provided. As a result, income from that employer also
+                    will not be validated. If verification of this employment is required, perform and document a verbal
+                    verification of employment for each borrower
+
+                    <label class="collapse" id="employ"> within 10 business days prior to the note date for all borrowers
+                            not using self-employment income for qualifying, and within 120 calendar days prior to the note date
+                            for all borrowers using self-employment income for qualifying. For borrowers with military income, a
+                            military Leave and Earnings Statement (LES) dated within 31 calendar days prior to the note date is acceptable
+                            in lieu of a verbal verification of employment. Lenders also have the option of obtaining the verbal
+                            verification of employment after the note date (and prior to delivery of the loan to Fannie Mae), but
+                            when using this option must ensure compliance with the Fannie Mae Selling Guide</label>
+                    <a href="#employ" class="pull-right" data-toggle="collapse"></a>
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>Employment/base income for ALICE FIRSTIMER for base non-fluctuating earnings or fluctuating hourly earnings
+                    must be supported by a YTD paystub documenting all YTD earnings and W-2(s) for the most recent calendar
+                    year, <label class="collapse" id="empIncome">OR a written VOE documenting all YTD earnings and earnings for the most recent calendar year.</label>
+                    <a href="#empIncome" class="pull-right" data-toggle="collapse"></a></p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p> Based on the years and months on job for Alice Firstimer's current employment, employment has not begun
+                    with . If the lender will not obtain a paystub and confirm the borrower has started employment prior
+                    to delivery of the mortgage loan,
+
+
+                    <label class="collapse" id="year"> the lender must confirm the loan meets the requirements to document
+                            income and employment using an employment offer/contract, confirm the loan meets the applicable reserve
+                            requirements, and the loan must be delivered with SFC 707. Refer to the Selling Guide for additional
+                            information.</label>
+                    <a href="#year" class="pull-right" data-toggle="collapse"></a>
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane fade" id="assets">
+          <div class="navigationContent">
+            <div class="iconWrapper"><span class="collapseIcon"></span></div>
+            <div class="row">
+              <div class="col-xs-6">
+                <span class="heading">DU-Findings (04)</span>
+              </div>
+              <div class="col-xs-6">
+                <span class="heading">LPA-Findings (07)</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>Assets totaling $21066 must be verified. From the liquid assets listed on the 1003, at a minimum verify
+                    those accounts that are needed to satisfy this amount. Based on the transaction, there may be additional
+                    <label class="collapse" id="obtainAsset">   reserve requirements that must be manually applied by the lender. Refer to the Fannie Mae Selling Guide
+                                for additional information.</label>
+                    <a href="#obtainAsset" class="pull-right" data-toggle="collapse"></a></p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>The total funds to be verified are no less than $21,066.00. This amount includes Required Borrower Funds
+                    ($21,066.00), required reserves ($0.00) and any debts to be paid off at or before closing ($0.00).
+                    <label class="collapse" id="fundAsset">The
+                                total funds to be verified do not include funds needed to pay down debt. In addition, the amount of discount
+                                points paid by someone other than the Borrower must be added to the amount that must be verified.</label>
+                    <a href="#fundAsset" class="pull-right" data-toggle="collapse"></a>
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p> If depository assets are needed to support the amount of funds required and reserves, verify these assets
+                    with a verification of deposit or bank statements covering a two-month period. Refer to the Selling Guide
+                    for guidance on evaluating un-sourced large deposits.
+                    <label class="collapse" id="depAssets"> Direct verifications provided by a third party
+                                asset verification vendor are acceptable if completed in accordance with the Selling Guide.</label>
+                    <a href="#depAssets" class="pull-right" data-toggle="collapse"></a>
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>Depository accounts: For each account (checking, savings, money market, CDs, and other depository accounts)
+                    used to qualify the borrower, obtain an account statement covering a 1-month period or a direct verification.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>The value entered for fully vested stock or bond account(s) may be 100 percent of the value of the account
+                    if the funds will be used as reserves. If these assets are needed to support the amount of funds required
+                    for reserves,
+
+                    <label class="collapse" id="stockAsset"> document the value with a current brokerage account statement or a photocopy of the certificate
+                                or bond accompanied by a dated newspaper list. For loan casefiles that are not underwritten as DU Refi
+                                Plus, if the funds will be used for the down payment or closing costs, receipt of the funds realized
+                                from the sale or liquidation of the assets is not required if the estimated liquidation value (or estimated
+                                redemption value) is at least 20% more than the amount of funds needed for the down payment and closing
+                                costs. Otherwise, receipt of funds realized from the sale or liquidation must be verified. Non-vested
+                                stock options and non-vested restricted stock are not acceptable sources of funds for the down payment,
+                                closing costs, or reserves.</label>
+                    <a href="#stockAsset" class="pull-right" data-toggle="collapse"></a>
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>Stocks, bonds, and mutual funds: For each account used to qualify the borrower, obtain an account statement
+                    covering a 1-month period or direct account verification. <label class="collapse" id="stockAssetLp"> If the borrower does not receive a statement,
+                        provide evidence the security is owned by the borrower and verify value using current stock prices from </label>
+                    <a href="#stockAssetLp" class="pull-right" data-toggle="collapse"></a> a financial publication or website.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>Life insurance funds are listed as an asset, and were included in available funds. If the cash value entered
+                    is the cash value that will be liquidated to be used for down payment or closing costs, the cash value
+                    of the policy and receipt of the funds must be verified.
+                    <label class="collapse" id="insurAsset"> If the cash value entered is the cash value
+                                  to be used only for reserves, only the cash value must be verified.</label>
+                    <a href="#insurAsset" class="pull-right" data-toggle="collapse"></a>
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p> Life insurance: Borrower must be the policy owner and only cash value may be used. For each account used
+                    to qualify the borrower, obtain documentation from the life insurance company verifying the policy owner(s),
+                    showing the period covered, <label class="collapse" id="insurAssetLp">current cash value and any outstanding loans.</label>
+                    <a href="#insurAssetLp" class="pull-right" data-toggle="collapse"></a>
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-offset-6 col-xs-6">
+                <div class="taskContent">
+                  <p>The Seller must verify sufficient assets from eligible sources of funds required to close the Mortgage
+                    transaction."
+
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-offset-6 col-xs-6">
+                <div class="taskContent">
+                  <p>Document the source of funds for any single deposit that exceeds $3,125.00, which is 50% of the total monthly
+                    qualifying income OR reduce the asset amount by the unverified deposit and resubmit.
+
+                    <label class="collapse" id="DocAsset"> the lender must confirm the loan meets the requirements to document income and employment using an employment offer/contract, confirm the loan meets the applicable reserve requirements, and the loan must be delivered with SFC 707. Refer to the Selling Guide for additional information.</label>
+                    <a href="#DocAsset" class="pull-right" data-toggle="collapse"></a>
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-offset-6 col-xs-6">
+                <div class="taskContent">
+                  <p>If the following assets are used to qualify the borrower and are needed for closing, include evidence of
+                    liquidation unless the combined value of the assets is at least 20% greater than the amount from these
+                    assets needed for closing.
+
+
+                    <label class="collapse" id="assetsLp"> When cash value of a life insurance policy is needed for closing, evidence
+                            of liquidation is required. LifeInsurance, Amt: $10,000, Holder: N/A; Stock, Amt: $5,000, Holder: N/A.</label>
+                    <a href="#assetsLp" class="pull-right" data-toggle="collapse"></a>
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="tab-pane fade" id="property">
+          <div class="navigationContent">
+            <div class="iconWrapper"><span class="collapseIcon"></span></div>
+            <div class="row">
+              <div class="col-xs-6">
+                <span class="heading">DU-Findings (03)</span>
+              </div>
+              <div class="col-xs-6">
+                <span class="heading">LPA-Findings (01)</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p> Desktop Underwriter returned the following standardized address and census tract for the subject property:
+                    430 PRINCE ST, BORDENTOWN, NJ 08505-1719, 701700. This is the address that Desktop Underwriter used in
+                    its property
+                    <label class="collapse" id="propDes"> valuation and fieldwork recommendation. Regardless of the property fieldwork required by
+                            Desktop Underwriter, if this address is not valid for the subject property, an appraisal based on an
+                            interior and exterior property inspection reported on Form 1004 is required for this transaction. If
+                            the subject property is located in a condominium project, the appraisal must be reported on Form 1073.</label>
+                    <a href="#propDes" class="pull-right" data-toggle="collapse"></a></p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>Form 70 is minimum assessment required for sale to Freddie Mac.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p> An appraisal based on an interior and exterior property inspection reported on Form 1004 is required for
+                    this transaction.
+
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>Form 1004MC must be completed for any transaction on which an appraisal is obtained. Refer to the Fannie
+                    Mae Selling Guide for additional information.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="borrower">
+          <div class="navigationContent">
+            <div class="iconWrapper"><span class="collapseIcon"></span></div>
+            <div class="row">
+              <div class="col-xs-6">
+                <span class="heading">DU-Findings (01)</span>
+              </div>
+              <div class="col-xs-6">
+                <span class="heading">LPA-Findings (0)</span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p> According to the Social Security Administration (SSA), the Social Security number (SSN) for Alice Firstimer
+                    either has not been issued, or was recently issued. The SSN accuracy must be confirmed, and if incorrect,
+                    the SSN must be
+                    <label class="collapse" id="genDes"> updated and the loan casefile resubmitted to DU. If the SSN is determined to be correct,
+                            it must be validated directly with the SSA (direct validation by a third party is acceptable), and the
+                            loan must be delivered with SFC 162. If the SSN cannot be validated with the SSA, the loan is not eligible
+                            for delivery to Fannie Mae. If an Individual Taxpayer Identification Number (ITIN) has been entered as
+                            the Social Security number for the borrower, the borrower must be either a United States citizen or a
+                            lawful permanent or non-permanent resident of the United States in order for this loan to be eligible
+                            for delivery to Fannie Mae. Verify that any non-US Citizen borrower is legally present in the United
+                            States. An ITIN by itself is not evidence that a borrower is legally present.</label>
+                    <a href="#genDes" class="pull-right" data-toggle="collapse"></a>
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane fade" id="credit">
+          <div class="navigationContent">
+            <div class="iconWrapper"><span class="collapseIcon"></span></div>
+            <div class="row">
+              <div class="col-xs-6">
+                <span class="heading">DU-Findings (02)</span>
+              </div>
+              <div class="col-xs-6">
+                <span class="heading">LPA-Findings (04)</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>If there is a home equity line of credit secured against the subject property the maximum allowable HCLTV
+                    is 97 percent and the terms of the home equity line of credit must be verified for compliance with the
+                    Fannie Mae Selling Guide.
+                    <label class="collapse" id="creditHome">  The HCLTV calculation is based on the maximum credit limit of the equity line.</label>
+                    <a href="#creditHome" class="pull-right" data-toggle="collapse"></a></p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>The following debt(s) was omitted from the debt-to-income (DTI) ratio due to 10 months or fewer payments
+                    remaining. Confirm the number of months remaining, and if the payment will continue for more than 10
+                    months, resubmit the loan to LPA: Installment,<label class="collapse" id="debt">   Bal: $260, Pymt: $52, Rem mos: 5.</label>
+                    <a href="#debt" class="pull-right" data-toggle="collapse"></a>
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>Based on the credit report obtained through Desktop Underwriter, this loan casefile must close on or before
+                    06/01/2018. <label class="collapse" id="creditRep"> All credit documents must be no more than four months old on the note date. For guidelines
+                        on the age of the appraisal or property inspection report, refer to the Fannie Mae Selling Guide.</label>
+                    <a href="#creditRep" class="pull-right" data-toggle="collapse"></a>
+                  </p>
+
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="taskContent">
+                  <p>710 is the Loan Product Advisor Indicator Score from Trans Union for ALICE FIRSTIMER.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-xs-offset-6">
+                <div class="taskContent">
+                  <p>Credit Warranty: Not required to determine the borrower's willingness to repay or an acceptable credit
+                    reputation is evidenced.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-xs-offset-6">
+                <div class="taskContent">
+                  <p>Ratio Warranty: Not required to determine if the borrower's primary housing expense-to-income and total
+                    obligation-to-income ratios meet Freddie Mac requirements.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lpFindings none">
+      <div class="panelContainer">
+        <div class="panelWrapper">
+          <div class="lpEligibility panel panel-default marginBottom">
+            <div class="panel-heading">
+              <span class="panelTitle">DU - PIW Eligibility</span>
+              <span class="pull-right">Fannie Mae</span>
+            </div>
+            <div class="panel-body">
+              <div class="row contentWrapper">
+                <div class="col-xs-12">
+                  <div class="verificationWrapper">
+                    <span class="icon"></span>
+                    <span class="verified">Eligibility</span>
+                    <span class="verified">- Qualified</span>
+                    <span class="successIcon"></span>
+                  </div>
+                </div>
+                <div class="col-xs-12">
+                  <div class="content">
+                    <p>
+                      The Loan File is eligible for PIW if submitted to Freddie Mac.
+                    </p>
+                    <div class="matchedCriteria">
+                      <span class="verifiedIcon"></span>
+                      <span class="text">One Unit Property</span>
+                    </div>
+                    <div class="matchedCriteria">
+                      <span class="verifiedIcon"></span>
+                      <span>Property Type Condominium</span>
+                    </div>
+                    <div class="matchedCriteria">
+                      <span class="verifiedIcon"></span>
+                      <span>Residence Type is Primary Residence  </span>
+                    </div>
+                    <div class="matchedCriteria">
+                      <span class="verifiedIcon"></span>
+                      <span>Cash Out Refinance with LTV 72.864%</span>
+                    </div>
+                    <div class="matchedCriteria">
+                      <span class="verifiedIcon"></span>
+                      <span>LPA Recommendation is Eligible</span>
+                    </div>
+                    <div class="matchedCriteria">
+                      <span class="verifiedIcon"></span>
+                      <span>LPA Underwriting Funding returned the below feedback message.</span>
+                    </div>
+                    <div class="matchedCriteria">
+
+                      <span>"This Loan is eligible for the appraisal waiver.If wavier is not accepted an appraisal is required".</span>
+                    </div>
+                    <a href="conditiontype.html"><button class="btn btn-primary proceed">Proceed with LPA</button></a>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="eligibleConditionWrapper" onclick="rotate()">
+          <div class="panelWrapper">
+            <div class="lpEligibility panel panel-default">
+              <div class="panel-heading">
+                <span class="downIcon"></span>
+                <span class="panelTitle">Why LPA did not return ACE for this Loan?</span>
+              </div>
+              <div class="panel-body reasonForNotEligible">
+                <div class="row contentWrapper">
+                  <div class="col-xs-12">
+                    <div class="content">
+                      <p>
+                        The Loan file is not eligible for PIW if submitted to Fannie Mae.
+                      </p>
+                      <div class="matchedCriteria">
+                        <span class="verifiedIcon"></span>
+                        <span class="text">LTV Exceeds 70% for cash-out refinance
+                            transaction
+                            
+                                                      </span>
+                      </div>
+                      <div class="matchedCriteria">
+                        <span class="verifiedIcon"></span>
+                        <span>Loan Casefile recieved “Approve/Ineligible”
+                            Underwriting recommendation
+                            
+                                                      </span>
+                      </div>
+                      <!-- <div class="matchedCriteria">
+                        <span class="verifiedIcon"></span>
+                        <span>GSE Property Type
+                                                      </span>
+                      </div>
+                      <div class="matchedCriteria">
+                        <span class="verifiedIcon"></span>
+                        <span>Borrower Residency Duration Months
+                                                      </span>
+                      </div>
+                      <div class="matchedCriteria">
+                        <span class="verifiedIcon"></span>
+                        <span>Alimony Child Support Obligation Indicator
+                                                      </span>
+                      </div>
+                      <div class="matchedCriteria">
+                        <span class="verifiedIcon"></span>
+                        <span>Borrowed Down Payment Indicator
+                                                      </span>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="lpHeading clearfix">
+            <span>DU - Findings (16)</span>
+            <button class="pull-right btn btn-report">Download Report</button>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="navigation text-center">
+            <ul class="list-inline">
+              <li class="active"><a href="#income2" data-toggle="pill">Income (06)</a></li>
+              <li><a href="#assets2" data-toggle="pill">Assets (04)</a></li>
+              <li><a href="#property2" data-toggle="pill">Property (03)</a></li>
+              <li><a href="#borrower2" data-toggle="pill">Borrower (01)</a></li>
+              <li><a href="#credit2" data-toggle="pill">Credit (02)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content">
+
+        <div class="tab-pane fade in active" id="income2">
+          <div class="navigationContent">
+            <div class="row">
+
+              <div class="col-xs-12">
+                <div class="taskContent">
+                  <p>Obtain a completed and signed Form 4506-T for each borrower at or before closing. If all of a borrower's
+                    income has been validated through the DU validation service, a completed and signed Form 4506T is not
+                    required for that borrower. Form 4506, Form 4506T-EZ, or Form 8821 may be used in lieu of Form 4506-T.
+                    Refer to the Fannie Mae Selling Guide for additional information.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="taskContent">
+                  <p>Alice Firstimer's income must be supported by a paystub and a W-2 from the prior year. or by a standard
+                    Verification of Employment (1005). The paystub must be dated no earlier than 30 days prior to the initial
+                    loan application date and it must include all year-to-date earnings. Additionally, the paystub must include
+                    sufficient information to appropriately calculate income; otherwise, additional documentation must be
+                    obtained. If a standard Verification of Employment (1005) will be obtained it must include all year-to-date
+                    earnings, as well as prior year earnings if a W-2 is not being provided. If a W-2 is not available from
+                    the prior year, the lender must determine if the income would still be acceptable per the Selling Guide.
+                    Direct verifications provided by a third party employment verification vendor are acceptable if completed
+                    in accordance with the Selling Guide.</p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col-xs-12">
+                <div class="taskContent">
+                  <p>Alimony or child support must be verified with one of the following documents: divorce decree, separation
+                    agreement, court decree, any other legal agreement that describes the payment terms, or any applicable
+                    state law that requires such payments and specifies the conditions under which the payments must be made
+                    For loan casefiles that are not underwritten as DU Refi Plus, the borrower must have a minimum 6-month
+                    documented history of the borrower's most recent regular and timely receipt of the full payment, and
+                    the lender must verify the income will continue for at least three years. Refer to the Fannie Mae Selling
+                    Guide for additional information.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col-xs-12">
+                <div class="taskContent">
+                  <p>Verification of Employment and/or Income (VOE/VOI) information on Alice Firstimer was not received from
+                    The Work Number. Either information was not ordered from The Work Number by the lender, The Work Number
+                    did not have information on the borrower when the lender placed the order, or the Lender Loan Number
+                    and borrower Social Security Number entered on the online loan application do not match those provided
+                    to The Work Number.
+                    <div class="contentFooter">
+                      <span class="complexityIcon"></span>
+                      <span class="name">Complexity-Low</span>
+                      <span class="viewTaskIcon"></span>
+                      <span class="name">View All Task</span>
+                      <span class="name pull-right">Download</span>
+                      <span class="downloadIcon  pull-right"></span>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col-xs-12">
+                <div class="taskContent">
+                  <p>Employment has not been validated for the reasons provided. As a result, income from that employer also
+                    will not be validated. If verification of this employment is required, perform and document a verbal
+                    verification of employment for each borrower within 10 business days prior to the note date for all borrowers
+                    not using self-employment income for qualifying, and within 120 calendar days prior to the note date
+                    for all borrowers using self-employment income for qualifying. For borrowers with military income, a
+                    military Leave and Earnings Statement (LES) dated within 31 calendar days prior to the note date is acceptable
+                    in lieu of a verbal verification of employment. Lenders also have the option of obtaining the verbal
+                    verification of employment after the note date (and prior to delivery of the loan to Fannie Mae), but
+                    when using this option must ensure compliance with the Fannie Mae Selling Guide</p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col-xs-12">
+                <div class="taskContent">
+                  <p>Based on the years and months on job for Alice Firstimer's current employment, employment has not begun
+                    with . If the lender will not obtain a paystub and confirm the borrower has started employment prior
+                    to delivery of the mortgage loan, the lender must confirm the loan meets the requirements to document
+                    income and employment using an employment offer/contract, confirm the loan meets the applicable reserve
+                    requirements, and the loan must be delivered with SFC 707. Refer to the Selling Guide for additional
+                    information.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane fade" id="assets2">
+          <div class="navigationContent">
+
+            <div class="row">
+
+              <div class="col-xs-12">
+                <div class="taskContent">
+                  <p>Assets totaling $21066 must be verified. From the liquid assets listed on the 1003, at a minimum verify
+                    those accounts that are needed to satisfy this amount. Based on the transaction, there may be additional
+                    reserve requirements that must be manually applied by the lender. Refer to the Fannie Mae Selling Guide
+                    for additional information
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col-xs-12">
+                <div class="taskContent">
+                  <p>If depository assets are needed to support the amount of funds required and reserves, verify these assets
+                    with a verification of deposit or bank statements covering a two-month period. Refer to the Selling Guide
+                    for guidance on evaluating un-sourced large deposits. Direct verifications provided by a third party
+                    asset verification vendor are acceptable if completed in accordance with the Selling Guide.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col-xs-12">
+                <div class="taskContent">
+                  <p>The value entered for fully vested stock or bond account(s) may be 100 percent of the value of the account
+                    if the funds will be used as reserves. If these assets are needed to support the amount of funds required
+                    for reserves, document the value with a current brokerage account statement or a photocopy of the certificate
+                    or bond accompanied by a dated newspaper list. For loan casefiles that are not underwritten as DU Refi
+                    Plus, if the funds will be used for the down payment or closing costs, receipt of the funds realized
+                    from the sale or liquidation of the assets is not required if the estimated liquidation value (or estimated
+                    redemption value) is at least 20% more than the amount of funds needed for the down payment and closing
+                    costs. Otherwise, receipt of funds realized from the sale or liquidation must be verified. Non-vested
+                    stock options and non-vested restricted stock are not acceptable sources of funds for the down payment,
+                    closing costs, or reserves.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col-xs-12">
+                <div class="taskContent">
+                  <p> Life insurance funds are listed as an asset, and were included in available funds. If the cash value entered
+                    is the cash value that will be liquidated to be used for down payment or closing costs, the cash value
+                    of the policy and receipt of the funds must be verified. If the cash value entered is the cash value
+                    to be used only for reserves, only the cash value must be verified.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="tab-pane fade" id="property2">
+          <div class="navigationContent">
+            <!-- <div class="iconWrapper"><span class="collapseIcon"></span></div>
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <span class="heading">DU-Findings (03)</span>
+                          </div>
+                          <div class="col-xs-6">
+                            <span class="heading">LPA-Findings (08)</span>
+                          </div>
+                        </div> -->
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="taskContent">
+                  <p>Desktop Underwriter returned the following standardized address and census tract for the subject property:
+                    430 PRINCE ST, BORDENTOWN, NJ 08505-1719, 701700. This is the address that Desktop Underwriter used in
+                    its property valuation and fieldwork recommendation. Regardless of the property fieldwork required by
+                    Desktop Underwriter, if this address is not valid for the subject property, an appraisal based on an
+                    interior and exterior property inspection reported on Form 1004 is required for this transaction. If
+                    the subject property is located in a condominium project, the appraisal must be reported on Form 1073.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="taskContent">
+                  <p>An appraisal based on an interior and exterior property inspection reported on Form 1004 is required for
+                    this transaction.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="taskContent">
+                <p>Form 1004MC must be completed for any transaction on which an appraisal is obtained. Refer to the Fannie
+                  Mae Selling Guide for additional information.
+                </p>
+                <div class="contentFooter">
+                  <span class="complexityIcon"></span>
+                  <span class="name">Complexity-Low</span>
+                  <span class="viewTaskIcon"></span>
+                  <span class="name">View All Task</span>
+                  <span class="name pull-right">Download</span>
+                  <span class="downloadIcon  pull-right"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="tab-pane fade" id="borrower2">
+          <div class="navigationContent">
+            <!-- <div class="iconWrapper"><span class="collapseIcon"></span></div>
+                          <div class="row">
+                            <div class="col-xs-6">
+                              <span class="heading">DU-Findings (03)</span>
+                            </div>
+                            <div class="col-xs-6">
+                              <span class="heading">LPA-Findings (08)</span>
+                            </div>
+                          </div> -->
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="taskContent">
+                  <p>According to the Social Security Administration (SSA), the Social Security number (SSN) for Alice Firstimer
+                    either has not been issued, or was recently issued. The SSN accuracy must be confirmed, and if incorrect,
+                    the SSN must be updated and the loan casefile resubmitted to DU. If the SSN is determined to be correct,
+                    it must be validated directly with the SSA (direct validation by a third party is acceptable), and the
+                    loan must be delivered with SFC 162. If the SSN cannot be validated with the SSA, the loan is not eligible
+                    for delivery to Fannie Mae. If an Individual Taxpayer Identification Number (ITIN) has been entered as
+                    the Social Security number for the borrower, the borrower must be either a United States citizen or a
+                    lawful permanent or non-permanent resident of the United States in order for this loan to be eligible
+                    for delivery to Fannie Mae. Verify that any non-US Citizen borrower is legally present in the United
+                    States. An ITIN by itself is not evidence that a borrower is legally present.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="credit2">
+          <div class="navigationContent">
+            <!-- <div class="iconWrapper"><span class="collapseIcon"></span></div>
+                          <div class="row">
+                            <div class="col-xs-6">
+                              <span class="heading">DU-Findings (02)</span>
+                            </div>
+                            <div class="col-xs-6">
+                              <span class="heading">LPA-Findings (04)</span>
+                            </div>
+                          </div> -->
+            <div class="row">
+
+              <div class="col-xs-12">
+                <div class="taskContent">
+                  <p>If there is a home equity line of credit secured against the subject property the maximum allowable HCLTV
+                    is 97 percent and the terms of the home equity line of credit must be verified for compliance with the
+                    Fannie Mae Selling Guide. The HCLTV calculation is based on the maximum credit limit of the equity line.
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col-xs-12">
+                <div class="taskContent">
+                  <p>Based on the credit report obtained through Desktop Underwriter, this loan casefile must close on or before
+                    06/01/2018. All credit documents must be no more than four months old on the note date. For guidelines
+                    on the age of the appraisal or property inspection report, refer to the Fannie Mae Selling Guide
+                  </p>
+                  <div class="contentFooter">
+                    <span class="complexityIcon"></span>
+                    <span class="name">Complexity-Low</span>
+                    <span class="viewTaskIcon"></span>
+                    <span class="name">View All Task</span>
+                    <span class="name pull-right">Download</span>
+                    <span class="downloadIcon  pull-right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="footer row">
+      <span class="footerContent">Copyright &#169; 2018 - Finrules. All rights reserved.</span>
+      <span class="right-content">
+            <label>Powered By:</label>
+            <span class="logo"></span>
+      </span>
+    </div>
+  </div>
+
+
+  <script src="../../assets/js/jquery.min.js"></script>
+  <script src="../../assets/js/bootstrap.min.js"></script>
+  <script src="../../assets/js/sideMenu.js"></script>
+  <script src="../../assets/js/comparison.js"></script>
+</body>
+
+</html>

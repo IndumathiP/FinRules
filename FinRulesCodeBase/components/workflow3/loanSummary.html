@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>::FinRules::</title>
-  <link rel="stylesheet/less" type="text/css" href="../assets/css/styles.less" />
+  <link rel="stylesheet/less" type="text/css" href="../../assets/css/styles.less" />
   <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
 </head>
 
@@ -18,9 +18,9 @@
           <a class="navbar-brand logo-wrap" href="javascript:void(0)"><span class="logo"></span></a>
         </div>
         <ul class="nav navbar-nav nav-pills headerlinks">
-          <li><a href="admin.html">DASHBOARD</a></li>
-          <li class="active"><a href="pipeline.html">PIPELINE</a></li>
-          <li><a href="adminConfig.html">ADMIN CONFIG</a></li>
+          <li><a href="../admin.html">DASHBOARD</a></li>
+          <li class="active"><a href="../pipeline.html">PIPELINE</a></li>
+          <li><a href="../adminConfig.html">ADMIN CONFIG</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right dashboardhead-right">
           <li class="username-wrap">
@@ -40,16 +40,16 @@
   <div class="summaryWrapper clearfix">
     <!-- Breadcrums -->
     <ol class="breadcrumb customBreadcrums">
-      <li><a href="pipeline.html">Pipeline</a></li>
+      <li><a href="../pipeline.html">Pipeline</a></li>
       <li><a class="active" href="javascript:void(0)">Summary</a></li>
     </ol>
     <!-- loan details header -->
     <div class="loanDetails clearfix">
-      <h3 class="col-md-2 col-xs-2">LOAN #W2018030139</h3>
+      <h3 class="col-md-2 col-xs-2">LOAN #W2017110035</h3>
       <ul class="loanInformation col-md-7 col-xs-7">
         <li class="col-md-3 col-xs-3">
           <label>Borrower</label>
-          <span>Firstimer, Alice</span>
+          <span>Lara, Maria</span>
         </li>
         <li class="col-md-3 col-xs-3">
           <label>Loan Status</label>
@@ -57,15 +57,15 @@
         </li>
         <li class="col-md-3 col-xs-3">
           <label>Purchase Price</label>
-          <span>$ 250,000.00</span>
+          <span>$ 477, 300.00</span>
         </li>
         <li class="col-md-3 col-xs-3">
           <label>Total Loan Amount</label>
-          <span>$ 217,150.00</span>
+          <span>$ 475, 827.00</span>
         </li>
       </ul>
       <div class="backButton pull-right">
-        <a href="pipeline.html"><button class="btn btn-back">Back to Pipeline</button></a>
+        <a href="../pipeline.html"><button class="btn btn-back">Back to Pipeline</button></a>
       </div>
     </div>
     <!-- select condition type -->
@@ -81,7 +81,7 @@
         <ul>
           <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
           <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
-          <li><a class="mainMenu" href="Workflow1/recommendation1.html" id="aus">AUS FINDING</a></li>
+          <li><a class="mainMenu" href="recommendation.html" onclick="displayDuLp(2)" id="aus">AUS FINDING</a></li>
           <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION CATEGORY</a></li>
           <li><a class="mainMenu" href="javascript:void(0)" id="data">LOAN DATA</a></li>
         </ul>
@@ -96,9 +96,9 @@
         <div class="mainSummary displayRecommendation">
           <div class="summaryInfo">
             <span class="infoIcon"></span>
-            <span>Recommended DU &amp; LPA</span>
+            <span>Recommended DU </span>
             <span class="rightArrow"></span>
-            <span>In Progress - LPA</span>
+            <span>In Progress </span>
             <a href="conditiontype.html" class="btn btn-primary goTo">Go to Conditions</a>
           </div>
         </div>
@@ -140,8 +140,8 @@
         <div class="datas" id="application">
           <!-- borrewer information -->
           <ul class="nameToggler clearfix tabWidth1">
-            <li class="active"> <a data-toggle="pill" href="#alice-description" onclick="toggleName()">Alice</a></li>
-            <li> <a data-toggle="pill" href="#john-description" onclick="toggleName()">John</a></li>
+            <li class="active"> <a data-toggle="pill" href="#alice-description" onclick="toggleName()">Maria</a></li>
+            <li> <a data-toggle="pill" href="#john-description" onclick="toggleName()">Andy</a></li>
           </ul>
 
           <div class="tab-content">
@@ -155,7 +155,7 @@
                       <div class="row">
                         <div class="col-xs-6">
                           <span class="labels">Name</span><br>
-                          <span class="labelValue">Alice Firstimer</span>
+                          <span class="labelValue">Maria Lara</span>
                         </div>
                         <div class="col-xs-6">
                           <span class="labels">Suffix</span><br>
@@ -165,7 +165,7 @@
                       <div class="row">
                         <div class="col-xs-6">
                           <span class="labels">Social Security Number</span><br>
-                          <span class="labelValue">991-91-9991</span>
+                          <span class="labelValue">887-87-8887</span>
                         </div>
                         <div class="col-xs-6">
                           <span class="labels">Date of Birth</span><br>
@@ -211,7 +211,7 @@
                     <div class="row">
                       <div class="col-xs-2">
                         <span class="labels">Account Held By</span><br>
-                        <span class="labelValue">Alice Firstimer</span>
+                        <span class="labelValue">Maria Lara</span>
                       </div>
                       <div class="col-xs-3">
                         <span class="labels">Company Name</span><br>
@@ -233,7 +233,7 @@
                     <div class="row">
                       <div class="col-xs-2">
                         <span class="labels">Account Held By</span><br>
-                        <span class="labelValue">Alice Firstimer</span>
+                        <span class="labelValue">Maria Lara</span>
                       </div>
                       <div class="col-xs-3">
                         <span class="labels">Company Name</span><br>
@@ -349,7 +349,7 @@
                       <div class="row">
                         <div class="col-xs-6">
                           <span class="labels">Name</span><br>
-                          <span class="labelValue">John Homeowner</span>
+                          <span class="labelValue">Andy Maria</span>
                         </div>
                         <div class="col-xs-6">
                           <span class="labels">Suffix</span><br>
@@ -405,7 +405,7 @@
                     <div class="row">
                       <div class="col-xs-2">
                         <span class="labels">Account Held By</span><br>
-                        <span class="labelValue">John Homeowner</span>
+                        <span class="labelValue">Andy Maria</span>
                       </div>
                       <div class="col-xs-3">
                         <span class="labels">Company Name</span><br>
@@ -427,7 +427,7 @@
                     <div class="row">
                       <div class="col-xs-2">
                         <span class="labels">Account Held By</span><br>
-                        <span class="labelValue">John Homeowner</span>
+                        <span class="labelValue">Andy Maria</span>
                       </div>
                       <div class="col-xs-3">
                         <span class="labels">Company Name</span><br>
@@ -567,7 +567,7 @@
                   </div>
                   <div class="col-xs-6">
                     <span class="labels">Purpose of Loan</span><br>
-                    <span class="labelValue">Purchase</span>
+                    <span class="labelValue">Refinance</span>
                   </div>
                 </div>
                 <div class="row">
@@ -605,21 +605,21 @@
                 <div class="row">
                   <div class="col-xs-6">
                     <span class="labels">Appraisal Value</span><br>
-                    <span class="labelValue">$ 250,000.00</span>
+                    <span class="labelValue">$ 477, 300.00</span>
                   </div>
                   <div class="col-xs-6">
                     <span class="labels">Loan To Value(LTV)</span><br>
-                    <span class="labelValue">80%</span>
+                    <span class="labelValue">92.141%</span>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
                     <span class="labels">Sales Price</span><br>
-                    <span class="labelValue">$ 250,000.00</span>
+                    <span class="labelValue">$ 477, 300.00</span>
                   </div>
                   <div class="col-xs-6">
                     <span class="labels">C. Loan To Value(CLTV)</span><br>
-                    <span class="labelValue">80%</span>
+                    <span class="labelValue">92.141%</span>
                   </div>
                 </div>
                 <!-- <div class="row">
@@ -632,22 +632,22 @@
                 <div class="row">
                   <div class="col-xs-6">
                     <span class="labels">Base Loan Amount</span><br>
-                    <span class="labelValue">$ 215,000.00</span>
+                    <span class="labelValue">$ 475,827.00</span>
                   </div>
                   <div class="col-xs-6">
                     <span class="labels">Top Ratio</span><br>
-                    <span class="labelValue">23.40%</span>
+                    <span class="labelValue">35.033%</span>
                   </div>
 
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
                     <span class="labels">Note Loan Amount</span><br>
-                    <span class="labelValue">$ 320,000.00</span>
+                    <span class="labelValue">$ 475,827.00</span>
                   </div>
                   <div class="col-xs-6">
                     <span class="labels">Bottom Ratio</span><br>
-                    <span class="labelValue">29.44%</span>
+                    <span class="labelValue">35.033%</span>
                   </div>
                 </div>
               </div>
@@ -678,7 +678,7 @@
                 <div class="row">
                   <div class="col-xs-6">
                     <span class="labels">Last Name</span><br>
-                    <span class="labelValue">Firstimer</span>
+                    <span class="labelValue">Lara, Maria</span>
                   </div>
                   <div class="col-xs-6">
                     <span class="labels">Occupancy Type</span><br>
@@ -696,12 +696,12 @@
           <li class="listHead">
             <span>Documents</span>
           </li>
-          <li><a href="../assets/images/paystub - Alice Firstimer.pdf" download><span class="documentIcon"></span><span>PayStub</span></a></li>
-          <li><a href="../assets/images/4506T - Alice Firstimer.pdf" download><span class="documentIcon"></span><span>4506T</span></a></li>
-          <li><a href="../assets/images/Credit Report - Alice Firstimer.pdf" download><span class="documentIcon"></span><span>Credit</span></a></li>
-          <li><a href="../assets/images/Credit Report - Alice Firstimer.pdf" download><span class="documentIcon"></span><span>Bank Statement</span></a></li>
-          <li><a href="../assets/images/Credit Report - Alice Firstimer.pdf" download><span class="documentIcon"></span><span>Mortgage Insurance</span></a></li>
-          <li><a href="../assets/images/Credit Report - Alice Firstimer.pdf" download><span class="documentIcon"></span><span>1004</span></a></li>
+          <li><a href="../../assets/images/paystub - Alice Firstimer.pdf" download><span class="documentIcon"></span><span>PayStub</span></a></li>
+          <li><a href="../../assets/images/4506T - Alice Firstimer.pdf" download><span class="documentIcon"></span><span>4506T</span></a></li>
+          <li><a href="../../assets/images/Credit Report - Alice Firstimer.pdf" download><span class="documentIcon"></span><span>Credit</span></a></li>
+          <li><a href="../../assets/images/Credit Report - Alice Firstimer.pdf" download><span class="documentIcon"></span><span>Bank Statement</span></a></li>
+          <li><a href="../../assets/images/Credit Report - Alice Firstimer.pdf" download><span class="documentIcon"></span><span>Mortgage Insurance</span></a></li>
+          <li><a href="../../assets/images/Credit Report - Alice Firstimer.pdf" download><span class="documentIcon"></span><span>1004</span></a></li>
         </ul>
       </div>
     </div>
@@ -715,11 +715,11 @@
     </div>
 
   </div>
-  <script src="../assets/js/jquery.min.js"></script>
-  <script src="../assets/js/bootstrap.min.js"></script>
-  <script src="../assets/js/sideMenu.js"></script>
-  <script src="../assets/js/comparison.js"></script>
-  <script src="../assets/js/loanSummary.js"></script>
+  <script src="../../assets/js/jquery.min.js"></script>
+  <script src="../../assets/js/bootstrap.min.js"></script>
+  <script src="../../assets/js/sideMenu.js"></script>
+  <script src="../../assets/js/comparison.js"></script>
+  <script src="../../assets/js/loanSummary.js"></script>
 </body>
 
 </html>

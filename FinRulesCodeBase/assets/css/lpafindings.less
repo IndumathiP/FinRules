@@ -1,4 +1,44 @@
 .conditionWrapper {
+  .table {
+    display: table;
+    text-align: right;
+    width: 1000px;
+    margin: 45px auto;
+    .tableHead {
+        .td {
+            color: @secondary-background;
+        }
+    }
+    .row {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .td,
+    .th {
+        padding-top: 20px ;
+        padding-bottom: 20px;
+        display: table-cell;
+        &:first-child {
+            text-align: left;
+        }
+    }
+    .th {
+        font-family: Roboto-Medium;
+        color: #656464;
+    }
+    .td,
+    .th {
+        border: none;
+    }
+    .even {
+        background: @table-color;
+    }
+    .glyphicon {
+        left: 40px;
+        top: 20px;
+        color: @secondary-background;
+    }
+  }
   .lpacontent{
   @media screen and (min-height:900px){
     height:calc(100vh - 345px);
@@ -62,44 +102,4 @@
         }
     }
 
-}
-.table {
-  display: table;
-  text-align: right;
-  width: 1000px;
-  margin: 45px auto;
-  .tableHead {
-      .td {
-          color: @secondary-background;
-      }
-  }
-  .row {
-      margin-top: 0;
-      margin-bottom: 0;
-  }
-  .td,
-  .th {
-      padding-top: 20px ;
-      padding-bottom: 20px;
-      display: table-cell;
-      &:first-child {
-          text-align: left;
-      }
-  }
-  .th {
-      font-family: Roboto-Medium;
-      color: #656464;
-  }
-  .td,
-  .th {
-      border: none;
-  }
-  .even {
-      background: @table-color;
-  }
-  .glyphicon {
-      left: 40px;
-      top: 20px;
-      color: @secondary-background;
-  }
 }
