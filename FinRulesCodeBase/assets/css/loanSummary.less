@@ -40,97 +40,107 @@
   }
 }
 .mainSummary {
-    margin: 15px;
-    border: 1px solid @primary-border;
-    border-radius: 3px;
-    .summarytabs {
-        background: @list-background;
-        .nav-tabs {   
-          padding: 15px 15px 0;      
-            border: 0;
-            li {
-                a {
-                    background-color: #e2e2e2;
-                    color: @secondary-color;
-                    margin-right: 9px;
+  margin: 15px;
+  border: 1px solid @primary-border;
+  border-radius: 3px;
+  .summarytabs {
+      background: @list-background;
+      .nav-tabs {   
+        padding: 15px 15px 0;      
+          border: 0;
+          li {
+              a {
+                  background-color: #e2e2e2;
+                  color: @secondary-color;
+                  margin-right: 9px;
+                  border: 0;
+                  width: 120px;
+                  .numberedCircle{
+                    position: absolute;
+                    right: 15px;
+                    bottom: 10px;
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+                    background-color: @secondary-background;
+                    text-align: center;
+                    color: @primary-color;
+                    padding-top: 1px;
+                  }
+              }
+              &.active {
+                a{
+                  background-color: @primary-color;
+                  &:focus,&:hover,&:active,&:visited{
                     border: 0;
-                    width: 120px;
-                    .numberedCircle{
-                      position: absolute;
-                      right: 15px;
-                      bottom: 10px;
-                      height: 20px;
-                      width: 20px;
-                      border-radius: 50%;
-                      background-color: @secondary-background;
-                      text-align: center;
-                      color: @primary-color;
-                      padding-top: 1px;
-                    }
-                }
-                &.active {
-                  a{
-                    background-color: @primary-color;
-                    &:focus,&:hover,&:active,&:visited{
-                      border: 0;
-                    }
                   }
                 }
-            }
+              }
+          }
+      }
+      .eligible-nav{
+        padding: 0 15px;
+        background-color: #f7f7f7;
+        li{
+          a{
+            text-align: left;
+          }
         }
-    }
-    .summaryDes {
-        background-color: @primary-color;
-        padding: 20px 20px 20px 50px;
-        ol {
-            list-style-type: decimal;
-            li {
-                margin-top: 10px;
-            }
-        }
-    }
-    .summaryInfo {
-        padding: 15px;
-        background: @list-background;
-        font-family: Roboto-Light;
-        color: @secondary-text;
-        font-size: 16px;
-        .infoIcon {
-            background: url('../images/Sprite_FinRules2.png') no-repeat -459px -272px;
-            width: 40px;
-            height: 40px;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-        .discrepences {
-            margin-right: 10px;
-            margin-bottom: 3px;
-        }
-        .subHeadingDis {
-            font-size: 13px;
-            margin-left: 15px;
-            font-family: Roboto-Bold;
-        }
-        .rightArrow {
-            background: url('../images/Sprite_FinRules2.png') no-repeat -194px -209px;
-            width: 12px;
-            height: 20px;
-            vertical-align: middle;
-            margin: 0 10px;
-        }
-        .goTo {
-            background-color: @primary-button-color;
-            border: @primary-button-color;
-            margin: 0 15px;
-            font-size: 12px;
-        }
-        .upArrow{
-          background: url('../images/Sprite_FinRules.png') no-repeat -675px -41px;
-          width: 20px;
-          height: 12px;
-          cursor: pointer;
-        }
-    }
+      }
+  }
+  .summaryDes {
+      background-color: @primary-color;
+      padding: 20px 20px 20px 50px;
+      ol {
+          list-style-type: decimal;
+          li {
+              margin-top: 10px;
+          }
+      }
+  }
+
+  .summaryInfo {
+      padding: 15px;
+      background: @list-background;
+      font-family: Roboto-Light;
+      color: @secondary-text;
+      font-size: 16px;
+      .infoIcon {
+          background: url('../images/Sprite_FinRules2.png') no-repeat -459px -272px;
+          width: 40px;
+          height: 40px;
+          vertical-align: middle;
+          margin-right: 10px;
+      }
+      .discrepences {
+          margin-right: 10px;
+          margin-bottom: 3px;
+      }
+      .subHeadingDis {
+          font-size: 13px;
+          margin-left: 15px;
+          font-family: Roboto-Bold;
+      }
+      .rightArrow {
+          background: url('../images/Sprite_FinRules2.png') no-repeat -194px -209px;
+          width: 12px;
+          height: 20px;
+          vertical-align: middle;
+          margin: 0 10px;
+      }
+      .goTo {
+          background-color: @primary-button-color;
+          border: @primary-button-color;
+          margin: 0 15px;
+          font-size: 12px;
+      }
+      .upArrow{
+        background: url('../images/Sprite_FinRules.png') no-repeat -675px -41px;
+        width: 20px;
+        height: 12px;
+        cursor: pointer;
+      }
+  }
 }
 
 .mainWrapper {
