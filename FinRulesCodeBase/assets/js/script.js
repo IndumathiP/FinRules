@@ -202,3 +202,16 @@ function changeName(value){
   document.getElementById("name").innerHTML ="HOMEOWNER JOHN";
   }
 }
+function success(){
+  var success,leng,i;
+  success=document.getElementsByClassName("successMsg");
+  leng=success.length;
+  document.getElementById("gif").style.display="block";
+  setTimeout(function(){
+    document.getElementById("gif").style.display="none";
+    for(i=0;i<leng;i++) {
+           success[i].innerText="Success";
+           success[i].style.color="green";
+      }
+  },1000);
+}
