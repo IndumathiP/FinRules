@@ -504,212 +504,12 @@
                 color: #757E86;
             }
             .editCondition {
-                border: 1px solid @primary-border; // -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
-                // box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
-                background: @primary-background;
-                h3 {
-                    padding: 12px;
-                    background: #9ea8bb;
-                    color: @primary-color;
-                }
-                .descriptionList {
-                    padding: 20px 15px;
-                    .detail {
-                        margin-bottom: 10px;
-                    }
-                    ul {
-                        padding: 12px 10px;
-                        border: 1px solid @primary-border;
-                        position: relative;
-                        background: @primary-color;
-                        &.inner-content {
-                            -webkit-box-shadow: 0 2px 2px rgba(185, 185, 185, 0.2);
-                            box-shadow: 0 2px 2px rgba(185, 185, 185, 0.2);
-                        }
-                        .collapse.in.displayNone {
-                            display: none;
-                        } // margin-bottom: 10px;
-                        // &:last-child {
-                        //     margin: 0;
-                        // }
-                        li {
-                            display: inline-block;
-                        }
-                        li:first-child {
-                            cursor: pointer;
-                            .dropdownIcon {
-                                background: url('../images/Sprite_FinRules1.png') no-repeat -842px -77px;
-                                width: 16px;
-                                height: 17px;
-                                display: inline-block;
-                                margin-right: 5px;
-                                vertical-align: text-bottom;
-                            }
-                        }
-                        li:nth-child(2) {
-                            color: #dc0a0d;
-                        }
-                        .col {
-                            position: relative;
-                        }
-                        li:nth-child(4),
-                        li:nth-child(5) {
-                            .settingsIcon-wrap {
-                                display: inline-block;
-                                padding: 17px 10px;
-                                position: absolute;
-                                left: -9px;
-                                margin-top: -15px;
-                                margin-bottom: -15px;
-                                cursor: pointer;
-                                .settingIcon {
-                                    // background: url('../images/Sprite_FinRules1.png') no-repeat -809px -79px;
-                                    // width: 3px;
-                                    // height: 13px;
-                                    // float: left;
-                                    // cursor: pointer; //  display: inline-block;  
-                                    // position: relative;
-                                    background: url('../images/Sprite_FinRules1.png') no-repeat -809px -79px;
-                                    width: 3px;
-                                    height: 13px;
-                                    position: relative;
-                                    .validation_action {
-                                        position: absolute;
-                                        z-index: 2;
-                                        top: -30px;
-                                        left: -160px;
-                                        padding: 0;
-                                        border: 1px solid #B1B9C9;
-                                        border-radius: 2px;
-                                        width: 150px;
-                                        .option {
-                                            border-bottom: 1px solid #F8F8F8;
-                                            padding: 10px;
-                                            color: #949494;
-                                            font-size: 11px;
-                                            .delete {
-                                                background: url('../images/Sprite_FinRules1.png') no-repeat -243px -146px;
-                                                width: 13px;
-                                                height: 16px;
-                                                display: inline-block;
-                                                vertical-align: sub;
-                                                margin-right: 5px;
-                                            }
-                                            .manage {
-                                                background: url('../images/Sprite_FinRules1.png') no-repeat -293px -146px;
-                                                width: 16px;
-                                                height: 16px;
-                                                display: inline-block;
-                                                vertical-align: middle;
-                                            }
-                                            .reopen {
-                                                background: url('../images/Sprite_FinRules1.png') no-repeat -346px -146px;
-                                                width: 11px;
-                                                height: 17px;
-                                                display: inline-block;
-                                                vertical-align: sub;
-                                                margin-right: 2px;
-                                            }
-                                        }
-                                        .tip {
-                                            // border: 10px solid;
-                                            // border-color: transparent transparent transparent #B1B9C9;
-                                            // position: absolute;
-                                            // top: 22%;
-                                            // left: 100%;
-                                            border: 15px solid;
-                                            border-color: transparent transparent transparent #B1B9C9;
-                                            position: absolute;
-                                            top: 17%;
-                                            left: 100%;
-                                        }
-                                        .in {
-                                            // top: 23%;
-                                            // left: 99%;
-                                            // border: 8px solid;
-                                            // border-color: transparent transparent transparent #ffffff;
-                                            top: 20%;
-                                            left: 100%;
-                                            border: 12px solid;
-                                            border-color: transparent transparent transparent #ffffff;
-                                            position: absolute;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        .col {
-                            width: 12.5%;
-                            .addIconTop {
-                                .addIcon();
-                            }
-                            .addIconMiddle {
-                                .addIcon();
-                            }
-                        }
-                        .dropDown {
-                            background: url('../images/Sprite_FinRules1.png') no-repeat -86px -145px;
-                            width: 18px;
-                            height: 18px;
-                            float: right;
-                        }
-                        .plusIcon {
-                            padding: 2px 15px;
-                            color: #6E7D9A;
-                            background-color: #eff0f2;
-                        }
-                        .addIconTop {
-                            .addIcon();
-                            bottom: 22px;
-                        }
-                        .addIconMiddle {
-                            .addIcon();
-                            top: 22px;
-                        }
-                        .addIconBottom {
-                            .addIcon();
-                            top: 100px;
-                        }
-                    }
-                    .addTask {
-                        padding: 0;
-                        border: 0;
-                        background: none;
-                        span {
-                            background: url('../images/Sprite_FinRules1.png') no-repeat -32px -143px;
-                            width: 20px;
-                            height: 21px;
-                            float: left;
-                        }
-                        label {
-                            vertical-align: -webkit-baseline-middle;
-                            margin-left: 20px;
-                        }
-                    }
-                }
-                .sourceInformation {
-                    padding: 18px 25px; // margin: 0px 25px;
-                    border: 1px solid #E7E7E7; // margin-bottom: 20px;
-                    position: relative;
-                    background: @primary-color;
-                    .closeIcon {
-                        background: url('../images/Sprite_FinRules1.png') no-repeat -193px -136px;
-                        width: 10px;
-                        height: 9px;
-                        display: inline-block;
-                        position: absolute;
-                        right: 16px;
-                    }
-                    span {
-                        font-weight: bold;
-                    } // .soruce::after {
-                    //     content: '|';
-                    //     padding: 0 30px;
-                    // }
-                    p {
-                        padding-top: 15px;
-                    }
-                }
+             
+              h3 {
+                  padding: 12px;
+                  background: #9ea8bb;
+                  color: @primary-color;
+              }
             }
             .assets {
                 margin-bottom: 80px;
@@ -1033,4 +833,212 @@
     left: 0;
     right: 0;
     width: 285px;
+}
+.editCondition {
+  border: 1px solid @primary-border; // -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+  // box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+  background: @primary-background;
+  h3 {
+      padding: 12px;
+      background: #9ea8bb;
+      color: @primary-color;
+  }
+  .descriptionList {
+      padding: 20px 15px;
+      .detail {
+          margin-bottom: 10px;
+      }
+      ul {
+          padding: 12px 10px;
+          border: 1px solid @primary-border;
+          position: relative;
+          background: @primary-color;
+          &.inner-content {
+              -webkit-box-shadow: 0 2px 2px rgba(185, 185, 185, 0.2);
+              box-shadow: 0 2px 2px rgba(185, 185, 185, 0.2);
+          }
+          .collapse.in.displayNone {
+              display: none;
+          } // margin-bottom: 10px;
+          // &:last-child {
+          //     margin: 0;
+          // }
+          li {
+              display: inline-block;
+          }
+          li:first-child {
+              cursor: pointer;
+              .dropdownIcon {
+                  background: url('../images/Sprite_FinRules1.png') no-repeat -842px -77px;
+                  width: 16px;
+                  height: 17px;
+                  display: inline-block;
+                  margin-right: 5px;
+                  vertical-align: text-bottom;
+              }
+          }
+          li:nth-child(2) {
+              color: #dc0a0d;
+          }
+          .col {
+              position: relative;
+          }
+          li:nth-child(4),
+          li:nth-child(5) {
+              .settingsIcon-wrap {
+                  display: inline-block;
+                  padding: 17px 10px;
+                  position: absolute;
+                  left: -9px;
+                  margin-top: -15px;
+                  margin-bottom: -15px;
+                  cursor: pointer;
+                  .settingIcon {
+                      // background: url('../images/Sprite_FinRules1.png') no-repeat -809px -79px;
+                      // width: 3px;
+                      // height: 13px;
+                      // float: left;
+                      // cursor: pointer; //  display: inline-block;  
+                      // position: relative;
+                      background: url('../images/Sprite_FinRules1.png') no-repeat -809px -79px;
+                      width: 3px;
+                      height: 13px;
+                      position: relative;
+                      .validation_action {
+                          position: absolute;
+                          z-index: 2;
+                          top: -30px;
+                          left: -160px;
+                          padding: 0;
+                          border: 1px solid #B1B9C9;
+                          border-radius: 2px;
+                          width: 150px;
+                          .option {
+                              border-bottom: 1px solid #F8F8F8;
+                              padding: 10px;
+                              color: #949494;
+                              font-size: 11px;
+                              .delete {
+                                  background: url('../images/Sprite_FinRules1.png') no-repeat -243px -146px;
+                                  width: 13px;
+                                  height: 16px;
+                                  display: inline-block;
+                                  vertical-align: sub;
+                                  margin-right: 5px;
+                              }
+                              .manage {
+                                  background: url('../images/Sprite_FinRules1.png') no-repeat -293px -146px;
+                                  width: 16px;
+                                  height: 16px;
+                                  display: inline-block;
+                                  vertical-align: middle;
+                              }
+                              .reopen {
+                                  background: url('../images/Sprite_FinRules1.png') no-repeat -346px -146px;
+                                  width: 11px;
+                                  height: 17px;
+                                  display: inline-block;
+                                  vertical-align: sub;
+                                  margin-right: 2px;
+                              }
+                          }
+                          .tip {
+                              // border: 10px solid;
+                              // border-color: transparent transparent transparent #B1B9C9;
+                              // position: absolute;
+                              // top: 22%;
+                              // left: 100%;
+                              border: 15px solid;
+                              border-color: transparent transparent transparent #B1B9C9;
+                              position: absolute;
+                              top: 17%;
+                              left: 100%;
+                          }
+                          .in {
+                              // top: 23%;
+                              // left: 99%;
+                              // border: 8px solid;
+                              // border-color: transparent transparent transparent #ffffff;
+                              top: 20%;
+                              left: 100%;
+                              border: 12px solid;
+                              border-color: transparent transparent transparent #ffffff;
+                              position: absolute;
+                          }
+                      }
+                  }
+              }
+          }
+          .col {
+              width: 12.5%;
+              .addIconTop {
+                  .addIcon();
+              }
+              .addIconMiddle {
+                  .addIcon();
+              }
+          }
+          .dropDown {
+              background: url('../images/Sprite_FinRules1.png') no-repeat -86px -145px;
+              width: 18px;
+              height: 18px;
+              float: right;
+          }
+          .plusIcon {
+              padding: 2px 15px;
+              color: #6E7D9A;
+              background-color: #eff0f2;
+          }
+          .addIconTop {
+              .addIcon();
+              bottom: 22px;
+          }
+          .addIconMiddle {
+              .addIcon();
+              top: 22px;
+          }
+          .addIconBottom {
+              .addIcon();
+              top: 100px;
+          }
+      }
+      .addTask {
+          padding: 0;
+          border: 0;
+          background: none;
+          span {
+              background: url('../images/Sprite_FinRules1.png') no-repeat -32px -143px;
+              width: 20px;
+              height: 21px;
+              float: left;
+          }
+          label {
+              vertical-align: -webkit-baseline-middle;
+              margin-left: 20px;
+          }
+      }
+  }
+  .sourceInformation {
+      padding: 18px 25px; // margin: 0px 25px;
+      border: 1px solid #E7E7E7; // margin-bottom: 20px;
+      position: relative;
+      background: @primary-color;
+      .closeIcon {
+          background: url('../images/Sprite_FinRules1.png') no-repeat -193px -136px;
+          width: 10px;
+          height: 9px;
+          display: inline-block;
+          position: absolute;
+          right: 16px;
+      }
+      span {
+          font-weight: bold;
+      } // .soruce::after {
+      //     content: '|';
+      //     padding: 0 30px;
+      // }
+      p {
+          padding-top: 15px;
+      }
+  }
 }
