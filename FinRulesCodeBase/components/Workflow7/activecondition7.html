@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>:: FinRules ::</title>
+  <link rel="stylesheet/less" type="text/css" href="../../assets/css/styles.less" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
+
+</head>
+
+<body>
+  <!-- Header section -->
+  <header>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand logo-wrap" href="javascript:void(0)"><span class="logo"></span></a>
+        </div>
+        <ul class="nav navbar-nav nav-pills headerlinks">
+          <li><a href="admin.html">DASHBOARD</a></li>
+          <li class="active"><a href="pipeline.html">PIPELINE</a></li>
+          <li><a href="adminConfig.html">ADMIN CONFIG</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right dashboardhead-right">
+          <li class="username-wrap">
+            <span class="user">John Smith</span>
+            <span class="profession">Underwriter</span>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+            <span class="usericon-wrap"><span class="user-icon"></span></span>
+            <span class="dropdown-icon"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="activeConditionContainer">
+    <ol class="breadcrumb customBreadcrums row">
+      <li><a href="pipeline.html">Pipeline</a></li>
+      <li><a href="loanSummary.html">Loan Summary</a></li>
+      <li><a href="conditiontype.html">Condition Category</a></li>
+      <li><a class="active" href="javascript:void(0)">Income</a></li>
+    </ol>
+    <!-- loan details header -->
+    <div class="loanDetails row">
+      <h3 class="col-md-2 col-xs-2">LOAN # W2017110127</h3>
+      <ul class="loanInformation col-md-7 col-xs-7">
+        <li class="col-md-3 col-xs-3">
+          <label>Borrower</label>
+          <span>Ella, Alice</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Loan Status</label>
+          <span>In Underwriting</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Purchase Price</label>
+          <span>$ 800,000.00</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Total Loan Amount</label>
+          <span>$ 736,000.00</span>
+        </li>
+      </ul>
+      <div class="backButton pull-right">
+          <a href="pipeline.html"><button class="btn btn-back">Back to Pipeline</button></a>
+        </div>
+    </div>
+    <!-- select condition type -->
+    <div class="row loanMenu">
+      <div class="hamMenu clearfix">
+        <div class="col hamIcon paddingLeft">
+          <a href="javascript:void(0)" class="hamperIcon" onclick="showsideMenu()"></a>
+        </div>
+        <a href="conditiontype.html" class="col leftArrow padding0"></a>
+        <h3 class="col summaryLabel">Condition Type: Income</h3>
+      </div>
+      <nav id="sideMenu">
+        <ul>
+          <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
+          <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
+          <li><a class="mainMenu" href="recommendation.html" id="aus">AUS FINDING</a></li>
+          <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION CATEGORY</a></li>
+          <li><a class="mainMenu" href="javascript:void(0)" id="data">LOAN DATA</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- success message -->
+    <div class="tipincomesuccess hideSuccess" id="successMessage">
+      <div class="alert alert-success alert-dismissible fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
+        <p><span class="success-icon"></span>New Condition " Tip Income " has been successfully added in the condition list.</p>
+      </div>
+    </div>
+    <!-- main content -->
+    <div class="content row">
+      <!-- Add conditions -->
+      <div class="activeCondition clearfix">
+        <div class="col-md-2 col-xs-2 padding0">
+          <a href="addConditionflow.html" class="col-xs-10 addConditionSection paddingRight">
+          <span class="add"></span>
+          <label>Add Conditions</label>
+        </a>
+          <div class="col-xs-2 search">
+            <span></span>
+          </div>
+        </div>
+        <div class="col-md-10 col-xs-10 paddingRight">
+          <ul class="optionMenu clearfix">
+            <ul class="leftTabs">
+              <li>
+                <h3>BASE INCOME</h3>
+              </li>
+              <li>
+                <span>Pending</span>
+              </li>
+            </ul>
+            <ul class="rightTabs" id="options">
+              <!-- <li id="viewDu">
+                <span class="searchIcon"></span>
+                <span>LPA Findings</span>
+              </li> -->
+              <li id="viewCondition">
+                <span class="conditionIcon"></span>
+                <span>Condition for Loan</span>
+              </li>
+              <li id="viewNotes">
+                <span class="notesIcon"></span>
+                <span>Notifications</span>
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <!-- Description of list of options -->
+      <!-- DU Findings in detail -->
+      <div id="duFindingsWrapper" class="row">
+      </div>
+      <div class="duFindings" id="duFindings">
+        <ul>
+          <li class="hideDu"><span></span></li>
+          <li>
+            <span class="searchIcon"></span>
+            <span>LPA Findings</span>
+          </li>
+        </ul>
+        <p>
+          Employment/base income for <span id="name"></span> for base non-fluctuating earnings or fluctuating hourly earnings
+          must be supported by a YTD paystub documenting all YTD earnings and W-2(s) for the most recent calendar year, OR
+          a written VOE documenting all YTD earnings and earnings for the most recent calendar year.
+        </p>
+        <div class="closeSection hideDu">
+          <span>close</span>
+        </div>
+      </div>
+      <div class="duFindings" id="loan">
+        <ul>
+          <li class="hideloan"><span></span></li>
+          <li>
+            <span class="conditionIcon"></span>
+            <span>Condition for Loan</span>
+          </li>
+        </ul>
+        <p>
+          CREDIT: PAYSTUBS / W-2S OR OTHER INCOME VALIDATION PER AUS FINDINGS TO SUPPORT INCOME AND MEET AUS FINDING REQUIREMENTS (PAYSTUBS
+          MUST BE DATED WITHIN 30 DAYS OF APPLICATION).
+        </p>
+        <div class="closeSection hideloan">
+          <span>close</span>
+        </div>
+      </div>
+      <!-- notes in detail -->
+      <div class="notes" id="notes">
+        <div class="notesHeader">
+          <ul>
+            <li class="hideNotes"><span></span></li>
+            <li>
+              <span class="notesIcon"></span>
+              <span>Notifications</span>
+            </li>
+          </ul>
+        </div>
+        <ul class="notesDes">
+          <li class="clearfix">
+            <div class="bullet"></div>
+            <div class="notesDate clearfix">
+              <h3>03/17/2018</h3>
+            </div>
+            <div class="task">
+              <h3>LPA Findings executed</h3>
+              <div class="author">
+                <span>6:30 pm</span>
+                <!-- <label>William John</label> -->
+              </div>
+              <p>
+                LPA Findings executed for the Loan File. Notification sent to the Loan Officer for documentation
+                <!-- <span>Read More...</span> -->
+              </p>
+            </div>
+            <div class="task">
+              <h3>LPA Findings attached</h3>
+              <div class="author">
+                <span>6:30 pm</span>
+                <!-- <label>William John</label> -->
+              </div>
+              <p>
+                LPA Findings attached to the Loan File. Findings matched to respective Tasks and Business Rules
+                <!-- <span>Read More...</span> -->
+              </p>
+            </div>
+            <div class="task">
+              <h3>Loan File successfully validated</h3>
+              <div class="author">
+                <span>6:30 pm</span>
+                <!-- <label>William John</label> -->
+              </div>
+              <p>
+                Loan File successfully validated by Finrules. Loan File fungible for both DU, LPA Submission
+                <!-- <span>Read More...</span> -->
+              </p>
+            </div>
+          </li>
+          <li class="clearfix">
+            <div class="bullet"></div>
+            <div class="notesDate clearfix">
+              <h3>03/15/2018</h3>
+            </div>
+            <div class="task">
+              <h3>Loan File submitted</h3>
+              <div class="author">
+                <span>11:15 am</span>
+                <!-- <label>William John</label> -->
+              </div>
+              <p>
+                Loan File submitted to Underwriting for Approval. Loan Status Changed to “In Underwriting”
+                <!-- <span>Read More...</span> -->
+              </p>
+            </div>
+          </li>
+          <li class="clearfix">
+            <div class="bullet"></div>
+            <div class="notesDate clearfix">
+              <h3>03/13/2018</h3>
+            </div>
+            <div class="task">
+              <h3>Initial Disclosure sent</h3>
+              <div class="author">
+                <span>11:25 am</span>
+                <!-- <label>William John</label> -->
+              </div>
+              <p>
+                Initial Disclosure sent to Firstimer, Alice and Homeowner, John for e-consent
+                <!-- <span>Read More...</span> -->
+              </p>
+            </div>
+          </li>
+          <li class="clearfix">
+            <div class="bullet"></div>
+            <div class="notesDate clearfix">
+              <h3>03/12/2018</h3>
+            </div>
+            <div class="task marginalSpace">
+              <h3>Initial Disclosure Requested</h3>
+              <div class="author">
+                <span>11:15 am</span>
+                <!-- <label>William John</label> -->
+              </div>
+              <p>
+                RESPA Triggered and Initial Disclosure Requested for the Loan File. Loan File submitted to the Disclosure Desk
+                <!-- <span>Read More...</span> -->
+              </p>
+            </div>
+          </li>
+        </ul>
+        <div class="closeSection clearfix">
+          <span class="hideNotes">Cancel</span>
+        </div>
+      </div>
+      <!-- Categories and task condition -->
+      <div class="mainSection clearfix">
+        <!-- side menu -->
+        <div class="leftMenu col-md-2 col-xs-2">
+          <div class="category" data-toggle="collapse" data-target="#category-list"> View All Category <a href="javascript:void(0)" class="catageory-select pull-right"></a>
+            <!-- onclick="showOverlay()" onfocusout="hideOverlay()" -->
+            <div class="category-list collapse" id="category-list">
+              <div><a href="javascript:void(0)">All</a></div>
+              <div><a href="javascript:void(0)">Prior to Approval</a></div>
+              <div><a href="javascript:void(0)">Prior to Document</a></div>
+              <div><a href="javascript:void(0)">Prior to Closing</a></div>
+              <div><a href="javascript:void(0)">Prior to Funding</a></div>
+              <div><a href="javascript:void(0)">Prior to Underwriting</a></div>
+            </div>
+
+          </div>
+          <ul>
+            <li class="subHeading">
+              ADDED BY FinRules
+            </li>
+            <li>
+              <h4>Base Income</h4>
+              <span class="threeDotIcon"></span>
+              <div class="incomeStatus">
+                <span>Open 3</span>
+                <span class="closed">Closed 0</span>
+              </div>
+            </li>
+            <li>
+              <h4>Income from Assets</h4>
+              <span class="threeDotIcon"></span>
+              <div class="incomeStatus">
+                <span>Open 3</span>
+                <span class="closed">Closed 0</span>
+              </div>
+            </li>
+            <li class="subHeading">
+              ADDED BY UNDERWRITER
+            </li>
+            <li class="commonList">
+              <h4>Additional Income</h4>
+              <span class="threeDotIcon"></span>
+              <div class="incomeStatus">
+                <span>Open 3</span>
+                <span class="closed">Closed 0</span>
+              </div>
+            </li>
+            <li class="commonList hideSuccess newtipincome-wrap" id="tipIncome">
+              <span class="new-icon"></span>
+              <h4>Tip Income</h4>
+              <span class="threeDotIcon"></span>
+              <div class="incomeStatus">
+                <span>Open 1</span>
+                <span class="closed">Closed 0</span>
+              </div>
+            </li>
+          </ul>
+          <div class="button-wrapper-suspended clearfix">
+            <div class="col-xs-12 suspended">
+              <label>Suspended</label>
+              <label class="suspensionCount">6</label>
+              <!-- <label class="badge">6</label> -->
+              <span></span>
+            </div>
+
+          </div>
+        </div>
+        <!-- content -->
+        <!-- borrower list -->
+        <div class="rightMenu col-md-10 col-xs-10 paddingRight">
+          <ul class="borrowerList">
+            <li class="active"><a data-toggle="pill" href="#alice" onclick="changeName(1)">Ella, Alice</a></li>
+            <li><a data-toggle="pill" href="#john" onclick="changeName(2)">Firstimer, Patrick</a></li>
+          </ul>
+          <!-- Task lists -->
+          <div class="tab-content">
+            <div id="alice" class="tab-pane fade in active">
+              <ul class="nav nav-pills taskList clearfix">
+                <li class="task active"><a data-toggle="pill" href="#task">Task List</a></li>
+                <li class="task"><a data-toggle="pill" href="#additionalincome">Loan Data</a></li>
+              </ul>
+              <div class="tab-content">
+                <div id="additionalincome" class="additionalincome tab-pane fade">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th class="left">Gross Monthly Income</th>
+                        <th>Borrower</th>
+                        <!-- <th>Total</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="left">Base Employee income</td>
+                        <td>$3800.00</td>
+                        <!-- <td>$3800</td> -->
+                      </tr>
+                      <tr>
+                        <td class="left">Overtime</td>
+                        <td>$0.00</td>
+                        <!-- <td>$0.00</td> -->
+                      </tr>
+                      <tr>
+                        <td class="left">Bonuses</td>
+                        <td>$0.00</td>
+                        <!-- <td>$0.00</td> -->
+                      </tr>
+                      <tr>
+                        <td class="left">Commissions</td>
+                        <td>$100.00</td>
+                        <!-- <td>$100.00</td> -->
+                      </tr>
+                      <tr>
+                        <td class="left">Dividends /Interest</td>
+                        <td>$1000.00</td>
+                        <!-- <td>$1000.00</td> -->
+                      </tr>
+                      <tr>
+                        <td class="left">Net Rental Income</td>
+                        <td>$0.00</td>
+                        <!-- <td>$0.00</td> -->
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="others">
+                    <table class="table table-striped">
+                      <tbody>
+                        <h3>OTHERS</h3>
+                        <tr>
+                          <td class="left">Automobile/Expense Account Income</td>
+                          <td>$0.00</td>
+                          <!-- <td>$0.00</td> -->
+                        </tr>
+                        <tr>
+                          <td class="left">Others Total</td>
+                          <td>$99.00</td>
+                          <!-- <td>$99.00</td> -->
+                        </tr>
+                        <tr>
+                          <td class="left">TOTAL</td>
+                          <td>$4999.00</td>
+                          <!-- <td>$4999.00</td> -->
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- task -->
+                <div id="task" class="tab-pane fade in active">
+                  <!-- Required tasks -->
+                  <h3>Task Validation Category 1</h3>
+                  <div class="editCondition">
+                    <h3>(And) all required Validation</h3>
+                    <div class="descriptionList">
+                      <div class="detail">
+                        <ul class="clearfix inner-content">
+                          <div data-toggle="collapse" href="#collapse1" onclick="addIcon()">
+                            <li class="col-md-4 col-xs-4"><span class="dropdownIcon" id="rotateArrow"></span>Upload the most recent Paystub</li>
+                          </div>
+                          <li class="col-md-1 col-xs-1">Pending</li>
+                          <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+                          <li class="col-md-2 col-xs-2">Loan Officer</li>
+                          <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
+                            <!-- <span class="settingIcon" onclick="showPopup()"> -->
+                            <span class="settingsIcon-wrap" onclick="showPopup()">
+                                  <span class="settingIcon">
+                        <ul class="validation_action text-left" id="pop-up">
+                          <div class="option"><span class="delete"></span>Delete</div>
+                      <a href="businessrulestatus.html">
+                        <div class="option"><span class="manage"></span> Business Rule</div>
+                      </a>
+                      <div class="option"><span class="reopen"></span> Reopen</div>
+                      <!-- <div class="tip"></div> -->
+                      <div class="tip in"></div>
+                      </ul>
+                      </span>
+                      </span>
+                      <span class="plusIcon">OR</span>
+                      <a href=""><span class="dropDown"></span></a>
+                      <a href=""><span class="addIconTop"></span></a>
+                      <span id="bottomIcon" class="addIconMiddle"></span>
+                      </li>
+                      </ul>
+                      <div id="collapse1" class="panel-collapse collapse">
+                        <div class="sourceInformation">
+                          <span class="closeIcon"></span>
+                          <label class="soruce">
+                      <span>Source : </span> System Default</label>
+                          <!-- <label>
+                      <span>Reason :</span> Info Closed after discusssion with loan Officer</label> -->
+                          <p>
+                            <span>Task : </span> Document supporting Stable Income Source</p>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="clearfix inner-content">
+                      <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload W2 of Previous Year</li>
+                      <li class="col-md-1 col-xs-1">Pending</li>
+                      <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+                      <li class="col-md-2 col-xs-2">Loan Officer</li>
+                      <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
+                        <span class="settingsIcon-wrap" onclick="showPopup2()">
+                        <span class="settingIcon">
+                        <ul class="validation_action text-left" id="pop-up2">
+                          <div class="option"><span class="delete"></span>Delete</div>
+                  <a href="businessrulestatus.html">
+                    <div class="option"><span class="manage"></span> Business Rule</div>
+                  </a>
+                  <div class="option"><span class="reopen"></span> Reopen</div>
+                  <!-- <div class="tip"></div> -->
+                  <div class="tip in"></div>
+                  </ul>
+                  </span>
+                  </span>
+                  <span class="plusIcon">OR</span>
+                  <span class="dropDown"></span>
+                  <span class="addIconMiddle"></span>
+                  </li>
+
+                  </ul>
+                </div>
+                <!-- Optional task -->
+                <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+                <div class="descriptionList">
+                  <ul class="addTask clearfix">
+                    <li class="col-md-2">
+                      <span></span>
+                      <label>Add Task</label>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+              <div class="toggleBtn">
+                <div class="btn-toggle clearfix">
+                  <button class="btn btn-inactive" id="inactive" onclick="toggleinactive()">And</button>
+                  <button class="btn btn-active" id="active" onclick="toggleactive()">Or</button>
+                </div>
+              </div>
+              <h3>Task Validation Category 2</h3>
+              <div class="editCondition">
+                <h3>(And) all required Validation</h3>
+                <div class="descriptionList">
+                  <ul class="clearfix">
+                    <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload VOE document</li>
+                    <li class="col-md-1 col-xs-1">Pending</li>
+                    <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
+                    <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
+                      <span class="settingsIcon-wrap">
+                      <span class="settingIcon" onclick="showPopup3()">
+                      <ul class="validation_action" id="pop-up3">
+                          <div class="option"><span class="delete"></span>Delete</div>
+                <a href="businessrulestatus.html">
+                  <div class="option"><span class="manage"></span> Business Rule</div>
+                </a>
+                <div class="option"><span class="reopen"></span> Reopen</div>
+                <!-- <div class="tip"></div> -->
+                <div class="tip in"></div>
+                </ul>
+                </span>
+                </span>
+                <span class="dropDown"></span>
+                <span class="addIconTop"></span>
+                <span class="addIconMiddle"></span>
+                </li>
+
+                </ul>
+              </div>
+              <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+              <div class="descriptionList">
+                <ul class="addTask clearfix">
+
+                  <span></span>
+                  <label>Add Task</label>
+
+                </ul>
+
+              </div>
+            </div>
+            <div class="toggleBtn">
+              <div class="btn-toggle clearfix disabled-switch">
+                <button class="btn btn-disabled btn-and">And</button>
+                <button class="btn btn-disabled">Or</button>
+              </div>
+            </div>
+            <div class="button-wrapper clearfix">
+              <div class="col-md-12 col-xs-12 clearfix taskButton padding0">
+                <button type="submit" class=" btn btn-primary add">
+                    <label>Add Task Validation Category 3</label>
+                    <span></span>
+                </button>
+                <button type="submit" class="btn btn-primary start">
+                    <label>Start Execution</label>
+                    <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of task -->
+      </div>
+      <div id="john" class="tab-pane fade">
+        <ul class="nav nav-pills taskList clearfix">
+          <li class="task active"><a data-toggle="pill" href="#task1">Task List</a></li>
+          <li class="task"><a data-toggle="pill" href="#additionalincome1">Loan Data</a></li>
+        </ul>
+        <div class="tab-content">
+
+          <div id="additionalincome1" class="additionalincome tab-pane fade">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="left">Gross Monthly Income</th>
+                  <th>Co-Borrower</th>
+                  <!-- <th>Total</th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="left">Base Employee income</td>
+                  <td>$2500.00</td>
+                  <!-- <td>$3800</td> -->
+                </tr>
+                <tr>
+                  <td class="left">Overtime</td>
+                  <td>$0.00</td>
+                  <!-- <td>$0.00</td> -->
+                </tr>
+                <tr>
+                  <td class="left">Bonuses</td>
+                  <td>$0.00</td>
+                  <!-- <td>$0.00</td> -->
+                </tr>
+                <tr>
+                  <td class="left">Commissions</td>
+                  <td>$0.00</td>
+                  <!-- <td>$100.00</td> -->
+                </tr>
+                <tr>
+                  <td class="left">Dividends /Interest</td>
+                  <td>$0.00</td>
+                  <!-- <td>$1000.00</td> -->
+                </tr>
+                <tr>
+                  <td class="left">Net Rental Income</td>
+                  <td>$0.00</td>
+                  <!-- <td>$0.00</td> -->
+                </tr>
+              </tbody>
+            </table>
+            <div class="others">
+              <table class="table table-striped">
+                <tbody>
+                  <h3>OTHERS</h3>
+                  <tr>
+                    <td class="left">Automobile/Expense Account Income</td>
+                    <td>$0.00</td>
+                    <!-- <td>$0.00</td> -->
+                  </tr>
+                  <tr>
+                    <td class="left">Others Total</td>
+                    <td>$0.00</td>
+                    <!-- <td>$99.00</td> -->
+                  </tr>
+                  <tr>
+                    <td class="left">TOTAL</td>
+                    <td>$2500.00</td>
+                    <!-- <td>$4999.00</td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- task -->
+          <div id="task1" class="tab-pane fade in active">
+            <!-- Required tasks -->
+            <h3>Task Validation Category 1</h3>
+            <div class="editCondition">
+              <h3>(And) all required Validation</h3>
+              <div class="descriptionList">
+                <div class="detail">
+                  <ul class="clearfix inner-content">
+                    <div data-toggle="collapse" href="#collapse1" onclick="addIcon()">
+                      <li class="col-md-4 col-xs-4"><span class="dropdownIcon" id="rotateArrow"></span>Upload the most recent Paystub</li>
+                    </div>
+                    <li class="col-md-1 col-xs-1">Pending</li>
+                    <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+                    <li class="col-md-2 col-xs-2">Loan Officer</li>
+                    <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
+                      <span class="settingsIcon-wrap" onclick="showPopup4()">
+                      <span class="settingIcon">
+                      <ul class="validation_action text-left" id="pop-up4">
+                        <div class="option"><span class="delete"></span>Delete</div>
+                <a href="businessrulestatus.html">
+                  <div class="option"><span class="manage"></span> Business Rule</div>
+                </a>
+                <div class="option"><span class="reopen"></span> Reopen</div>
+                <!-- <div class="tip"></div> -->
+                <div class="tip in"></div>
+                </ul>
+                </span>
+                </span>
+                <span class="plusIcon">OR</span>
+                <a href=""><span class="dropDown"></span></a>
+                <a href=""><span class="addIconTop"></span></a>
+                <span id="bottomIcon" class="addIconMiddle"></span>
+                </li>
+                </ul>
+                <div id="collapse1" class="panel-collapse collapse">
+                  <div class="sourceInformation">
+                    <span class="closeIcon"></span>
+                    <label class="soruce">
+                    <span>Source : </span> System Default</label>
+                    <!-- <label>
+                    <span>Reason :</span> Info Closed after discusssion with loan Officer</label> -->
+                    <p>
+                      <span>Task : </span> Document supporting Stable Income Source</p>
+                  </div>
+                </div>
+              </div>
+              <ul class="clearfix inner-content">
+                <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload W2 of Previous Year</li>
+                <li class="col-md-1 col-xs-1">Pending</li>
+                <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+                <li class="col-md-2 col-xs-2">Loan Officer</li>
+                <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
+                  <span class="settingsIcon-wrap" onclick="showPopup5()">
+                  <span class="settingIcon">
+                      <ul class="validation_action text-left" id="pop-up5">
+                        <div class="option"><span class="delete"></span>Delete</div>
+            <a href="businessrulestatus.html">
+              <div class="option"><span class="manage"></span> Business Rule</div>
+            </a>
+            <div class="option"><span class="reopen"></span> Reopen</div>
+            <!-- <div class="tip"></div> -->
+            <div class="tip in"></div>
+            </ul>
+            </span>
+            </span>
+            <span class="plusIcon">OR</span>
+            <span class="dropDown"></span>
+            <span class="addIconMiddle"></span>
+            </li>
+
+            </ul>
+          </div>
+          <!-- Optional task -->
+          <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+          <div class="descriptionList">
+            <ul class="addTask clearfix">
+              <li class="col-md-2">
+                <span></span>
+                <label>Add Task</label>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="toggleBtn">
+          <div class="btn-toggle clearfix">
+            <button class="btn btn-inactive" id="inactive" onclick="toggleinactive()">And</button>
+            <button class="btn btn-active" id="active" onclick="toggleactive()">Or</button>
+          </div>
+        </div>
+        <h3>Task Validation Category 2</h3>
+        <div class="editCondition">
+          <h3>(And) all required Validation</h3>
+          <div class="descriptionList">
+            <ul class="clearfix">
+              <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload VOE document</li>
+              <li class="col-md-1 col-xs-1">Pending</li>
+              <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
+              <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
+                <span class="settingsIcon-wrap" onclick="showPopup6()">
+                <span class="settingIcon">
+                    <ul class="validation_action" id="pop-up6">
+                        <div class="option"><span class="delete"></span>Delete</div>
+          <a href="businessrulestatus.html">
+            <div class="option"><span class="manage"></span> Business Rule</div>
+          </a>
+          <div class="option"><span class="reopen"></span> Reopen</div>
+          <!-- <div class="tip"></div> -->
+          <div class="tip in"></div>
+          </ul>
+          </span>
+          </span>
+          <span class="dropDown"></span>
+          <span class="addIconTop"></span>
+          <span class="addIconMiddle"></span>
+          </li>
+
+          </ul>
+        </div>
+        <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+        <div class="descriptionList">
+          <ul class="addTask clearfix">
+
+            <span></span>
+            <label>Add Task</label>
+
+          </ul>
+
+        </div>
+      </div>
+      <div class="toggleBtn">
+        <div class="btn-toggle clearfix disabled-switch">
+          <button class="btn btn-disabled btn-and">And</button>
+          <button class="btn btn-disabled">Or</button>
+        </div>
+      </div>
+      <div class="button-wrapper clearfix">
+        <div class="col-md-12 col-xs-12 clearfix taskButton padding0">
+          <button type="submit" class=" btn btn-primary add">
+                  <label>Add Task Validation Category 3</label>
+                  <span></span>
+              </button>
+          <button type="submit" class="btn btn-primary start">
+                  <label>Start Execution</label>
+                  <span></span>
+              </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  </div>
+
+
+  <div class="footer row">
+    <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
+    <span class="right-content">
+        <label>Powered By:</label>
+        <span class="logo"></span>
+    </span>
+  </div>
+  </div>
+  <script src="../../assets/js/jquery.min.js"></script>
+  <script src="../../assets/js/bootstrap.min.js"></script>
+  <script src="../../assets/js/sideMenu.js"></script>
+  <script src="../../assets/js/comparison.js"></script>
+  <script src="../../assets/js/script.js"></script>
+  <script src="../../assets/js/activeCondition.js"></script>
+</body>
+
+</html>

@@ -3,8 +3,9 @@ var listOfOptions = document.getElementById("options"),
   notes = document.getElementById("notes"),
   counter = 0,cnt=0,
   childCount;
-
+if(document.getElementById("viewDu")){
 document.getElementById("viewDu").addEventListener("click", showDu);
+}
 document.getElementById("viewNotes").addEventListener("click", showNotes);
 document.getElementById("viewCondition").addEventListener("click", showCondition);
 window.addEventListener("click",hideMenu);
