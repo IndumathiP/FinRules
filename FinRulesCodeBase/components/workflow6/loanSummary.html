@@ -45,11 +45,11 @@
     </ol>
     <!-- loan details header -->
     <div class="loanDetails clearfix">
-      <h3 class="col-md-2 col-xs-2">LOAN #W2017110023</h3>
+      <h3 class="col-md-2 col-xs-2">LOAN #W2018030163</h3>
       <ul class="loanInformation col-md-7 col-xs-7">
         <li class="col-md-3 col-xs-3">
           <label>Borrower</label>
-          <span>Bancroft, Cameron</span>
+          <span>Clarke, Michael</span>
         </li>
         <li class="col-md-3 col-xs-3">
           <label>Loan Status</label>
@@ -57,11 +57,11 @@
         </li>
         <li class="col-md-3 col-xs-3">
           <label>Purchase Price</label>
-          <span>$ 215, 090.00</span>
+          <span>$ 750,000.00</span>
         </li>
         <li class="col-md-3 col-xs-3">
           <label>Total Loan Amount</label>
-          <span>$199, 804.00</span>
+          <span>$ 700,000.00</span>
         </li>
       </ul>
       <div class="backButton pull-right">
@@ -81,8 +81,8 @@
         <ul>
           <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
           <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
-          <li><a class="mainMenu" href="recommendation.html" onclick="displayDuLp(2)" id="aus">AUS FINDING</a></li>
-          <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION CATEGORY</a></li>
+          <li><a class="mainMenu" href="../recommendation.html" onclick="displayDuLp(2)" id="aus">AUS FINDING</a></li>
+          <li><a class="mainMenu" href="../conditiontype.html" id="cond">CONDITION CATEGORY</a></li>
           <li><a class="mainMenu" href="javascript:void(0)" id="data">LOAN DATA</a></li>
         </ul>
       </nav>
@@ -99,7 +99,7 @@
             <span>Recommended DU &amp; LPA</span>
             <span class="rightArrow"></span>
             <span>In Progress - LPA</span>
-            <a href="conditiontype.html" class="btn btn-primary goTo">Go to Conditions</a>
+            <a href="../conditiontype.html" class="btn btn-primary goTo">Go to Conditions</a>
           </div>
         </div>
         <div class="mainSummary displayDiscrepancy">
@@ -117,6 +117,7 @@
               <li><a data-toggle="tab" href="#incomeloan">Income <span class="numberedCircle">2</span></a></li>
               <li><a data-toggle="tab" href="#creditloan">Credit <span class="numberedCircle">1</span></a></li>
               <li><a data-toggle="tab" href="#propertyloan">Property <span class="numberedCircle">1</span></a></li>
+              <li><a data-toggle="tab" href="#fannie">Fannie Mae <span class="numberedCircle">1</span></a></li>
             </ul>
             <div class="tab-content summaryDes">
               <div id="loan" class="tab-pane fade in active">
@@ -125,6 +126,22 @@
                   <li>FHA 92900 A for Underwriting</li>
                 </ol>
               </div>
+              <div id="incomeloan" class="tab-pane fade">
+                  <ol>
+                    <li>Tip Income is not a valid income type for Government Loans</li>
+                    <li>W2 and Paystub mandatory for Underwriting</li>
+                  </ol>
+                </div>
+                <div id="creditloan" class="tab-pane fade">
+                    <ol>
+                      <li>DTI exceeds GSE limit (45%)</li>
+                    </ol>
+                  </div>
+                  <div id="propertyloan" class="tab-pane fade">
+                      <ol>
+                        <li>Appraisal not received</li>
+                      </ol>
+                    </div>
             </div>
           </div>
         </div>
@@ -140,8 +157,8 @@
         <div class="datas" id="application">
           <!-- borrewer information -->
           <ul class="nameToggler clearfix tabWidth1">
-            <li class="active"> <a data-toggle="pill" href="#alice-description" onclick="toggleName()">Cameron</a></li>
-            <li> <a data-toggle="pill" href="#john-description" onclick="toggleName()">Amelia</a></li>
+            <li class="active"> <a data-toggle="pill" href="#alice-description" onclick="toggleName()">Michael</a></li>
+            <li> <a data-toggle="pill" href="#john-description" onclick="toggleName()">Arya</a></li>
           </ul>
 
           <div class="tab-content">
@@ -155,7 +172,7 @@
                       <div class="row">
                         <div class="col-xs-6">
                           <span class="labels">Name</span><br>
-                          <span class="labelValue">Cameron Bancroft</span>
+                          <span class="labelValue">Michael Clarke</span>
                         </div>
                         <div class="col-xs-6">
                           <span class="labels">Suffix</span><br>
@@ -165,7 +182,7 @@
                       <div class="row">
                         <div class="col-xs-6">
                           <span class="labels">Social Security Number</span><br>
-                          <span class="labelValue">887-87-8887</span>
+                          <span class="labelValue">991-91-9991</span>
                         </div>
                         <div class="col-xs-6">
                           <span class="labels">Date of Birth</span><br>
@@ -211,7 +228,7 @@
                     <div class="row">
                       <div class="col-xs-2">
                         <span class="labels">Account Held By</span><br>
-                        <span class="labelValue">Cameron Bancroft</span>
+                        <span class="labelValue">Michael Clarke</span>
                       </div>
                       <div class="col-xs-3">
                         <span class="labels">Company Name</span><br>
@@ -233,7 +250,7 @@
                     <div class="row">
                       <div class="col-xs-2">
                         <span class="labels">Account Held By</span><br>
-                        <span class="labelValue">Cameron Bancroft</span>
+                        <span class="labelValue">Michael Clarke</span>
                       </div>
                       <div class="col-xs-3">
                         <span class="labels">Company Name</span><br>
@@ -349,7 +366,7 @@
                       <div class="row">
                         <div class="col-xs-6">
                           <span class="labels">Name</span><br>
-                          <span class="labelValue">Amelia Bancroft</span>
+                          <span class="labelValue">Michael Clarke</span>
                         </div>
                         <div class="col-xs-6">
                           <span class="labels">Suffix</span><br>
@@ -405,7 +422,7 @@
                     <div class="row">
                       <div class="col-xs-2">
                         <span class="labels">Account Held By</span><br>
-                        <span class="labelValue">Amelia Bancroft</span>
+                        <span class="labelValue">Michael Clarke</span>
                       </div>
                       <div class="col-xs-3">
                         <span class="labels">Company Name</span><br>
@@ -427,7 +444,7 @@
                     <div class="row">
                       <div class="col-xs-2">
                         <span class="labels">Account Held By</span><br>
-                        <span class="labelValue">Amelia Bancroft</span>
+                        <span class="labelValue">Michael Clarke</span>
                       </div>
                       <div class="col-xs-3">
                         <span class="labels">Company Name</span><br>
@@ -543,11 +560,11 @@
                 <div class="row">
                   <div class="col-xs-6">
                     <span class="labels">Mortgage Applied For</span><br>
-                    <span class="labelValue">VA</span>
+                    <span class="labelValue">FHA</span>
                   </div>
                   <div class="col-xs-6">
                     <span class="labels">Loan Program Code</span><br>
-                    <span class="labelValue">30 Yrs Fixed VA</span>
+                    <span class="labelValue">30 Yrs Fixed FHA</span>
                   </div>
                 </div>
                 <div class="row">
@@ -605,21 +622,21 @@
                 <div class="row">
                   <div class="col-xs-6">
                     <span class="labels">Appraisal Value</span><br>
-                    <span class="labelValue">$ 215, 090.00</span>
+                    <span class="labelValue">$ 750, 000.00</span>
                   </div>
                   <div class="col-xs-6">
                     <span class="labels">Loan To Value(LTV)</span><br>
-                    <span class="labelValue">72.864%</span>
+                    <span class="labelValue">93.334%</span>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
                     <span class="labels">Sales Price</span><br>
-                    <span class="labelValue">$ 215, 090.00</span>
+                    <span class="labelValue">$ 750, 000.00</span>
                   </div>
                   <div class="col-xs-6">
                     <span class="labels">C. Loan To Value(CLTV)</span><br>
-                    <span class="labelValue">72.864%</span>
+                    <span class="labelValue">93.334%</span>
                   </div>
                 </div>
                 <!-- <div class="row">
@@ -632,22 +649,22 @@
                 <div class="row">
                   <div class="col-xs-6">
                     <span class="labels">Base Loan Amount</span><br>
-                    <span class="labelValue">$ 198,070.00</span>
+                    <span class="labelValue">$ 689,000.00</span>
                   </div>
                   <div class="col-xs-6">
                     <span class="labels">Top Ratio</span><br>
-                    <span class="labelValue">16.173%</span>
+                    <span class="labelValue">38.659%</span>
                   </div>
 
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
                     <span class="labels">Note Loan Amount</span><br>
-                    <span class="labelValue">$ 198,080.00</span>
+                    <span class="labelValue">$ 700,000.00</span>
                   </div>
                   <div class="col-xs-6">
                     <span class="labels">Bottom Ratio</span><br>
-                    <span class="labelValue">38.675%</span>
+                    <span class="labelValue">47.134%</span>
                   </div>
                 </div>
               </div>
@@ -678,7 +695,7 @@
                 <div class="row">
                   <div class="col-xs-6">
                     <span class="labels">Last Name</span><br>
-                    <span class="labelValue">Bancroft, Cameron</span>
+                    <span class="labelValue">Clarke</span>
                   </div>
                   <div class="col-xs-6">
                     <span class="labels">Occupancy Type</span><br>

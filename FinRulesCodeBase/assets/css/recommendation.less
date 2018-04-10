@@ -15,21 +15,20 @@
             z-index: 1;
             background: #f0f4f7;
             width: calc(100% + 60px);
-            height: calc(100% + 50px); 
-            // .viewDes {
+            height: calc(100% + 50px); // .viewDes {
             //   margin: 15px;
             // }
-            .viewheading{
-              padding: 30px;
-              font-weight: 600;
-              font-size: 16px;
-              border-bottom: 1px solid #e4e7e9;
-              .viewCloseIcon{
-                background: url('../images/Sprite_FinRules4.png') no-repeat -771px -334px;
-                width: 14px;
-                height: 14px;
-                cursor: pointer;
-              }
+            .viewheading {
+                padding: 30px;
+                font-weight: 600;
+                font-size: 16px;
+                border-bottom: 1px solid #e4e7e9;
+                .viewCloseIcon {
+                    background: url('../images/Sprite_FinRules4.png') no-repeat -771px -334px;
+                    width: 14px;
+                    height: 14px;
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -37,6 +36,13 @@
 
 span {
     display: inline-block;
+}
+
+.btn-report {
+    border: 1px solid @secondary-background;
+    color: @secondary-background;
+    background-color: @primary-color;
+    font-family: Roboto-Medium;
 }
 
 .lpFindings {
@@ -104,10 +110,9 @@ span {
             width: 100%;
             z-index: 10;
             transition: top 1s ease-in;
-            top: calc(100% - 56px);
-            .lpEligibility {
-                margin-bottom: 60px;
-            }
+            top: calc(100% - 50px); // .lpEligibility {
+            //     margin-bottom: 60px;
+            // }
             .downIcon {
                 background: url('../images/Sprite_FinRules.png') no-repeat -682px -204px;
                 width: 18px;
@@ -150,6 +155,9 @@ span {
         background-color: @table-color;
         padding: 20px;
         font-family: Roboto-Medium;
+        span {
+            margin-top: 10px;
+        }
     }
     .navigation {
         border-bottom: 1px solid @primary-border;
@@ -189,12 +197,6 @@ span {
             padding-left: 15px;
             padding-top: 2px;
         }
-        .btn-report {
-            border: 1px solid @secondary-background;
-            color: @secondary-background;
-            background-color: @table-color;
-            font-family: Roboto-Medium;
-        }
     }
     .panel-body {
         .contentWrapper {
@@ -220,17 +222,15 @@ span {
             .vertiallyCenter {
                 margin-top: 10px;
                 cursor: pointer;
-                span{
-                  vertical-align: middle;
+                span {
+                    vertical-align: middle;
                 }
                 label {
                     font-family: Roboto-Medium;
                     cursor: pointer;
-                    vertical-align: middle;
-                    // content: "Hide Details";
+                    vertical-align: middle; // content: "Hide Details";
                 }
-            }
-            // .collapsed:after{
+            } // .collapsed:after{
             //   content: "View Details";
             // }
             .headingEligible {
@@ -278,13 +278,12 @@ span {
                 }
                 p {
                     margin-top: 20px;
-                    text-align:justify;
+                    text-align: justify;
                 }
             }
             .content {
                 font-family: Roboto-Medium;
-                padding: 20px 30px;
-                // border-left: 1px solid @primary-border;
+                padding: 20px 30px; // border-left: 1px solid @primary-border;
                 p {
                     line-height: 22px;
                     margin-bottom: 15px;
@@ -307,37 +306,36 @@ span {
         }
     }
     .summarytabs {
-      height: 330px;
-      background-color: @primary-color;
-      @media screen and (min-width: 1366px){
-        height: 250px;
-      }     
-      @media screen and (min-width: 1200px){
-        height: 300px;
-      }
-      .eligibledes {
-          padding: 20px;
-          background-color: @primary-color;
-          p {
-              line-height: 15px;
-          }
-          .table {
-              width: 100%;
-              margin: 0px;
-              .glyphicon {
-                  right: 100px;
-                  left: 0;
-              } // .tableHead .td{
-              //   text-align: center;
-              // }
-          }
-      }
-  }
-  
-  .eligibleInfo {
-      padding: 15px;
-      background: #f7f7f7;
-  }
+        height: 330px;
+        background-color: @primary-color;
+        @media screen and (min-width: 1366px) {
+            height: 250px;
+        }
+        @media screen and (min-width: 1200px) {
+            height: 300px;
+        }
+        .eligibledes {
+            padding: 20px;
+            background-color: @primary-color;
+            p {
+                line-height: 15px;
+            }
+            .table {
+                width: 100%;
+                margin: 0px;
+                .glyphicon {
+                    right: 100px;
+                    left: 0;
+                } // .tableHead .td{
+                //   text-align: center;
+                // }
+            }
+        }
+    }
+    .eligibleInfo {
+        padding: 15px;
+        background: #f7f7f7;
+    }
 }
 
 .lpEligibility {
@@ -495,4 +493,3 @@ span {
 .none {
     display: none;
 }
-

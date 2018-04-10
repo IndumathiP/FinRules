@@ -5,25 +5,25 @@
     border-radius: 50%;
     position: relative;
     label {
-    color:black;
-    height: 23px;
-    width: 23px;
-    font-size: 1.7em;
-    text-align: center;
-    margin: auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    font-size:1.7em;
+        color: black;
+        height: 23px;
+        width: 23px;
+        font-size: 1.7em;
+        text-align: center;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        font-size: 1.7em;
     }
 }
 
 .h2style {
     font-family: Roboto-Regular;
-    font-weight:bold;
-    font-size:18px;
+    font-weight: bold;
+    font-size: 18px;
     color: @secondary-background;
     padding: 30px 0;
 }
@@ -45,143 +45,140 @@
     font-family: Roboto-Regular;
     font-size: 12px;
 }
-.totalfindings-row{
-  background-color:#308a7b;
-  color:@primary-color;
-  padding:15px;
-  vertical-align:middle;
-  .col-xs-2{
-    width:20%;
-    margin-right:35px;
-  }
-  .totalopen{
-  }
-  .totalclosed{
 
-  }
-  .totalunassigned{
-
-  }
-  label{
-    font-size:1.1em;
-  }
-  span{
-    font-size: 33px;
-    font-family: Roboto-Medium;
-    vertical-align:middle;
-  }
-.totalfindings-wrap{
-    padding:13px 15px;
-    text-align:right;
-  span{
-    vertical-align:top;
-    margin-right:30px;
-  }
-label{
-  width:66px;
-  text-align:left;
-  margin-right:15px;
-}
-  border-right:1px solid @totalfindings-border;
-}
-.totalcondition-wrap{
-  background:@totalfindings-wrap;
-  padding:10px 20px 10px 15px;
-  .total-value{
-    float:right;
-    padding-top:3px;
-  }
-  .totalopen-icon{
-    background: url('../images/Sprite_FinRules4.png') no-repeat -704px -384px;
-    width: 34px;
-    height: 39px;
-  }
-  .totalclosed-icon{
-    background: url('../images/Sprite_FinRules4.png') no-repeat -775px -381px;
-    width: 39px;
-    height: 39px;
-  }
-  .totalunassigned-icon{
-    background: url('../images/Sprite_FinRules4.png') no-repeat -855px -383px;
-    width: 18px;
-    height: 39px;
-  }
-  .totalunassigned-icon,.totalclosed-icon,.totalopen-icon{
-    margin-right:20px;
-  }
-  @media screen and (max-width:1300px){
-  .totalunassigned-icon,.totalclosed-icon,.totalopen-icon{
-    margin-right:10px;
-  }}
-}
-}
-@media screen and (max-width:1300px){
-  .totalfindings-row{
-    // padding:10px;
-    .col-xs-2{
-      margin-right:10px;
-      width:23.99%
+.totalfindings-row {
+    background-color: #308a7b;
+    color: @primary-color;
+    padding: 15px;
+    vertical-align: middle;
+    .col-xs-2 {
+        width: 20%;
+        margin-right: 35px;
     }
-    // span{
-    //   font-size:2em;
-    // }
-    // .totalcondition-wrap{
-    //   padding:7px 1px;
-    // }
-  }
-}
-.conditionContainer {
-  box-sizing: border-box;
-    padding: 0 15px; 
-  //   .heading-link {
-  //     .h2style();
-  //     padding: 20px 0;
-  // }  
-  .condition-tabs{
-      //padding-top:10px;
-      background-color: #F4F4F4;
-     
-      padding: 0 15px;
-      ul{
-        border-bottom:1px solid #c0c0c0;
-      }
-      li.active{
-        border-bottom:4px solid @secondary-background;
-        a{
-          color:@secondary-background;
+    .totalopen {}
+    .totalclosed {}
+    .totalunassigned {}
+    label {
+        font-size: 1.1em;
+    }
+    span {
+        font-size: 33px;
+        font-family: Roboto-Medium;
+        vertical-align: middle;
+    }
+    .totalfindings-wrap {
+        padding: 13px 15px;
+        text-align: right;
+        span {
+            vertical-align: top;
+            margin-right: 30px;
         }
-      }
-      li{
-        //padding:10px 0;
-        margin:0 20px;
-      a{
-        padding:25px 15px 15px;
-        font-size:14px;
-        font-family:Roboto-Medium;
-        display: block;
-        background:transparent!important;
-        color:@secondary-background;
-      }
+        label {
+            width: 66px;
+            text-align: left;
+            margin-right: 15px;
+        }
+        border-right:1px solid @totalfindings-border;
     }
-  }
+    .totalcondition-wrap {
+        background: @totalfindings-wrap;
+        padding: 10px 20px 10px 15px;
+        .total-value {
+            float: right;
+            padding-top: 3px;
+        }
+        .totalopen-icon {
+            background: url('../images/Sprite_FinRules4.png') no-repeat -704px -384px;
+            width: 34px;
+            height: 39px;
+        }
+        .totalclosed-icon {
+            background: url('../images/Sprite_FinRules4.png') no-repeat -775px -381px;
+            width: 39px;
+            height: 39px;
+        }
+        .totalunassigned-icon {
+            background: url('../images/Sprite_FinRules4.png') no-repeat -855px -383px;
+            width: 18px;
+            height: 39px;
+        }
+        .totalunassigned-icon,
+        .totalclosed-icon,
+        .totalopen-icon {
+            margin-right: 20px;
+        }
+        @media screen and (max-width:1300px) {
+            .totalunassigned-icon,
+            .totalclosed-icon,
+            .totalopen-icon {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1300px) {
+    .totalfindings-row {
+        // padding:10px;
+        .col-xs-2 {
+            margin-right: 10px;
+            width: 23.99%
+        } // span{
+        //   font-size:2em;
+        // }
+        // .totalcondition-wrap{
+        //   padding:7px 1px;
+        // }
+    }
+}
+
+.conditionContainer {
+    box-sizing: border-box;
+    padding: 0 15px; //   .heading-link {
+    //     .h2style();
+    //     padding: 20px 0;
+    // }  
+    .condition-tabs {
+        //padding-top:10px;
+        background-color: #F4F4F4;
+        padding: 0 15px;
+        ul {
+            border-bottom: 1px solid #c0c0c0;
+        }
+        li.active {
+            border-bottom: 4px solid @secondary-background;
+            a {
+                color: @secondary-background;
+            }
+        }
+        li {
+            //padding:10px 0;
+            margin: 0 20px;
+            a {
+                padding: 25px 15px 15px;
+                font-size: 14px;
+                font-family: Roboto-Medium;
+                display: block;
+                background: transparent !important;
+                color: @secondary-background;
+            }
+        }
+    }
     .mainContent {
         background-color: #F4F4F4;
-        @media screen and (min-height:900px){
-          height:calc(100vh - 425px);
+        @media screen and (min-height: 900px) {
+            height:calc(100vh - 425px);
         }
-       
         .cardView {
             //display: inline-block;
             // padding: 0 15px;;
             // margin-bottom: 5em;
-            padding: 20px;
-            // margin-bottom: 60px;
-            width:100%;
-            
+            padding: 20px; // margin-bottom: 60px;
+            width: 100%;
             .cards {
-              margin:30px 0 65px 0;
+                margin: 30px 0 65px 0;
                 .individualCard {
-                    position: relative;    
+                    position: relative;
                     transition: all 500ms ease;
                     transform: scale(1);
                     &:hover {
@@ -190,10 +187,9 @@ label{
                         border: 2px solid @secondary-background;
                         .configuration {
                             display: block;
-                            cursor:pointer;
+                            cursor: pointer;
                         }
                     }
-
                     .cardStyle();
                     border-bottom: 2px solid @secondary-background;
                     .cardHeader {
@@ -209,69 +205,99 @@ label{
                             display: inline-block;
                             padding-left: 15px;
                             h3 {
-                              font-family: Roboto-regular;
-                              font-size: 18px;
-                              font-weight: bold;
-                              color:black;
+                                font-family: Roboto-regular;
+                                font-size: 18px;
+                                font-weight: bold;
+                                color: @secondary-color;
                             }
                             label {
-                                color: @closed-status-border;
+                                // color: @closed-status-border;
                                 font-size: 13px;
                                 margin-top: 4px;
                             }
+                            .progressColor {
+                                color: @closed-status-border;
+                            }
+                            .compColor {
+                                color: @secondary-background;
+                            }
+                        } // .rightIcon {
+                        //   background: url('../images/Sprite_FinRules2.png') no-repeat -288px -73px;
+                        //   width: 27px;
+                        //   height: 23px;
+                        //   float: right;
+                        //   position: absolute;
+                        //   top: 30px;
+                        //   right: 22px;
+                        // }
+                        .rightIconprogress {
+                            background: url('../images/Sprite_FinRules2.png') no-repeat -288px -73px;
+                            width: 27px;
+                            height: 23px;
+                            float: right;
+                            position: absolute;
+                            top: 30px;
+                            right: 22px;
                         }
-                        .rightIcon {
-                          background: url('../images/Sprite_FinRules2.png') no-repeat -288px -73px;
-                          width: 27px;
-                          height: 23px;
-                          float: right;
-                          position: absolute;
-                          top: 30px;
-                          right: 22px;
+                        .rightIconcomp {
+                            background: url('../images/Sprite_FinRules2.png') no-repeat -341px -76px;
+                            width: 27px;
+                            height: 23px;
+                            float: right;
+                            position: absolute;
+                            top: 30px;
+                            right: 22px;
                         }
-                        
-                @media only screen and (max-width: 1203px){
-                  .rightIcon{
-                    background: url('../images/Sprite_FinRules2.png') no-repeat -552px -205px;
-                    width: 20px;
-                    height: 18px;
-                    position: absolute;
-                    top: 41px;
-                    right: 17px;
-                  }
-                  }
+                        @media only screen and (max-width: 1203px) {
+                            .rightIconprogress {
+                                background: url('../images/Sprite_FinRules2.png') no-repeat -552px -205px;
+                                width: 20px;
+                                height: 18px;
+                                position: absolute;
+                                top: 41px;
+                                right: 17px;
+                            }
+                            .rightIconcomp {
+                                background: url('../images/Sprite_FinRules2.png') no-repeat -600px -207px;
+                                width: 20px;
+                                height: 18px;
+                                position: absolute;
+                                top: 41px;
+                                right: 17px;
+                            }
+                        }
                     }
                     .cardData {
                         padding: 12%;
-                        background-color: @primary-color;                        
-                        box-sizing:border-box;
-                        p{
-                          font-size: 13px;
-                          color: #656464;
+                        background-color: @primary-color;
+                        box-sizing: border-box;
+                        p {
+                            font-size: 13px;
+                            color: #656464;
                         }
-                        .conditionstatus-wrap{
-                          background:#f8f8f8;                          
-                          padding:6%;  
-                          box-sizing:border-box;
-                          .conditionstatus-content{                      
-                        .left-content{
-                          font-size:1em;
-                          color:#818181;
-                          display:inline-block;
-                          width: 50%;
+                        .conditionstatus-wrap {
+                            background: #f8f8f8;
+                            padding: 6%;
+                            box-sizing: border-box;
+                            .conditionstatus-content {
+                                .left-content {
+                                    font-size: 1em;
+                                    color: #818181;
+                                    display: inline-block;
+                                    width: 50%;
+                                }
+                                .right-content {
+                                    text-align: right;
+                                    font-size: 37px;
+                                    font-weight: bold;
+                                    color: #4b4e60;
+                                    border-left: 1px solid #818181;
+                                    display: inline-block;
+                                    width: 45%;
+                                    box-sizing: border-box;
+                                }
+                            }
                         }
-                        .right-content{
-                          text-align: right;
-                          font-size:37px;
-                          font-weight:bold;                          
-                          color:#4b4e60;                                                    
-                          border-left:1px solid #818181;
-                          display:inline-block;
-                          width: 45%;
-                          box-sizing:border-box;
-                        }
-                        }
-                      }
                         .statusCount {
                             padding: 20px 0 15px;
                             text-align: center;
@@ -287,25 +313,24 @@ label{
                                 border: 1px solid @closed-status-border;
                                 .status();
                             }
-                            @media only screen and (max-width: 1203px){
-                              .closeStatus,.openStatus{
-                                width:45px;
-                                height:45px;
-                              }
-
+                            @media only screen and (max-width: 1203px) {
+                                .closeStatus,
+                                .openStatus {
+                                    width: 45px;
+                                    height: 45px;
+                                }
                             }
-                              .openstatuswrap{
+                            .openstatuswrap {
                                 margin-right: 30px;
-                              }
+                            }
                             .statusContainer {
                                 display: inline-block;
-                                position: relative;                             
+                                position: relative;
                                 span {
                                     display: block;
                                     font-size: 12px;
                                     color: grey;
-                                }
-                                // @media screen and (max-width:1150px) and (min-width:1024px) {
+                                } // @media screen and (max-width:1150px) and (min-width:1024px) {
                                 //     margin-right: 17px;
                                 // }
                             }
@@ -319,61 +344,59 @@ label{
                         position: absolute;
                         left: -2px;
                         display: none;
-                            span {
-                                font-size: 24px;
-                                color: #ffffff;
-                            }
+                        span {
+                            font-size: 24px;
+                            color: #ffffff;
+                        }
                     }
                 }
                 .individualCard:nth-child(2) {
                     .leftIcon {
-                        background: url('../images/Sprite_FinRules2.png') no-repeat -77px -69px!important;
+                        background: url('../images/Sprite_FinRules2.png') no-repeat -77px -69px !important;
                     }
                 }
                 .individualCard:nth-child(3) {
                     .leftIcon {
-                        background: url('../images/Sprite_FinRules2.png') no-repeat -133px -69px!important;
+                        background: url('../images/Sprite_FinRules2.png') no-repeat -133px -69px !important;
                     }
                 }
                 .individualCard:nth-child(4) {
-                    .loanStatus {
-                        label {
-                            color: @secondary-background;
-                        }
-                    }
+                    // .loanStatus {
+                    //     label {
+                    //         color: @secondary-background;
+                    //     }
+                    // }
                     .leftIcon {
-                        background: url('../images/Sprite_FinRules2.png') no-repeat -188px -68px!important;
-                    }
-                    .rightIcon {
-                      background: url('../images/Sprite_FinRules2.png') no-repeat -341px -76px;
-                    }
-                    @media only screen and (max-width: 1203px){
-                      .rightIcon{
-                        background: url('../images/Sprite_FinRules2.png') no-repeat -600px -207px;
-                      }
-                    }
+                        background: url('../images/Sprite_FinRules2.png') no-repeat -188px -68px !important;
+                    } // .rightIcon {
+                    //   background: url('../images/Sprite_FinRules2.png') no-repeat -341px -76px;
+                    // }
+                    // @media only screen and (max-width: 1203px){
+                    //   .rightIcon{
+                    //     background: url('../images/Sprite_FinRules2.png') no-repeat -600px -207px;
+                    //   }
                 }
                 .individualCard:nth-child(5) {
-                    .loanStatus {
-                        label {
-                            color: @secondary-background;
-                        }
-                    }
+                    // .loanStatus {
+                    //     label {
+                    //         color: @secondary-background;
+                    //     }
+                    // }
                     .leftIcon {
-                        background: url('../images/Sprite_FinRules2.png') no-repeat -234px -70px!important;
-                    }
-                    .rightIcon {
-                      background: url('../images/Sprite_FinRules2.png') no-repeat -341px -76px;
-                    }
-                    @media only screen and (max-width: 1203px){
-                      .rightIcon{
-                        background: url('../images/Sprite_FinRules2.png') no-repeat -600px -207px;
-                      }
-                    }
-                    
+                        background: url('../images/Sprite_FinRules2.png') no-repeat -234px -70px !important;
+                    } // .rightIcon {
+                    //   background: url('../images/Sprite_FinRules2.png') no-repeat -341px -76px;
+                    // }
+                    // @media only screen and (max-width: 1203px){
+                    //   .rightIcon{
+                    //     background: url('../images/Sprite_FinRules2.png') no-repeat -600px -207px;
+                    //   }
+                    // }
                 }
-            }/*cards*/
-        }/*cardview*/
+            }
+            /*cards*/
+        }
+        /*cardview*/
         .startExecution {
             margin-bottom: 20px;
             text-align: center;
@@ -409,66 +432,65 @@ label{
                     color: @secondary-color;
                 }
             }
-          }
-            .unassigned-wrap{
-              position: relative;
-              height: 334px;
-              width: 100%;
-              margin-top: 35px;
-            .unassigned-row{
-              display: flex;
-              position:absolute;
-              top:0;
-              left:0;
-              bottom:0;
-              right:0;
-              width: 788px;
-              height: 334px;
-              margin: 0 auto;
-            .duCards {
-                margin-bottom: 20px;
-                float: left;
-                margin-right: 20px;
-                .singleduCard {
-                    .cardStyle();
-                    width: 250px;
-                    margin: 0;
-                    border-bottom: 2px solid @totalfindings-backgrnd;
-                    height: 100%;
-                    h2 {
-                        background: @primary-background;
-                        padding: 25px 20px;
-                        color: @secondary-color;
-                    }
-                    p {
-                        padding: 20px;
-                        background-color: @primary-color;
-                        font-family: Roboto-Regular;
-                        text-align: justify;
-                        font-size: 13px;
-                        color:grey;
-                        line-height: 17px;
+        }
+        .unassigned-wrap {
+            position: relative;
+            height: 334px;
+            width: 100%;
+            margin-top: 35px;
+            .unassigned-row {
+                display: flex;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 788px;
+                height: 334px;
+                margin: 0 auto;
+                .duCards {
+                    margin-bottom: 20px;
+                    float: left;
+                    margin-right: 20px;
+                    .singleduCard {
+                        .cardStyle();
+                        width: 250px;
+                        margin: 0;
+                        border-bottom: 2px solid @totalfindings-backgrnd;
                         height: 100%;
-                        position: relative;
-                        .btn-convert{
-                          position: absolute;
-                          bottom: 20px;
-                          left: 35px;
-                          width: 180px;
-                          border: 1px solid @totalfindings-backgrnd;
-                          background: @primary-color;
-                          color: @primary-text;
+                        h2 {
+                            background: @primary-background;
+                            padding: 25px 20px;
+                            color: @secondary-color;
+                        }
+                        p {
+                            padding: 20px;
+                            background-color: @primary-color;
+                            font-family: Roboto-Regular;
+                            text-align: justify;
+                            font-size: 13px;
+                            color: grey;
+                            line-height: 17px;
+                            height: 100%;
+                            position: relative;
+                            .btn-convert {
+                                position: absolute;
+                                bottom: 20px;
+                                left: 35px;
+                                width: 180px;
+                                border: 1px solid @totalfindings-backgrnd;
+                                background: @primary-color;
+                                color: @primary-text;
+                            }
                         }
                     }
                 }
             }
         }
     }
-  }
-    @media only screen and (min-width: 1367px){
-      .cards {
-        padding:0 10%;
-      }
+    @media only screen and (min-width: 1367px) {
+        .cards {
+            padding: 0 10%;
+        }
     }
-    
 }
