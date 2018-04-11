@@ -1,3 +1,5 @@
+
+
 .cancelbtn {
     background: @primary-color;
     border: 1px solid @primary-color;
@@ -109,8 +111,7 @@
                 width: 70%;
             }
             p {
-              
-              line-height: 17px;
+                line-height: 17px;
             }
         }
         .incomedes {
@@ -122,6 +123,18 @@
                 p {
                     padding: 0;
                     line-height: 17px;
+                }
+            }
+            .disabledChecbox {
+              .checkmark{
+                background-color: #c2c5c7;
+              }
+                input ~ .checkmark {
+                    background-color: #c2c5c7;
+                    border: 1px solid #c2c5c7;
+                }
+                .checkmark:after {
+                    display: block;
                 }
             }
         }
@@ -147,12 +160,12 @@
             }
             border-top: 1px solid #f4f4f4;
         }
-        .showActiveList{
-          display: none;
-          margin-bottom: 20px;
-          .editCondition{
-            border: 0;
-          }
+        .showActiveList {
+            display: none;
+            margin-bottom: 20px;
+            .editCondition {
+                border: 0;
+            }
         }
         h2 {
             font-size: 16px;
@@ -367,8 +380,7 @@
     .buttonWrapper {
         padding: 3px 25px;
         border-top: 2px solid @primary-border;
-        color: #565454;
-        // a{
+        color: #565454; // a{
         //   display: inline-block;
         // }
         label {

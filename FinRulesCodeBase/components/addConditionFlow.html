@@ -87,7 +87,7 @@
         <ul>
           <li><a href="javascript:void(0)"><span class="closeSideMenu"></span></a></li>
           <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
-          <li><a class="mainMenu" href="recommendation.html" id="aus">AUS FINDING</a></li>
+          <li><a class="mainMenu" href="workflow1/recommendation1.html" id="aus">AUS FINDING</a></li>
           <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION CATEGORY</a></li>
           <li><a class="mainMenu" href="javascript:void(0)" id="data">LOAN DATA</a></li>
         </ul>
@@ -162,7 +162,7 @@
                       <div class="row">
                         <div class="col-xs-4"><span class="content">Year</span></div>
                         <div class="col-xs-2">
-                          <select class="form-control select-wrap">
+                          <select class="form-control select-wrap" readonly>
                                         <option class="content">Equal to</option>
                                         <option class="content">Less than</option>                
                                         <option class="content">Greater than</option>
@@ -178,7 +178,7 @@
                         <div class="col-xs-4">
                           <span class="col-xs-2 content textbox-content">Year</span>
                           <div class="col-xs-6">
-                            <select class="form-control">
+                            <select class="form-control" readonly>
                                         <option class="content">2018</option>               
                                         </select>
                             <span class="select-icon"></span>
@@ -207,8 +207,8 @@
                           <div class="col-xs-2 checkbox-wrap">
                             <!-- <span class="computeCheckbox"></span>
                               <span class="computeLabel content">Compute</span> -->
-                            <label class="checkboxx">Compute
-                                  <input type="checkbox" checked="checked">
+                            <label class="checkboxx disabledChecbox">Compute
+                                  <input type="checkbox" checked="checked" readonly>
                                   <span class="checkmark"></span>
                                 </label>
                           </div>
@@ -216,14 +216,14 @@
                             <span class="provideLabel topic-txtbx">Provided Value</span>
                           </div>
                           <div class="col-xs-3">
-                            <select class="form-control">
+                            <select class="form-control" readonly>
                                     <option class="content">Divide ( / )</option>
                                 </select>
                             <span class="select-icon"></span>
                           </div>
                           <div class="col-xs-2">
-                            <div class="inputWrapper">
-                              <input type="text" class="form-control computedValue" name="quantity" value="12">
+                            <div class="inputWrapper"> 
+                              <input type="text" class="form-control computedValue" name="quantity" value="12" readonly>
                               <span class="select-icon1"></span>
                               <span class="select-icon2"></span>
                             </div>
@@ -249,22 +249,22 @@
 
                             <!-- <span class="computeCheckbox"></span>
                                 <span class="computeLabel content">Toerance Level</span> -->
-                            <label class="checkboxx">Tolerance Level
-                                    <input type="checkbox" checked="checked">
+                            <label class="checkboxx disabledChecbox">Tolerance Level
+                                    <input type="checkbox" checked="checked" readonly>
                                     <span class="checkmark"></span>
                                   </label>
                           </div>
                           <div class="col-xs-2">
                           </div>
                           <div class="col-xs-3">
-                            <select class="form-control">
+                            <select class="form-control" readonly>
                                       <option class="content">Less Than</option>
                                   </select>
                             <span class="select-icon"></span>
                           </div>
                           <div class="col-xs-2">
                             <div class="inputWrapper">
-                              <input type="text" class="form-control computedValue" name="quantity" value="30">
+                              <input type="text" class="form-control computedValue" name="quantity" value="30" readonly>
                               <span class="select-icon1"></span>
                               <span class="select-icon2"></span>
                             </div>
@@ -312,7 +312,7 @@
         </a>
       </div>
       <div class="footer">
-        <span class="footerContent">Copyright &#169; 2018 - Finrules. All rights reserved.</span>
+        <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
         <span class="right-content">
               <label>Powered By:</label>
               <span class="logo"></span>

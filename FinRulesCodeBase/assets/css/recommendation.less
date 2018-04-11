@@ -75,6 +75,7 @@ span {
                         vertical-align: middle;
                         margin-right: 15px;
                     }
+                   
                     .verified {
                         display: inline;
                         &:nth-of-type(2) {
@@ -180,6 +181,9 @@ span {
         border: none;
         box-shadow: none;
     }
+    .panelCenter{
+      margin-top: 10px;
+    }
     .panel-heading {
         background-color: @table-color;
         padding: 15px;
@@ -193,10 +197,25 @@ span {
             border-right: 1px solid #00000059;
             margin-top: 10px;
         }
+        .sideHeading1{
+          font-family: Roboto-Medium;
+          font-size: 16px;
+          padding-right: 15px;
+          border-right: 1px solid #00000059;
+          margin-top: 10px;
+        }
         .findingLen {
             padding-left: 15px;
             padding-top: 2px;
         }
+        .findingLen1 {
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-top: 2px;
+          border-right: 1px solid #00000059;
+          margin-right: 15px;
+          margin-top: 10px;
+      }
     }
     .panel-body {
         .contentWrapper {
@@ -206,18 +225,57 @@ span {
                 box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
                 margin-top: 20px; // margin-left: 10px;
             }
+            .verified1 {
+              width: 100%;
+              text-align: center;
+              color: @secondary-background;
+              &:nth-of-type(1) {
+                  font-size: 24px;
+                  font-family: Roboto-Bold;
+                  padding-top: 10px;
+              }
+              &:nth-of-type(2) {
+                  font-size: 18px;
+                  padding-top: 5px;
+                  padding-bottom: 10px;
+              }
+          }
             .verified {
                 // width: 100%;
                 // text-align: center;
                 font-family: Roboto-Regular;
                 color: @secondary-background;
                 margin-left: 15px;
+              //   &:nth-of-type(1) {
+              //     font-size: 24px;
+              //     font-family: Roboto-Bold;
+              //     padding-top: 10px;
+              // }
+              // &:nth-of-type(2) {
+              //     font-size: 18px;
+              //     padding-top: 5px;
+              //     padding-bottom: 10px;
+              // }
                 .viewIcon {
                     background: url('../images/Sprite_FinRules4.png') no-repeat -627px -394px;
                     width: 9px;
                     height: 12px;
                     margin-right: 10px;
                 }
+            }
+           
+            .icon1 {
+              
+                background: url('../images/Sprite_FinRules.png') no-repeat -150px -283px;
+                width: 100px;
+                height: 94px;
+                margin: auto;
+            }
+            .successIcon {
+                background: url('../images/Sprite_FinRules.png') no-repeat -285px -299px;
+                width: 61px;
+                height: 61px;
+                margin: auto;
             }
             .vertiallyCenter {
                 margin-top: 10px;
@@ -265,6 +323,19 @@ span {
                 //     margin-top: 25%;
                 // }
             }
+            .verficationPanel{
+              margin-top: 25%;
+              text-align: center;
+              @media screen and (min-width: 1024px) and (max-width:1200px) {
+                    margin-top:70%;
+                }
+                @media screen and (min-width:1800px) {
+                    margin-top: 25%;
+                }
+            }
+            .border0{
+              border: 0;
+            }
             .paneldescription {
                 margin: 20px 15px;
                 height: 150px;
@@ -280,6 +351,12 @@ span {
                     margin-top: 20px;
                     text-align: justify;
                 }
+            }
+            .borderContent{
+              border-left: 1px solid @primary-border;
+              a{
+                text-align: left;
+              }
             }
             .content {
                 font-family: Roboto-Medium;

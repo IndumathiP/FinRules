@@ -118,7 +118,7 @@
                 <h3>BASE INCOME</h3>
               </li>
               <li>
-                <span>Pending</span>
+                <span class="successMsg">Pending</span>
               </li>
             </ul>
             <ul class="rightTabs" id="options">
@@ -193,24 +193,24 @@
               <h3>03/17/2018</h3>
             </div>
             <div class="task">
-              <h3>LPA Findings executed</h3>
+              <h3>DU Findings executed</h3>
               <div class="author">
                 <span>6:30 pm</span>
                 <!-- <label>William John</label> -->
               </div>
               <p>
-                LPA Findings executed for the Loan File. Notification sent to the Loan Officer for documentation
+                  DU Findings executed for the Loan File. Notification sent to the Loan Officer for documentation
                 <!-- <span>Read More...</span> -->
               </p>
             </div>
             <div class="task">
-              <h3>LPA Findings attached</h3>
+              <h3>DU Findings attached</h3>
               <div class="author">
                 <span>6:30 pm</span>
                 <!-- <label>William John</label> -->
               </div>
               <p>
-                LPA Findings attached to the Loan File. Findings matched to respective Tasks and Business Rules
+                  DU Findings attached to the Loan File. Findings matched to respective Tasks and Business Rules
                 <!-- <span>Read More...</span> -->
               </p>
             </div>
@@ -441,7 +441,7 @@
                           <div data-toggle="collapse" href="#collapse1" onclick="addIcon()">
                             <li class="col-md-4 col-xs-4"><span class="dropdownIcon" id="rotateArrow"></span>Upload the most recent Paystub</li>
                           </div>
-                          <li class="col-md-1 col-xs-1">Pending</li>
+                          <li class="col-md-1 col-xs-1 successMsg">Pending</li>
                           <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
                           <li class="col-md-2 col-xs-2">Loan Officer</li>
                           <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
@@ -479,7 +479,7 @@
                     </div>
                     <ul class="clearfix inner-content">
                       <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload W2 of Previous Year</li>
-                      <li class="col-md-1 col-xs-1">Pending</li>
+                      <li class="col-md-1 col-xs-1 successMsg">Pending</li>
                       <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
                       <li class="col-md-2 col-xs-2">Loan Officer</li>
                       <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
@@ -527,7 +527,7 @@
                 <div class="descriptionList">
                   <ul class="clearfix">
                     <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload VOE document</li>
-                    <li class="col-md-1 col-xs-1">Pending</li>
+                    <li class="col-md-1 col-xs-1 successMsg">Pending</li>
                     <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
                     <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
                       <span class="settingsIcon-wrap">
@@ -573,7 +573,7 @@
                     <label>Add Task Validation Category 3</label>
                     <span></span>
                 </button>
-                <button type="submit" class="btn btn-primary start">
+                <button type="submit" class="btn btn-primary start" onclick="success()">
                     <label>Start Execution</label>
                     <span></span>
                 </button>
@@ -667,7 +667,7 @@
                     <div data-toggle="collapse" href="#collapse1" onclick="addIcon()">
                       <li class="col-md-4 col-xs-4"><span class="dropdownIcon" id="rotateArrow"></span>Upload the most recent Paystub</li>
                     </div>
-                    <li class="col-md-1 col-xs-1">Pending</li>
+                    <li class="col-md-1 col-xs-1 successMsg">Pending</li>
                     <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
                     <li class="col-md-2 col-xs-2">Loan Officer</li>
                     <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
@@ -704,7 +704,7 @@
               </div>
               <ul class="clearfix inner-content">
                 <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload W2 of Previous Year</li>
-                <li class="col-md-1 col-xs-1">Pending</li>
+                <li class="col-md-1 col-xs-1 successMsg">Pending</li>
                 <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
                 <li class="col-md-2 col-xs-2">Loan Officer</li>
                 <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
@@ -752,7 +752,7 @@
           <div class="descriptionList">
             <ul class="clearfix">
               <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload VOE document</li>
-              <li class="col-md-1 col-xs-1">Pending</li>
+              <li class="col-md-1 col-xs-1 successMsg">Pending</li>
               <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
               <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
                 <span class="settingsIcon-wrap" onclick="showPopup6()">
@@ -798,7 +798,7 @@
                   <label>Add Task Validation Category 3</label>
                   <span></span>
               </button>
-          <button type="submit" class="btn btn-primary start">
+          <button type="submit" class="btn btn-primary start" onclick="success()">
                   <label>Start Execution</label>
                   <span></span>
               </button>
@@ -813,9 +813,9 @@
 
   </div>
 
-
+  <img src="../../assets/images/thankyou-loader.gif" alt="gif" id="gif" style="display:none">
   <div class="footer row">
-    <span class="footerContent">Copyright &#169; 2018 - Finrules. All rights reserved.</span>
+    <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
     <span class="right-content">
         <label>Powered By:</label>
         <span class="logo"></span>

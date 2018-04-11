@@ -20,9 +20,9 @@
           <a class="navbar-brand logo-wrap" href="javascript:void(0)"><span class="logo"></span></a>
         </div>
         <ul class="nav navbar-nav nav-pills headerlinks">
-          <li><a href="admin.html">DASHBOARD</a></li>
-          <li class="active"><a href="pipeline.html">PIPELINE</a></li>
-          <li><a href="adminConfig.html">ADMIN CONFIG</a></li>
+          <li><a href="../admin.html">DASHBOARD</a></li>
+          <li class="active"><a href="../pipeline.html">PIPELINE</a></li>
+          <li><a href="../adminConfig.html">ADMIN CONFIG</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right dashboardhead-right">
           <li class="username-wrap">
@@ -41,7 +41,7 @@
   </header>
   <div class="conditionWrapper">
     <ol class="breadcrumb customBreadcrums row">
-      <li><a href="pipeline.html">Pipeline</a></li>
+      <li><a href="../pipeline.html">Pipeline</a></li>
       <li><a href="loanSummary.html">Loan Summary</a></li>
       <li><a href="conditiontype.html">Condition Category</a></li>
       <li><a href="activecondition.html">Income</a></li>
@@ -49,29 +49,29 @@
     </ol>
     <!-- loan details header -->
     <div class="loanDetails row">
-      <h3 class="col-md-2 col-xs-2">LOAN # W2017110127</h3>
-      <ul class="loanInformation col-md-7 col-xs-7">
-        <li class="col-md-3 col-xs-3">
-          <label>Borrower</label>
-          <span>Ella, Alice</span>
-        </li>
-        <li class="col-md-3 col-xs-3">
-          <label>Loan Status</label>
-          <span>In Underwriting</span>
-        </li>
-        <li class="col-md-3 col-xs-3">
-          <label>Purchase Price</label>
-          <span>$ 800,000.00</span>
-        </li>
-        <li class="col-md-3 col-xs-3">
-          <label>Total Loan Amount</label>
-          <span>$ 736,000.00</span>
-        </li>
-      </ul>
-      <div class="backButton pull-right">
-          <a href="pipeline.html"><button class="btn btn-back">Back to Pipeline</button></a>
+        <h3 class="col-md-2 col-xs-2">LOAN #W2017110023</h3>
+        <ul class="loanInformation col-md-7 col-xs-7">
+          <li class="col-md-3 col-xs-3">
+            <label>Borrower</label>
+            <span>Bancroft, Cameron</span>
+          </li>
+          <li class="col-md-3 col-xs-3">
+            <label>Loan Status</label>
+            <span>In Underwriting</span>
+          </li>
+          <li class="col-md-3 col-xs-3">
+            <label>Purchase Price</label>
+            <span>$ 215, 090.00</span>
+          </li>
+          <li class="col-md-3 col-xs-3">
+            <label>Total Loan Amount</label>
+            <span>$199, 804.00</span>
+          </li>
+        </ul>
+        <div class="backButton pull-right">
+          <a href="../pipeline.html"><button class="btn btn-back">Back to Pipeline</button></a>
         </div>
-    </div>
+      </div>
     <div id="duFindingsWrapper" class="row">
     </div>
     <!-- select condition type -->
@@ -80,21 +80,19 @@
         <div class="col hamIcon paddingLeft">
           <a href="javascript:void(0)" class="hamperIcon" onclick="showsideMenu()"></a>
         </div>
-        <a href="activecondition7.html" class="col leftArrow padding0"></a>
-        <h3 class="col summaryLabel">Condition Type: Income</h3>
+        <a href="conditiontype.html" class="col leftArrow padding0"></a>
+        <h3 class="col summaryLabel">Add Condition</h3>
       </div>
       <nav id="sideMenu">
         <ul>
           <li><a href="javascript:void(0)"><span class="closeSideMenu"></span></a></li>
-          <li><a class="mainMenu activeMenu" href="loanSummary7.html" id="loansummary">LOAN SUMMARY</a></li>
-          <li><a class="mainMenu" href="javascript:void(0)" id="aus">AUS FINDING</a></li>
-          <li><a class="mainMenu" href="conditiontype7.html" id="cond">CONDITION CATEGORY</a></li>
+          <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
+          <li><a class="mainMenu" href="recommendation.html" id="aus">AUS FINDING</a></li>
+          <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION CATEGORY</a></li>
           <li><a class="mainMenu" href="javascript:void(0)" id="data">LOAN DATA</a></li>
         </ul>
       </nav>
     </div>
-
-    <!-- main content -->
     <div class="mainSection row">
       <section>
         <h2>CONDITION</h2>
@@ -210,7 +208,7 @@
                             <!-- <span class="computeCheckbox"></span>
                               <span class="computeLabel content">Compute</span> -->
                             <label class="checkboxx disabledChecbox">Compute
-                                  <input type="checkbox" checked="checked">
+                                  <input type="checkbox" checked="checked" readonly>
                                   <span class="checkmark"></span>
                                 </label>
                           </div>
@@ -224,7 +222,7 @@
                             <span class="select-icon"></span>
                           </div>
                           <div class="col-xs-2">
-                            <div class="inputWrapper">
+                            <div class="inputWrapper"> 
                               <input type="text" class="form-control computedValue" name="quantity" value="12" readonly>
                               <span class="select-icon1"></span>
                               <span class="select-icon2"></span>
@@ -252,7 +250,7 @@
                             <!-- <span class="computeCheckbox"></span>
                                 <span class="computeLabel content">Toerance Level</span> -->
                             <label class="checkboxx disabledChecbox">Tolerance Level
-                                    <input type="checkbox" checked="checked">
+                                    <input type="checkbox" checked="checked" readonly>
                                     <span class="checkmark"></span>
                                   </label>
                           </div>
@@ -294,19 +292,19 @@
     </div>
     <div class="buttonAndFooter row">
       <div class="buttonWrapper clearfix">
-        <a href="activecondition7.html" onclick="displayDuLp(5)">
+        <a href="activecondition.html" onclick="displayDuLp(5)">
           <button type="submit" class="btn btn-primary saveUser" id="savej-link">
               <span></span>
               <label>Add to Firstimer, Alice</label>
          </button>
         </a>
-        <a href="activecondition7.html" onclick="displayDuLp(5)">
+        <a href="activecondition.html" onclick="displayDuLp(5)">
           <button type="submit" class="btn btn-primary save" id="save-link">
               <span></span>
               <label>Save &amp; Add to All Browsers</label>
           </button>
         </a>
-        <a href="activecondition7.html">
+        <a href="activecondition.html">
           <button type="submit" class="btn btn-primary cancel" id="cancel-link">
               <span></span>
               <label>Cancel</label>
