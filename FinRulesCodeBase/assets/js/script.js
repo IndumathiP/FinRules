@@ -209,10 +209,10 @@ function success(){
   close =  document.getElementsByClassName("closedNum");
   leng=success.length;
   document.getElementById("gif").style.display="block";
-  document.getElementById("gif1").style.display="block";
+  // document.getElementById("gif1").style.display="block";
   setTimeout(function(){
     document.getElementById("gif").style.display="none";
-    document.getElementById("gif1").style.display="none";
+    // document.getElementById("gif1").style.display="none";
     for(i=0;i<leng;i++) {
            success[i].innerText="Success";
            success[i].style.color="green";         
