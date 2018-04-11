@@ -87,7 +87,7 @@
         <ul>
           <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
           <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
-          <li><a class="mainMenu" href="recommendation.html" id="aus">AUS FINDING</a></li>
+          <li><a class="mainMenu" href="Workflow1/recommendation1.html" id="aus">AUS FINDING</a></li>
           <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION CATEGORY</a></li>
           <li><a class="mainMenu" href="javascript:void(0)" id="data">LOAN DATA</a></li>
         </ul>
@@ -114,7 +114,7 @@
                 <h3>Asset Banking</h3>
               </li>
               <li>
-                <span>Pending</span>
+                <span class="successMsg">Pending</span>
               </li>
             </ul>
             <ul class="rightTabs" id="options">
@@ -304,24 +304,24 @@
               <h4>Asset Banking</h4>
               <span class="threeDotIcon"></span>
               <div class="incomeStatus">
-                <span>Open 3</span>
-                <span class="closed">Closed 0</span>
+                  <span>Open <span class="openNum">3</span></span>
+                  <span class="closed">Closed <span class="closedNum">0</span></span>
               </div>
             </li>
             <li class="commonList">
               <h4>Asset - Stock &amp; Bond</h4>
               <span class="threeDotIcon"></span>
               <div class="incomeStatus">
-                <span>Open 3</span>
-                <span class="closed">Closed 0</span>
+                  <span>Open <span class="openNum">3</span></span>
+                  <span class="closed">Closed <span class="closedNum">0</span></span>
               </div>
             </li>
             <li class="commonList">
               <h4>Asset - Life Insurance</h4>
               <span class="threeDotIcon"></span>
               <div class="incomeStatus">
-                <span>Open 3</span>
-                <span class="closed">Closed 0</span>
+                  <span>Open <span class="openNum">3</span></span>
+                  <span class="closed">Closed <span class="closedNum">0</span></span>
               </div>
             </li>
           </ul>
@@ -362,7 +362,7 @@
                             <li class="col-xs-6"><span class="dropdownIcon" id="rotateArrow"></span>Upload Document to verify Assets Totaling
                               $21,066.00 </li>
                           </div>
-                          <li class=" col-xs-1">Pending</li>
+                          <li class=" col-xs-1 successMsg">Pending</li>
                           <li class="col-xs-2">10/27/2017 12:30 PM</li>
                           <li class="col">Loan Officer</li>
                           <li class="col manage-validation paddingLeft text-center">
@@ -402,7 +402,7 @@
                       <li class="col-xs-6 paddingRight"><span class="dropdownIcon"></span>Assets Totaling $21,066.00 can be verified by third party verification
                         services
                       </li>
-                      <li class="col-xs-1">Pending</li>
+                      <li class="col-xs-1 successMsg">Pending</li>
                       <li class="col-xs-2">10/27/2017 12:30 PM</li>
                       <li class="col">Loan Officer</li>
                       <li class="col manage-validation paddingLeft text-center">
@@ -449,7 +449,7 @@
                                   <label>Add Task Validation Category 2</label>
                                   <span></span>
                               </button>
-                  <button type="submit" class="btn btn-primary start">
+                  <button type="submit" class="btn btn-primary start" onclick="success()">
                                   <label>Start Execution</label>
                                   <span></span>
                               </button>
@@ -626,7 +626,7 @@
                         <li class="col-xs-6"><span class="dropdownIcon" id="rotateArrow"></span>Upload Document to verify Assets Totaling $21,066.00
                         </li>
                       </div>
-                      <li class=" col-xs-1">Pending</li>
+                      <li class=" col-xs-1 successMsg1">Pending</li>
                       <li class="col-xs-2">10/27/2017 12:30 PM</li>
                       <li class="col">Loan Officer</li>
                       <li class="col manage-validation paddingLeft text-center">
@@ -663,7 +663,7 @@
                   <li class="col-xs-6 paddingRight"><span class="dropdownIcon"></span>Assets Totaling $21,066.00 can be verified by third party verification
                     services
                   </li>
-                  <li class="col-xs-1">Pending</li>
+                  <li class="col-xs-1 successMsg1">Pending</li>
                   <li class="col-xs-2">10/27/2017 12:30 PM</li>
                   <li class="col">Loan Officer</li>
                   <li class="col manage-validation paddingLeft text-center">
@@ -710,7 +710,7 @@
                             <label>Add Task Validation Category 2</label>
                             <span></span>
                         </button>
-              <button type="submit" class="btn btn-primary start">
+              <button type="submit" class="btn btn-primary start" onclick="success1()">
                             <label>Start Execution</label>
                             <span></span>
                         </button>
@@ -871,7 +871,7 @@
   </div>
   </div>
 
-
+  <img src="../assets/images/thankyou-loader.gif" alt="gif" id="gif" style="display:none">
   <div class="footer row">
     <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
     <span class="right-content">

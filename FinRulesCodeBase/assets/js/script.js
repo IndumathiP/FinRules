@@ -204,14 +204,39 @@ function changeName(value){
 }
 function success(){
   var success,leng,i;
-  success=document.getElementsByClassName("successMsg");
+  success = document.getElementsByClassName("successMsg");
+  open = document.getElementsByClassName("openNum");
+  close =  document.getElementsByClassName("closedNum");
   leng=success.length;
   document.getElementById("gif").style.display="block";
   setTimeout(function(){
     document.getElementById("gif").style.display="none";
     for(i=0;i<leng;i++) {
            success[i].innerText="Success";
-           success[i].style.color="green";
+           success[i].style.color="green";         
+      }
+      for(i=0,len=open.length;i<len;i++) {
+      open[i].innerText = "0";
+      close[i].innerText = "3";
+      }
+  },1000);
+}
+function success1(){
+  var success,leng,i;
+  success = document.getElementsByClassName("successMsg1");
+  open = document.getElementsByClassName("openNum");
+  close =  document.getElementsByClassName("closedNum");
+  leng=success.length;
+  document.getElementById("gif").style.display="block";
+  setTimeout(function(){
+    document.getElementById("gif").style.display="none";
+    for(i=0;i<leng;i++) {
+           success[i].innerText="Success";
+           success[i].style.color="green";         
+      }
+      for(i=0,len=open.length;i<len;i++) {
+      open[i].innerText = "0";
+      close[i].innerText = "3";
       }
   },1000);
 }
