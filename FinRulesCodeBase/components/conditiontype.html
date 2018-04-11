@@ -90,14 +90,14 @@
           <a href="../assets/images/LPA Report - Alice Firstimer.pdf" download><button type="submit">Download Report</button></a>
         </li>
       </ul>
-      <div class="col-md-3 col-xs-3">
+      <div class="col-md-3 col-xs-3 paddingLeft">
         <div class="runDu clearfix">
           <div class="col-md-7 col-xs-7">
             <label>Last Run</label>
             <span>1/17/18 2:05 PM</span>
           </div>
-          <div class="col-md-5 col-xs-5 padding0">
-            <button type="submit" duBtn>Run LPA Again</button>
+          <div class="col-md-5 col-xs-5 paddingLeft">
+            <button type="submit" class="pull-right">Run LPA Again</button>
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@
         <ul>
           <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
           <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
-          <li><a class="mainMenu" href="Workflow1/recommendation1.html" id="aus">AUS FINDING</a></li>
+          <li><a class="mainMenu" onclick="displayDuLp(1)" href="Workflow1/recommendation1.html" id="aus">AUS FINDING</a></li>
           <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION CATEGORY</a></li>
           <li><a class="mainMenu" href="javascript:void(0)" id="data">LOAN DATA</a></li>
         </ul>
@@ -117,7 +117,7 @@
     <div class="totalfindings-row row">
       <div class="totalfindings-wrap col-xs-2">
         <label>TOTAL FINDINGS</label>
-        <span>15</span>
+        <span>18</span>
       </div>
       <div class="totalcondition-wrap totalopen col-xs-2">
         <span class="totalopen-icon"></span>
