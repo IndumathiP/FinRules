@@ -302,7 +302,7 @@
             <li class="subHeading">
               ADDED BY LPA
             </li>
-            <li>
+            <li class="defaultTask" id="inactiveTask">
               <h4>Base Income</h4>
               <span class="threeDotIcon"></span>
               <div class="incomeStatus">
@@ -329,7 +329,7 @@
                 <span class="closed">Closed 0</span>
               </div>
             </li>
-            <li class="commonList hideSuccess newtipincome-wrap" id="tipIncome">
+            <li class="defaultTask hideSuccess newtipincome-wrap" id="tipIncome">
               <span class="new-icon"></span>
               <h4>Tip Income</h4>
               <span class="threeDotIcon"></span>
@@ -441,7 +441,7 @@
                           <div data-toggle="collapse" href="#collapse1" onclick="addIcon()">
                             <li class="col-md-4 col-xs-4"><span class="dropdownIcon" id="rotateArrow"></span>Upload the most recent Paystub</li>
                           </div>
-                          <li class="col-md-1 col-xs-1 successMsg">Pending</li>
+                          <li class="col-md-1 col-xs-1"><img src="../../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg">Pending</span></li>
                           <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
                           <li class="col-md-2 col-xs-2">Loan Officer</li>
                           <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
@@ -479,7 +479,7 @@
                     </div>
                     <ul class="clearfix inner-content">
                       <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload W2 of Previous Year</li>
-                      <li class="col-md-1 col-xs-1 successMsg">Pending</li>
+                      <li class="col-md-1 col-xs-1"><img src="../../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg">Pending</span></li>
                       <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
                       <li class="col-md-2 col-xs-2">Loan Officer</li>
                       <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
@@ -515,6 +515,7 @@
 
                 </div>
               </div>
+              <div class="displaysuccess" id="secondTask">
               <div class="toggleBtn">
                 <div class="btn-toggle clearfix">
                   <button class="btn btn-active" id="inactive" onclick="toggleinactive()">And</button>
@@ -527,7 +528,7 @@
                 <div class="descriptionList">
                   <ul class="clearfix">
                     <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload VOE document</li>
-                    <li class="col-md-1 col-xs-1 successMsg">Pending</li>
+                    <li class="col-md-1 col-xs-1"><img src="../../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg">Pending</span></li>
                     <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
                     <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
                       <span class="settingsIcon-wrap">
@@ -560,6 +561,7 @@
                 </ul>
 
               </div>
+            </div>
             </div>
             <div class="toggleBtn">
               <div class="btn-toggle clearfix disabled-switch">
@@ -667,7 +669,7 @@
                     <div data-toggle="collapse" href="#collapse1" onclick="addIcon()">
                       <li class="col-md-4 col-xs-4"><span class="dropdownIcon" id="rotateArrow"></span>Upload the most recent Paystub</li>
                     </div>
-                    <li class="col-md-1 col-xs-1 successMsg1">Pending</li>
+                    <li class="col-md-1 col-xs-1"><img src="../../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg1">Pending</span></li>
                     <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
                     <li class="col-md-2 col-xs-2">Loan Officer</li>
                     <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
@@ -704,7 +706,7 @@
               </div>
               <ul class="clearfix inner-content">
                 <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload W2 of Previous Year</li>
-                <li class="col-md-1 col-xs-1 successMsg1">Pending</li>
+                <li class="col-md-1 col-xs-1"><img src="../../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg1">Pending</span></li>
                 <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
                 <li class="col-md-2 col-xs-2">Loan Officer</li>
                 <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
@@ -752,7 +754,7 @@
           <div class="descriptionList">
             <ul class="clearfix">
               <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload VOE document</li>
-              <li class="col-md-1 col-xs-1 successMsg1">Pending</li>
+              <li class="col-md-1 col-xs-1"><img src="../../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg1">Pending</span></li>
               <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
               <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
                 <span class="settingsIcon-wrap" onclick="showPopup6()">

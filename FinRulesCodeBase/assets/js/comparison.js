@@ -26,6 +26,9 @@ function displayDuLp(m) {
   else if (data == 5) {
     document.getElementById("successMessage").classList.add("displaysuccess");
     document.getElementById("tipIncome").classList.add("displaysuccess");
+    document.getElementById("secondTask").classList.add("hideTask");
+    document.getElementById("inactiveTask").classList.remove("defaultTask");
+    document.getElementById("inactiveTask").classList.add("commonList");
   } 
 })();
 

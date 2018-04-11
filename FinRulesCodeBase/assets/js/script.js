@@ -207,13 +207,19 @@ function success(){
   success = document.getElementsByClassName("successMsg");
   open = document.getElementsByClassName("openNum");
   close =  document.getElementsByClassName("closedNum");
+  load = document.getElementsByClassName("gif");
   leng=success.length;
-  document.getElementById("gif").style.display="block";
-  // document.getElementById("gif1").style.display="block";
+  for(i=1;i<leng;i++) {
+    success[i].innerText="";
+  }
+  for(i=0,len=load.length;i<len;i++) {
+ load[i].style.display="block";
+  }
   setTimeout(function(){
-    document.getElementById("gif").style.display="none";
-    // document.getElementById("gif1").style.display="none";
-    for(i=0;i<leng;i++) {
+    for(i=0,len=load.length;i<len;i++){
+      load[i].style.display="none";
+    }
+     for(i=0;i<leng;i++) {
            success[i].innerText="Success";
            success[i].style.color="green";         
       }
@@ -228,13 +234,19 @@ function success1(){
   success = document.getElementsByClassName("successMsg1");
   open = document.getElementsByClassName("openNum");
   close =  document.getElementsByClassName("closedNum");
+  load = document.getElementsByClassName("gif");
   leng=success.length;
-  document.getElementById("gif").style.display="block";
-  // document.getElementById("gif1").style.display="block";
+  for(i=0;i<leng;i++) {
+    success[i].innerText="";
+  }
+  for(i=0,len=load.length;i<len;i++) {
+ load[i].style.display="block";
+  }
   setTimeout(function(){
-    document.getElementById("gif").style.display="none";
-    // document.getElementById("gif1").style.display="none";
-    for(i=0;i<leng;i++) {
+    for(i=0,len=load.length;i<len;i++){
+      load[i].style.display="none";
+    }
+     for(i=0;i<leng;i++) {
            success[i].innerText="Success";
            success[i].style.color="green";         
       }

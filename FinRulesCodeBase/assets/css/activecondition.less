@@ -73,14 +73,16 @@
         }
     }
 }
-#gif {
+// #gif {
+//   position: absolute;
+//   top:50%;
+//   left:50%;
+// }
+.gif{
+  
+  height: 20px;
   position: absolute;
-  top:50%;
-  left:50%;
-}
-#gif1{
-  width: 100%;
-  height: 100%;
+  // left:50%;
 }
 .OptionsInDetail {
     background-color: @primary-color;
@@ -166,6 +168,9 @@
     }
     .displaysuccess {
         display: block;
+    }
+    .hideTask{
+      display: none;
     }
     span {
         display: inline-block;
@@ -416,31 +421,10 @@
                     font-size: 12px;
                     margin: 0;
                 }
-                li:nth-child(2) {
-                    background: @base-background;
-                    color: @primary-color;
-                    .incomeStatus {
-                        span {
-                            color: white;
-                        }
-                        .pstyle();
-                        margin-top: 10px;
-                        .closed {
-                            float: right;
-                            padding: 0 20px;
-                        }
-                    }
-                    .threeDotIcon {
-                        background: url('../images/Sprite_FinRules1.png') no-repeat -769px -79px;
-                        width: 3px;
-                        height: 13px;
-                        float: right;
-                    }
-                }
+              
                 li:nth-child(3),
                 li:nth-child(4),
-                li:nth-child(5),
-                li:nth-child(6) {
+                li:nth-child(5){
                     .incomeStatus {
                         .pstyle();
                         margin-top: 10px;
@@ -467,8 +451,43 @@
                         right: 0;
                     }
                 }
+                .defaultTask{
+                  background: @base-background;
+                  color: @primary-color;
+                  .incomeStatus {
+                      span {
+                          color: white;
+                      }
+                      .pstyle();
+                      margin-top: 10px;
+                      .closed {
+                          float: right;
+                          padding: 0 20px;
+                      }
+                  }
+                  .threeDotIcon {
+                      background: url('../images/Sprite_FinRules1.png') no-repeat -769px -79px;
+                      width: 3px;
+                      height: 13px;
+                      float: right;
+                  }
+              }
                 .commonList {
                     border-bottom: 1px solid @primary-border;
+                    .incomeStatus {
+                      .pstyle();
+                      margin-top: 10px;
+                      .closed {
+                          float: right;
+                          padding: 0 20px;
+                      }
+                  }
+                  .threeDotIcon {
+                      background: url('../images/Sprite_FinRules1.png') no-repeat -809px -79px;
+                      width: 3px;
+                      height: 13px;
+                      float: right;
+                  }
                 }
             }
         }
