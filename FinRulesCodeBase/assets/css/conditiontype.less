@@ -47,42 +47,43 @@
 }
 
 .totalfindings-row {
-  background-color:#308a7b;
-    // background-color: #e9e9e9;
-    color: @primary-color;
-    // color: #6a6a6a;
-    padding: 15px;
-    vertical-align: middle;
+    background-color: #fbfbfb;
+    border: 1px solid #dddddd;
+    margin: 15px; // background-color: #e9e9e9;
+    color: #6f5c5e; // color: #6a6a6a;
+    padding: 10px 15px; // vertical-align: middle;
     .col-xs-2 {
         width: 20%;
         margin-right: 35px;
     }
-    label {
-        font-size: 1.1em;
-    }
-    span {
-        font-size: 33px;
-        font-family: Roboto-Medium;
-        vertical-align: middle;
-    }
+    .col {
+        margin-right: 15PX;
+    } // span {
+    //     font-size: 15px;
+    //     font-family: Roboto-Medium;
+    //     vertical-align: middle;
+    // }
     .totalfindings-wrap {
-        padding: 13px 15px;
-        text-align: right;
-        span {
-            vertical-align: top;
-            margin-right: 30px;
-        }
+        padding: 7px 15px;
+        margin-top: 5px;
+        font-size: 20px;
         label {
-            width: 66px;
-            text-align: left;
-            margin-right: 15px;
+            margin-right: 10px;
         }
-        border-right:1px solid @totalfindings-border;
+        border-right:1px solid #6f5c5e;
     }
     .totalcondition-wrap {
-        background: @totalfindings-wrap;
-        // background: #f4f4f4;
+        background: #f6f7f9;
+        border-radius: 3px; // background: #f4f4f4;
         padding: 10px 20px 10px 15px;
+        border: 1px solid #dddddd;
+        .col {
+            margin-right: 15px;
+        }
+        label {
+            font-size: 15px;
+            font-family: Roboto-Medium;
+        }
         .total-value {
             float: right;
             padding-top: 3px;
@@ -90,17 +91,20 @@
         .totalopen-icon {
             background: url('../images/Sprite_FinRules4.png') no-repeat -704px -384px;
             width: 34px;
-            height: 39px;
+            height: 25px;
         }
         .totalclosed-icon {
             background: url('../images/Sprite_FinRules4.png') no-repeat -775px -381px;
             width: 39px;
-            height: 39px;
+            height: 25px;
         }
         .totalunassigned-icon {
             background: url('../images/Sprite_FinRules4.png') no-repeat -855px -383px;
             width: 18px;
-            height: 39px;
+            height: 25px;
+        }
+        span {
+            vertical-align: middle;
         }
         .totalunassigned-icon,
         .totalclosed-icon,
@@ -167,7 +171,7 @@
     .mainContent {
         background-color: #F4F4F4;
         @media screen and (min-height: 900px) {
-          height: calc(100vh - 425px);
+            height: calc(100vh - 283px);
         }
         .cardView {
             //display: inline-block;
@@ -489,14 +493,15 @@
             }
         }
     }
-    .privateinvestor-wrap{
-      @media screen and (min-height: 900px) {
-        height: calc(100vh - 358px);
-      }
+    .privateinvestor-wrap {
+        @media screen and (min-height: 900px) {
+            height: calc(100vh - 270px);
+        }
+       
     }
     @media only screen and (min-width: 1367px) {
-        .cards {
-            padding: 0 10%;
-        }
-    }
+      .cards {
+          padding: 0 10%;
+      }
+  }
 }
