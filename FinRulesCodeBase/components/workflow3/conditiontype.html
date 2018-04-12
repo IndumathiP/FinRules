@@ -10,6 +10,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
 </head>
 <!-- active page -->
+
 <body>
   <!-- Header section -->
   <header>
@@ -82,7 +83,7 @@
           <label>Requested By</label>
           <span>Charlie</span>
         </li>
-        <li class="col-md-3 col-xs-3">                               
+        <li class="col-md-3 col-xs-3">
           <label>Recommendation</label>
           <span>Approve/Eligible</span>
         </li>
@@ -91,16 +92,16 @@
         </li>
       </ul>
       <div class="col-md-3 col-xs-3 paddingLeft">
-          <div class="runDu clearfix">
-            <div class="col-md-7 col-xs-7">
-              <label>Last Run</label>
-              <span>04/11/2018</span>
-            </div>
-            <div class="col-md-5 col-xs-5 paddingLeft">
-              <button type="submit" class="pull-right">Run DU Again</button>
-            </div>
+        <div class="runDu clearfix">
+          <div class="col-md-7 col-xs-7">
+            <label>Last Run</label>
+            <span>04/11/2018</span>
+          </div>
+          <div class="col-md-5 col-xs-5 paddingLeft">
+            <button type="submit" class="pull-right">Run DU Again</button>
           </div>
         </div>
+      </div>
       <nav id="sideMenu">
         <ul>
           <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
@@ -114,309 +115,311 @@
     <div id="duFindingsWrapper" class="row">
     </div>
 
-    <div class="totalfindings-row row">
-      <div class="totalfindings-wrap col-xs-2">
-        <label>TOTAL FINDINGS</label>
-        <span>24</span>
+    <div class="mainContent row">
+      <div class="totalfindings-row clearfix">
+        <div class="totalfindings-wrap col">
+          <label>Total Conditions </label>
+          <span>24</span>
+        </div>
+        <div class="totalcondition-wrap totalopen col">
+          <span class="totalopen-icon"></span>
+          <label>Total Open - 13</label>
+          <!-- <span class="total-value">07</span> -->
+        </div>
+        <div class="totalcondition-wrap totalclosed col">
+          <span class="totalclosed-icon"></span>
+          <label>Total Closed - 08</label>
+          <!-- <span class="total-value">08</span> -->
+        </div>
+        <div class="totalcondition-wrap totalunassign col">
+          <span class="totalunassigned-icon"></span>
+          <label>Total Unassigned - 03</label>
+          <!-- <span class="total-value">03</span> -->
+        </div>
       </div>
-      <div class="totalcondition-wrap totalopen col-xs-2">
-        <span class="totalopen-icon"></span>
-        <label>TOTAL OPEN</label>
-        <span class="total-value">13</span>
+      <div class="condition-tabs">
+        <ul class="nav-pills clearfix">
+          <li class="active"><a data-toggle="pill" href="#conditioncategory-wrap">CONDITION CATEGORY</a></li>
+          <li><a data-toggle="pill" href="#unassigned-wrap">UNASSIGNED FINDINGS</a></li>
+        </ul>
       </div>
-      <div class="totalcondition-wrap totalclosed col-xs-2">
-        <span class="totalclosed-icon"></span>
-        <label>TOTAL CLOSED</label>
-        <span class="total-value">08</span>
-      </div>
-      <div class="totalcondition-wrap totalunassign col-xs-2">
-        <span class="totalunassigned-icon"></span>
-        <label>TOTAL UNASSIGNED</label>
-        <span class="total-value">03</span>
-      </div>
-    </div>
-    <div class="condition-tabs row">
-      <ul class="nav-pills clearfix">
-        <li class="active"><a data-toggle="pill" href="#conditioncategory-wrap">CONDITION CATEGORY</a></li>
-        <li><a data-toggle="pill" href="#unassigned-wrap">UNASSIGNED FINDINGS</a></li>
-      </ul>
-    </div>
-    <div class="tab-content row mainContent">
-      <!-- <div class="cardView">
+      <div class="tab-content">
+        <!-- <div class="cardView">
         <h2>CONDITION CATEGORY</h2> -->
-      <div id="conditioncategory-wrap" class="cardView tab-pane fade in active">
-        <div class="clearfix cards">
-          <div class="individualCard">
-            <a href="activecondition.html">
-              <div class="cardHeader">
-                <span class="leftIcon"></span>
-                <div class="loanStatus">
-                  <h3>Income</h3>
-                  <label class="progressColor">In progress</label>
+        <div id="conditioncategory-wrap" class="cardView tab-pane fade in active">
+          <div class="clearfix cards">
+            <div class="individualCard">
+              <a href="activecondition.html">
+                <div class="cardHeader">
+                  <span class="leftIcon"></span>
+                  <div class="loanStatus">
+                    <h3>Income</h3>
+                    <label class="progressColor">In progress</label>
+                  </div>
+                  <span class="rightIconprogress"></span>
                 </div>
-                <span class="rightIconprogress"></span>
-              </div>
-              <div class="cardData">
-                <div class="conditionstatus-wrap">
-                  <div class="conditionstatus-content">
-                    <span class="left-content">
+                <div class="cardData">
+                  <div class="conditionstatus-wrap">
+                    <div class="conditionstatus-content">
+                      <span class="left-content">
                       Total Conditions
                     </span>
-                    <span class="right-content">
+                      <span class="right-content">
                         04
                     </span>
-                  </div>
-                </div>
-                <div class="statusCount">
-                  <div class="statusContainer openstatuswrap">
-                    <div class="openStatus">
-                      <label>03</label>
                     </div>
-                    <span>Open</span>
                   </div>
-                  <div class="statusContainer">
-                    <div class="closeStatus">
-                      <label>01</label>
+                  <div class="statusCount">
+                    <div class="statusContainer openstatuswrap">
+                      <div class="openStatus">
+                        <label>03</label>
+                      </div>
+                      <span>Open</span>
                     </div>
-                    <span>Closed</span>
+                    <div class="statusContainer">
+                      <div class="closeStatus">
+                        <label>01</label>
+                      </div>
+                      <span>Closed</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="configuration text-center">
-                <span class="glyphicon glyphicon-cog"></span>
-              </div>
-            </a>
-          </div>
-          <div class="individualCard">
-            <a href="activecondition.html">
-              <div class="cardHeader">
-                <span class="leftIcon"></span>
-                <div class="loanStatus">
-                  <h3>Property</h3>
-                  <label class="compColor">Completed</label>
+                <div class="configuration text-center">
+                  <span class="glyphicon glyphicon-cog"></span>
                 </div>
-                <span class="rightIconcomp"></span>
-              </div>
-              <div class="cardData">
-                <div class="conditionstatus-wrap">
-                  <div class="conditionstatus-content">
-                    <span class="left-content">
+              </a>
+            </div>
+            <div class="individualCard">
+              <a href="activecondition.html">
+                <div class="cardHeader">
+                  <span class="leftIcon"></span>
+                  <div class="loanStatus">
+                    <h3>Property</h3>
+                    <label class="compColor">Completed</label>
+                  </div>
+                  <span class="rightIconcomp"></span>
+                </div>
+                <div class="cardData">
+                  <div class="conditionstatus-wrap">
+                    <div class="conditionstatus-content">
+                      <span class="left-content">
                     Total Conditions
                   </span>
-                    <span class="right-content">
+                      <span class="right-content">
                       02
                   </span>
+                    </div>
+                  </div>
+                  <div class="statusCount">
+                    <div class="statusContainer openstatuswrap">
+                      <div class="openStatus">
+                        <label>0</label>
+                      </div>
+                      <span>Open</span>
+                    </div>
+                    <div class="statusContainer">
+                      <div class="closeStatus">
+                        <label>02</label>
+                      </div>
+                      <span>Closed</span>
+                    </div>
                   </div>
                 </div>
-                <div class="statusCount">
-                  <div class="statusContainer openstatuswrap">
-                    <div class="openStatus">
-                      <label>0</label>
-                    </div>
-                    <span>Open</span>
-                  </div>
-                  <div class="statusContainer">
-                    <div class="closeStatus">
-                      <label>02</label>
-                    </div>
-                    <span>Closed</span>
-                  </div>
+                <div class="configuration text-center">
+                  <span class="glyphicon glyphicon-cog"></span>
                 </div>
-              </div>
-              <div class="configuration text-center">
-                <span class="glyphicon glyphicon-cog"></span>
-              </div>
-            </a>
-          </div>
+              </a>
+            </div>
 
-          <div class="individualCard">
-            <a href="assets.html">
-              <div class="cardHeader">
-                <span class="leftIcon"></span>
-                <div class="loanStatus">
-                  <h3>Asset</h3>
-                  <label class="progressColor">In progress</label>
+            <div class="individualCard">
+              <a href="assets.html">
+                <div class="cardHeader">
+                  <span class="leftIcon"></span>
+                  <div class="loanStatus">
+                    <h3>Asset</h3>
+                    <label class="progressColor">In progress</label>
+                  </div>
+                  <span class="rightIconprogress"></span>
                 </div>
-                <span class="rightIconprogress"></span>
-              </div>
-              <div class="cardData">
-                <div class="conditionstatus-wrap">
-                  <div class="conditionstatus-content">
-                    <span class="left-content">
+                <div class="cardData">
+                  <div class="conditionstatus-wrap">
+                    <div class="conditionstatus-content">
+                      <span class="left-content">
                       Total Conditions
                     </span>
-                    <span class="right-content">
+                      <span class="right-content">
                         06
                     </span>
+                    </div>
+                  </div>
+                  <div class="statusCount">
+                    <div class="statusContainer openstatuswrap">
+                      <div class="openStatus">
+                        <label>05</label>
+                      </div>
+                      <span>Open</span>
+                    </div>
+                    <div class="statusContainer">
+                      <div class="closeStatus">
+                        <label>01</label>
+                      </div>
+                      <span>Closed</span>
+                    </div>
                   </div>
                 </div>
-                <div class="statusCount">
-                  <div class="statusContainer openstatuswrap">
-                    <div class="openStatus">
-                      <label>05</label>
-                    </div>
-                    <span>Open</span>
-                  </div>
-                  <div class="statusContainer">
-                    <div class="closeStatus">
-                      <label>01</label>
-                    </div>
-                    <span>Closed</span>
-                  </div>
+                <div class="configuration text-center">
+                  <span class="glyphicon glyphicon-cog"></span>
                 </div>
-              </div>
-              <div class="configuration text-center">
-                <span class="glyphicon glyphicon-cog"></span>
-              </div>
-            </a>
-          </div>
+              </a>
+            </div>
 
-          <div class="individualCard">
-            <a href="activecondition.html">
-              <div class="cardHeader">
-                <span class="leftIcon"></span>
-                <div class="loanStatus">
-                  <h3>Borrower</h3>
-                  <label class="progressColor">In progress</label>
+            <div class="individualCard">
+              <a href="activecondition.html">
+                <div class="cardHeader">
+                  <span class="leftIcon"></span>
+                  <div class="loanStatus">
+                    <h3>Borrower</h3>
+                    <label class="progressColor">In progress</label>
+                  </div>
+                  <span class="rightIconprogress"></span>
                 </div>
-                <span class="rightIconprogress"></span>
-              </div>
-              <div class="cardData">
-                <div class="conditionstatus-wrap">
-                  <div class="conditionstatus-content">
-                    <span class="left-content">
+                <div class="cardData">
+                  <div class="conditionstatus-wrap">
+                    <div class="conditionstatus-content">
+                      <span class="left-content">
                       Total Conditions
                     </span>
-                    <span class="right-content">
+                      <span class="right-content">
                         05
                     </span>
-                  </div>
-                </div>
-                <div class="statusCount">
-                  <div class="statusContainer openstatuswrap">
-                    <div class="openStatus">
-                      <label>03</label>
                     </div>
-                    <span>Open</span>
                   </div>
-                  <div class="statusContainer">
-                    <div class="closeStatus">
-                      <label>02</label>
+                  <div class="statusCount">
+                    <div class="statusContainer openstatuswrap">
+                      <div class="openStatus">
+                        <label>03</label>
+                      </div>
+                      <span>Open</span>
                     </div>
-                    <span>Closed</span>
+                    <div class="statusContainer">
+                      <div class="closeStatus">
+                        <label>02</label>
+                      </div>
+                      <span>Closed</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="configuration text-center">
-                <span class="glyphicon glyphicon-cog"></span>
-              </div>
-            </a>
-          </div>
-          <div class="individualCard">
-            <a href="activecondition.html">
-              <div class="cardHeader">
-                <span class="leftIcon"></span>
-                <div class="loanStatus">
-                  <h3>Credit</h3>
-                  <label class="progressColor">In progress</label>
+                <div class="configuration text-center">
+                  <span class="glyphicon glyphicon-cog"></span>
                 </div>
-                <span class="rightIconprogress"></span>
-              </div>
-              <div class="cardData">
-                <div class="conditionstatus-wrap">
-                  <div class="conditionstatus-content">
-                    <span class="left-content">
+              </a>
+            </div>
+            <div class="individualCard">
+              <a href="activecondition.html">
+                <div class="cardHeader">
+                  <span class="leftIcon"></span>
+                  <div class="loanStatus">
+                    <h3>Credit</h3>
+                    <label class="progressColor">In progress</label>
+                  </div>
+                  <span class="rightIconprogress"></span>
+                </div>
+                <div class="cardData">
+                  <div class="conditionstatus-wrap">
+                    <div class="conditionstatus-content">
+                      <span class="left-content">
                       Total Conditions
                     </span>
-                    <span class="right-content">
+                      <span class="right-content">
                         04
                     </span>
+                    </div>
+                  </div>
+                  <div class="statusCount">
+                    <div class="statusContainer openstatuswrap">
+                      <div class="openStatus">
+                        <label>02</label>
+                      </div>
+                      <span>Open</span>
+                    </div>
+                    <div class="statusContainer">
+                      <div class="closeStatus">
+                        <label>02</label>
+                      </div>
+                      <span>Closed</span>
+                    </div>
                   </div>
                 </div>
-                <div class="statusCount">
-                  <div class="statusContainer openstatuswrap">
-                    <div class="openStatus">
-                      <label>02</label>
-                    </div>
-                    <span>Open</span>
-                  </div>
-                  <div class="statusContainer">
-                    <div class="closeStatus">
-                      <label>02</label>
-                    </div>
-                    <span>Closed</span>
-                  </div>
+                <div class="configuration text-center">
+                  <span class="glyphicon glyphicon-cog"></span>
                 </div>
-              </div>
-              <div class="configuration text-center">
-                <span class="glyphicon glyphicon-cog"></span>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="startExecution">
-          <button type="submit" class="btn btn-primary">
+          <div class="startExecution">
+            <button type="submit" class="btn btn-primary">
             <label>Start Execution</label>
 				    <span></span>
 			    </button>
+          </div>
         </div>
-      </div>
-      <!-- <div class="lineBreak">
+        <!-- <div class="lineBreak">
       </div> -->
-      <!-- <div class="duFindings clearfix">
+        <!-- <div class="duFindings clearfix">
         <h2>UNASSIGNED
           <span>(03)</span>
         </h2> -->
-      <div id="unassigned-wrap" class="tab-pane fade unassigned-wrap">
-        <div class="unassigned-row clearfix">
-          <div class="duCards">
-            <div class="singleduCard">
-              <!-- <h2>LPA Findings</h2> -->
-              <p>A 10-day pre-closing verification (10-day PCV) for ALICE FIRSTIMER is required from each employer for which
-                income is used to qualify. The 10-day PCV must be dated no more than 10 Business Days prior to the Note Date
-                or after the Note Date but prior to the Delivery Date.
-                <button class="btn btn-convert">Convert to Conditions</button>
-              </p>
+        <div id="unassigned-wrap" class="tab-pane fade unassigned-wrap">
+          <div class="unassigned-row clearfix">
+            <div class="duCards">
+              <div class="singleduCard">
+                <!-- <h2>LPA Findings</h2> -->
+                <p>A 10-day pre-closing verification (10-day PCV) for ALICE FIRSTIMER is required from each employer for which
+                  income is used to qualify. The 10-day PCV must be dated no more than 10 Business Days prior to the Note
+                  Date or after the Note Date but prior to the Delivery Date.
+                  <button class="btn btn-convert">Convert to Conditions</button>
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="duCards">
-            <div class="singleduCard">
-              <!-- <h2>LPA Findings</h2> -->
-              <p>If the following assets are used to qualify the borrower and are needed for closing, include evidence of liquidation
-                unless the combined value of the assets is at least 20% greater than the amount from these assets needed
-                for closing. When cash value of a life insurance policy is needed for closing, evidence of liquidation is
-                required. Life Insurance, Amt: $10,000, Holder: N/A; Stock, Amt: $5,000, Holder: N/A.
-                <button class="btn btn-convert">Convert to Conditions</button>
-              </p>
+            <div class="duCards">
+              <div class="singleduCard">
+                <!-- <h2>LPA Findings</h2> -->
+                <p>If the following assets are used to qualify the borrower and are needed for closing, include evidence of
+                  liquidation unless the combined value of the assets is at least 20% greater than the amount from these
+                  assets needed for closing. When cash value of a life insurance policy is needed for closing, evidence of
+                  liquidation is required. Life Insurance, Amt: $10,000, Holder: N/A; Stock, Amt: $5,000, Holder: N/A.
+                  <button class="btn btn-convert">Convert to Conditions</button>
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="duCards">
-            <div class="singleduCard">
-              <!-- <h2>LPA Findings</h2> -->
-              <p>Document the source of funds for any single deposit that exceeds $3,125.00, which is 50% of the total monthly
-                qualifying income OR reduce the asset amount by the unverified deposit and resubmit.
-                <button class="btn btn-convert">Convert to Conditions</button>
-              </p>
+            <div class="duCards">
+              <div class="singleduCard">
+                <!-- <h2>LPA Findings</h2> -->
+                <p>Document the source of funds for any single deposit that exceeds $3,125.00, which is 50% of the total monthly
+                  qualifying income OR reduce the asset amount by the unverified deposit and resubmit.
+                  <button class="btn btn-convert">Convert to Conditions</button>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- <div class="lineBreak">
+      </div>
+      <!-- <div class="lineBreak">
       </div> -->
-    <div class="footer row">
-      <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
-      <span class="right-content">
+      <div class="footer row">
+        <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
+        <span class="right-content">
             <label>Powered By:</label>
             <span class="logo"></span>
-      </span>
+        </span>
+      </div>
     </div>
-  </div>
-  <script src="../../assets/js/jquery.min.js"></script>
-  <script src="../../assets/js/bootstrap.min.js"></script>
-  <!-- <script src="../../assets/js/comparison.js"></script> -->
-  <script src="../../assets/js/sideMenu.js"></script>
-  <script src="../../assets/js/conditiontype.js"></script>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <!-- <script src="../../assets/js/comparison.js"></script> -->
+    <script src="../../assets/js/sideMenu.js"></script>
+    <script src="../../assets/js/conditiontype.js"></script>
 </body>
 
 </html>
