@@ -42,15 +42,15 @@
   <div class="conditionContainer">
     <ol class="breadcrumb customBreadcrums row">
       <li><a href="../pipeline.html">Pipeline</a></li>
-      <li><a href="loanSummary.html">Loan Summary</a></li>
+      <li><a href="../loanSummary.html">Loan Summary</a></li>
       <li><a class="active" href="javascript:void(0)">Condition Category</a></li>
     </ol>
     <div class="loanDetails row">
-      <h3 class="col-md-2 col-xs-2">LOAN #W2017110023</h3>
+      <h3 class="col-md-2 col-xs-2">LOAN # W2018030139</h3>
       <ul class="loanInformation col-md-7 col-xs-7">
         <li class="col-md-3 col-xs-3">
           <label>Borrower</label>
-          <span>Bancroft, Cameron</span>
+          <span>Firstimer, Alice</span>
         </li>
         <li class="col-md-3 col-xs-3">
           <label>Loan Status</label>
@@ -58,11 +58,11 @@
         </li>
         <li class="col-md-3 col-xs-3">
           <label>Purchase Price</label>
-          <span>$ 215, 090.00</span>
+          <span>$ 250,000.00</span>
         </li>
         <li class="col-md-3 col-xs-3">
           <label>Total Loan Amount</label>
-          <span>$199, 804.00</span>
+          <span>$ 217,150.00</span>
         </li>
       </ul>
       <div class="backButton pull-right">
@@ -72,7 +72,7 @@
     <div class="row loanMenu">
       <div class="hamMenu clearfix col-md-2 col-xs-2">
         <a href="javascript:void(0)" class="col hamperIcon" onclick="showsideMenu()"></a>
-        <h3 class="col summaryLabel">AUS - LPA</h3>
+        <h3 class="col summaryLabel">AUS - DU</h3>
       </div>
       <ul class="col-md-7 col-xs-7 loanReport">
         <li class="col-md-3 col-xs-3">
@@ -85,10 +85,10 @@
         </li>
         <li class="col-md-3 col-xs-3">
           <label>Recommendation</label>
-          <span>Accept</span>
+          <span>Approve/Eligible</span>
         </li>
         <li class="col-md-3 col-xs-3">
-          <a href="../../assets/images/LPA Report.pdf" download><button type="submit">Download Report</button></a>
+          <a href="../../assets/images/DU Report.pdf" download><button type="submit">Download Report</button></a>
         </li>
       </ul>
       <div class="col-md-3 col-xs-3 paddingLeft">
@@ -98,16 +98,16 @@
             <span>1/17/18 2:05 PM</span>
           </div>
           <div class="col-md-5 col-xs-5 paddingLeft">
-            <button type="submit" class="pull-right">Run LPA Again</button>
+            <button type="submit" class="pull-right">Run DU Again</button>
           </div>
         </div>
       </div>
       <nav id="sideMenu">
         <ul>
           <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
-          <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
-          <li><a class="mainMenu" href="recommendation.html" onclick="displayDuLp(2)" id="aus">AUS FINDING</a></li>
-          <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION CATEGORY</a></li>
+          <li><a class="mainMenu activeMenu" href="../loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
+          <li><a class="mainMenu" href="recommendation1.html" onclick="displayDuLp(1)" id="aus">AUS FINDING</a></li>
+          <li><a class="mainMenu" href="conditiontype1.html" id="cond">CONDITION CATEGORY</a></li>
           <li><a class="mainMenu" href="javascript:void(0)" id="data">LOAN DATA</a></li>
         </ul>
       </nav>
@@ -148,7 +148,7 @@
       <div id="conditioncategory-wrap" class="cardView tab-pane fade in active">
         <div class="clearfix cards">
           <div class="individualCard">
-            <a href="activecondition.html">
+            <a href="activecondition1.html">
               <div class="cardHeader">
                 <span class="leftIcon"></span>
                 <div class="loanStatus">
@@ -161,11 +161,11 @@
                 <div class="conditionstatus-wrap">
                   <div class="conditionstatus-content">
                     <span class="left-content">
-                  Total Conditions
-                </span>
+                      Total Conditions
+                    </span>
                     <span class="right-content">
-                    04
-                </span>
+                        03
+                    </span>
                   </div>
                 </div>
                 <div class="statusCount">
@@ -177,7 +177,7 @@
                   </div>
                   <div class="statusContainer">
                     <div class="closeStatus">
-                      <label>01</label>
+                      <label>0</label>
                     </div>
                     <span>Closed</span>
                   </div>
@@ -189,36 +189,36 @@
             </a>
           </div>
           <div class="individualCard">
-            <a href="activecondition.html">
+            <a href="activecondition1.html">
               <div class="cardHeader">
                 <span class="leftIcon"></span>
                 <div class="loanStatus">
                   <h3>Property</h3>
-                  <label class="compColor">Completed</label>
+                  <label class="progressColor">In progress</label>
                 </div>
-                <span class="rightIconcomp"></span>
+                <span class="rightIconprogress"></span>
               </div>
               <div class="cardData">
                 <div class="conditionstatus-wrap">
                   <div class="conditionstatus-content">
                     <span class="left-content">
-                Total Conditions
-              </span>
+                    Total Conditions
+                  </span>
                     <span class="right-content">
-                  02
-              </span>
+                      01
+                  </span>
                   </div>
                 </div>
                 <div class="statusCount">
                   <div class="statusContainer openstatuswrap">
                     <div class="openStatus">
-                      <label>0</label>
+                      <label>01</label>
                     </div>
                     <span>Open</span>
                   </div>
                   <div class="statusContainer">
                     <div class="closeStatus">
-                      <label>02</label>
+                      <label>0</label>
                     </div>
                     <span>Closed</span>
                   </div>
@@ -231,7 +231,7 @@
           </div>
 
           <div class="individualCard">
-            <a href="assets.html">
+            <a href="../assets.html">
               <div class="cardHeader">
                 <span class="leftIcon"></span>
                 <div class="loanStatus">
@@ -244,23 +244,23 @@
                 <div class="conditionstatus-wrap">
                   <div class="conditionstatus-content">
                     <span class="left-content">
-                  Total Conditions
-                </span>
+                      Total Conditions
+                    </span>
                     <span class="right-content">
-                    06
-                </span>
+                        03
+                    </span>
                   </div>
                 </div>
                 <div class="statusCount">
                   <div class="statusContainer openstatuswrap">
                     <div class="openStatus">
-                      <label>05</label>
+                      <label>03</label>
                     </div>
                     <span>Open</span>
                   </div>
                   <div class="statusContainer">
                     <div class="closeStatus">
-                      <label>01</label>
+                      <label>0</label>
                     </div>
                     <span>Closed</span>
                   </div>
@@ -273,36 +273,36 @@
           </div>
 
           <div class="individualCard">
-            <a href="activecondition.html">
+            <a href="activecondition1.html">
               <div class="cardHeader">
                 <span class="leftIcon"></span>
                 <div class="loanStatus">
                   <h3>Borrower</h3>
-                  <label class="progressColor">In progress</label>
+                  <label class="compColor">Completed</label>
                 </div>
-                <span class="rightIconprogress"></span>
+                <span class="rightIconcomp"></span>
               </div>
               <div class="cardData">
                 <div class="conditionstatus-wrap">
                   <div class="conditionstatus-content">
                     <span class="left-content">
-                  Total Conditions
-                </span>
+                      Total Conditions
+                    </span>
                     <span class="right-content">
-                    05
-                </span>
+                        04
+                    </span>
                   </div>
                 </div>
                 <div class="statusCount">
                   <div class="statusContainer openstatuswrap">
                     <div class="openStatus">
-                      <label>03</label>
+                      <label>0</label>
                     </div>
                     <span>Open</span>
                   </div>
                   <div class="statusContainer">
                     <div class="closeStatus">
-                      <label>02</label>
+                      <label>04</label>
                     </div>
                     <span>Closed</span>
                   </div>
@@ -314,36 +314,36 @@
             </a>
           </div>
           <div class="individualCard">
-            <a href="activecondition.html">
+            <a href="activecondition1.html">
               <div class="cardHeader">
                 <span class="leftIcon"></span>
                 <div class="loanStatus">
                   <h3>Credit</h3>
-                  <label class="progressColor">In progress</label>
+                  <label class="compColor">Completed</label>
                 </div>
-                <span class="rightIconprogress"></span>
+                <span class="rightIconcomp"></span>
               </div>
               <div class="cardData">
                 <div class="conditionstatus-wrap">
                   <div class="conditionstatus-content">
                     <span class="left-content">
-                  Total Conditions
-                </span>
+                      Total Conditions
+                    </span>
                     <span class="right-content">
-                    04
-                </span>
+                        04
+                    </span>
                   </div>
                 </div>
                 <div class="statusCount">
                   <div class="statusContainer openstatuswrap">
                     <div class="openStatus">
-                      <label>02</label>
+                      <label>0</label>
                     </div>
                     <span>Open</span>
                   </div>
                   <div class="statusContainer">
                     <div class="closeStatus">
-                      <label>02</label>
+                      <label>04</label>
                     </div>
                     <span>Closed</span>
                   </div>
