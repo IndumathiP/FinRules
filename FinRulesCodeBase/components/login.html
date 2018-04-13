@@ -40,7 +40,7 @@
     <div class="loginimage-wrap">
       <span class="loginlogo"></span>
       <p class="copyright">Copyrights &copy; 2018 - FinRules - All Rights Reserved.</p>
-        <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div id="myCarousel" class="carousel slide carousel-fade" data-interval="15000" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -52,7 +52,7 @@
             <div class="carousel-inner">
 
               <div class="item active">
-                <img src="../assets/images/login.png" alt="image" style="width:100%;height:100vh">
+                <img src="../assets/images/image1.png" alt="image" style="width:100%;height:100vh">
                 <div class="carousel-caption slide-right">
                   <div class="content">
                     <h3>Automated<br>Digital Approach</h3>
@@ -99,19 +99,40 @@
     <div class="logindescription-wrap">
 <div class="logindescription-content">
   <div class="usericon-wrap">
-  <span class="usericon"></span></div>
+  <span class="usericon"></span>
+</div>
   <p class="theme">One Stop Solution For<br>Underwriter Portal</p>
   <p class="note">Getting started is quick and simple,<br>just fill out the info below!</p>
-  <input type="email" placeholder="name@finrules.com">
+  <div class="form">
+      <form>
+        <div class="form-group logininput-wrap">
+          <!-- <label for="email">Email:</label> -->
+          <input type="email" class="form-control" id="email" placeholder="Email" name="email" autocomplete="off">
+        </div>
+        <div class="form-group logininput-wrap password-wrap">
+          <!-- <label for="pwd">Password:</label> -->
+          <input type="password" class="form-control" placeholder="Password" name="pwd" id="passwrd">
+          
+          <a class="showpassword-icon" onclick="showPassword()"></a>
+        </div>
+        <!-- <div class="checkbox">
+          <label><input type="checkbox" name="remember"> Remember me</label>
+        </div> -->
+        <div class="loginbtn-wrap"><a href="pipeline.html"><button type="button" class="btn btn-default login-button">LOGIN</button></a></div>
+        <a href="javascript:void(0)" class="passwordhelp">Forgot Password?</a>
+      </form>
+  </div>
+  <!-- <input type="email" placeholder="name@finrules.com">
   <input type="password" plaveholder="Password">
   <div class="loginbtn-wrap"><button class="login-button">LOGIN</button></div>
-  <p class="passwordhelp">Forgot Password?</p>
+  <p class="passwordhelp">Forgot Password?</p> -->
 </div>
   </div>
 </div>
   </main>
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/login.js"></script>
 </body>
 
 </html>
