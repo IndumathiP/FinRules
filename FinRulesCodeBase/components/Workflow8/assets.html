@@ -10,67 +10,68 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
 
 </head>
+<!-- active page -->
 
 <body>
-    <!-- Header section -->
-    <header>
-        <nav class="navbar">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand logo-wrap" href="javascript:void(0)"><span class="logo"></span></a>
-            </div>
-            <ul class="nav navbar-nav nav-pills headerlinks">
-              <li><a href="../admin.html">DASHBOARD</a></li>
-              <li class="active"><a href="../pipeline.html">PIPELINE</a></li>
-              <li><a href="../adminConfig.html">ADMIN CONFIG</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right dashboardhead-right">
-              <li class="username-wrap">
-                <span class="user">John Smith</span>
-                <span class="profession">Underwriter</span>
-              </li>
-              <li>
-                <a href="javascript:void(0)">
+  <!-- Header section -->
+  <header>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand logo-wrap" href="javascript:void(0)"><span class="logo"></span></a>
+        </div>
+        <ul class="nav navbar-nav nav-pills headerlinks">
+          <li><a href="../admin.html">DASHBOARD</a></li>
+          <li class="active"><a href="../pipeline.html">PIPELINE</a></li>
+          <li><a href="../adminConfig.html">ADMIN CONFIG</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right dashboardhead-right">
+          <li class="username-wrap">
+            <span class="user">John Smith</span>
+            <span class="profession">Underwriter</span>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
               <span class="usericon-wrap"><span class="user-icon"></span></span>
               <span class="dropdown-icon"></span>
               </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
   <div class="activeConditionContainer">
-  
+
     <ol class="breadcrumb customBreadcrums row">
-        <li><a href="../pipeline.html">Pipeline</a></li>
-        <li><a href="loanSummary7.html">Loan Summary</a></li>
-        <li><a href="conditiontype7.html">Condition Category</a></li>
-        <li><a class="active" href="javascript:void(0)">Asset</a></li>
-      </ol>
+      <li><a href="../pipeline.html">Pipeline</a></li>
+      <li><a href="loanSummary.html">Loan Summary</a></li>
+      <li><a href="conditiontype.html">Condition Category</a></li>
+      <li><a class="active" href="javascript:void(0)">Asset</a></li>
+    </ol>
     <!-- loan details header -->
     <div class="loanDetails row">
-      <h3 class="col-md-2 col-xs-2">LOAN # W2017110127</h3>
-      <ul class="loanInformation col-md-7 col-xs-7">
-        <li class="col-md-3 col-xs-3">
-          <label>Borrower</label>
-          <span>Ella, Alice</span>
-        </li>
+        <h3 class="col-md-2 col-xs-2">LOAN #W2018030160</h3>
+        <ul class="loanInformation col-md-7 col-xs-7">
+          <li class="col-md-3 col-xs-3">
+            <label>Borrower</label>
+            <span>Tomas, Peter</span>
+          </li>
         <li class="col-md-3 col-xs-3">
           <label>Loan Status</label>
           <span>In Underwriting</span>
         </li>
         <li class="col-md-3 col-xs-3">
           <label>Purchase Price</label>
-          <span>$ 800,000.00</span>
+          <span>$ 215, 090.00</span>
         </li>
         <li class="col-md-3 col-xs-3">
           <label>Total Loan Amount</label>
-          <span>$ 736,000.00</span>
+          <span>$199, 804.00</span>
         </li>
       </ul>
       <div class="backButton pull-right">
-          <a href="../pipeline.html"><button class="btn btn-back">Back to Pipeline</button></a>
-        </div>
+        <a href="../pipeline.html"><button class="btn btn-back">Back to Pipeline</button></a>
+      </div>
     </div>
     <div id="duFindingsWrapper" class="row">
     </div>
@@ -80,15 +81,15 @@
         <div class="col hamIcon paddingLeft">
           <a href="javascript:void(0)" class="hamperIcon" onclick="showsideMenu()"></a>
         </div>
-        <a href="conditiontype7.html" class="col leftArrow padding0"></a>
+        <a href="conditiontype.html" class="col leftArrow padding0"></a>
         <h3 class="col summaryLabel">Condition Type: Assets</h3>
       </div>
       <nav id="sideMenu">
         <ul>
           <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
-          <li><a class="mainMenu activeMenu" href="loanSummary7.html" id="loansummary">LOAN SUMMARY</a></li>
-          <!-- <li><a class="mainMenu" href="recommendation.html" id="aus">AUS FINDING</a></li> -->
-          <li><a class="mainMenu" href="conditiontype7.html" id="cond">CONDITION CATEGORY</a></li>
+          <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
+          <li><a class="mainMenu" onclick="displayDuLp(2)" href="recommendation.html" id="aus">AUS FINDING</a></li>
+          <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION CATEGORY</a></li>
           <li><a class="mainMenu" href="javascript:void(0)" id="data">LOAN DATA</a></li>
         </ul>
       </nav>
@@ -114,14 +115,14 @@
                 <h3>Asset Banking</h3>
               </li>
               <li>
-                <span>Pending</span>
+                <span class="successMsg">Pending</span>
               </li>
             </ul>
             <ul class="rightTabs" id="options">
-              <!-- <li id="viewDu">
+              <li id="viewDu">
                 <span class="searchIcon"></span>
                 <span>LPA Findings</span>
-              </li> -->
+              </li>
               <li id="viewCondition">
                 <span class="conditionIcon"></span>
                 <span>Condition for Loan</span>
@@ -184,125 +185,99 @@
           </ul>
         </div>
         <ul class="notesDes">
-            <li class="clearfix">
-                <div class="bullet"></div>
-                <div class="notesDate clearfix">
-                  <h3>04/12/2018</h3>
-                </div>
-                <div class="task">
-                  <h3>Income Condition Validated</h3>
-                  <div class="author">
-                    <span>2:30 pm</span>                    
-                  </div>
-                  <p>
-                    W2 in the file is not most recent.                    
-                  </p>
-                </div>
-                <div class="task">
-                  <h3>Lender Condition Executed</h3>
-                  <div class="author">
-                    <span>2:30 pm</span>                    
-                  </div>
-                  <p>
-                    Paystub missing for Ella, Alice :<br>
-                    Notification sent to the Loan Officer, Loan Processor.
-                  </p>
-                </div>
-              </li>
-          <!-- <li class="clearfix">
+          <li class="clearfix">
             <div class="bullet"></div>
             <div class="notesDate clearfix">
-              <h3>03/17/2018</h3>
+              <h3>04/09/2018</h3>
             </div>
             <div class="task">
               <h3>LPA Findings executed</h3>
               <div class="author">
                 <span>6:30 pm</span>
-                
+                <!-- <label>William John</label> -->
               </div>
               <p>
                 LPA Findings executed for the Loan File. Notification sent to the Loan Officer for documentation
-                
+                <!-- <span>Read More...</span> -->
               </p>
             </div>
             <div class="task">
               <h3>LPA Findings attached</h3>
               <div class="author">
                 <span>6:30 pm</span>
-                
+                <!-- <label>William John</label> -->
               </div>
               <p>
                 LPA Findings attached to the Loan File. Findings matched to respective Tasks and Business Rules
-                
+                <!-- <span>Read More...</span> -->
               </p>
             </div>
             <div class="task">
               <h3>Loan File successfully validated</h3>
               <div class="author">
                 <span>6:30 pm</span>
-                
+                <!-- <label>William John</label> -->
               </div>
               <p>
                 Loan File successfully validated by Finrules. Loan File fungible for both DU, LPA Submission
-                
+                <!-- <span>Read More...</span> -->
               </p>
             </div>
           </li>
           <li class="clearfix">
             <div class="bullet"></div>
             <div class="notesDate clearfix">
-              <h3>03/15/2018</h3>
+              <h3>04/10/2018</h3>
             </div>
             <div class="task">
               <h3>Loan File submitted</h3>
               <div class="author">
                 <span>11:15 am</span>
-                
+                <!-- <label>William John</label> -->
               </div>
               <p>
                 Loan File submitted to Underwriting for Approval. Loan Status Changed to “In Underwriting”
-                
+                <!-- <span>Read More...</span> -->
               </p>
             </div>
           </li>
           <li class="clearfix">
             <div class="bullet"></div>
             <div class="notesDate clearfix">
-              <h3>03/13/2018</h3>
+              <h3>04/12/2018</h3>
             </div>
             <div class="task">
               <h3>Initial Disclosure sent</h3>
               <div class="author">
                 <span>11:25 am</span>
-                
+                <!-- <label>William John</label> -->
               </div>
               <p>
                 Initial Disclosure sent to Firstimer, Alice and Homeowner, John for e-consent
-                
+                <!-- <span>Read More...</span> -->
               </p>
             </div>
           </li>
           <li class="clearfix">
             <div class="bullet"></div>
             <div class="notesDate clearfix">
-              <h3>03/12/2018</h3>
+              <h3>04/13/2018</h3>
             </div>
             <div class="task marginalSpace">
               <h3>Initial Disclosure Requested</h3>
               <div class="author">
                 <span>11:15 am</span>
-                
+                <!-- <label>William John</label> -->
               </div>
               <p>
                 RESPA Triggered and Initial Disclosure Requested for the Loan File. Loan File submitted to the Disclosure Desk
-                
+                <!-- <span>Read More...</span> -->
               </p>
             </div>
-          </li> -->
+          </li>
         </ul>
-        <div class="closeSection">
+        <div class="closeSection clearfix">
           <span class="hideNotes">Cancel</span>
-          <!-- <span class="view">View All</span> -->
         </div>
       </div>
       <!-- Categories and task condition -->
@@ -325,28 +300,28 @@
             <li class="subHeading">
               ADDED BY LPA
             </li>
-            <li  class="defaultTask">
+            <li class="defaultTask">
               <h4>Asset Banking</h4>
               <span class="threeDotIcon"></span>
               <div class="incomeStatus">
-                <span>Open 3</span>
-                <span class="closed">Closed 0</span>
+                <span>Open <span class="openNum">3</span></span>
+                <span class="closed">Closed <span class="closedNum">0</span></span>
               </div>
             </li>
             <li class="commonList">
               <h4>Asset - Stock &amp; Bond</h4>
               <span class="threeDotIcon"></span>
               <div class="incomeStatus">
-                <span>Open 3</span>
-                <span class="closed">Closed 0</span>
+                <span>Open <span class="openNum">3</span></span>
+                <span class="closed">Closed <span class="closedNum">0</span></span>
               </div>
             </li>
             <li class="commonList">
               <h4>Asset - Life Insurance</h4>
               <span class="threeDotIcon"></span>
               <div class="incomeStatus">
-                <span>Open 3</span>
-                <span class="closed">Closed 0</span>
+                <span>Open <span class="openNum">3</span></span>
+                <span class="closed">Closed <span class="closedNum">0</span></span>
               </div>
             </li>
           </ul>
@@ -364,8 +339,8 @@
         <!-- borrower list -->
         <div class="rightMenu col-md-10 col-xs-10 paddingRight">
           <ul class="borrowerList">
-            <li class="active"><a data-toggle="pill" href="#alice">Ella, Alice</a></li>
-            <li><a data-toggle="pill" href="#john">Firstimer, Patrick</a></li>
+              <li class="active"><a data-toggle="pill" href="#alice" onclick="changeName(1)">Tomas, Peter</li>
+                <li><a data-toggle="pill" href="#john" onclick="changeName(2)">Tomas, Veronika </a></li>
           </ul>
           <!-- Task lists -->
           <div class="tab-content">
@@ -387,7 +362,7 @@
                             <li class="col-xs-6"><span class="dropdownIcon" id="rotateArrow"></span>Upload Document to verify Assets Totaling
                               $21,066.00 </li>
                           </div>
-                          <li class=" col-xs-1">Pending</li>
+                          <li class=" col-xs-1"><img src="../../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg">Pending</span></li>
                           <li class="col-xs-2">10/27/2017 12:30 PM</li>
                           <li class="col">Loan Officer</li>
                           <li class="col manage-validation paddingLeft text-center">
@@ -427,7 +402,7 @@
                       <li class="col-xs-6 paddingRight"><span class="dropdownIcon"></span>Assets Totaling $21,066.00 can be verified by third party verification
                         services
                       </li>
-                      <li class="col-xs-1">Pending</li>
+                      <li class="col-xs-1"><img src="../../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg">Pending</span></li>
                       <li class="col-xs-2">10/27/2017 12:30 PM</li>
                       <li class="col">Loan Officer</li>
                       <li class="col manage-validation paddingLeft text-center">
@@ -461,8 +436,8 @@
 
                 </div> -->
               </div>
-
-              <!-- <div class="toggleBtn">
+<!-- 
+              <div class="toggleBtn">
                 <div class="btn-toggle clearfix disabled-switch">
                   <button class="btn btn-disabled">And</button>
                   <button class="btn btn-disabled">Or</button>
@@ -474,7 +449,7 @@
                                   <label>Add Task Validation Category 2</label>
                                   <span></span>
                               </button> -->
-                  <button type="submit" class="btn btn-primary start">
+                  <button type="submit" class="btn btn-primary start" onclick="success()">
                                   <label>Start Execution</label>
                                   <span></span>
                               </button>
@@ -486,7 +461,7 @@
               <div class="subtotal row">
                 <div class="col-xs-3">
                   <label>Subtotal Liquid :</label>
-                  <span>$20,000.00</span>
+                  <span>$40,000.00</span>
                 </div>
                 <div class="col-xs-3">
                   <label>Subtotal Other :</label>
@@ -494,7 +469,7 @@
                 </div>
                 <div class="col-xs-3">
                   <label>Borrower Total :</label>
-                  <span>$31,000.00</span>
+                  <span>$51,000.00</span>
                 </div>
               </div>
               <div class="heading row">
@@ -583,7 +558,7 @@
                                 Account Holder Name:
                             </label>
                         <span>
-                                Alice
+                                Cameron
                             </span>
                       </div>
                       <div class="col-xs-5">
@@ -651,7 +626,7 @@
                         <li class="col-xs-6"><span class="dropdownIcon" id="rotateArrow"></span>Upload Document to verify Assets Totaling $21,066.00
                         </li>
                       </div>
-                      <li class=" col-xs-1">Pending</li>
+                      <li class=" col-xs-1"><img src="../../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg1">Pending</span></li>
                       <li class="col-xs-2">10/27/2017 12:30 PM</li>
                       <li class="col">Loan Officer</li>
                       <li class="col manage-validation paddingLeft text-center">
@@ -688,7 +663,7 @@
                   <li class="col-xs-6 paddingRight"><span class="dropdownIcon"></span>Assets Totaling $21,066.00 can be verified by third party verification
                     services
                   </li>
-                  <li class="col-xs-1">Pending</li>
+                  <li class="col-xs-1"><img src="../../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg1">Pending</span></li>
                   <li class="col-xs-2">10/27/2017 12:30 PM</li>
                   <li class="col">Loan Officer</li>
                   <li class="col manage-validation paddingLeft text-center">
@@ -735,7 +710,7 @@
                             <label>Add Task Validation Category 2</label>
                             <span></span>
                         </button> -->
-              <button type="submit" class="btn btn-primary start">
+              <button type="submit" class="btn btn-primary start" onclick="success1()">
                             <label>Start Execution</label>
                             <span></span>
                         </button>
@@ -747,7 +722,7 @@
           <div class="subtotal row">
             <div class="col-xs-3">
               <label>Subtotal Liquid :</label>
-              <span>$20,000.00</span>
+              <span>$40,000.00</span>
             </div>
             <div class="col-xs-3">
               <label>Subtotal Other :</label>
@@ -755,7 +730,7 @@
             </div>
             <div class="col-xs-3">
               <label>Borrower Total :</label>
-              <span>$31,000.00</span>
+              <span>$51,000.00</span>
             </div>
           </div>
           <div class="heading row">
@@ -844,7 +819,7 @@
                           Account Holder Name:
                       </label>
                     <span>
-                          Alice
+                          Cameron
                       </span>
                   </div>
                   <div class="col-xs-5">
@@ -896,9 +871,9 @@
   </div>
   </div>
 
-
+ 
   <div class="footer row">
-    <span class="footerContent">Copyright &#169; 2018 - Finrules. All rights reserved.</span>
+    <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
     <span class="right-content">
         <label>Powered By:</label>
         <span class="logo"></span>
@@ -908,6 +883,7 @@
   <script src="../../assets/js/jquery.min.js"></script>
   <script src="../../assets/js/bootstrap.min.js"></script>
   <script src="../../assets/js/sideMenu.js"></script>
+  <script src="../../assets/js/comparison.js"></script>
   <script src="../../assets/js/script.js"></script>
   <script src="../../assets/js/activeCondition.js"></script>
 </body>

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>::FinRules::</title>
-  <link rel="stylesheet/less" type="text/css" href="../assets/css/styles.less" />
+  <link rel="stylesheet/less" type="text/css" href="../../assets/css/styles.less" />
   <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
 
 </head>
@@ -20,9 +20,9 @@
           <a class="navbar-brand logo-wrap" href="javascript:void(0)"><span class="logo"></span></a>
         </div>
         <ul class="nav navbar-nav nav-pills headerlinks">
-          <li><a href="admin.html">DASHBOARD</a></li>
-          <li class="active"><a href="pipeline.html">PIPELINE</a></li>
-          <li><a href="adminConfig.html">ADMIN CONFIG</a></li>
+          <li><a href="../admin.html">DASHBOARD</a></li>
+          <li class="active"><a href="../pipeline.html">PIPELINE</a></li>
+          <li><a href="../adminConfig.html">ADMIN CONFIG</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right dashboardhead-right">
           <li class="username-wrap">
@@ -41,7 +41,7 @@
   </header>
   <div class="conditionWrapper">
     <ol class="breadcrumb customBreadcrums row">
-      <li><a href="pipeline.html">Pipeline</a></li>
+      <li><a href="../pipeline.html">Pipeline</a></li>
       <li><a href="loanSummary.html">Loan Summary</a></li>
       <li><a href="conditiontype.html">Condition Category</a></li>
       <li><a href="activecondition.html">Income</a></li>
@@ -49,29 +49,29 @@
     </ol>
     <!-- loan details header -->
     <div class="loanDetails row">
-      <h3 class="col-md-2 col-xs-2">LOAN # W2018030139</h3>
-      <ul class="loanInformation col-md-7 col-xs-7">
-        <li class="col-md-3 col-xs-3">
-          <label>Borrower</label>
-          <span>Firstimer, Alice</span>
-        </li>
-        <li class="col-md-3 col-xs-3">
-          <label>Loan Status</label>
-          <span>In Underwriting</span>
-        </li>
-        <li class="col-md-3 col-xs-3">
-          <label>Purchase Price</label>
-          <span>$ 250,000.00</span>
-        </li>
-        <li class="col-md-3 col-xs-3">
-          <label>Total Loan Amount</label>
-          <span>$ 217,150.00</span>
-        </li>
-      </ul>
-      <div class="backButton pull-right">
-        <a href="pipeline.html"><button class="btn btn-back">Back to Pipeline</button></a>
+        <h3 class="col-md-2 col-xs-2">LOAN #W2018030160</h3>
+        <ul class="loanInformation col-md-7 col-xs-7">
+          <li class="col-md-3 col-xs-3">
+            <label>Borrower</label>
+            <span>Tomas, Peter</span>
+          </li>
+          <li class="col-md-3 col-xs-3">
+            <label>Loan Status</label>
+            <span>In Underwriting</span>
+          </li>
+          <li class="col-md-3 col-xs-3">
+            <label>Purchase Price</label>
+            <span>$ 215, 090.00</span>
+          </li>
+          <li class="col-md-3 col-xs-3">
+            <label>Total Loan Amount</label>
+            <span>$199, 804.00</span>
+          </li>
+        </ul>
+        <div class="backButton pull-right">
+          <a href="../pipeline.html"><button class="btn btn-back">Back to Pipeline</button></a>
+        </div>
       </div>
-    </div>
     <div id="duFindingsWrapper" class="row">
     </div>
     <!-- select condition type -->
@@ -87,7 +87,7 @@
         <ul>
           <li><a href="javascript:void(0)"><span class="closeSideMenu"></span></a></li>
           <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
-          <li><a class="mainMenu" href="workflow1/recommendation1.html" id="aus">AUS FINDING</a></li>
+          <li><a class="mainMenu" onclick="displayDuLp(2)" href="recommendation.html" id="aus">AUS FINDING</a></li>
           <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION CATEGORY</a></li>
           <li><a class="mainMenu" href="javascript:void(0)" id="data">LOAN DATA</a></li>
         </ul>
@@ -222,7 +222,7 @@
                             <span class="select-icon"></span>
                           </div>
                           <div class="col-xs-2">
-                            <div class="inputWrapper">
+                            <div class="inputWrapper"> 
                               <input type="text" class="form-control computedValue" name="quantity" value="12" readonly>
                               <span class="select-icon1"></span>
                               <span class="select-icon2"></span>
@@ -281,11 +281,11 @@
               </div>
             </div>
             <div class="maincontentList">
-              <ul class="clearfix incomeList">
-                <li class="col-xs-3" data-toggle="collapse" href="#content2"><span class="dropdownIcon" id="rotateArrow"></span>Upload the most recent Paystub</li>
-                <li class="col-xs-3">Loan Officer</li>
-              </ul>
-            </div>
+            <ul class="clearfix incomeList">
+              <li class="col-xs-3" data-toggle="collapse" href="#content2"><span class="dropdownIcon" id="rotateArrow"></span>Upload the most recent Paystub</li>
+              <li class="col-xs-3">Loan Officer</li>
+            </ul>
+          </div>
           </div>
         </div>
       </section>
@@ -298,33 +298,12 @@
               <label>Add to Firstimer, Alice</label>
          </button>
         </a>
-        <!-- <a href="activecondition.html" onclick="displayDuLp(5)">
+        <a href="activecondition.html" onclick="displayDuLp(5)">
           <button type="submit" class="btn btn-primary save" id="save-link">
               <span></span>
               <label>Save &amp; Add to All Browsers</label>
           </button>
-        </a> -->
-        <div class="multipleDropdown">
-        <input type="text" name="selectedNames" placeholder="All Browsers" id="selectedValues" readonly/>
-        <span class="dropdown" id="dropdown">
-          <span></span>
-        </span>
-        <div class="options" id="options">
-            <label for="selectAll" class="selectAll">
-                <input id="selectAll" type="checkbox" value="All Browsers" name="selectAll" />
-                <span>All Browsers</span>
-              </label>
-            <label for="audi" class="option">
-                <input id="audi" class="carName" type="checkbox" value="Alice Firstimer" name="Alice Firstimer" />
-                <span>Alice Firstimer</span>
-              </label>
-            <label for="Chevrolet" class="option">
-                  <input id="Chevrolet" class="carName" type="checkbox" value="John Homeowner" name="John Homeowner"/>
-                  <span>John Homeowner</span>
-              </label>
-          </div>
-      </div>
-        
+        </a>
         <a href="activecondition.html">
           <button type="submit" class="btn btn-primary cancel" id="cancel-link">
               <span></span>
@@ -341,11 +320,11 @@
       </div>
     </div>
   </div>
-  <script src="../assets/js/jquery.min.js"></script>
-  <script src="../assets/js/bootstrap.min.js"></script>
-  <script src="../assets/js/sideMenu.js"></script>
-  <script src="../assets/js/comparison.js"></script>
-  <script src="../assets/js/conditionFlowScript.js"></script>
+  <script src="../../assets/js/jquery.min.js"></script>
+  <script src="../../assets/js/bootstrap.min.js"></script>
+  <script src="../../assets/js/sideMenu.js"></script>
+  <script src="../../assets/js/comparison.js"></script>
+  <script src="../../assets/js/conditionFlowScript.js"></script>
 </body>
 
 </html>

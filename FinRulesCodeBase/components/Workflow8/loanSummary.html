@@ -1,0 +1,725 @@
+<!Doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>::FinRules::</title>
+  <link rel="stylesheet/less" type="text/css" href="../../assets/css/styles.less" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
+</head>
+<!-- active page -->
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand logo-wrap" href="javascript:void(0)"><span class="logo"></span></a>
+        </div>
+        <ul class="nav navbar-nav nav-pills headerlinks">
+          <li><a href="../admin.html">DASHBOARD</a></li>
+          <li class="active"><a href="../pipeline.html">PIPELINE</a></li>
+          <li><a href="../adminConfig.html">ADMIN CONFIG</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right dashboardhead-right">
+          <li class="username-wrap">
+            <span class="user">John Smith</span>
+            <span class="profession">Underwriter</span>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <span class="usericon-wrap"><span class="user-icon"></span></span>
+              <span class="dropdown-icon"></span>
+              </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="summaryWrapper clearfix">
+    <!-- Breadcrums -->
+    <ol class="breadcrumb customBreadcrums">
+      <li><a href="../pipeline.html">Pipeline</a></li>
+      <li><a class="active" href="javascript:void(0)">Summary</a></li>
+    </ol>
+    <!-- loan details header -->
+    <div class="loanDetails clearfix">
+      <h3 class="col-md-2 col-xs-2">LOAN #W2018030160</h3>
+      <ul class="loanInformation col-md-7 col-xs-7">
+        <li class="col-md-3 col-xs-3">
+          <label>Borrower</label>
+          <span>Tomas, Peter</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Loan Status</label>
+          <span>Ready For Underwriting</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Purchase Price</label>
+          <span>$ 215, 090.00</span>
+        </li>
+        <li class="col-md-3 col-xs-3">
+          <label>Total Loan Amount</label>
+          <span>$199, 804.00</span>
+        </li>
+      </ul>
+      <div class="backButton pull-right">
+        <a href="../pipeline.html"><button class="btn btn-back">Back to Pipeline</button></a>
+      </div>
+    </div>
+    <!-- select condition type -->
+    <div class="clearfix loanMenu">
+      <div class="clearfix hamMenu">
+        <div class="hamIcon col paddingLeft">
+          <a href="javascript:void(0)" class="hamperIcon" onclick="showsideMenu()"></a>
+        </div>
+        <!-- <span class="leftArrow"></span> -->
+        <h3 class="col summaryLabel">Summary</h3>
+      </div>
+      <nav id="sideMenu">
+        <ul>
+          <li><a href="javascript:void(0)" onclick="hideSideMenu()"><span class="closeSideMenu"></span></a></li>
+          <li><a class="mainMenu activeMenu" href="loanSummary.html" id="loansummary">LOAN SUMMARY</a></li>
+          <li><a class="mainMenu" href="recommendation.html" onclick="displayDuLp(2)" id="aus">AUS FINDING</a></li>
+          <li><a class="mainMenu" href="conditiontype.html" id="cond">CONDITION CATEGORY</a></li>
+          <li><a class="mainMenu" href="javascript:void(0)" id="data">LOAN DATA</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="duFindingsWrapper">
+    </div>
+    <!-- header part end-->
+    <!-- main section -->
+    <div class="summary-wrapper">
+      <div class="subHeader" id="headerContent">
+        <div class="mainSummary displayRecommendation">
+          <div class="summaryInfo">
+            <span class="infoIcon"></span>
+            <span>Recommended DU &amp; LPA</span>
+            <span class="rightArrow"></span>
+            <span>In Progress - LPA</span>
+            <a href="conditiontype.html" class="btn btn-primary goTo">Go to Conditions</a>
+          </div>
+        </div>
+        <div class="mainSummary displayDiscrepancy">
+          <div class="summaryInfo">
+            <span class="discrepences"></span>
+            <span>Discrepancies</span>
+            <span class="subHeadingDis">Voilations Found in Loan File</span>
+            <span class="pull-right" data-toggle="collapse" data-target="#demo" onclick="iconToggle()" count="0">
+            <span class="upArrow"></span>
+            </span>
+          </div>
+          <div class="collapse in summarytabs" id="demo">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#loan">Loan <span class="numberedCircle">2</span></a></li>
+              <li><a data-toggle="tab" href="#incomeloan">Income <span class="numberedCircle">2</span></a></li>
+              <li><a data-toggle="tab" href="#creditloan">Credit <span class="numberedCircle">1</span></a></li>
+              <li><a data-toggle="tab" href="#propertyloan">Property <span class="numberedCircle">1</span></a></li>
+            </ul>
+            <div class="tab-content summaryDes">
+              <div id="loan" class="tab-pane fade in active">
+                <ol>
+                  <li>Loan Amount exceeds the FHA 1-Unit County Limit for Contra Costa (S 679,650)</li>
+                  <li>FHA 92900 A for Underwriting</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mainWrapper">
+        <div class="summaryContent">
+          <ul class="nav nav-tabs">
+            <li class="summaryLinks"><a href="javascript:void(0)" onclick="displayLoanSummary()" class="navLink currentLink">Application</a></li>
+            <li class="summaryLinks"><a href="javascript:void(0)" onclick="displayLoanSummary()">Loan Information</a></li>
+          </ul>
+
+        </div>
+        <div class="datas" id="application">
+          <!-- borrewer information -->
+          <ul class="nameToggler clearfix tabWidth1">
+            <li class="active"> <a data-toggle="pill" href="#alice-description" onclick="toggleName()">Peter</a></li>
+            <li> <a data-toggle="pill" href="#john-description" onclick="toggleName()">Veronika</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="alice-description" class="tab-pane fade in active">
+              <div class="clearfix borrowerInformation">
+                <div class="fieldTitle" data-toggle="collapse" data-target="#borrowerinfo" onclick="iconToggle()" count="0"> <span class="downIcon"></span><span class="titleLabel">BORROWER INFORMATION</span></div>
+                <div class="collapse in clearfix" id="borrowerinfo">
+                  <div class="col-xs-6 borderRight">
+                    <div class="personalDetails">
+                      <div class="title"><span>PERSONAL DETAILS</span></div>
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <span class="labels">Name</span><br>
+                          <span class="labelValue">Peter Tomas</span>
+                        </div>
+                        <div class="col-xs-6">
+                          <span class="labels">Suffix</span><br>
+                          <span class="labelValue">-</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <span class="labels">Social Security Number</span><br>
+                          <span class="labelValue">887-87-8887</span>
+                        </div>
+                        <div class="col-xs-6">
+                          <span class="labels">Date of Birth</span><br>
+                          <span class="labelValue">3/17/71</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="presentAddress">
+                      <div class="title"><span>PRESENT ADDRESS</span></div>
+                      <div class="row">
+                        <div class="col-xs-4">
+                          <span class="labels">Type</span><br>
+                          <span class="labelValue">Rent</span>
+                        </div>
+                        <div class="col-xs-4">
+                          <span class="labels">No of Years</span><br>
+                          <span class="labelValue">8</span>
+                        </div>
+                        <div class="col-xs-4">
+                          <span class="labels">No of Months</span><br>
+                          <span class="labelValue">11</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <span class="labels">Address</span><br>
+                          <span class="labelValue">175, 13th Street.<br>Washington, DC 20013</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- borrowerInformation end -->
+              <!-- income -->
+              <div class="clearfix income">
+                <div class="fieldTitle" data-toggle="collapse" data-target="#income" onclick="iconToggle()" count="0"> <span class="downIcon"></span><span class="titleLabel">INCOME &amp; EXPENSES</span></div>
+                <div class="col-xs-12 collapse in clearfix" id="income">
+                  <div class="obligation">
+                    <div class="title"><span>OTHER OBLIGATIONS</span></div>
+                    <div class="row">
+                      <div class="col-xs-2">
+                        <span class="labels">Account Held By</span><br>
+                        <span class="labelValue">Peter Tomas</span>
+                      </div>
+                      <div class="col-xs-3">
+                        <span class="labels">Company Name</span><br>
+                        <span class="labelValue">Bank of America</span>
+                      </div>
+                      <div class="col-xs-2">
+                        <span class="labels">Account Type</span><br>
+                        <span class="labelValue">Revolving</span>
+                      </div>
+                      <div class="col-xs-3">
+                        <span class="labels">Account Number</span><br>
+                        <span class="labelValue">ACCT123456</span>
+                      </div>
+                      <div class="col-xs-2">
+                        <span class="labels">Monthly Payment</span><br>
+                        <span class="labelValue">$533.00</span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-2">
+                        <span class="labels">Account Held By</span><br>
+                        <span class="labelValue">Peter Tomas</span>
+                      </div>
+                      <div class="col-xs-3">
+                        <span class="labels">Company Name</span><br>
+                        <span class="labelValue">CHASE</span>
+                      </div>
+                      <div class="col-xs-2">
+                        <span class="labels">Account Type</span><br>
+                        <span class="labelValue">Revolving</span>
+                      </div>
+                      <div class="col-xs-3">
+                        <span class="labels">Account Number</span><br>
+                        <span class="labelValue">ACCT00****</span>
+                      </div>
+                      <div class="col-xs-2">
+                        <span class="labels">Monthly Payment</span><br>
+                        <span class="labelValue">$10.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- income end -->
+              <!-- monthly income -->
+              <div class="clearfix monthlyIncome">
+                <div class="fieldTitle" data-toggle="collapse" data-target="#monthly" onclick="iconToggle()" count="0"> <span class="downIcon"></span><span class="titleLabel">MONTHLY INCOME</span></div>
+                <div class="col-xs-12 collapse in clearfix" id="monthly">
+                  <div class="table">
+                    <div class="tableHead row">
+                      <div class="col-xs-3 th">Gross Monthly Income</div>
+                      <div class="col-xs-3 th">Borrower</div>
+                      <div class="col-xs-3 th">Co-Borrower</div>
+                      <div class="col-xs-3 th">Total</div>
+                    </div>
+                    <div class="tableBody">
+                      <div class="even row">
+                        <div class="col-xs-3 td">Base Employee income</div>
+                        <div class="col-xs-3 td">$ 3800.00</div>
+                        <div class="col-xs-3 td">$ 2500.00</div>
+                        <div class="col-xs-3 td">$ 6300.00</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-3 td">Overtime</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                      </div>
+                      <div class="row even">
+                        <div class="col-xs-3 td">Bonuses</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-3 td">Commissions</div>
+                        <div class="col-xs-3 td">$ 100.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 100.00</div>
+                      </div>
+                      <div class="row even">
+                        <div class="col-xs-3 td">Dividends/Interest</div>
+                        <div class="col-xs-3 td">$ 1000.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 1000.00</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-3 td">Net Rental Income</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table">
+                    <div class="tableHead row">
+                      <div class="row">
+                        <div class="labelValue col-xs-12 td">Others</div>
+                      </div>
+                    </div>
+                    <div class="tableBody">
+                      <div class="row even">
+                        <div class="col-xs-3 td">Automobile/Expense Account Income</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-3 td">Others Total</div>
+                        <div class="col-xs-3 td">$ 99.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 99.00</div>
+                      </div>
+                    </div>
+                    <div class="tableFooter">
+                      <div class="row">
+                        <div class="col-xs-3 td">TOTAL</div>
+                        <div class="col-xs-3 td">$ 4999.00</div>
+                        <div class="col-xs-3 td">$ 2500.00</div>
+                        <div class="col-xs-3 td">$ 7499.00</div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="john-description" class="tab-pane fade">
+              <div class="clearfix borrowerInformation">
+                <div class="fieldTitle" data-toggle="collapse" data-target="#borrowerinfo" onclick="iconToggle()" count="0"> <span class="downIcon"></span><span class="titleLabel">BORROWER INFORMATION</span></div>
+                <div class="collapse in clearfix" id="borrowerinfo">
+                  <div class="col-xs-6 borderRight">
+                    <div class="personalDetails">
+                      <div class="title"><span>PERSONAL DETAILS</span></div>
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <span class="labels">Name</span><br>
+                          <span class="labelValue">Veronika Tomas</span>
+                        </div>
+                        <div class="col-xs-6">
+                          <span class="labels">Suffix</span><br>
+                          <span class="labelValue">-</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <span class="labels">Social Security Number</span><br>
+                          <span class="labelValue">990-40-5000</span>
+                        </div>
+                        <div class="col-xs-6">
+                          <span class="labels">Date of Birth</span><br>
+                          <span class="labelValue">16 May 1985</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="presentAddress">
+                      <div class="title"><span>PRESENT ADDRESS</span></div>
+                      <div class="row">
+                        <div class="col-xs-4">
+                          <span class="labels">Type</span><br>
+                          <span class="labelValue">Rent</span>
+                        </div>
+                        <div class="col-xs-4">
+                          <span class="labels">No of Years</span><br>
+                          <span class="labelValue">5</span>
+                        </div>
+                        <div class="col-xs-4">
+                          <span class="labels">No of Months</span><br>
+                          <span class="labelValue">11</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <span class="labels">Address</span><br>
+                          <span class="labelValue">175, 13th Street.<br>Washington, DC 20013</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- borrowerInformation end -->
+              <!-- income -->
+              <div class="clearfix income">
+                <div class="fieldTitle" data-toggle="collapse" data-target="#income" onclick="iconToggle()" count="0"> <span class="downIcon"></span><span class="titleLabel">INCOME &amp; EXPENSES</span></div>
+                <div class="col-xs-12 collapse in clearfix" id="income">
+                  <div class="obligation">
+                    <div class="title"><span>OTHER OBLIGATIONS</span></div>
+                    <div class="row">
+                      <div class="col-xs-2">
+                        <span class="labels">Account Held By</span><br>
+                        <span class="labelValue">Veronika Tomas</span>
+                      </div>
+                      <div class="col-xs-3">
+                        <span class="labels">Company Name</span><br>
+                        <span class="labelValue">Bank of America</span>
+                      </div>
+                      <div class="col-xs-2">
+                        <span class="labels">Account Type</span><br>
+                        <span class="labelValue">Revolving</span>
+                      </div>
+                      <div class="col-xs-3">
+                        <span class="labels">Account Number</span><br>
+                        <span class="labelValue">ACCT123456</span>
+                      </div>
+                      <div class="col-xs-2">
+                        <span class="labels">Monthly Payment</span><br>
+                        <span class="labelValue">$545.00</span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-2">
+                        <span class="labels">Account Held By</span><br>
+                        <span class="labelValue">Veronika Tomas</span>
+                      </div>
+                      <div class="col-xs-3">
+                        <span class="labels">Company Name</span><br>
+                        <span class="labelValue">Wells Fargo</span>
+                      </div>
+                      <div class="col-xs-2">
+                        <span class="labels">Account Type</span><br>
+                        <span class="labelValue">Installment</span>
+                      </div>
+                      <div class="col-xs-3">
+                        <span class="labels">Account Number</span><br>
+                        <span class="labelValue">ACCT00****</span>
+                      </div>
+                      <div class="col-xs-2">
+                        <span class="labels">Monthly Payment</span><br>
+                        <span class="labelValue">$500.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- income end -->
+              <!-- monthly income -->
+              <div class="clearfix monthlyIncome">
+                <div class="fieldTitle" data-toggle="collapse" data-target="#monthly" onclick="iconToggle()" count="0"> <span class="downIcon"></span><span class="titleLabel">MONTHLY INCOME</span></div>
+                <div class="col-xs-12 collapse in clearfix" id="monthly">
+                  <div class="table">
+                    <div class="tableHead row">
+                      <div class="col-xs-3 th">Gross Monthly Income</div>
+                      <div class="col-xs-3 th">Borrower</div>
+                      <div class="col-xs-3 th">Co-Borrower</div>
+                      <div class="col-xs-3 th">Total</div>
+                    </div>
+                    <div class="tableBody">
+                      <div class="even row">
+                        <div class="col-xs-3 td">Base Employee income</div>
+                        <div class="col-xs-3 td">$ 3800.00</div>
+                        <div class="col-xs-3 td">$ 2500.00</div>
+                        <div class="col-xs-3 td">$ 6300.00</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-3 td">Overtime</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                      </div>
+                      <div class="row even">
+                        <div class="col-xs-3 td">Bonuses</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-3 td">Commissions</div>
+                        <div class="col-xs-3 td">$ 100.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 100.00</div>
+                      </div>
+                      <div class="row even">
+                        <div class="col-xs-3 td">Dividends/Interest</div>
+                        <div class="col-xs-3 td">$ 1000.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 1000.00</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-3 td">Net Rental Income</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table">
+                    <div class="tableHead row">
+                      <div class="row">
+                        <div class="labelValue col-xs-12 td">Others</div>
+                      </div>
+                    </div>
+                    <div class="tableBody">
+                      <div class="row even">
+                        <div class="col-xs-3 td">Automobile/Expense Account Income</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-3 td">Others Total</div>
+                        <div class="col-xs-3 td">$ 99.00</div>
+                        <div class="col-xs-3 td">$ 0.00</div>
+                        <div class="col-xs-3 td">$ 99.00</div>
+                      </div>
+                    </div>
+                    <div class="tableFooter">
+                      <div class="row">
+                        <div class="col-xs-3 td">TOTAL</div>
+                        <div class="col-xs-3 td">$ 4999.00</div>
+                        <div class="col-xs-3 td">$ 2500.00</div>
+                        <div class="col-xs-3 td">$ 7499.00</div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="datas" id="loanInformation">
+          <div class="clearfix loanInformation">
+            <div class="fieldTitle" data-toggle="collapse" data-target="#loanInfo" onclick="iconToggle()" count="0"> <span class="downIcon"></span><span class="titleLabel">LOAN INFORMATION</span></div>
+            <div class="collapse in clearfix" id="loanInfo">
+              <div class="col-xs-6 borderRight">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <span class="labels">Mortgage Applied For</span><br>
+                    <span class="labelValue">VA</span>
+                  </div>
+                  <div class="col-xs-6">
+                    <span class="labels">Loan Program Code</span><br>
+                    <span class="labelValue">30 Yrs Fixed VA</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <span class="labels">Loan Program Des.</span><br>
+                    <span class="labelValue">Select</span>
+                  </div>
+                  <div class="col-xs-6">
+                    <span class="labels">Amortization</span><br>
+                    <span class="labelValue">Fixed Rate</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <span class="labels">Jumbo Loan</span><br>
+                    <span class="labelValue">No</span>
+                  </div>
+                  <div class="col-xs-6">
+                    <span class="labels">Purpose of Loan</span><br>
+                    <span class="labelValue">Refinance</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <span class="labels">Interest Rate</span><br>
+                    <span class="labelValue">4.750%</span>
+                  </div>
+                  <div class="col-xs-6">
+                    <span class="labels">Qualifying Rate</span><br>
+                    <span class="labelValue">4.750%</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <span class="labels">Loan Term(in Months)</span><br>
+                    <span class="labelValue">360</span>
+                  </div>
+                  <div class="col-xs-6">
+                    <span class="labels">Interest only Periods(Months)</span><br>
+                    <span class="labelValue">0</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <span class="labels">QM Test Results</span><br>
+                    <span class="labelValue">QM - Pass</span>
+                  </div>
+                  <div class="col-xs-6">
+                    <span class="labels">HPML Test result</span><br>
+                    <span class="labelValue">HPML - Pass</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <span class="labels">Appraisal Value</span><br>
+                    <span class="labelValue">$ 215, 090.00</span>
+                  </div>
+                  <div class="col-xs-6">
+                    <span class="labels">Loan To Value(LTV)</span><br>
+                    <span class="labelValue">72.864%</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <span class="labels">Sales Price</span><br>
+                    <span class="labelValue">$ 215, 090.00</span>
+                  </div>
+                  <div class="col-xs-6">
+                    <span class="labels">Combined Loan To Value(CLTV)</span><br>
+                    <span class="labelValue">72.864%</span>
+                  </div>
+                </div>
+                <!-- <div class="row">
+                  <div class="col-xs-6">
+                                    <span class="labels">DP Factor</span><br>
+                                    <span class="labelValue">Select,Enter Base Loan</span>
+                                </div>
+                 
+                </div> -->
+                <div class="row">
+                  <div class="col-xs-6">
+                    <span class="labels">Base Loan Amount</span><br>
+                    <span class="labelValue">$ 198,070.00</span>
+                  </div>
+                  <div class="col-xs-6">
+                    <span class="labels">Front Ratio</span><br>
+                    <span class="labelValue">16.173%</span>
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <span class="labels">Note Loan Amount</span><br>
+                    <span class="labelValue">$ 198,080.00</span>
+                  </div>
+                  <div class="col-xs-6">
+                    <span class="labels">Back Ratio</span><br>
+                    <span class="labelValue">38.675%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix propertyInformation">
+            <div class="fieldTitle" data-toggle="collapse" data-target="#propertyInfo" onclick="iconToggle()" count="0"> <span class="downIcon"></span><span class="titleLabel">PROPERTY INFORMATION</span></div>
+            <div class="collapse in clearfix" id="propertyInfo">
+              <div class="col-xs-6">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <span class="labels">Property Type</span><br>
+                    <span class="labelValue">Detached</span>
+                  </div>
+                  <div class="col-xs-6">
+                    <span class="labels">Occupancy Type</span><br>
+                    <span class="labelValue">Primary Residence</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <span class="labels">Address</span><br>
+                    <span class="labelValue">4646 Maryland St. <br>Gary, Indiana, 46409</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <span class="labels">Last Name</span><br>
+                    <span class="labelValue">Tomas</span>
+                  </div>
+                  <div class="col-xs-6">
+                    <span class="labels">Occupancy Type</span><br>
+                    <span class="labelValue">Primary Residence</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="asideWrapper">
+        <ul class="list-unstyled documents">
+          <li class="listHead">
+            <span>Documents</span>
+          </li>
+          <li><a href="../../assets/images/PayStub.pdf" download><span class="documentIcon"></span><span>PayStub</span></a></li>
+          <li><a href="../../assets/images/4506T.pdf" download><span class="documentIcon"></span><span>4506T</span></a></li>
+          <li><a href="../../assets/images/Credit Report.pdf" download><span class="documentIcon"></span><span>Credit</span></a></li>
+          <li><a href="../../assets/images/Credit Report.pdf" download><span class="documentIcon"></span><span>Bank Statement</span></a></li>
+          <li><a href="../../assets/images/Credit Report.pdf" download><span class="documentIcon"></span><span>Mortgage Insurance</span></a></li>
+          <li><a href="../../assets/images/Credit Report.pdf" download><span class="documentIcon"></span><span>1004</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- main section end -->
+    <div class="footer">
+      <span class="footerContent">Copyright &#169; 2018 - FinRules. All rights reserved.</span>
+      <span class="right-content">
+          <label>Powered By:</label>
+          <span class="logo"></span>
+      </span>
+    </div>
+
+  </div>
+  <script src="../../assets/js/jquery.min.js"></script>
+  <script src="../../assets/js/bootstrap.min.js"></script>
+  <script src="../../assets/js/sideMenu.js"></script>
+  <script src="../../assets/js/comparison.js"></script>
+  <script src="../../assets/js/loanSummary.js"></script>
+</body>
+
+</html>
