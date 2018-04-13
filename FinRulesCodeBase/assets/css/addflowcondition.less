@@ -432,6 +432,62 @@
                 vertical-align: middle;
             }
         }
+        .multipleDropdown{
+          position: relative;
+          float: right;
+          input[type="text"] {
+           white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            box-sizing: border-box;
+            margin-right: 5px;           
+            border: 1px solid #f7a551;
+            border-radius: 2px;
+            padding: 12px 22px;           
+          }
+          input[type=text]:focus{
+            outline: none;
+          }
+        }
+        .dropdown {
+          // width:20px;
+          display: inline-block;
+          // height:20px;
+          // border: 1px solid grey;
+          // border-left: none;
+          position: absolute;
+          top: 0; 
+          right: 5px;
+          padding: 12px;
+          cursor: pointer;
+          span{
+            background: url('../images/Sprite_FinRules5.png') no-repeat -95px -216px;
+            width: 10px;
+            height: 6px;
+          }
+        }
+        // .selectAll {
+        //   border-bottom: 1px solid black;
+        // }
+        .options {
+          padding: 8px;
+          position: absolute;
+          bottom: 50px;
+          min-width: 100%;
+          border: 1px solid rgba(0,0,0,.15);
+          border-radius: 4px;
+          -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+          box-shadow: 0 6px 12px rgba(0,0,0,.175);
+          display: none;
+        }
+        .option, .selectAll{
+          padding: 8px 8px;
+          display: block;
+          cursor: pointer;
+        }
+        .inline-block {
+          display: inline-block;
+        }
     }
     .verticallyCenter {
         padding: 8px;

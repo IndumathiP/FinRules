@@ -58,11 +58,14 @@
     }
     .col {
         margin-right: 15PX;
-    } // span {
-    //     font-size: 15px;
-    //     font-family: Roboto-Medium;
-    //     vertical-align: middle;
-    // }
+    } 
+    .findingIcon{
+      background: url('../images/Sprite_FinRules5.png') no-repeat -93px -385px;
+      width: 40px;
+      height: 40px;
+      margin-top: 3px;
+      margin-right: 0;
+    }
     .totalfindings-wrap {
         padding: 7px 15px;
         margin-top: 5px;
@@ -89,19 +92,19 @@
             padding-top: 3px;
         }
         .totalopen-icon {
-            background: url('../images/Sprite_FinRules4.png') no-repeat -704px -384px;
-            width: 34px;
-            height: 25px;
+            background: url('../images/Sprite_FinRules5.png') no-repeat -203px -396px;
+            width: 22px;
+            height: 27px;
         }
         .totalclosed-icon {
-            background: url('../images/Sprite_FinRules4.png') no-repeat -775px -381px;
-            width: 39px;
-            height: 25px;
+            background: url('../images/Sprite_FinRules5.png') no-repeat -265px -395px;
+            width: 27px;
+            height: 27px;
         }
         .totalunassigned-icon {
-            background: url('../images/Sprite_FinRules4.png') no-repeat -855px -383px;
-            width: 18px;
-            height: 25px;
+            background: url('../images/Sprite_FinRules5.png') no-repeat -323px -396px;
+            width: 12px;
+            height: 27px;
         }
         span {
             vertical-align: middle;
@@ -109,7 +112,7 @@
         .totalunassigned-icon,
         .totalclosed-icon,
         .totalopen-icon {
-            margin-right: 20px;
+            margin-right: 5px;
         }
         @media screen and (max-width:1300px) {
             .totalunassigned-icon,
@@ -497,11 +500,10 @@
         @media screen and (min-height: 900px) {
             height: calc(100vh - 270px);
         }
-       
     }
     @media only screen and (min-width: 1367px) {
-      .cards {
-          padding: 0 10%;
-      }
-  }
+        .cards {
+            padding: 0 10%;
+        }
+    }
 }
