@@ -119,6 +119,9 @@ body {
   min-width: 1024px;
   box-sizing: border-box;
   }
+  button,input{
+    outline:none!important;
+  }
 .loginimage-wrap{
   padding:0;
   width:75%;
@@ -129,14 +132,14 @@ body {
     width: 129px;
     height: 21px;
     position:absolute;
-    top:45px;
-    left:45px;
+    top:65px;
+    left:65px;
     z-index:11;
   }
   .copyright{
     position:absolute;
-    bottom:20px;
-    right:25px;
+    bottom:30px;
+    right:30px;
     z-index:11;
     color:white;
     font-size:12px;
@@ -173,7 +176,7 @@ body {
     li{
       width: 12px;
       height: 12px;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
       background:white;
       opacity:0.5;
     }
@@ -184,35 +187,27 @@ body {
   }
   .carousel-caption{
     position:absolute;
-    top:40%;
+    top:44%;
     left:0;
     text-align:left;
-    padding-left:20%;
+    padding-left:10%;
     width:100%;
     h3{
-      font-size: 44px;
+      font-size: 58px;
       letter-spacing: 0.5px;
       font-family:Roboto-Light;
       line-height:1.2em;
-      margin-bottom:2%;
+      margin-bottom:60px;
     }
     p{      
-      font-size: 18px;
+      font-size: 24px;
       letter-spacing: 0.5px;
     }
     .label1{
-      // text-align:right;
-      // padding: 3% 0 1% 26%;
-      position: absolute;
-      bottom: 42%;
-      left: 13%;
+      margin:0 0 25px 165px;
     }
     .label2{
-      // text-align:center;
-      // padding: 3% 0 1% 10%;
-      position: absolute;
-      bottom: 27%;
-      left: 5%;
+      margin-left:85px;
   }
     }
   .slide-right {
@@ -248,9 +243,12 @@ body {
   position:relative;
   color:#6f6f6f;
   .logindescription-content{
-    @media screen and (max-width:1300px){
-      width:95%;
+    @media screen and (max-width:1230px){
+      width:90%;
     }
+    // @media screen and (max-width:1365px){
+    //   width:94%;
+    // }
   width:75%;
   height: 645px;
   position:absolute;
@@ -261,7 +259,6 @@ body {
   text-align:center;
   margin:auto;
   .usericon-wrap{
-    // padding:20px 0;
     margin-bottom: 50px;
   }
   .usericon{
@@ -270,22 +267,20 @@ body {
     height: 55px;
   }
   .theme{
-    font-size: 26px;
+    font-size: 29px;
     font-family:Roboto-Light;
-    // padding: 20px 0;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     color:#525252;
+    line-height:1.3em;
+    // @media screen and (max-width:1200px){
+    //   font-size: 25px;
+    // }
   }
   .note{
-    // width:75%;
-    // margin:auto;
     font-size: 15px;
-    // padding: 20px 0;
-    margin-bottom: 90px;
+    margin-bottom: 80px;
     font-family: Roboto-Light;
-  }
-  .form{
-    // padding:20px;
+    line-height:1.3em;
   }
   .password-wrap{
     position:relative;
@@ -296,27 +291,27 @@ body {
     height: 12px;
     position:absolute;
     right: 5px;
-    top: 10px;
+    top: 4px;
     cursor:pointer;
   }
   input{
     border: 0;    
     box-shadow:none;
     border-bottom: 2px solid #b5b5b5;
-    // box-shadow:0px 1px 3px 0px #c5c5c5;
-    // box-shadow:0px 0px 1px #c5c5c5;
-    // box-shadow: 0 1px 2px -2px #c5c5c5;
-    font-size: 15px;
+    font-size: 18px;
     border-radius:initial;
+    padding-left:5px;
+    font-family: Roboto-Light;
+    color: black;
     &::placeholder{
-      color:#525252;
+      color: black;
     }
     &:focus{
       border-bottom: 2px solid #48a99a;
     }
   }
   .loginbtn-wrap{
-    margin-top: 100px;
+    margin-top: 80px;
   }
   .login-button{
     border:2px solid #56c2b1;
@@ -324,19 +319,17 @@ body {
     box-shadow: none;
     outline: 0;
     border-radius:initial;
-    padding: 12px 15px;
+    padding: 15px;
+    font-size:18px;
     font-family:Roboto-Medium;
   }
   .passwordhelp{
-    font-size:12px;
+    font-size:13px;
     color:black;
     display:inline-block;
     margin-top: 35px;
   }
   .logininput-wrap{
-    // width:90%;
-    // margin:auto;
-    // padding:20px 0;
     margin-bottom:40px;
   }
   }
