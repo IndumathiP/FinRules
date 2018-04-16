@@ -2,18 +2,15 @@
 // html {
 //     height: 100%;
 // }
-
 // body {
 //     font-family: Roboto-Regular;
 //     font-size: 13px;
 //     min-width: 1024px;
 //     box-sizing: border-box;
 // }
-
 // button {
 //     outline: none!important;
 // }
-
 // main {
 //     height: 100%;
 //     width: 100%;
@@ -114,242 +111,239 @@
 //     }
 // }
 body {
-  font-family: Roboto-Regular;
-  font-size: 13px;
-  min-width: 1024px;
-  box-sizing: border-box;
-  }
-  button,input{
-    outline:none!important;
-  }
-.allbrowser-dropdown{
-  
+    font-family: Roboto-Regular;
+    font-size: 13px;
+    min-width: 1024px;
+    box-sizing: border-box;
 }
-.loginimage-wrap{
-  padding:0;
-  width:75%;
-  float:left;
-  position:relative;
-  .loginlogo{
-    background: url('../images/Sprite_FinRules6.png') no-repeat -327px -22px;
-    width: 129px;
-    height: 21px;
-    position:absolute;
-    top:65px;
-    left:65px;
-    z-index:11;
-  }
-  .item{
-    width:100%;
-    height:100vh;
-  }
-  .item1{
-    background: url('../images/login1.png');
-    background-size:cover;
-  }
-  .item2{
-    background: url('../images/login2.png');
-    background-size:cover;
-  }
-  .item3{
-    background: url('../images/login3.png');
-    background-size:cover;
-  }
-  .copyright{
-    position:absolute;
-    bottom:30px;
-    right:30px;
-    z-index:11;
-    color:white;
-    font-size:12px;
-  }
-  .carousel-fade .carousel-inner .item {
-    opacity: 0;
-    -webkit-transition-property: opacity;
-    -moz-transition-property: opacity;
-    -o-transition-property: opacity;
-    transition-property: opacity;
-  }
-  .carousel-fade .carousel-inner .active {
-    opacity: 1;
-  }
-  .carousel-fade .carousel-inner .active.left,
-  .carousel-fade .carousel-inner .active.right {
-    left: 0;
-    opacity: 0;
-    z-index: 1;
-  }
-  .carousel-fade .carousel-inner .next.left,
-  .carousel-fade .carousel-inner .prev.right {
-    opacity: 1;
-  }
-  .carousel-fade .carousel-control {
-    z-index: 2;
-  }
-  .carousel-indicators {
-    left:94%;
-    top: 50%;
-    height: 50px;
-    width: 20px;
-    margin: 0;
-    li{
-      width: 12px;
-      height: 12px;
-      margin-bottom: 14px;
-      background:white;
-      opacity:0.5;
-    }
-    .active{
-      background:white;
-      opacity:1;
-    }
-  }
-  .carousel-caption{
-    position:absolute;
-    top:44%;
-    left:0;
-    text-align:left;
-    padding-left:10%;
-    width:100%;
-    h3{
-      font-size: 58px;
-      letter-spacing: 0.5px;
-      font-family:Roboto-Light;
-      line-height:1.2em;
-      margin-bottom:60px;
-    }
-    p{      
-      font-size: 24px;
-      letter-spacing: 0.5px;
-    }
-    .label1{
-      margin:0 0 25px 165px;
-    }
-    .label2{
-      margin-left:85px;
-  }
-    }
-  .slide-right {
-    overflow:hidden;
-  }
-  .content {
-    animation: 2s slide-right;
+
+button,
+input {
+    outline: none !important;
+}
+
+.loginimage-wrap {
+    padding: 0;
+    width: 75%;
+    float: left;
     position: relative;
-    height: 300px;
-    span{
-      background: url('../images/Sprite_FinRules6.png') no-repeat -512px -392px;
-      width: 33px;
-      height: 23px;
-      margin-right:15px;
-      vertical-align:middle;
+    .loginlogo {
+        background: url('../images/Sprite_FinRules6.png') no-repeat -327px -22px;
+        width: 129px;
+        height: 21px;
+        position: absolute;
+        top: 65px;
+        left: 65px;
+        z-index: 11;
     }
-  }
-  
-  @keyframes slide-right {
-    from {
-      margin-left:-100%;
+    .item {
+        width: 100%;
+        height: 100vh;
     }
-  
-    to {
-      margin-left: 0%;
+    .item1 {
+        background: url('../images/login1.png');
+        background-size: cover;
     }
-  }
+    .item2 {
+        background: url('../images/login2.png');
+        background-size: cover;
+    }
+    .item3 {
+        background: url('../images/login3.png');
+        background-size: cover;
+    }
+    .copyright {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        z-index: 11;
+        color: white;
+        font-size: 12px;
+    }
+    .carousel-fade .carousel-inner .item {
+        opacity: 0;
+        -webkit-transition-property: opacity;
+        -moz-transition-property: opacity;
+        -o-transition-property: opacity;
+        transition-property: opacity;
+    }
+    .carousel-fade .carousel-inner .active {
+        opacity: 1;
+    }
+    .carousel-fade .carousel-inner .active.left,
+    .carousel-fade .carousel-inner .active.right {
+        left: 0;
+        opacity: 0;
+        z-index: 1;
+    }
+    .carousel-fade .carousel-inner .next.left,
+    .carousel-fade .carousel-inner .prev.right {
+        opacity: 1;
+    }
+    .carousel-fade .carousel-control {
+        z-index: 2;
+    }
+    .carousel-indicators {
+        left: 94%;
+        top: 50%;
+        height: 50px;
+        width: 20px;
+        margin: 0;
+        li {
+            width: 12px;
+            height: 12px;
+            margin-bottom: 14px;
+            background: white;
+            opacity: 0.5;
+        }
+        .active {
+            background: white;
+            opacity: 1;
+        }
+    }
+    .carousel-caption {
+        position: absolute;
+        top: 44%;
+        left: 0;
+        text-align: left;
+        padding-left: 10%;
+        width: 100%;
+        h3 {
+            font-size: 58px;
+            letter-spacing: 0.5px;
+            font-family: Roboto-Light;
+            line-height: 1.2em;
+            margin-bottom: 60px;
+        }
+        p {
+            font-size: 24px;
+            letter-spacing: 0.5px;
+        }
+        .label1 {
+            margin: 0 0 25px 165px;
+        }
+        .label2 {
+            margin-left: 85px;
+        }
+    }
+    .slide-right {
+        overflow: hidden;
+    }
+    .content {
+        animation: 2s slide-right;
+        position: relative;
+        height: 300px;
+        span {
+            background: url('../images/Sprite_FinRules6.png') no-repeat -512px -392px;
+            width: 33px;
+            height: 23px;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+    }
+    @keyframes slide-right {
+        from {
+            margin-left: -100%;
+        }
+        to {
+            margin-left: 0%;
+        }
+    }
 }
-.logindescription-wrap{
-  width:25%;
-  float:left;
-  height:100vh;
-  position:relative;
-  color:#6f6f6f;
-  .logindescription-content{
-    @media screen and (max-width:1230px){
-      width:90%;
+
+.logindescription-wrap {
+    width: 25%;
+    float: left;
+    height: 100vh;
+    position: relative;
+    color: #6f6f6f;
+    .logindescription-content {
+        @media screen and (max-width: 1230px) {
+            width:90%;
+        } // @media screen and (max-width:1365px){
+        //   width:94%;
+        // }
+        width:75%;
+        height: 645px;
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        text-align:center;
+        margin:auto;
+        .usericon-wrap {
+            margin-bottom: 50px;
+        }
+        .usericon {
+            background: url('../images/Sprite_FinRules6.png') no-repeat -427px -372px;
+            width: 56px;
+            height: 55px;
+        }
+        .theme {
+            font-size: 29px;
+            font-family: Roboto-Light;
+            margin-bottom: 40px;
+            color: #525252;
+            line-height: 1.3em; // @media screen and (max-width:1200px){
+            //   font-size: 25px;
+            // }
+        }
+        .note {
+            font-size: 15px;
+            margin-bottom: 80px;
+            font-family: Roboto-Light;
+            line-height: 1.3em;
+        }
+        .password-wrap {
+            position: relative;
+        }
+        .showpassword-icon {
+            background: url('../images/Sprite_FinRules6.png') no-repeat -384px -400px;
+            width: 20px;
+            height: 12px;
+            position: absolute;
+            right: 5px;
+            top: 4px;
+            cursor: pointer;
+        }
+        input {
+            border: 0;
+            box-shadow: none;
+            border-bottom: 2px solid #b5b5b5;
+            font-size: 18px;
+            border-radius: initial;
+            padding-left: 5px;
+            font-family: Roboto-Light;
+            color: black;
+            &::placeholder {
+                color: black;
+            }
+            &:focus {
+                border-bottom: 2px solid #48a99a;
+            }
+        }
+        .loginbtn-wrap {
+            margin-top: 80px;
+        }
+        .login-button {
+            border: 2px solid #56c2b1;
+            background: white;
+            box-shadow: none;
+            outline: 0;
+            border-radius: initial;
+            padding: 15px;
+            font-size: 18px;
+            font-family: Roboto-Medium;
+        }
+        .passwordhelp {
+            font-size: 13px;
+            color: black;
+            display: inline-block;
+            margin-top: 35px;
+        }
+        .logininput-wrap {
+            margin-bottom: 40px;
+        }
     }
-    // @media screen and (max-width:1365px){
-    //   width:94%;
-    // }
-  width:75%;
-  height: 645px;
-  position:absolute;
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
-  text-align:center;
-  margin:auto;
-  .usericon-wrap{
-    margin-bottom: 50px;
-  }
-  .usericon{
-    background: url('../images/Sprite_FinRules6.png') no-repeat -427px -372px;
-    width: 56px;
-    height: 55px;
-  }
-  .theme{
-    font-size: 29px;
-    font-family:Roboto-Light;
-    margin-bottom: 40px;
-    color:#525252;
-    line-height:1.3em;
-    // @media screen and (max-width:1200px){
-    //   font-size: 25px;
-    // }
-  }
-  .note{
-    font-size: 15px;
-    margin-bottom: 80px;
-    font-family: Roboto-Light;
-    line-height:1.3em;
-  }
-  .password-wrap{
-    position:relative;
-  }
-  .showpassword-icon{
-    background: url('../images/Sprite_FinRules6.png') no-repeat -384px -400px;
-    width: 20px;
-    height: 12px;
-    position:absolute;
-    right: 5px;
-    top: 4px;
-    cursor:pointer;
-  }
-  input{
-    border: 0;    
-    box-shadow:none;
-    border-bottom: 2px solid #b5b5b5;
-    font-size: 18px;
-    border-radius:initial;
-    padding-left:5px;
-    font-family: Roboto-Light;
-    color: black;
-    &::placeholder{
-      color: black;
-    }
-    &:focus{
-      border-bottom: 2px solid #48a99a;
-    }
-  }
-  .loginbtn-wrap{
-    margin-top: 80px;
-  }
-  .login-button{
-    border:2px solid #56c2b1;
-    background:white;
-    box-shadow: none;
-    outline: 0;
-    border-radius:initial;
-    padding: 15px;
-    font-size:18px;
-    font-family:Roboto-Medium;
-  }
-  .passwordhelp{
-    font-size:13px;
-    color:black;
-    display:inline-block;
-    margin-top: 35px;
-  }
-  .logininput-wrap{
-    margin-bottom:40px;
-  }
-  }
 }
