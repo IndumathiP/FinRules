@@ -295,7 +295,7 @@
         <a href="activecondition.html" onclick="displayDuLp(5)">
           <button type="submit" class="btn btn-primary saveUser" id="savej-link">
               <span></span>
-              <label>Add to Firstimer, Alice</label>
+              <label>Add </label>
          </button>
         </a>
         <!-- <a href="activecondition.html" onclick="displayDuLp(5)">
@@ -305,26 +305,32 @@
           </button>
         </a> -->
         <div class="multipleDropdown">
-        <input type="text" name="selectedNames" placeholder="All Browsers" id="selectedValues" readonly/>
-        <span class="dropdown">
-          <span></span>
-        </span>
-        <div class="options" id="options">
-            <label for="selectAll" class="selectAll">
-                <input id="selectAll" type="checkbox" value="All Browsers" name="selectAll" />
-                <span>All Browsers</span>
+          <label id="selectedValues">
+              <label class="leftView droptext">Select Borrower</label>
+              <input type="text" name="selectedNames" placeholder="All Borrowers" class="droptext" id="dropValue" readonly/>
+              <label class="dropdown droptext">
+                <span></span>
               </label>
-            <label for="audi" class="option">
+          </label>
+          <div class="options" id="options">
+            <label for="selectAll" class="selectAll cardCheck">
+                <input id="selectAll" type="checkbox" value="All Borrowers" name="selectAll" />
+                <span>All Browsers</span>
+                <span class="checkmark"></span>
+              </label>
+            <label for="audi" class="option cardCheck">
                 <input id="audi" class="carName" type="checkbox" value="Alice Firstimer" name="Alice Firstimer" />
                 <span>Alice Firstimer</span>
+                <span class="checkmark"></span>
               </label>
-            <label for="Chevrolet" class="option">
+            <label for="Chevrolet" class="option cardCheck">
                   <input id="Chevrolet" class="carName" type="checkbox" value="John Homeowner" name="John Homeowner"/>
                   <span>John Homeowner</span>
+                  <span class="checkmark"></span>
               </label>
           </div>
-      </div>
-        
+        </div>
+
         <a href="activecondition.html">
           <button type="submit" class="btn btn-primary cancel" id="cancel-link">
               <span></span>

@@ -297,15 +297,41 @@
         <a href="activecondition7.html" onclick="displayDuLp(5)">
           <button type="submit" class="btn btn-primary saveUser" id="savej-link">
               <span></span>
-              <label>Add to Ella, Alice</label>
+              <label>Add</label>
          </button>
         </a>
-        <a href="activecondition7.html" onclick="displayDuLp(5)">
+        <!-- <a href="activecondition.html" onclick="displayDuLp(5)">
           <button type="submit" class="btn btn-primary save" id="save-link">
               <span></span>
               <label>Save &amp; Add to All Browsers</label>
           </button>
-        </a>
+        </a> -->
+        <div class="multipleDropdown">
+            <label id="selectedValues">
+                <label class="leftView droptext">Select Borrower</label>
+                <input type="text" name="selectedNames" placeholder="All Borrowers" class="droptext" id="dropValue" readonly/>
+                <label class="dropdown droptext">
+                  <span></span>
+                </label>
+            </label>
+            <div class="options" id="options">
+              <label for="selectAll" class="selectAll cardCheck">
+                  <input id="selectAll" type="checkbox" value="All Borrowers" name="selectAll" />
+                  <span>All Browsers</span>
+                  <span class="checkmark"></span>
+                </label>
+              <label for="audi" class="option cardCheck">
+                  <input id="audi" class="carName" type="checkbox" value="Price Ella" name="Price Ella" />
+                  <span>Price Ella</span>
+                  <span class="checkmark"></span>
+                </label>
+              <label for="Chevrolet" class="option cardCheck">
+                    <input id="Chevrolet" class="carName" type="checkbox" value="Patrick Firstimer" name="Patrick Firstimer"/>
+                    <span>Patrick Firstimer</span>
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+          </div>
         <a href="activecondition7.html">
           <button type="submit" class="btn btn-primary cancel" id="cancel-link">
               <span></span>
