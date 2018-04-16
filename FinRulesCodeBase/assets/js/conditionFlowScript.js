@@ -72,8 +72,9 @@ function toSelectAll(e) {
 var flag = true;
 var selected = [];
 // var dropdown = document.getElementById('dropdown');
-dropdown.addEventListener('click', show);
+
 var selectedValues = document.getElementById('selectedValues');
+selectedValues.addEventListener('click', show);
 var checkboxes = document.querySelectorAll('.carName');
 checkboxes.forEach(checkbox => checkbox.addEventListener('change',display));
 var selectAll = document.getElementById('selectAll');
