@@ -269,6 +269,7 @@ function displaySuspended(){
       // ease = d.getElementById("easing"),
       incometasks = d.getElementById("incometasks"),
       suspendedtasks=d.getElementById("suspendedtasks"),
+      activecondition = d.getElementById("activecondition"),
       duration = 15,
       height, interval, counter, flag = 0,clickcount=0,contentHeight;
   
@@ -287,7 +288,7 @@ function displaySuspended(){
 
   //#2 the slideUp
   function slideUp(a, b) {
-    
+    activecondition.style.display="none";
     height = a.offsetHeight; //declare the value of "height" variable
     counter = height; //declare the value of "counter" variable
 
@@ -312,7 +313,7 @@ function displaySuspended(){
       } else {
         a.style.height = 0;
         b.disabled = 0;
-        suspendedtasks.style.height = height + "px";
+        suspendedtasks.style.height = height + 55 + "px";
         // b.innerHTML = "slideDown";              
         clearInterval(interval);
       }
@@ -324,6 +325,7 @@ function displaySuspended(){
   //#3 the slideDown
   function slideDown(a, b) {
 
+    activecondition.style.display="block";
     var adder = height/10; //the height is global variable          
     suspendedtasks.style.overflow = "hidden";
     //iteratively increase the height
