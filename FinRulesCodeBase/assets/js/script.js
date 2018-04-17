@@ -256,3 +256,110 @@ function success1(){
       }
   },1000);
 }
+
+function displaySuspended(){
+  document.getElementById("hideRightMenu").classList.toggle("hide");
+  document.getElementById("showSuspendedContent").classList.toggle("show");
+  } 
+
+(function (d) { //closure, close up
+  
+  //GLOBAL VARIABLES
+  var suspendedlink = d.getElementById("suspendedlink"),
+      // ease = d.getElementById("easing"),
+      incometasks = d.getElementById("incometasks"),
+      suspendedtasks=d.getElementById("suspendedtasks"),
+      duration = 15,
+      height, interval, counter, flag = 0,clickcount=0,contentHeight;
+  
+  //**************************************
+  //FUNCTIONS
+  //#1 this is the transition, it won't work for old IE
+  // function addEasing(a) {
+    
+  //   if (flag === 1) { //check flag
+  //     a.style.cssText = "transition: height 500ms; -webkit-transition: height 500ms; -moz-transition: height 500ms; -o-transition: height 500ms";
+  //   } else {
+  //     a.style.cssText = "transition: none; -webkit-transition: none; -moz-transition: none; -o-transition: none";
+  //   }
+    
+  // }
+
+  //#2 the slideUp
+  function slideUp(a, b) {
+    
+    height = a.offsetHeight; //declare the value of "height" variable
+    counter = height; //declare the value of "counter" variable
+
+    var subtractor = height/10;
+
+    //add CSS3 transition
+    a.style.cssText = "transition: height 500ms; -webkit-transition: height 500ms; -moz-transition: height 500ms; -o-transition: height 500ms";          
+
+    // ease.disabled = 1;
+
+    //to hide the content of the incometasks
+    a.style.overflow = "hidden";
+
+    //decreasing the height
+    interval = setInterval(function () {
+      
+      counter -= subtractor;            
+      if (counter > 0) {
+        a.style.height = counter + "px";        
+        contentHeight=height+counter;
+        suspendedtasks.style.height = contentHeight + "px";
+      } else {
+        a.style.height = 0;
+        b.disabled = 0;
+        suspendedtasks.style.height = height + "px";
+        // b.innerHTML = "slideDown";              
+        clearInterval(interval);
+      }
+    }, duration);
+
+    suspendedtasks.style.display="block";
+  }
+
+  //#3 the slideDown
+  function slideDown(a, b) {
+
+    var adder = height/10; //the height is global variable          
+    suspendedtasks.style.overflow = "hidden";
+    //iteratively increase the height
+    interval = setInterval(function () {            
+      counter += adder;
+      if (counter < height) {
+        a.style.height = counter + "px";
+        contentHeight=height-counter;
+        suspendedtasks.style.height = contentHeight;
+      } else {
+        a.style.height = height + "px";
+        b.disabled = 0;
+        suspendedtasks.style.height = 0;
+        // b.innerHTML = "slideUp";            
+        // ease.disabled = 0;
+        clearInterval(interval);
+      }
+    }, duration);  
+    
+    // content.style.display="none";
+  }
+  
+  //**************************************
+  //BUTTONS TRIGGERS
+  //#1 "slideUp/slideDown" trigger
+  suspendedlink.onclick = function () {
+    
+    // var text = this.innerHTML;
+
+    this.disabled = 1;
+    // if (text.match(/up/gi)){
+      if (clickcount%2==0){
+      slideUp(incometasks, this); 
+    } else {
+      slideDown(incometasks, this);
+    }
+    clickcount+=1;
+  }
+}(document));
