@@ -9,11 +9,18 @@ var listOfOptions = document.getElementById("options"),
   counter = 0,cnt=0,
   childCount,
   suspendclickcount=0,activeConditionHead;
+
+
 if(document.getElementById("viewDu")){
 document.getElementById("viewDu").addEventListener("click", showDu);
 }
+if(document.getElementById("viewDu1")){
+  document.getElementById("viewDu1").addEventListener("click", showDu);
+  }
 document.getElementById("viewNotes").addEventListener("click", showNotes);
 document.getElementById("viewCondition").addEventListener("click", showCondition);
+document.getElementById("viewNotes1").addEventListener("click", showNotes);
+document.getElementById("viewCondition1").addEventListener("click", showCondition);
 window.addEventListener("click",hideMenu);
 var ElehideDu = document.getElementsByClassName("hideDu");
 var EleNotesDu = document.getElementsByClassName("hideNotes");
@@ -167,11 +174,15 @@ function positionIcon(counter){
     document.getElementById("bottomIcon").classList.remove("addIconBottom");
     document.getElementById("bottomIcon").classList.add("addIconMiddle");
     document.getElementById("rotateArrow").style.transform = "rotate(0deg)";
+    if(document.getElementById("rotateArrow")){
+    document.getElementById("rotateArrow1").style.transform = "rotate(0deg)";}
   }
   else{
     document.getElementById("bottomIcon").classList.remove("addIconMiddle");
     document.getElementById("bottomIcon").classList.add("addIconBottom");
     document.getElementById("rotateArrow").style.transform = "rotate(180deg)";
+    if(document.getElementById("rotateArrow")){
+    document.getElementById("rotateArrow1").style.transform = "rotate(180deg)";}
   }
 }
 // function enabledCheckbox(event) {
