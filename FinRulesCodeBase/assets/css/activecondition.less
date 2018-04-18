@@ -362,6 +362,36 @@
             -webkit-transition: height 500ms;
             -moz-transition: height 500ms;
             -o-transition: height 500ms;
+            .suspendedlist-wrap{
+              .activesuspend{
+                background:#757f86;
+                color:white;
+                span{
+                  color:white;
+                }
+              }
+              .suspendedlist{
+                label{
+                  font-size:15px;
+                  white-space:nowrap;
+                  overflow:hidden;
+                }
+                border-bottom: 1px solid @primary-border;
+                .suspendedstatus{
+                font-family: Roboto-Light;
+                font-size: 12px;
+                margin-top: 10px;
+                .suspendedcount{
+                  color:grey;
+                  background:white;
+                  border:1px solid grey;
+                  padding:1px 7px;
+                  margin-left:10px;
+                  font-family:Roboto-Light;
+                }
+                }
+              }
+            }
         }
         .leftMenu {
             // border: 1px solid @primary-border;
@@ -503,8 +533,77 @@
                 }
             }
         }
-        .rightMenu {
+        .activeconditionmain-wrap {
             // padding-top: 10px;
+            .suspropdescription-wrap{
+              display:none;
+            }
+            .modal-dialog{
+              width: 400px;
+              height: 90vh;
+              transform:translate(0,0);
+              transition:none;
+            }
+            .modal-content{
+              width: 400px;
+              margin: auto;
+              position:absolute;
+              top:37%;
+          }
+          .modal-title{
+            text-align:center;
+            font-size:15px;
+            color:@secondary-background;
+          }
+          .modal-body{
+            padding:44px 30px;
+            .restore-message{
+              position:relative;
+              padding-left:50px;
+              line-height:20px;
+              font-size:15px;
+              color:grey;
+              .highlight-text{
+                font-family:Roboto-Medium;
+              }
+            }
+            .notify-icon{
+              background: url('../images/Sprite_FinRules6.png') no-repeat -386px -134px;
+              width: 40px;
+              height: 40px;
+              margin-right:10px;
+              position:absolute;
+              left:0;
+            }
+          }
+          .modal-footer{
+            text-align:center;
+            border-top:none;
+            padding:0;
+            .restore-btn{
+              width:50%;
+              border-radius:0;
+              border-bottom-right-radius: 5px;
+              float:left;
+              margin:0;
+              padding:10px;
+              background:@secondary-background;
+              color:white;
+              border:1px solid @secondary-background;
+              font-size:13px;
+            }
+            .cancel-btn{
+              width:50%;
+              border-radius:0;
+              border-bottom-left-radius: 5px;
+              float:left;
+              margin:0;
+              padding:10px;
+              background:white;
+              color:grey;
+              font-size:13px;
+            }
+          }
             .borrowerList {
                 border-bottom: 1px solid @primary-border;
                 li {
@@ -543,6 +642,14 @@
                 background: #6E7D9A;
             }
             .tab-content {
+              position:relative;
+              .restorecondition-btn{
+                position:absolute;
+                top:0;
+                right:0;
+                background:@secondary-background;
+                color:white;
+              }
                 h3 {
                     padding-bottom: 15px;
                     color: #757E86;
@@ -729,9 +836,9 @@
         }
         .SuspendedContent {
           display: none;
-          position: relative;
           background-color: @primary-background;
           margin-left: 15px;
+          font-family:Roboto-Regular;
           .center-content {
               position: absolute;
               top: 0;

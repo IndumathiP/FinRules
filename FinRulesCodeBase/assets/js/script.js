@@ -1,8 +1,14 @@
 var listOfOptions = document.getElementById("options"),
   duFindings = document.getElementById("duFindings"),
   notes = document.getElementById("notes"),
+  restorecondition=document.getElementById("restorecondition"),
+  incomedescriptionwrap=document.getElementById("incomedescription-wrap"),
+  showSuspendedContent=document.getElementById("showSuspendedContent"),
+  suspendedarrow=document.getElementById("suspendedarrow"),
+  suspropdescriptionwrap=document.getElementById("suspropdescription-wrap"),
   counter = 0,cnt=0,
-  childCount;
+  childCount,
+  suspendclickcount=0,activeConditionHead;
 if(document.getElementById("viewDu")){
 document.getElementById("viewDu").addEventListener("click", showDu);
 }
@@ -258,8 +264,8 @@ function success1(){
 }
 
 function displaySuspended(){
-  document.getElementById("hideRightMenu").classList.toggle("hide");
-  document.getElementById("showSuspendedContent").classList.toggle("show");
+  incomedescriptionwrap.classList.toggle("hide");
+  showSuspendedContent.classList.toggle("show");
   } 
 
 (function (d) { //closure, close up
@@ -334,7 +340,7 @@ function displaySuspended(){
       if (counter < height) {
         a.style.height = counter + "px";
         contentHeight=height-counter;
-        suspendedtasks.style.height = contentHeight;
+        suspendedtasks.style.height = contentHeight;  
       } else {
         a.style.height = height + "px";
         b.disabled = 0;
@@ -348,6 +354,7 @@ function displaySuspended(){
     // content.style.display="none";
   }
   
+  activeConditionHead= document.getElementById("incomeName");
   //**************************************
   //BUTTONS TRIGGERS
   //#1 "slideUp/slideDown" trigger
@@ -359,9 +366,36 @@ function displaySuspended(){
     // if (text.match(/up/gi)){
       if (clickcount%2==0){
       slideUp(incometasks, this); 
+      suspendedarrow.style.transform="rotate(180deg)";
     } else {
+      activeConditionHead.innerHTML="BASE INCOME";
       slideDown(incometasks, this);
+      showSuspendedContent.classList.remove("show");
+      suspropdescriptionwrap.classList.remove("show");
+      suspendedarrow.style.transform="rotate(0deg)";
+      // showSuspendedContent.classList.remove("show");
     }
     clickcount+=1;
   }
 }(document));
+
+var suspendedwrap = document.getElementById("suspendedwrap");
+var suspendedlist = suspendedwrap.getElementsByClassName("suspendedlist");
+for (var i = 0; i < suspendedlist.length; i++) {
+  suspendedlist[i].addEventListener("click", function() {
+    if(suspendclickcount==0)
+    {      
+    this.className += " activesuspend";
+    }
+    var current = document.getElementsByClassName("activesuspend");
+    current[0].className = current[0].className.replace(" activesuspend", "");
+    this.className += " activesuspend";
+    suspendclickcount+=1;
+  });
+}
+function showsuspendedproperty(){  
+  activeConditionHead.innerHTML="INCOME FROM PROPERTY";
+  showSuspendedContent.classList.remove("show");
+  showSuspendedContent.classList.add("hide");
+  suspropdescriptionwrap.classList.add("show");
+}
