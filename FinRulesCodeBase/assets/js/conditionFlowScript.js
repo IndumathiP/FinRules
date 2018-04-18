@@ -45,6 +45,9 @@ function display(e) {
   } else {
     selected = selected.filter(element => element != e.target.name);
     selectedValues.value = selected.join(', ');
+    if(selectAll.disabled == false){
+      selectAll.checked = false;
+    }
     // document.getElementById('count').innerHTML = "(" + selected.length + ")";
   }
 }
@@ -87,18 +90,18 @@ function myFunction() {
 
 window.onclick = function (event) {
   // if (typeof event != "function") {
-    if (!event.target.matches('.droptext')) {
+  if (!event.target.matches('.droptext')) {
 
-      var dropdowns = document.getElementsByClassName("options");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('showDropdown')) {
-          openDropdown.classList.remove('showDropdown');
-        }
+    var dropdowns = document.getElementsByClassName("options");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('showDropdown')) {
+        openDropdown.classList.remove('showDropdown');
       }
     }
- // }
+  }
+  // }
 };
 
 // active Menu
