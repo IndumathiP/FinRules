@@ -7,7 +7,7 @@ var listOfOptions = document.getElementById("options"),
   suspendedarrow=document.getElementById("suspendedarrow"),
   suspropdescriptionwrap=document.getElementById("suspropdescription-wrap"),
   counter = 0,cnt=0,
-  childCount,
+  childCount,heightcnt=0,
   suspendclickcount=0,activeConditionHead;
 
 
@@ -306,9 +306,20 @@ function displaySuspended(){
   //#2 the slideUp
   function slideUp(a, b) {
     activecondition.style.display="none";
-    height = a.offsetHeight; //declare the value of "height" variable
+    if(heightcnt==0)
+    {
+    height = a.offsetHeight+160;
+    if(height>600)
+    {
+      height = a.offsetHeight;
+    } 
+  }
+    // height = a.offsetHeight;
+    else    
+    height = a.offsetHeight;
+    //declare the value of "height" variable
     counter = height; //declare the value of "counter" variable
-
+    heightcnt=1;
     var subtractor = height/10;
 
     //add CSS3 transition
@@ -330,7 +341,7 @@ function displaySuspended(){
       } else {
         a.style.height = 0;
         b.disabled = 0;
-        suspendedtasks.style.height = height + 55 + "px";
+        suspendedtasks.style.height = height + "px";
         // b.innerHTML = "slideDown";              
         clearInterval(interval);
       }
