@@ -3,31 +3,29 @@ duFindings = document.getElementById("duFindings"),
 notes = document.getElementById("notes"),
 restorecondition = document.getElementById("restorecondition"),
 incomedescriptionwrap = document.getElementById("incomedescription-wrap"),
-showSuspendedContent = document.getElementById("showSuspendedContent"),
-suspendedarrow = document.getElementById("suspendedarrow"),
 suspropdescriptionwrap = document.getElementById("suspropdescription-wrap"),
 counter = 0,
 cnt = 0,
 childCount,
 suspendclickcount = 0,
-activeConditionHead;
+activeConditionHead,suspendedwrap,suspendedlist;
 
 
-if (document.getElementById("viewDu")) {
-document.getElementById("viewDu").addEventListener("click", showDu);
-}
-if (document.getElementById("viewDu1")) {
-document.getElementById("viewDu1").addEventListener("click", showDu);
-}
-document.getElementById("viewNotes").addEventListener("click", showNotes);
-if (document.getElementById("viewNotes1")) {
-document.getElementById("viewNotes1").addEventListener("click", showNotes);
-}
-document.getElementById("viewCondition").addEventListener("click", showCondition);
+// if (document.getElementById("viewDu")) {
+// document.getElementById("viewDu").addEventListener("click", showDu);
+// }
+// if (document.getElementById("viewDu1")) {
+// document.getElementById("viewDu1").addEventListener("click", showDu);
+// }
+// document.getElementById("viewNotes").addEventListener("click", showNotes);
+// if (document.getElementById("viewNotes1")) {
+// document.getElementById("viewNotes1").addEventListener("click", showNotes);
+// }
+// document.getElementById("viewCondition").addEventListener("click", showCondition);
 
-if (document.getElementById("viewCondition1")) {
-document.getElementById("viewCondition1").addEventListener("click", showCondition);
-}
+// if (document.getElementById("viewCondition1")) {
+// document.getElementById("viewCondition1").addEventListener("click", showCondition);
+// }
 window.addEventListener("click", hideMenu);
 var ElehideDu = document.getElementsByClassName("hideDu");
 var EleNotesDu = document.getElementsByClassName("hideNotes");
@@ -61,41 +59,42 @@ if (e.target == document.getElementById("duFindingsWrapper")) {
 }
 
 function showPopup() {
-display(document.getElementById("pop-up"), true);
-showOverlay();
+    display(document.getElementById("pop-up"), true);
+    showOverlay();
 }
 
 function showPopup2() {
-display(document.getElementById("pop-up2"), true);
-showOverlay();
+    display(document.getElementById("pop-up2"), true);
+    showOverlay();
 }
 
 function showPopup3() {
-display(document.getElementById("pop-up3"), true);
-showOverlay();
+    display(document.getElementById("pop-up3"), true);
+    showOverlay();
 }
 
 function showPopup4() {
-display(document.getElementById("pop-up4"), true);
-showOverlay();
+    display(document.getElementById("pop-up4"), true);
+    showOverlay();
 }
 
 function showPopup5() {
-display(document.getElementById("pop-up5"), true);
-showOverlay();
+    display(document.getElementById("pop-up5"), true);
+    showOverlay();
 }
 
 function showPopup6() {
-display(document.getElementById("pop-up6"), true);
-showOverlay();
+    display(document.getElementById("pop-up6"), true);
+    showOverlay();
 }
 
 function display(ele, res) {
 if (ele) {
   if (res) {
-    ele.classList.remove("displayNone");
-  } else {
-    ele.classList.add("displayNone");
+      ele.classList.remove("displayNone");
+    } 
+  else {
+      ele.classList.add("displayNone");
   }
 }
 }
@@ -294,22 +293,16 @@ setTimeout(function () {
 }
 
 function  displaySuspended() {
-incomedescriptionwrap.classList.toggle("hide");
-showSuspendedContent.classList.toggle("show");
+// incomedescriptionwrap.classList.toggle("hide");
+// showSuspendedContent.classList.toggle("show");
+// incomedescriptionwrap.classList.toggle("hide");
+// if(incomedescriptionwrap.classList.contains)
 }
 
-(function (d) { //closure, close up
+// (function (d) { //closure, close up
 
 //GLOBAL VARIABLES
-var suspendedlink = d.getElementById("suspendedlink"),
-  // ease = d.getElementById("easing"),
-  incometasks = d.getElementById("incometasks"),
-  suspendedtasks = d.getElementById("suspendedtasks"),
-  activecondition = d.getElementById("activecondition"),
-  duration = 15,
-  height, interval, counter, flag = 0,
-  clickcount = 0,
-  contentHeight;
+
 
 //**************************************
 //FUNCTIONS
@@ -333,12 +326,12 @@ function slideUp(a, b) {
   var subtractor = height / 10;
 
   //add CSS3 transition
-  a.style.cssText = "transition: height 500ms; -webkit-transition: height 500ms; -moz-transition: height 500ms; -o-transition: height 500ms";
+  // a.style.cssText = "transition: height 500ms; -webkit-transition: height 500ms; -moz-transition: height 500ms; -o-transition: height 500ms";
 
   // ease.disabled = 1;
 
   //to hide the content of the incometasks
-  a.style.overflow = "hidden";
+  // a.style.overflow = "hidden";
 
   //decreasing the height
   interval = setInterval(function () {
@@ -355,7 +348,7 @@ function slideUp(a, b) {
       // b.innerHTML = "slideDown";              
       clearInterval(interval);
     }
-  }, duration);
+  }, 15);
 
   suspendedtasks.style.display = "block";
 }
@@ -381,7 +374,7 @@ function slideDown(a, b) {
       // ease.disabled = 0;
       clearInterval(interval);
     }
-  }, duration);
+  }, 15);
 
   // content.style.display="none";
 }
@@ -391,29 +384,56 @@ activeConditionHead = document.getElementById("incomeName");
 //BUTTONS TRIGGERS
 //#1 "slideUp/slideDown" trigger
 
-suspendedlink.onclick = function () {
+var clickcount=0,
+height, interval, counter, flag = 0;
+function suspendedshow() {
 
+// clickcount=0;
   // var text = this.innerHTML;
+  var suspendedlink = document.getElementById("suspendedlink"),
+  // ease = d.getElementById("easing"),
+  incometasks = document.getElementById("incometasks"),
+  suspendedtasks = document.getElementById("suspendedtasks"),
+  activecondition = document.getElementById("activecondition"),  
+  suspendedarrow = document.getElementById("suspendedarrow"),
+  showSuspendedContent = document.getElementById("showSuspendedContent"),
+  duration = 15,
+  contentHeight;
+  // clickcount += 1;
+  suspendtoggle();
+}
 
-  this.disabled = 1;
+function suspendtoggle(){
+  // this.disabled = 1;
   // if (text.match(/up/gi)){
-  if (clickcount % 2 == 0) {
+  // if (clickcount == 0) {
+    if (!(showSuspendedContent.classList.contains("showsusp"))) {
+    // if (incomedescriptionwrap.style.display=="block") {
     slideUp(incometasks, this);
     suspendedarrow.style.transform = "rotate(180deg)";
+    incomedescriptionwrap.style.display="none";
+    showSuspendedContent.style.display="block";
+    showSuspendedContent.classList.add("showsusp");
+    clickcount=1;
   } else {
     activeConditionHead.innerHTML = "BASE INCOME";
     slideDown(incometasks, this);
     showSuspendedContent.classList.remove("show");
     suspropdescriptionwrap.classList.remove("show");
     suspendedarrow.style.transform = "rotate(0deg)";
+    incomedescriptionwrap.style.display="block";
+    showSuspendedContent.style.display="none";    
+    showSuspendedContent.classList.remove("showsusp");
+    clickcount=0;
+    suspendclickcount = 0;
     // showSuspendedContent.classList.remove("show");
   }
-  clickcount += 1;
 }
-}(document));
+// }(document));
 
-var suspendedwrap = document.getElementById("suspendedwrap");
-var suspendedlist = suspendedwrap.getElementsByClassName("suspendedlist");
+// function activesuspended(this){  
+  suspendedwrap=document.getElementById("suspendedwrap");
+  suspendedlist=suspendedwrap.getElementsByClassName("suspendedlist");
 for (var i = 0; i < suspendedlist.length; i++) {
 suspendedlist[i].addEventListener("click", function () {
   if (suspendclickcount == 0) {
@@ -425,10 +445,27 @@ suspendedlist[i].addEventListener("click", function () {
   suspendclickcount += 1;
 });
 }
+// }
 
 function showsuspendedproperty() {
 activeConditionHead.innerHTML = "INCOME FROM PROPERTY";
 showSuspendedContent.classList.remove("show");
 showSuspendedContent.classList.add("hide");
 suspropdescriptionwrap.classList.add("show");
+}
+
+function addcondition() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("activeouterwrap").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "activeconditionadded.html", true);
+  xhttp.send();
+  showSuspendedContent.classList.remove("showsusp");
+  suspendedarrow.style.transform = "rotate(0deg)";
+  var restoresuccess = document.getElementById("restoresuccess");
+  restoresuccess.style.display="block";
 }

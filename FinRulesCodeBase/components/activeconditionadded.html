@@ -1,0 +1,1040 @@
+<div class="leftMenu col-md-2 col-xs-2">
+  <div class="activeCondition clearfix padding0" id="activecondition">
+
+    <a href="addConditionflow.html" class="col-xs-10 addConditionSection paddingRight">
+                            <span class="add"></span>
+                            <label>Add Conditions</label>
+                          </a>
+    <div class="col-xs-2 search">
+      <span></span>
+    </div>
+
+  </div>
+  <div id="incometasks" class="incometasks">
+    <div class="category" data-toggle="collapse" data-target="#category-list"> View All Category <a href="javascript:void(0)" class="catageory-select pull-right"></a>
+      <!-- onclick="showOverlay()" onfocusout="hideOverlay()" -->
+      <div class="category-list collapse" id="category-list">
+        <div><a href="javascript:void(0)">All</a></div>
+        <div><a href="javascript:void(0)">Prior to Approval</a></div>
+        <div><a href="javascript:void(0)">Prior to Document</a></div>
+        <div><a href="javascript:void(0)">Prior to Closing</a></div>
+        <div><a href="javascript:void(0)">Prior to Funding</a></div>
+        <div><a href="javascript:void(0)">Prior to Underwriting</a></div>
+      </div>
+
+    </div>
+    <ul>
+      <li class="subHeading">
+        ADDED BY LPA
+      </li>
+      <li class="sideBand" id="inactiveTask">
+        <h4>Base Income</h4>
+        <span class="threeDotIcon"></span>
+        <div class="incomeStatus">
+          <span>Open <span class="openNum">3</span></span>
+          <span class="closed">Closed <span class="closedNum">0</span></span>
+        </div>
+      </li>
+      <li class="sideBand">
+        <h4>Income from Assets</h4>
+        <span class="threeDotIcon"></span>
+        <div class="incomeStatus">
+          <span>Open <span class="openNum">3</span></span>
+          <span class="closed">Closed <span class="closedNum">0</span></span>
+        </div>
+      </li>
+      <li class="defaultTask sideBand menuincpropwrap">
+        <span class="new-icon"></span>
+          <h4>Income from Property</h4>
+          <span class="threeDotIcon"></span>
+          <div class="incomeStatus">
+            <span>Open <span class="openNum">3</span></span>
+            <span class="closed">Closed <span class="closedNum">0</span></span>
+          </div>
+        </li>
+      <li class="subHeading">
+        ADDED BY UNDERWRITER
+      </li>
+      <li class="commonList">
+        <h4>Additional Income</h4>
+        <span class="threeDotIcon"></span>
+        <div class="incomeStatus">
+          <span>Open <span class="openNum">3</span></span>
+          <span class="closed">Closed <span class="closedNum">0</span></span>
+        </div>
+      </li>
+      <li class="defaultTask hideSuccess newtipincome-wrap" id="tipIncome">
+        <span class="new-icon"></span>
+        <h4>Tip Income</h4>
+        <span class="threeDotIcon"></span>
+        <div class="incomeStatus">
+          <span>Open <span class="openNum">2</span></span>
+          <span class="closed">Closed <span class="closedNum">0</span></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="button-wrapper-suspended clearfix" id="suspendedlink" onclick="suspendedshow()">
+    <div class="col-xs-12 suspended">
+      <label>Suspended</label>
+      <label class="suspensionCount">12</label>
+      <!-- <label class="badge">6</label> -->
+      <span id="suspendedarrow"></span>
+    </div>
+
+  </div>
+
+  <div id="suspendedtasks" class="suspendedtasks">
+    <ul class="suspendedlist-wrap" id="suspendedwrap">
+      <li class="subHeading">
+        SUSPENDED BY LPA
+      </li>
+      <!-- <li class="suspendedlist" id="suspendedproperty" onclick="showsuspendedproperty()">
+        <label>Income from Property</label>
+        <div class="suspendedstatus">
+          <span>Pending<span class="badge suspendedcount">4/7</span></span>
+        </div>
+      </li> -->
+      <li class="suspendedlist">
+        <label>Income from Commission</label>
+        <div class="suspendedstatus">
+          <span>Pending<span class="badge suspendedcount">4/7</span></span>
+        </div>
+      </li>
+      <li class="subHeading">
+        ADDED BY UNDERWRITER
+      </li>
+      <li class="suspendedlist">
+        <label>Income from Shares</label>
+        <div class="suspendedstatus">
+          <span>Pending<span class="badge suspendedcount">4/7</span></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+</div>
+<!-- content -->
+<!-- borrower list -->
+<div class="activeconditionmain-wrap col-md-10 col-xs-10 paddingRight" id="activeconditionmain-wrap">
+  <div class="incomedescription-wrap" id="incomedescription-wrap">
+    <div class="activeCondition clearfix">
+      <div class="col-xs-12 padding0">
+        <ul class="optionMenu clearfix">
+          <ul class="leftTabs">
+            <li>
+              <h3 id="incomeName">INCOME FROM PROPERTY</h3>
+            </li>
+            <li>
+              <span class="successMsg">Pending</span>
+            </li>
+          </ul>
+          <ul class="rightTabs" id="options">
+            <li id="viewDu" onclick="showDu()">
+              <span class="searchIcon"></span>
+              <span>LPA Findings</span>
+            </li>
+            <li id="viewCondition" onclick="showCondition()">
+              <span class="conditionIcon"></span>
+              <span>Condition for Loan</span>
+            </li>
+            <li id="viewNotes" onclick="showNotes()">
+              <span class="notesIcon"></span>
+              <span>Notifications</span>
+            </li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+    <ul class="borrowerList">
+      <li class="active"><a data-toggle="pill" href="#alice" onclick="changeName(1)">Firstimer, Alice</a></li>
+      <li><a data-toggle="pill" href="#john" onclick="changeName(2)">Homeowner, John</a></li>
+    </ul>
+    <!-- Task lists -->
+    <div class="tab-content">
+
+      <div id="alice" class="tab-pane fade in active">
+        <ul class="nav nav-pills taskList clearfix">
+          <li class="task active"><a data-toggle="pill" href="#task">Task List</a></li>
+          <li class="task"><a data-toggle="pill" href="#additionalincome">Loan Data</a></li>
+        </ul>
+        <div class="tab-content">
+          <div id="additionalincome" class="additionalincome tab-pane fade">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="left">Gross Monthly Income</th>
+                  <th>Borrower</th>
+                  <!-- <th>Total</th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="left">Base Employee income</td>
+                  <td>$3800.00</td>
+                  <!-- <td>$3800</td> -->
+                </tr>
+                <tr>
+                  <td class="left">Overtime</td>
+                  <td>$0.00</td>
+                  <!-- <td>$0.00</td> -->
+                </tr>
+                <tr>
+                  <td class="left">Bonuses</td>
+                  <td>$0.00</td>
+                  <!-- <td>$0.00</td> -->
+                </tr>
+                <tr>
+                  <td class="left">Commissions</td>
+                  <td>$100.00</td>
+                  <!-- <td>$100.00</td> -->
+                </tr>
+                <tr>
+                  <td class="left">Dividends /Interest</td>
+                  <td>$1000.00</td>
+                  <!-- <td>$1000.00</td> -->
+                </tr>
+                <tr>
+                  <td class="left">Net Rental Income</td>
+                  <td>$0.00</td>
+                  <!-- <td>$0.00</td> -->
+                </tr>
+              </tbody>
+            </table>
+            <div class="others">
+              <table class="table table-striped">
+                <tbody>
+                  <h3>OTHERS</h3>
+                  <tr>
+                    <td class="left">Automobile/Expense Account Income</td>
+                    <td>$0.00</td>
+                    <!-- <td>$0.00</td> -->
+                  </tr>
+                  <tr>
+                    <td class="left">Others Total</td>
+                    <td>$99.00</td>
+                    <!-- <td>$99.00</td> -->
+                  </tr>
+                  <tr>
+                    <td class="left">TOTAL</td>
+                    <td>$4999.00</td>
+                    <!-- <td>$4999.00</td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- task -->
+          <div id="task" class="tab-pane fade in active">
+            <!-- Required tasks -->
+            <h3>Task Validation Category 1</h3>
+            <div class="editCondition">
+              <h3>(And) all required Validation</h3>
+              <div class="descriptionList">
+                <div class="detail">
+                  <ul class="clearfix inner-content">
+                    <div data-toggle="collapse" href="#collapse1" onclick="addIcon()">
+                      <li class="col-md-4 col-xs-4"><span class="dropdownIcon" id="rotateArrow"></span>Upload the most recent Paystub</li>
+                    </div>
+                    <li class="col-md-1 col-xs-1">
+                      <img src="../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg">Pending</span>
+                    </li>
+                    <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+                    <li class="col-md-2 col-xs-2">Loan Officer</li>
+                    <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
+                      <!-- <span class="settingIcon" onclick="showPopup()"> -->
+                      <span class="settingsIcon-wrap" onclick="showPopup()">
+                              <span class="settingIcon">
+                    <ul class="validation_action text-left displayNone" id="pop-up">
+                      <div class="option"><span class="delete"></span>Delete</div>
+                <a href="businessrulestatus.html">
+                  <div class="option"><span class="manage"></span> Business Rule</div>
+                </a>
+                <div class="option"><span class="reopen"></span> Reopen</div>
+                <!-- <div class="tip"></div> -->
+                <div class="tip in"></div>
+                </ul>
+                </span>
+                </span>
+                <span class="plusIcon">OR</span>
+                <a href=""><span class="dropDown"></span></a>
+                <a href=""><span class="addIconTop"></span></a>
+                <span id="bottomIcon" class="addIconMiddle"></span>
+                </li>
+                </ul>
+                <div id="collapse1" class="panel-collapse collapse">
+                  <div class="sourceInformation">
+                    <span class="closeIcon"></span>
+                    <label class="soruce">
+                  <span>Source : </span> System Default</label>
+                    <!-- <label>
+                  <span>Reason :</span> Info Closed after discusssion with loan Officer</label> -->
+                    <p>
+                      <span>Task : </span> Document supporting Stable Income Source</p>
+                  </div>
+                </div>
+              </div>
+              <ul class="clearfix inner-content">
+                <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload W2 of Previous Year</li>
+                <li class="col-md-1 col-xs-1"> <img src="../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg">Pending</span></li>
+                <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+                <li class="col-md-2 col-xs-2">Loan Officer</li>
+                <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
+                  <span class="settingsIcon-wrap" onclick="showPopup2()">
+                    <span class="settingIcon">
+                    <ul class="validation_action text-left displayNone" id="pop-up2">
+                      <div class="option"><span class="delete"></span>Delete</div>
+            <a href="javascript:void(0)">
+              <div class="option"><span class="manage"></span> Business Rule</div>
+            </a>
+            <div class="option"><span class="reopen"></span> Reopen</div>
+            <!-- <div class="tip"></div> -->
+            <div class="tip in"></div>
+            </ul>
+            </span>
+            </span>
+            <span class="plusIcon">OR</span>
+            <span class="dropDown"></span>
+            <span class="addIconMiddle"></span>
+            </li>
+
+            </ul>
+          </div>
+          <!-- Optional task -->
+          <!-- <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+            <div class="descriptionList">
+              <ul class="addTask clearfix">
+                <li class="col-md-2">
+                  <span></span>
+                  <label>Add Task</label>
+                </li>
+              </ul>
+
+            </div> -->
+        </div>
+        <div class="displaysuccess" id="secondTask">
+          <div class="toggleBtn">
+            <div class="btn-toggle clearfix">
+              <button class="btn btn-active" id="inactive" onclick="toggleinactive()">And</button>
+              <button class="btn btn-inactive " id="active" onclick="toggleactive()">Or</button>
+            </div>
+          </div>
+          <h3>Task Validation Category 2</h3>
+          <div class="editCondition">
+            <h3>(And) all required Validation</h3>
+            <div class="descriptionList">
+              <ul class="clearfix">
+                <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload VOE document</li>
+                <li class="col-md-1 col-xs-1"> <img src="../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg">Pending</span></li>
+                <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
+                <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
+                  <span class="settingsIcon-wrap">
+                  <span class="settingIcon" onclick="showPopup3()">
+                  <ul class="validation_action displayNone" id="pop-up3">
+                      <div class="option"><span class="delete"></span>Delete</div>
+            <a href="javascript:void(0)">
+              <div class="option"><span class="manage"></span> Business Rule</div>
+            </a>
+            <div class="option"><span class="reopen"></span> Reopen</div>
+            <!-- <div class="tip"></div> -->
+            <div class="tip in"></div>
+            </ul>
+            </span>
+            </span>
+            <span class="dropDown"></span>
+            <span class="addIconTop"></span>
+            <span class="addIconMiddle"></span>
+            </li>
+
+            </ul>
+          </div>
+          <!-- <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+          <div class="descriptionList">
+            <ul class="addTask clearfix">
+
+              <span></span>
+              <label>Add Task</label>
+
+            </ul>
+
+          </div> -->
+        </div>
+      </div>
+      <!-- <div class="toggleBtn">
+          <div class="btn-toggle clearfix disabled-switch">
+            <button class="btn btn-disabled ">And</button>
+            <button class="btn btn-disabled btn-and">Or</button>
+          </div>
+        </div> -->
+      <div class="button-wrapper clearfix">
+        <div class="col-md-12 col-xs-12 clearfix taskButton padding0">
+          <!-- <button type="submit" class=" btn btn-primary add">
+                <label>Add Task Validation Category 3</label>
+                <span></span>
+            </button> -->
+          <button type="submit" class="btn btn-primary start" onclick="success()">
+                <label>Start Execution</label>
+                <span></span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of task -->
+</div>
+<div id="john" class="tab-pane fade">
+  <ul class="nav nav-pills taskList clearfix">
+    <li class="task active"><a data-toggle="pill" href="#task1">Task List</a></li>
+    <li class="task"><a data-toggle="pill" href="#additionalincome1">Loan Data</a></li>
+  </ul>
+  <div class="tab-content">
+
+    <div id="additionalincome1" class="additionalincome tab-pane fade">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th class="left">Gross Monthly Income</th>
+            <th>Co-Borrower</th>
+            <!-- <th>Total</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="left">Base Employee income</td>
+            <td>$2500.00</td>
+            <!-- <td>$3800</td> -->
+          </tr>
+          <tr>
+            <td class="left">Overtime</td>
+            <td>$0.00</td>
+            <!-- <td>$0.00</td> -->
+          </tr>
+          <tr>
+            <td class="left">Bonuses</td>
+            <td>$0.00</td>
+            <!-- <td>$0.00</td> -->
+          </tr>
+          <tr>
+            <td class="left">Commissions</td>
+            <td>$0.00</td>
+            <!-- <td>$100.00</td> -->
+          </tr>
+          <tr>
+            <td class="left">Dividends /Interest</td>
+            <td>$0.00</td>
+            <!-- <td>$1000.00</td> -->
+          </tr>
+          <tr>
+            <td class="left">Net Rental Income</td>
+            <td>$0.00</td>
+            <!-- <td>$0.00</td> -->
+          </tr>
+        </tbody>
+      </table>
+      <div class="others">
+        <table class="table table-striped">
+          <tbody>
+            <h3>OTHERS</h3>
+            <tr>
+              <td class="left">Automobile/Expense Account Income</td>
+              <td>$0.00</td>
+              <!-- <td>$0.00</td> -->
+            </tr>
+            <tr>
+              <td class="left">Others Total</td>
+              <td>$0.00</td>
+              <!-- <td>$99.00</td> -->
+            </tr>
+            <tr>
+              <td class="left">TOTAL</td>
+              <td>$2500.00</td>
+              <!-- <td>$4999.00</td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- task -->
+    <div id="task1" class="tab-pane fade in active">
+      <!-- Required tasks -->
+      <h3>Task Validation Category 1</h3>
+      <div class="editCondition">
+        <h3>(And) all required Validation</h3>
+        <div class="descriptionList">
+          <div class="detail">
+            <ul class="clearfix inner-content">
+              <div data-toggle="collapse" href="#collapse1" onclick="addIcon()">
+                <li class="col-md-4 col-xs-4"><span class="dropdownIcon" id="rotateArrow"></span>Upload the most recent Paystub</li>
+              </div>
+              <li class="col-md-1 col-xs-1"> <img src="../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg1">Pending</span></li>
+              <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+              <li class="col-md-2 col-xs-2">Loan Officer</li>
+              <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
+                <span class="settingsIcon-wrap" onclick="showPopup4()">
+                  <span class="settingIcon">
+                  <ul class="validation_action text-left displayNone" id="pop-up4">
+                    <div class="option"><span class="delete"></span>Delete</div>
+          <a href="businessrulestatus.html">
+            <div class="option"><span class="manage"></span> Business Rule</div>
+          </a>
+          <div class="option"><span class="reopen"></span> Reopen</div>
+          <!-- <div class="tip"></div> -->
+          <div class="tip in"></div>
+          </ul>
+          </span>
+          </span>
+          <span class="plusIcon">OR</span>
+          <a href=""><span class="dropDown"></span></a>
+          <a href=""><span class="addIconTop"></span></a>
+          <span id="bottomIcon" class="addIconMiddle"></span>
+          </li>
+          </ul>
+          <div id="collapse1" class="panel-collapse collapse">
+            <div class="sourceInformation">
+              <span class="closeIcon"></span>
+              <label class="soruce">
+                <span>Source : </span> System Default</label>
+              <!-- <label>
+                <span>Reason :</span> Info Closed after discusssion with loan Officer</label> -->
+              <p>
+                <span>Task : </span> Document supporting Stable Income Source</p>
+            </div>
+          </div>
+        </div>
+        <ul class="clearfix inner-content">
+          <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload W2 of Previous Year</li>
+          <li class="col-md-1 col-xs-1"> <img src="../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg1">Pending</span></li>
+          <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+          <li class="col-md-2 col-xs-2">Loan Officer</li>
+          <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
+            <span class="settingsIcon-wrap" onclick="showPopup5()">
+              <span class="settingIcon">
+                  <ul class="validation_action text-left displayNone" id="pop-up5">
+                    <div class="option"><span class="delete"></span>Delete</div>
+      <a href="javascript:void(0)">
+        <div class="option"><span class="manage"></span> Business Rule</div>
+      </a>
+      <div class="option"><span class="reopen"></span> Reopen</div>
+      <!-- <div class="tip"></div> -->
+      <div class="tip in"></div>
+      </ul>
+      </span>
+      </span>
+      <span class="plusIcon">OR</span>
+      <span class="dropDown"></span>
+      <span class="addIconMiddle"></span>
+      </li>
+
+      </ul>
+    </div>
+    <!-- Optional task -->
+    <!-- <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+      <div class="descriptionList">
+        <ul class="addTask clearfix">
+          <li class="col-md-2">
+            <span></span>
+            <label>Add Task</label>
+          </li>
+        </ul>
+
+      </div> -->
+  </div>
+  <div class="toggleBtn">
+    <div class="btn-toggle clearfix">
+      <button class="btn btn-active" id="inactive" onclick="toggleinactive()">And</button>
+      <button class="btn btn-inactive " id="active" onclick="toggleactive()">Or</button>
+    </div>
+  </div>
+  <h3>Task Validation Category 2</h3>
+  <div class="editCondition">
+    <h3>(And) all required Validation</h3>
+    <div class="descriptionList">
+      <ul class="clearfix">
+        <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload VOE document</li>
+        <li class="col-md-1 col-xs-1"> <img src="../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg1">Pending</span></li>
+        <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
+        <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
+          <span class="settingsIcon-wrap" onclick="showPopup6()">
+            <span class="settingIcon">
+                <ul class="validation_action displayNone" id="pop-up6">
+                    <div class="option"><span class="delete"></span>Delete</div>
+    <a href="javascript:void(0)">
+      <div class="option"><span class="manage"></span> Business Rule</div>
+    </a>
+    <div class="option"><span class="reopen"></span> Reopen</div>
+    <!-- <div class="tip"></div> -->
+    <div class="tip in"></div>
+    </ul>
+    </span>
+    </span>
+    <span class="dropDown"></span>
+    <span class="addIconTop"></span>
+    <span class="addIconMiddle"></span>
+    </li>
+
+    </ul>
+  </div>
+  <!-- <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+    <div class="descriptionList">
+      <ul class="addTask clearfix">
+
+        <span></span>
+        <label>Add Task</label>
+
+      </ul>
+
+    </div> -->
+</div>
+<!-- <div class="toggleBtn">
+    <div class="btn-toggle clearfix disabled-switch">
+      <button class="btn btn-disabled ">And</button>
+      <button class="btn btn-disabled btn-and">Or</button>
+    </div>
+  </div> -->
+<div class="button-wrapper clearfix">
+  <div class="col-md-12 col-xs-12 clearfix taskButton padding0">
+    <!-- <button type="submit" class=" btn btn-primary add">
+              <label>Add Task Validation Category 3</label>
+              <span></span>
+          </button> -->
+    <!--start execution-->
+    <button type="submit" class="btn btn-primary start" onclick="success1()">
+              <label>Start Execution</label>
+              <span></span>
+        </button>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--incomedescription-->
+<div class="SuspendedContent" id="showSuspendedContent">
+  <div class="center-content">
+    <span class="largeInfoIcon"></span>
+    <p>Select a condition to view the task list</p>
+  </div>
+</div>
+
+<div class="suspropdescription-wrap" id="suspropdescription-wrap">
+  <div class="activeCondition clearfix">
+    <div class="col-xs-12 padding0">
+      <ul class="optionMenu clearfix">
+        <ul class="leftTabs">
+          <li>
+            <h3 id="incomeName">INCOME FROM PROPERTY</h3>
+          </li>
+          <li>
+            <span class="successMsg">Pending</span>
+          </li>
+        </ul>
+        <ul class="rightTabs" id="options">
+          <li id="viewDu1" onclick="showDu()">
+            <span class="searchIcon"></span>
+            <span>LPA Findings</span>
+          </li>
+          <li id="viewCondition1" onclick="showCondition()">
+            <span class="conditionIcon"></span>
+            <span>Condition for Loan</span>
+          </li>
+          <li id="viewNotes1" onclick="showNotes()">
+            <span class="notesIcon"></span>
+            <span>Notifications</span>
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </div>
+  <ul class="borrowerList">
+    <li class="active"><a data-toggle="pill" href="#alice1" onclick="changeName(1)">Firstimer, Alice</a></li>
+    <li><a data-toggle="pill" href="#john1" onclick="changeName(2)">Homeowner, John</a></li>
+  </ul>
+  <!-- Task lists -->
+  <div class="tab-content">
+    <button class="btn btn-default restorecondition-btn" id="restorecondition" data-toggle="modal" data-target="#restorecondition-modal">Restore Conditon</button>
+
+
+    <div class="modal fade" id="restorecondition-modal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <!-- <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Confirmation</h4>
+            </div> -->
+          <div class="modal-body">
+            <p class="restore-message"><span class="notify-icon"></span>The <span class="highlight-text">"Income from Property"</span> condition will
+              be restored to <span class="highlight-text">Underwriter Category".</span></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default cancel-btn" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-default restore-btn" data-dismiss="modal">Restore</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--modal-->
+
+    <div id="alice1" class="tab-pane fade in active">
+      <ul class="nav nav-pills taskList clearfix">
+        <li class="task active"><a data-toggle="pill" href="#task2">Task List</a></li>
+        <li class="task"><a data-toggle="pill" href="#additionalincome2">Loan Data</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="additionalincome2" class="additionalincome tab-pane fade">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="left">Gross Monthly Income</th>
+                <th>Borrower</th>
+                <!-- <th>Total</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="left">Base Employee income</td>
+                <td>$3800.00</td>
+                <!-- <td>$3800</td> -->
+              </tr>
+              <tr>
+                <td class="left">Overtime</td>
+                <td>$0.00</td>
+                <!-- <td>$0.00</td> -->
+              </tr>
+              <tr>
+                <td class="left">Bonuses</td>
+                <td>$0.00</td>
+                <!-- <td>$0.00</td> -->
+              </tr>
+              <tr>
+                <td class="left">Commissions</td>
+                <td>$100.00</td>
+                <!-- <td>$100.00</td> -->
+              </tr>
+              <tr>
+                <td class="left">Dividends /Interest</td>
+                <td>$1000.00</td>
+                <!-- <td>$1000.00</td> -->
+              </tr>
+              <tr>
+                <td class="left">Net Rental Income</td>
+                <td>$0.00</td>
+                <!-- <td>$0.00</td> -->
+              </tr>
+            </tbody>
+          </table>
+          <div class="others">
+            <table class="table table-striped">
+              <tbody>
+                <h3>OTHERS</h3>
+                <tr>
+                  <td class="left">Automobile/Expense Account Income</td>
+                  <td>$0.00</td>
+                  <!-- <td>$0.00</td> -->
+                </tr>
+                <tr>
+                  <td class="left">Others Total</td>
+                  <td>$99.00</td>
+                  <!-- <td>$99.00</td> -->
+                </tr>
+                <tr>
+                  <td class="left">TOTAL</td>
+                  <td>$4999.00</td>
+                  <!-- <td>$4999.00</td> -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- task -->
+        <div id="task2" class="tab-pane fade in active">
+          <!-- Required tasks -->
+          <h3>Task Validation Category 1</h3>
+          <div class="editCondition">
+            <h3>(And) all required Validation</h3>
+            <div class="descriptionList">
+              <div class="detail">
+                <ul class="clearfix inner-content">
+                  <div data-toggle="collapse" href="#collapse2" onclick="addIcon()">
+                    <li class="col-md-4 col-xs-4"><span class="dropdownIcon" id="rotateArrow1"></span>Upload the most recent Paystub</li>
+                  </div>
+                  <li class="col-md-1 col-xs-1">
+                    <img src="../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg">Pending</span>
+                  </li>
+                  <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+                  <li class="col-md-2 col-xs-2">Loan Officer</li>
+                  <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
+                  </li>
+                </ul>
+                <div id="collapse2" class="panel-collapse collapse">
+                  <div class="sourceInformation">
+                    <span class="closeIcon"></span>
+                    <label class="soruce">
+              <span>Source : </span> System Default</label>
+                    <!-- <label>
+              <span>Reason :</span> Info Closed after discusssion with loan Officer</label> -->
+                    <p>
+                      <span>Task : </span> Document supporting Stable Income Source</p>
+                  </div>
+                </div>
+              </div>
+              <ul class="clearfix inner-content">
+                <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload W2 of Previous Year</li>
+                <li class="col-md-1 col-xs-1"> <img src="../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg">Pending</span></li>
+                <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+                <li class="col-md-2 col-xs-2">Loan Officer</li>
+                <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
+                </li>
+
+              </ul>
+            </div>
+            <!-- Optional task -->
+            <!-- <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+        <div class="descriptionList">
+          <ul class="addTask clearfix">
+            <li class="col-md-2">
+              <span></span>
+              <label>Add Task</label>
+            </li>
+          </ul>
+
+        </div> -->
+          </div>
+          <div class="displaysuccess" id="secondTask">
+            <div class="toggleBtn">
+              <div class="btn-toggle clearfix">
+                <button class="btn btn-active" id="inactive" onclick="toggleinactive()">And</button>
+                <button class="btn btn-inactive " id="active" onclick="toggleactive()">Or</button>
+              </div>
+            </div>
+            <h3>Task Validation Category 2</h3>
+            <div class="editCondition">
+              <h3>(And) all required Validation</h3>
+              <div class="descriptionList">
+                <ul class="clearfix">
+                  <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload VOE document</li>
+                  <li class="col-md-1 col-xs-1"> <img src="../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg">Pending</span></li>
+                  <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
+                  <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
+                  </li>
+
+                </ul>
+              </div>
+              <!-- <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+      <div class="descriptionList">
+        <ul class="addTask clearfix">
+
+          <span></span>
+          <label>Add Task</label>
+
+        </ul>
+
+      </div> -->
+            </div>
+          </div>
+          <!-- <div class="toggleBtn">
+      <div class="btn-toggle clearfix disabled-switch">
+        <button class="btn btn-disabled ">And</button>
+        <button class="btn btn-disabled btn-and">Or</button>
+      </div>
+    </div> -->
+          <div class="button-wrapper clearfix">
+            <div class="col-md-12 col-xs-12 clearfix taskButton padding0">
+              <!-- <button type="submit" class=" btn btn-primary add">
+            <label>Add Task Validation Category 3</label>
+            <span></span>
+        </button> -->
+              <!-- <button type="submit" class="btn btn-primary start" onclick="success()">
+            <label>Start Execution</label>
+            <span></span>
+        </button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of task -->
+    </div>
+    <div id="john1" class="tab-pane fade">
+      <ul class="nav nav-pills taskList clearfix">
+        <li class="task active"><a data-toggle="pill" href="#task3">Task List</a></li>
+        <li class="task"><a data-toggle="pill" href="#additionalincome3">Loan Data</a></li>
+      </ul>
+      <div class="tab-content">
+
+        <div id="additionalincome3" class="additionalincome tab-pane fade">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="left">Gross Monthly Income</th>
+                <th>Co-Borrower</th>
+                <!-- <th>Total</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="left">Base Employee income</td>
+                <td>$2500.00</td>
+                <!-- <td>$3800</td> -->
+              </tr>
+              <tr>
+                <td class="left">Overtime</td>
+                <td>$0.00</td>
+                <!-- <td>$0.00</td> -->
+              </tr>
+              <tr>
+                <td class="left">Bonuses</td>
+                <td>$0.00</td>
+                <!-- <td>$0.00</td> -->
+              </tr>
+              <tr>
+                <td class="left">Commissions</td>
+                <td>$0.00</td>
+                <!-- <td>$100.00</td> -->
+              </tr>
+              <tr>
+                <td class="left">Dividends /Interest</td>
+                <td>$0.00</td>
+                <!-- <td>$1000.00</td> -->
+              </tr>
+              <tr>
+                <td class="left">Net Rental Income</td>
+                <td>$0.00</td>
+                <!-- <td>$0.00</td> -->
+              </tr>
+            </tbody>
+          </table>
+          <div class="others">
+            <table class="table table-striped">
+              <tbody>
+                <h3>OTHERS</h3>
+                <tr>
+                  <td class="left">Automobile/Expense Account Income</td>
+                  <td>$0.00</td>
+                  <!-- <td>$0.00</td> -->
+                </tr>
+                <tr>
+                  <td class="left">Others Total</td>
+                  <td>$0.00</td>
+                  <!-- <td>$99.00</td> -->
+                </tr>
+                <tr>
+                  <td class="left">TOTAL</td>
+                  <td>$2500.00</td>
+                  <!-- <td>$4999.00</td> -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- task -->
+        <div id="task3" class="tab-pane fade in active">
+          <!-- Required tasks -->
+          <h3>Task Validation Category 1</h3>
+          <div class="editCondition">
+            <h3>(And) all required Validation</h3>
+            <div class="descriptionList">
+              <div class="detail">
+                <ul class="clearfix inner-content">
+                  <div data-toggle="collapse" href="#collapse1" onclick="addIcon()">
+                    <li class="col-md-4 col-xs-4"><span class="dropdownIcon" id="rotateArrow"></span>Upload the most recent Paystub</li>
+                  </div>
+                  <li class="col-md-1 col-xs-1"> <img src="../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg1">Pending</span></li>
+                  <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+                  <li class="col-md-2 col-xs-2">Loan Officer</li>
+                  <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
+                  </li>
+                </ul>
+                <div id="collapse1" class="panel-collapse collapse">
+                  <div class="sourceInformation">
+                    <span class="closeIcon"></span>
+                    <label class="soruce">
+            <span>Source : </span> System Default</label>
+                    <!-- <label>
+            <span>Reason :</span> Info Closed after discusssion with loan Officer</label> -->
+                    <p>
+                      <span>Task : </span> Document supporting Stable Income Source</p>
+                  </div>
+                </div>
+              </div>
+              <ul class="clearfix inner-content">
+                <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload W2 of Previous Year</li>
+                <li class="col-md-1 col-xs-1"> <img src="../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg1">Pending</span></li>
+                <li class="col-md-3 col-xs-3">10/27/2017 12:30 PM</li>
+                <li class="col-md-2 col-xs-2">Loan Officer</li>
+                <li class="col-md-2 col-xs-2 manage-validation paddingLeft text-center">
+                </li>
+
+              </ul>
+            </div>
+            <!-- Optional task -->
+            <!-- <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+  <div class="descriptionList">
+    <ul class="addTask clearfix">
+      <li class="col-md-2">
+        <span></span>
+        <label>Add Task</label>
+      </li>
+    </ul>
+
+  </div> -->
+          </div>
+          <div class="toggleBtn">
+            <div class="btn-toggle clearfix">
+              <button class="btn btn-active" id="inactive" onclick="toggleinactive()">And</button>
+              <button class="btn btn-inactive " id="active" onclick="toggleactive()">Or</button>
+            </div>
+          </div>
+          <h3>Task Validation Category 2</h3>
+          <div class="editCondition">
+            <h3>(And) all required Validation</h3>
+            <div class="descriptionList">
+              <ul class="clearfix">
+                <li class="col-md-4 col-xs-4"><span class="dropdownIcon"></span>Upload VOE document</li>
+                <li class="col-md-1 col-xs-1"> <img src="../assets/images/loading.svg" alt="gif" class="gif" style="display:none"> <span class="successMsg1">Pending</span></li>
+                <li class="col-md-5 col-xs-5">10/27/2017 12:30 PM</li>
+                <li class="col-md-2 col-xs-2 manage-validation paddingLeft">
+                </li>
+
+              </ul>
+            </div>
+            <!-- <h3>(Or) Either of one - Task not satisfied by above(and)group, either of one should be satisfied by below task(s)</h3>
+<div class="descriptionList">
+  <ul class="addTask clearfix">
+
+    <span></span>
+    <label>Add Task</label>
+
+  </ul>
+
+</div> -->
+          </div>
+          <!-- <div class="toggleBtn">
+<div class="btn-toggle clearfix disabled-switch">
+  <button class="btn btn-disabled ">And</button>
+  <button class="btn btn-disabled btn-and">Or</button>
+</div>
+</div> -->
+          <div class="button-wrapper clearfix">
+            <div class="col-md-12 col-xs-12 clearfix taskButton padding0">
+              <!-- <button type="submit" class=" btn btn-primary add">
+          <label>Add Task Validation Category 3</label>
+          <span></span>
+      </button> -->
+              <!--start execution-->
+              <!-- <button type="submit" class="btn btn-primary start" onclick="success1()">
+          <label>Start Execution</label>
+          <span></span>
+    </button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

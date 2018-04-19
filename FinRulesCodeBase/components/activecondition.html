@@ -98,6 +98,12 @@
         <p><span class="success-icon"></span>New Condition " Tip Income " has been successfully added in the condition list.</p>
       </div>
     </div>
+    <div class="tipincomesuccess hideSuccess" id="restoresuccess">
+        <div class="alert alert-success alert-dismissible fade in">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
+          <p><span class="success-icon"></span>The Condition " Income from Property " has been Successfully Restored in the Condition List.</p>
+        </div>
+      </div>
     <!-- main content -->
     <div class="content row">
       <!-- Add conditions -->
@@ -283,8 +289,9 @@
         </div>
       </div>
       <!-- Categories and task condition -->
-      <div class="mainSection clearfix">
+<div class="mainSection clearfix">
         <!-- side menu -->
+        <div id="activeouterwrap" class="activeouterwrap">
         <div class="leftMenu col-md-2 col-xs-2">
           <div class="activeCondition clearfix padding0" id="activecondition">
 
@@ -310,11 +317,12 @@
               </div>
 
             </div>
-            <ul>
+            <ul id="incometaskwrap">
               <li class="subHeading">
                 ADDED BY LPA
               </li>
-              <li class="defaultTask" id="inactiveTask">
+              <li class="defaultTask incometasklist"  id="inactiveTask">
+                <!-- <li class="sideBand incometasklist"> -->
                 <h4>Base Income</h4>
                 <span class="threeDotIcon"></span>
                 <div class="incomeStatus">
@@ -322,7 +330,7 @@
                   <span class="closed">Closed <span class="closedNum">0</span></span>
                 </div>
               </li>
-              <li class="sideBand">
+              <li class="sideBand incometasklist">
                 <h4>Income from Assets</h4>
                 <span class="threeDotIcon"></span>
                 <div class="incomeStatus">
@@ -333,7 +341,8 @@
               <li class="subHeading">
                 ADDED BY UNDERWRITER
               </li>
-              <li class="commonList">
+              <li class="commonList incometasklist">
+                  <!-- <li class="sideBand incometasklist"> -->
                 <h4>Additional Income</h4>
                 <span class="threeDotIcon"></span>
                 <div class="incomeStatus">
@@ -341,7 +350,7 @@
                   <span class="closed">Closed <span class="closedNum">0</span></span>
                 </div>
               </li>
-              <li class="defaultTask hideSuccess newtipincome-wrap" id="tipIncome">
+              <li class="defaultTask hideSuccess newtipincome-wrap incometasklist" id="tipIncome">
                 <span class="new-icon"></span>
                 <h4>Tip Income</h4>
                 <span class="threeDotIcon"></span>
@@ -352,8 +361,8 @@
               </li>
             </ul>
           </div>
-          <div class="button-wrapper-suspended clearfix" id="suspendedlink">
-            <div class="col-xs-12 suspended" onclick="displaySuspended()">
+          <div class="button-wrapper-suspended clearfix" id="suspendedlink" onclick="suspendedshow()">
+            <div class="col-xs-12 suspended">
               <label>Suspended</label>
               <label class="suspensionCount">12</label>
               <!-- <label class="badge">6</label> -->
@@ -367,7 +376,7 @@
               <li class="subHeading">
                 SUSPENDED BY LPA
               </li>
-              <li class="suspendedlist" id="suspendedproperty" onclick="showsuspendedproperty()">
+              <li class="suspendedlist" id="suspendedproperty" onclick="showsuspendedproperty();">
                 <label>Income from Property</label>
                 <div class="suspendedstatus">
                   <span>Pending<span class="badge suspendedcount">4/7</span></span>
@@ -395,7 +404,7 @@
         </div>
         <!-- content -->
         <!-- borrower list -->
-        <div class="activeconditionmain-wrap col-md-10 col-xs-10 paddingRight" id="activeconditionmain-wrap">
+ <div class="activeconditionmain-wrap col-md-10 col-xs-10 paddingRight" id="activeconditionmain-wrap">
           <div class="incomedescription-wrap" id="incomedescription-wrap">
             <div class="activeCondition clearfix">
               <div class="col-xs-12 padding0">
@@ -409,15 +418,15 @@
                     </li>
                   </ul>
                   <ul class="rightTabs" id="options">
-                    <li id="viewDu">
+                    <li id="viewDu" onclick="showDu()">
                       <span class="searchIcon"></span>
                       <span>LPA Findings</span>
                     </li>
-                    <li id="viewCondition">
+                    <li id="viewCondition" onclick="showCondition()">
                       <span class="conditionIcon"></span>
                       <span>Condition for Loan</span>
                     </li>
-                    <li id="viewNotes">
+                    <li id="viewNotes" onclick="showNotes()">
                       <span class="notesIcon"></span>
                       <span>Notifications</span>
                     </li>
@@ -909,15 +918,15 @@
             </li>
           </ul>
           <ul class="rightTabs" id="options">
-            <li id="viewDu1">
+            <li id="viewDu1" onclick="showDu()">
               <span class="searchIcon"></span>
               <span>LPA Findings</span>
             </li>
-            <li id="viewCondition1">
+            <li id="viewCondition1" onclick="showCondition()">
               <span class="conditionIcon"></span>
               <span>Condition for Loan</span>
             </li>
-            <li id="viewNotes1">
+            <li id="viewNotes1" onclick="showNotes()">
               <span class="notesIcon"></span>
               <span>Notifications</span>
             </li>
@@ -949,7 +958,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default cancel-btn" data-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-default restore-btn" data-dismiss="modal">Restore</button>
+              <button type="button" class="btn btn-default restore-btn" data-dismiss="modal" onclick="addcondition()">Restore</button>
             </div>
           </div>
 
@@ -1318,7 +1327,7 @@
   </div>
   <!--activeconditionmain-wrap-->
 
-  </div>
+</div></div>
 
   </div>
 
